@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='utf-8'?>
+<catalogue id="e2ae-511d-6428-889e" name="Casual - Mixed Human and Alien (not tournament legal)" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="61c2-d61f-70a4-4d68" gameSystemRevision="1" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <readme>CASUAL ONLY. Lets one list mix UNSC and Banished units. Tournament lists never mix humans and aliens. No detachments here.</readme>
+  <forceEntries>
+    <forceEntry id="34cd-1bfd-c9da-8697" name="Casual Mixed Fireteam (not tournament legal)" hidden="false">
+      <categoryLinks>
+        <categoryLink id="bfa9-4ce0-7b52-e505" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="false" />
+        <categoryLink id="5ac0-d633-6915-172e" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="false" />
+        <categoryLink id="ec46-5f6b-eca3-ffab" name="Marines" hidden="false" targetId="c964-7c65-c947-c4e9" primary="false" />
+        <categoryLink id="4a20-66d1-9288-8aae" name="Sangheili" hidden="false" targetId="76d6-aa41-a970-e81a" primary="false" />
+        <categoryLink id="0976-fc57-16d9-22ab" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="false" />
+        <categoryLink id="20b7-0fda-82d3-d8a4" name="Unggoy" hidden="false" targetId="5c4d-42ee-4f9f-c4a6" primary="false" />
+        <categoryLink id="3275-c08f-6641-0adc" name="Kig-Yar" hidden="false" targetId="083a-640e-69e2-d56c" primary="false" />
+        <categoryLink id="6311-7b2d-51d0-ccd8" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2889-5149-6072-9762" type="min" />
+          </constraints>
+        </categoryLink>
+        <categoryLink id="6b96-4f67-afbe-8ba5" name="Special Orders" hidden="false" targetId="d703-104b-21a0-c90f" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9f1a-3c59-c257-4937" type="min" />
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4069-953b-7704-6644" type="max" />
+          </constraints>
+        </categoryLink>
+        <categoryLink id="2b09-c227-257a-00cf" name="Command Upgrades" hidden="false" targetId="8bdc-911c-6856-85fb" primary="false" />
+      </categoryLinks>
+    </forceEntry>
+  </forceEntries>
+  <entryLinks>
+    <entryLink id="6b19-e029-09db-ac4a" name="Spartan Zvezda" hidden="false" collective="false" import="true" targetId="047a-e8d5-dbec-dbd7" type="selectionEntry" />
+    <entryLink id="07ce-809a-062b-7ccf" name="Spartan HAZOP" hidden="false" collective="false" import="true" targetId="6ebd-e43f-182d-bed1" type="selectionEntry" />
+    <entryLink id="a12d-a896-17e8-6ed8" name="Spartan Brawler" hidden="false" collective="false" import="true" targetId="f33e-e5e6-fcaf-bbd3" type="selectionEntry" />
+    <entryLink id="28f0-6d18-2f6a-ba46" name="Spartan Mk VII" hidden="false" collective="false" import="true" targetId="7d09-5c62-6ae4-567e" type="selectionEntry" />
+    <entryLink id="0998-7dfc-facc-e75e" name="Spartan JFO" hidden="false" collective="false" import="true" targetId="978f-df5b-71c7-dcb9" type="selectionEntry" />
+    <entryLink id="04a0-0151-4d5f-2dc5" name="Tomas Horvath (Spartan Legend)" hidden="false" collective="false" import="true" targetId="af93-eabc-e244-7a3b" type="selectionEntry" />
+    <entryLink id="f470-ab03-6b9d-c00f" name="Spartan Gungnir" hidden="false" collective="false" import="true" targetId="707a-60ef-4d56-65eb" type="selectionEntry" />
+    <entryLink id="9d1c-7a5f-b5ae-3735" name="Spartan Deadeye" hidden="false" collective="false" import="true" targetId="3158-e389-fb04-6287" type="selectionEntry" />
+    <entryLink id="941e-9ae4-e751-e8e4" name="Spartan CQB" hidden="false" collective="false" import="true" targetId="3859-1abf-2873-475c" type="selectionEntry" />
+    <entryLink id="70dc-23eb-241b-6b69" name="Jun-A266 Noble Three (Spartan Legend)" hidden="false" collective="false" import="true" targetId="c52b-8443-17a5-7b3f" type="selectionEntry" />
+    <entryLink id="0cc6-34e4-bc64-da0f" name="Emile-A239 Noble Four (Spartan Legend)" hidden="false" collective="false" import="true" targetId="5cf8-1c43-0f06-73fc" type="selectionEntry" />
+    <entryLink id="def2-fe71-2480-4c5e" name="Kat-B320 Noble Two (Spartan Legend)" hidden="false" collective="false" import="true" targetId="5e16-35f6-f2d9-c552" type="selectionEntry" />
+    <entryLink id="65a6-eeb1-2303-92d8" name="Spartan-B312 Noble Six (Spartan Legend)" hidden="false" collective="false" import="true" targetId="4deb-fde0-7cb0-984c" type="selectionEntry" />
+    <entryLink id="76e4-1140-4453-d2b2" name="Carter-A259 Noble One (Spartan Legend)" hidden="false" collective="false" import="true" targetId="adf8-d842-c1fd-479d" type="selectionEntry" />
+    <entryLink id="6b7d-004b-cb08-70cd" name="Jorge-052 Noble Five (Spartan Legend)" hidden="false" collective="false" import="true" targetId="5593-2523-2eb7-09ff" type="selectionEntry" />
+    <entryLink id="333f-b8fc-568f-e7b2" name="Master Chief (Spartan Legend)" hidden="false" collective="false" import="true" targetId="4f9f-1376-9ba0-d0c4" type="selectionEntry" />
+    <entryLink id="5d9d-f124-d27a-284a" name="ODST Special Purpose Trooper" hidden="false" collective="false" import="true" targetId="c761-9496-21dd-2499" type="selectionEntry" />
+    <entryLink id="3197-47e3-1ea7-2150" name="ODST 2nd Lieutenant" hidden="false" collective="false" import="true" targetId="6200-eabc-e34d-6e64" type="selectionEntry" />
+    <entryLink id="89a3-8f9b-ad35-b8cd" name="ODST Air Assault 'Bullfrog'" hidden="false" collective="false" import="true" targetId="4866-e09e-ceec-8f68" type="selectionEntry" />
+    <entryLink id="5904-fc96-722c-4ba9" name="ODST Firebreak" hidden="false" collective="false" import="true" targetId="9bda-deeb-1735-074e" type="selectionEntry" />
+    <entryLink id="666f-e934-e955-e1cc" name="ODST Captain" hidden="false" collective="false" import="true" targetId="ffd4-158e-3760-5d3e" type="selectionEntry" />
+    <entryLink id="8f9a-cc6e-b5a5-95b4" name="Captain Veronica Dare - ONI (UNSC Legend)" hidden="false" collective="false" import="true" targetId="ea2b-147b-2619-2738" type="selectionEntry" />
+    <entryLink id="381f-1310-8c7f-884d" name="Gunnery Sergeant Edward Buck (ODST Legend)" hidden="false" collective="false" import="true" targetId="613b-de3f-8591-6d1c" type="selectionEntry" />
+    <entryLink id="1aa8-97df-0986-1daa" name="UNSC Marine Corporal" hidden="false" collective="false" import="true" targetId="d48f-2d71-7d87-a897" type="selectionEntry" />
+    <entryLink id="b23c-4745-cddd-8145" name="UNSC Marine" hidden="false" collective="false" import="true" targetId="3be4-405f-298f-bb56" type="selectionEntry" />
+    <entryLink id="d35b-5aef-b03d-854d" name="UNSC Marine Medic" hidden="false" collective="false" import="true" targetId="87a4-b61a-a049-5bfb" type="selectionEntry" />
+    <entryLink id="fc85-d8a4-acd4-6590" name="UNSC Comms Marine" hidden="false" collective="false" import="true" targetId="53c5-5fa0-2b47-0684" type="selectionEntry" />
+    <entryLink id="9be9-ef20-0e29-909a" name="Sangheili Mercenary" hidden="false" collective="false" import="true" targetId="3d52-9f42-39d5-df9d" type="selectionEntry" />
+    <entryLink id="a77f-1def-8c50-11e9" name="Sangheili Enforcer" hidden="false" collective="false" import="true" targetId="910e-7ac0-c495-531e" type="selectionEntry" />
+    <entryLink id="6217-6c37-8425-f4f9" name="Jega 'Rdomnai (Banished Legend)" hidden="false" collective="false" import="true" targetId="8866-1550-87dc-0cdb" type="selectionEntry" />
+    <entryLink id="1bad-3ef4-ff46-2c05" name="Kig-Yar Sniper" hidden="false" collective="false" import="true" targetId="4559-b2a2-2ed8-e34c" type="selectionEntry" />
+    <entryLink id="8dad-d18d-df89-15c7" name="Kig-Yar Freebooter" hidden="false" collective="false" import="true" targetId="f6e9-3648-45fd-80e2" type="selectionEntry" />
+    <entryLink id="39ce-0b22-b59c-d345" name="Jiralhanae Warrior" hidden="false" collective="false" import="true" targetId="27e8-38cf-5607-65d0" type="selectionEntry" />
+    <entryLink id="82cd-b5a5-3c9e-2308" name="Jiralhanae Berserker" hidden="false" collective="false" import="true" targetId="6d06-6c5d-723f-0ae1" type="selectionEntry" />
+    <entryLink id="f47e-81ed-82f6-b6a4" name="Jiralhanae Sniper" hidden="false" collective="false" import="true" targetId="72ea-90e8-fc20-ad9c" type="selectionEntry" />
+    <entryLink id="5b09-2996-9ed8-a6b2" name="Jiralhanae Chosen Warrior" hidden="false" collective="false" import="true" targetId="cd1d-d628-f71a-40a6" type="selectionEntry" />
+    <entryLink id="e3be-ee52-d8c3-0ffc" name="Jiralhanae Captain" hidden="false" collective="false" import="true" targetId="8c4f-7d9f-5b0a-21f3" type="selectionEntry" />
+    <entryLink id="2493-d564-fe08-9562" name="Tovarus (Jiralhanae Legend)" hidden="false" collective="false" import="true" targetId="edf6-a4cb-5afc-6f12" type="selectionEntry" />
+    <entryLink id="8e00-a050-c470-da9d" name="Hyperius (Jiralhanae Legend)" hidden="false" collective="false" import="true" targetId="c3c2-9338-9bc1-3de1" type="selectionEntry" />
+    <entryLink id="2aba-4295-baf1-1f8b" name="Atriox, Jiralhanae Warmaster (Banished Legend)" hidden="false" collective="false" import="true" targetId="768f-887e-b9f3-9df3" type="selectionEntry" />
+    <entryLink id="b18e-71d1-076a-b97e" name="Unggoy Conscript" hidden="false" collective="false" import="true" targetId="daa8-a337-4cff-ba49" type="selectionEntry" />
+    <entryLink id="c675-ace6-90ee-8501" name="Unggoy Assault" hidden="false" collective="false" import="true" targetId="fa4b-1349-510f-8e73" type="selectionEntry" />
+    <entryLink id="508f-f53c-7e5b-56b9" name="Lone Wolf" hidden="false" collective="false" import="true" targetId="3ed6-167e-418c-ab16" type="selectionEntry" />
+    <entryLink id="8a6a-a9f0-4fee-58c1" name="Hot Drop" hidden="false" collective="false" import="true" targetId="5547-f07d-a01f-411e" type="selectionEntry" />
+    <entryLink id="6d17-af06-b28f-827d" name="Target Acquired" hidden="false" collective="false" import="true" targetId="6b65-ac2c-dacd-136a" type="selectionEntry" />
+    <entryLink id="4acc-afb3-ff34-d99f" name="Your Orders Have Changed" hidden="false" collective="false" import="true" targetId="4882-882e-ddb8-bf28" type="selectionEntry" />
+    <entryLink id="54c4-2fa6-8dbb-753d" name="Snap Shot" hidden="false" collective="false" import="true" targetId="13ca-c241-aac0-b026" type="selectionEntry" />
+    <entryLink id="082e-4554-1459-a71a" name="Supply Drop" hidden="false" collective="false" import="true" targetId="11d1-86f1-ffe0-db1c" type="selectionEntry" />
+    <entryLink id="0bf1-a7b0-b657-7d60" name="Return to Sender" hidden="false" collective="false" import="true" targetId="3717-ca1c-afd8-0561" type="selectionEntry" />
+    <entryLink id="7656-675f-5231-927c" name="Finish the Fight" hidden="false" collective="false" import="true" targetId="c46b-ce3b-5609-8db6" type="selectionEntry" />
+    <entryLink id="e239-4c6c-51e3-1416" name="Our Time to Shine" hidden="false" collective="false" import="true" targetId="f512-ecea-10fd-9d30" type="selectionEntry" />
+    <entryLink id="8b46-9454-8a81-8874" name="Holograms" hidden="false" collective="false" import="true" targetId="cf69-615f-e96b-963d" type="selectionEntry" />
+    <entryLink id="d79c-5e7c-feda-1ef9" name="Reinforcements Incoming" hidden="false" collective="false" import="true" targetId="ce80-0678-454c-3fe1" type="selectionEntry" />
+    <entryLink id="65ca-6098-6b6d-57e1" name="Defiance" hidden="false" collective="false" import="true" targetId="1f10-6c7f-6b22-c151" type="selectionEntry" />
+    <entryLink id="5441-e351-6c98-f006" name="Rampage" hidden="false" collective="false" import="true" targetId="59f1-4cd1-d4d1-c22c" type="selectionEntry" />
+    <entryLink id="addf-4407-0d38-60c5" name="Alliance" hidden="false" collective="false" import="true" targetId="7937-a65c-6026-af2d" type="selectionEntry" />
+    <entryLink id="7bfa-0297-214c-2686" name="Unggoy Plasma Grenade Assault!" hidden="false" collective="false" import="true" targetId="7592-2d8b-cf06-e5a2" type="selectionEntry" />
+    <entryLink id="6409-69b0-91d0-6d76" name="Hand of Atriox" hidden="false" collective="false" import="true" targetId="eb89-2fed-de04-d865" type="selectionEntry" />
+    <entryLink id="0b2f-9bd1-29b0-73af" name="Bloodlust" hidden="false" collective="false" import="true" targetId="9d07-071b-5eb3-ef22" type="selectionEntry" />
+    <entryLink id="1faf-d5df-8d49-bc33" name="Pack Brothers" hidden="false" collective="false" import="true" targetId="1c50-46f2-6789-0649" type="selectionEntry" />
+    <entryLink id="08ea-ca74-9275-b53a" name="Extra Cmd Die (every round)" hidden="false" collective="false" import="true" targetId="702a-f5d7-702c-739b" type="selectionEntry" />
+    <entryLink id="5d66-6db8-2169-70b4" name="2x Extra Cmd Die (single use)" hidden="false" collective="false" import="true" targetId="aba7-4421-0838-73b7" type="selectionEntry" />
+    <entryLink id="ee26-449c-26de-4b06" name="Extra Cmd Die (one use)" hidden="false" collective="false" import="true" targetId="8b5f-3a24-d779-45fc" type="selectionEntry" />
+    <entryLink id="7e93-6564-0068-4854" name="Extra d8 (one use)" hidden="false" collective="false" import="true" targetId="8cea-b03b-98b1-b5a1" type="selectionEntry" />
+  </entryLinks>
+</catalogue>

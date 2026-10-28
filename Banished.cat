@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<catalogue id="6816-5daf-88dc-898b" name="Banished" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="61c2-d61f-70a4-4d68" gameSystemRevision="1" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <readme>Banished fireteam: Sangheili, Jiralhanae, Unggoy and Kig-Yar mix freely. Pick the detachment in Fireteam setup (Jiralhanae Hunting Party or none). Tournament-legal path.</readme>
+  <forceEntries>
+    <forceEntry id="1d64-b569-8f5d-8aac" name="Banished Fireteam" hidden="false">
+      <categoryLinks>
+        <categoryLink id="3c21-7283-bef2-88cb" name="Configuration" hidden="false" targetId="eab0-61fb-ffe7-6234" primary="false" />
+        <categoryLink id="e909-4b0b-3c2c-c837" name="Sangheili" hidden="false" targetId="76d6-aa41-a970-e81a" primary="false" />
+        <categoryLink id="66bb-73af-993b-47bb" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="false" />
+        <categoryLink id="6bb5-cec8-b6da-8079" name="Unggoy" hidden="false" targetId="5c4d-42ee-4f9f-c4a6" primary="false" />
+        <categoryLink id="8dac-a62f-7d90-4393" name="Kig-Yar" hidden="false" targetId="083a-640e-69e2-d56c" primary="false" />
+        <categoryLink id="c3bd-2681-8cde-5520" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2492-dab8-260c-df4b" type="min" />
+          </constraints>
+        </categoryLink>
+        <categoryLink id="dd61-11c2-5691-47a3" name="Special Orders" hidden="false" targetId="d703-104b-21a0-c90f" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="116b-5929-3d13-640a" type="min" />
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7bbb-cbb4-344b-5ff9" type="max" />
+          </constraints>
+        </categoryLink>
+        <categoryLink id="b81c-748e-9cd4-23e2" name="Command Upgrades" hidden="false" targetId="8bdc-911c-6856-85fb" primary="false" />
+        <categoryLink id="3163-bcff-bb2c-1c49" name="Fireteam Upgrades" hidden="false" targetId="2513-309c-fd84-eddb" primary="false" />
+      </categoryLinks>
+    </forceEntry>
+  </forceEntries>
+  <entryLinks>
+    <entryLink id="9d9a-3001-c404-54c3" name="Fireteam setup (Banished)" hidden="false" collective="false" import="true" targetId="514f-2a5a-1e4a-426c" type="selectionEntry" />
+    <entryLink id="eb4d-3d18-ce34-0852" name="Sangheili Mercenary" hidden="false" collective="false" import="true" targetId="3d52-9f42-39d5-df9d" type="selectionEntry" />
+    <entryLink id="4eaa-72b5-5ac1-e998" name="Sangheili Enforcer" hidden="false" collective="false" import="true" targetId="910e-7ac0-c495-531e" type="selectionEntry" />
+    <entryLink id="e0e2-f138-3cd5-f458" name="Jega 'Rdomnai (Banished Legend)" hidden="false" collective="false" import="true" targetId="8866-1550-87dc-0cdb" type="selectionEntry" />
+    <entryLink id="74bf-8bd8-9f12-bffe" name="Kig-Yar Sniper" hidden="false" collective="false" import="true" targetId="4559-b2a2-2ed8-e34c" type="selectionEntry" />
+    <entryLink id="9aad-5ed8-6c23-1839" name="Kig-Yar Freebooter" hidden="false" collective="false" import="true" targetId="f6e9-3648-45fd-80e2" type="selectionEntry" />
+    <entryLink id="cbc5-d161-2b6b-3d2a" name="Jiralhanae Warrior" hidden="false" collective="false" import="true" targetId="27e8-38cf-5607-65d0" type="selectionEntry" />
+    <entryLink id="2fbf-c9aa-23f7-d8d4" name="Jiralhanae Berserker" hidden="false" collective="false" import="true" targetId="6d06-6c5d-723f-0ae1" type="selectionEntry" />
+    <entryLink id="f786-ab04-160f-550f" name="Jiralhanae Sniper" hidden="false" collective="false" import="true" targetId="72ea-90e8-fc20-ad9c" type="selectionEntry" />
+    <entryLink id="974f-e53f-519a-7bb9" name="Jiralhanae Chosen Warrior" hidden="false" collective="false" import="true" targetId="cd1d-d628-f71a-40a6" type="selectionEntry" />
+    <entryLink id="bd40-de90-cb18-274c" name="Jiralhanae Captain" hidden="false" collective="false" import="true" targetId="8c4f-7d9f-5b0a-21f3" type="selectionEntry" />
+    <entryLink id="7371-0816-9ad4-c038" name="Tovarus (Jiralhanae Legend)" hidden="false" collective="false" import="true" targetId="edf6-a4cb-5afc-6f12" type="selectionEntry" />
+    <entryLink id="4df0-07f0-8ce8-3854" name="Hyperius (Jiralhanae Legend)" hidden="false" collective="false" import="true" targetId="c3c2-9338-9bc1-3de1" type="selectionEntry" />
+    <entryLink id="088d-cda2-c125-f76b" name="Atriox, Jiralhanae Warmaster (Banished Legend)" hidden="false" collective="false" import="true" targetId="768f-887e-b9f3-9df3" type="selectionEntry" />
+    <entryLink id="1a39-8cd3-a66f-d831" name="Unggoy Conscript" hidden="false" collective="false" import="true" targetId="daa8-a337-4cff-ba49" type="selectionEntry" />
+    <entryLink id="80d7-cc07-91db-5afa" name="Unggoy Assault" hidden="false" collective="false" import="true" targetId="fa4b-1349-510f-8e73" type="selectionEntry" />
+    <entryLink id="62b6-e9f1-215d-cff9" name="Berserk Rampage" hidden="false" collective="false" import="true" targetId="77c0-7201-fdf7-5073" type="selectionEntry" />
+    <entryLink id="0083-f7fc-b201-e14e" name="Reinforcements Incoming" hidden="false" collective="false" import="true" targetId="ce80-0678-454c-3fe1" type="selectionEntry" />
+    <entryLink id="0254-eb1b-71af-f909" name="Defiance" hidden="false" collective="false" import="true" targetId="1f10-6c7f-6b22-c151" type="selectionEntry" />
+    <entryLink id="fcb7-1e91-f7cf-2444" name="Aerial Deployment" hidden="false" collective="false" import="true" targetId="3179-54fb-3fdb-7b28" type="selectionEntry" />
+    <entryLink id="fca7-d598-8020-4719" name="Rampage" hidden="false" collective="false" import="true" targetId="59f1-4cd1-d4d1-c22c" type="selectionEntry" />
+    <entryLink id="877a-24f7-166f-e672" name="Defiance (JHP)" hidden="false" collective="false" import="true" targetId="257d-6831-5d29-75c2" type="selectionEntry" />
+    <entryLink id="3f55-3d0d-dbf5-4a82" name="Alliance" hidden="false" collective="false" import="true" targetId="7937-a65c-6026-af2d" type="selectionEntry" />
+    <entryLink id="5ac1-b763-1d5a-a43a" name="Unggoy Plasma Grenade Assault!" hidden="false" collective="false" import="true" targetId="7592-2d8b-cf06-e5a2" type="selectionEntry" />
+    <entryLink id="3e18-00ec-6b87-b0ad" name="Hand of Atriox" hidden="false" collective="false" import="true" targetId="eb89-2fed-de04-d865" type="selectionEntry" />
+    <entryLink id="d503-1529-156b-7dff" name="Bloodlust" hidden="false" collective="false" import="true" targetId="9d07-071b-5eb3-ef22" type="selectionEntry" />
+    <entryLink id="df4b-cd58-154d-3e96" name="Pack Brothers" hidden="false" collective="false" import="true" targetId="1c50-46f2-6789-0649" type="selectionEntry" />
+    <entryLink id="84ee-1ca3-0cc4-d320" name="Extra Cmd Die (every round)" hidden="false" collective="false" import="true" targetId="702a-f5d7-702c-739b" type="selectionEntry" />
+    <entryLink id="ff96-5059-a034-b2db" name="2x Extra Cmd Die (single use)" hidden="false" collective="false" import="true" targetId="aba7-4421-0838-73b7" type="selectionEntry" />
+    <entryLink id="8cae-156c-fe93-f167" name="Extra Cmd Die (one use)" hidden="false" collective="false" import="true" targetId="8b5f-3a24-d779-45fc" type="selectionEntry" />
+    <entryLink id="16d2-b573-e241-cfaa" name="Extra d8 (one use)" hidden="false" collective="false" import="true" targetId="8cea-b03b-98b1-b5a1" type="selectionEntry" />
+    <entryLink id="708d-6b8a-edc1-4605" name="Warmaster's Pack" hidden="false" collective="false" import="true" targetId="178a-92ff-aa2b-a9cd" type="selectionEntry" />
+    <entryLink id="9c75-40f7-1d4a-0042" name="Enraged" hidden="false" collective="false" import="true" targetId="53c5-f589-f30f-0da8" type="selectionEntry" />
+    <entryLink id="859d-57bd-b47a-385a" name="Veteran Heirlooms" hidden="false" collective="false" import="true" targetId="96e0-a830-4193-b456" type="selectionEntry" />
+    <entryLink id="5cfa-190e-55ee-b1e8" name="Tactical Display Unit" hidden="false" collective="false" import="true" targetId="558a-acce-9a75-8037" type="selectionEntry" />
+    <entryLink id="bdfd-76fb-531e-b9fd" name="Drop Pods" hidden="false" collective="false" import="true" targetId="131e-a106-9207-f994" type="selectionEntry" />
+    <entryLink id="fb70-f386-74da-83ee" name="Ambush Hunters" hidden="false" collective="false" import="true" targetId="ed3f-bee1-f7e1-866e" type="selectionEntry" />
+  </entryLinks>
+</catalogue>
