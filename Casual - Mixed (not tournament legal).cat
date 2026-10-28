@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<catalogue id="e2ae-511d-6428-889e" name="Casual - Mixed Human and Alien (not tournament legal)" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="61c2-d61f-70a4-4d68" gameSystemRevision="2" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e2ae-511d-6428-889e" name="Casual - Mixed Human and Alien (not tournament legal)" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="61c2-d61f-70a4-4d68" gameSystemRevision="3" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>CASUAL ONLY. Lets one list mix UNSC and Banished units. Tournament lists never mix humans and aliens. No detachments here.</readme>
   <forceEntries>
     <forceEntry id="34cd-1bfd-c9da-8697" name="Casual Mixed Fireteam (not tournament legal)" hidden="false">
@@ -19,6 +19,7 @@
         <categoryLink id="a326-25f7-06e5-1243" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="false" />
         <categoryLink id="3b37-2419-297f-1a3d" name="Grenades" hidden="false" targetId="539c-6c19-4e8f-bdb3" primary="false" />
         <categoryLink id="7df2-1375-45b7-c96b" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="false" />
+        <categoryLink id="1906-dda8-853b-98c8" name="Objective Items" hidden="false" targetId="98a4-2a82-7a3d-1735" primary="false" />
         <categoryLink id="6b96-4f67-afbe-8ba5" name="Special Orders" hidden="false" targetId="d703-104b-21a0-c90f" primary="false">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9f1a-3c59-c257-4937" type="min" />
@@ -135,6 +136,8 @@
     <entryLink id="bba0-19be-03b2-84d9" name="Explosive Ammo" hidden="false" collective="false" import="true" targetId="35ec-f4cb-59ec-9d01" type="selectionEntry" />
     <entryLink id="733e-be68-3295-3aab" name="Drop Wall" hidden="false" collective="false" import="true" targetId="2620-ca61-0c56-63a6" type="selectionEntry" />
     <entryLink id="6a39-ef2a-10b8-3bd9" name="Overshield" hidden="false" collective="false" import="true" targetId="0f10-1a8c-53c3-7040" type="selectionEntry" />
+    <entryLink id="9d47-bd43-6598-fe34" name="Oddball" hidden="false" collective="false" import="true" targetId="7b6b-59c7-7774-0759" type="selectionEntry" />
+    <entryLink id="b5cb-c190-700b-c065" name="Power Seeds" hidden="false" collective="false" import="true" targetId="4107-8d95-271d-2252" type="selectionEntry" />
     <entryLink id="508f-f53c-7e5b-56b9" name="Lone Wolf" hidden="false" collective="false" import="true" targetId="3ed6-167e-418c-ab16" type="selectionEntry" />
     <entryLink id="8a6a-a9f0-4fee-58c1" name="Hot Drop" hidden="false" collective="false" import="true" targetId="5547-f07d-a01f-411e" type="selectionEntry" />
     <entryLink id="6d17-af06-b28f-827d" name="Target Acquired" hidden="false" collective="false" import="true" targetId="6b65-ac2c-dacd-136a" type="selectionEntry" />

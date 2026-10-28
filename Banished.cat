@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<catalogue id="6816-5daf-88dc-898b" name="Banished" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="61c2-d61f-70a4-4d68" gameSystemRevision="2" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6816-5daf-88dc-898b" name="Banished" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="61c2-d61f-70a4-4d68" gameSystemRevision="3" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>Banished fireteam: Sangheili, Jiralhanae, Unggoy and Kig-Yar mix freely. Pick the detachment in Fireteam setup (Jiralhanae Hunting Party or none). Tournament-legal path.</readme>
   <forceEntries>
     <forceEntry id="1d64-b569-8f5d-8aac" name="Banished Fireteam" hidden="false">
@@ -17,6 +17,7 @@
         <categoryLink id="08cb-fdcc-e4cb-5c53" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="false" />
         <categoryLink id="26b6-4fc7-dc91-3609" name="Grenades" hidden="false" targetId="539c-6c19-4e8f-bdb3" primary="false" />
         <categoryLink id="c43a-86ea-525f-f7bc" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="false" />
+        <categoryLink id="3567-95a3-b247-396a" name="Objective Items" hidden="false" targetId="98a4-2a82-7a3d-1735" primary="false" />
         <categoryLink id="dd61-11c2-5691-47a3" name="Special Orders" hidden="false" targetId="d703-104b-21a0-c90f" primary="false">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="116b-5929-3d13-640a" type="min" />
@@ -106,6 +107,8 @@
     <entryLink id="1fcc-b38c-1b1a-d957" name="Explosive Ammo" hidden="false" collective="false" import="true" targetId="35ec-f4cb-59ec-9d01" type="selectionEntry" />
     <entryLink id="116f-5cdc-8272-6929" name="Drop Wall" hidden="false" collective="false" import="true" targetId="2620-ca61-0c56-63a6" type="selectionEntry" />
     <entryLink id="b197-17fb-30db-2373" name="Overshield" hidden="false" collective="false" import="true" targetId="0f10-1a8c-53c3-7040" type="selectionEntry" />
+    <entryLink id="8dc3-29f0-09c9-35d7" name="Oddball" hidden="false" collective="false" import="true" targetId="7b6b-59c7-7774-0759" type="selectionEntry" />
+    <entryLink id="9c9d-ad35-6c8b-e2da" name="Power Seeds" hidden="false" collective="false" import="true" targetId="4107-8d95-271d-2252" type="selectionEntry" />
     <entryLink id="62b6-e9f1-215d-cff9" name="Berserk Rampage" hidden="false" collective="false" import="true" targetId="77c0-7201-fdf7-5073" type="selectionEntry" />
     <entryLink id="0083-f7fc-b201-e14e" name="Reinforcements Incoming" hidden="false" collective="false" import="true" targetId="ce80-0678-454c-3fe1" type="selectionEntry" />
     <entryLink id="0254-eb1b-71af-f909" name="Defiance" hidden="false" collective="false" import="true" targetId="1f10-6c7f-6b22-c151" type="selectionEntry" />
