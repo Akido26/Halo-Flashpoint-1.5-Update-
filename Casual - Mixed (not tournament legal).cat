@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<catalogue id="e2ae-511d-6428-889e" name="Casual - Mixed Human and Alien (not tournament legal)" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="61c2-d61f-70a4-4d68" gameSystemRevision="1" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e2ae-511d-6428-889e" name="Casual - Mixed Human and Alien (not tournament legal)" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="61c2-d61f-70a4-4d68" gameSystemRevision="2" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>CASUAL ONLY. Lets one list mix UNSC and Banished units. Tournament lists never mix humans and aliens. No detachments here.</readme>
   <forceEntries>
     <forceEntry id="34cd-1bfd-c9da-8697" name="Casual Mixed Fireteam (not tournament legal)" hidden="false">
@@ -16,6 +16,9 @@
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2889-5149-6072-9762" type="min" />
           </constraints>
         </categoryLink>
+        <categoryLink id="a326-25f7-06e5-1243" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="false" />
+        <categoryLink id="3b37-2419-297f-1a3d" name="Grenades" hidden="false" targetId="539c-6c19-4e8f-bdb3" primary="false" />
+        <categoryLink id="7df2-1375-45b7-c96b" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="false" />
         <categoryLink id="6b96-4f67-afbe-8ba5" name="Special Orders" hidden="false" targetId="d703-104b-21a0-c90f" primary="false">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9f1a-3c59-c257-4937" type="min" />
@@ -69,6 +72,69 @@
     <entryLink id="2aba-4295-baf1-1f8b" name="Atriox, Jiralhanae Warmaster (Banished Legend)" hidden="false" collective="false" import="true" targetId="768f-887e-b9f3-9df3" type="selectionEntry" />
     <entryLink id="b18e-71d1-076a-b97e" name="Unggoy Conscript" hidden="false" collective="false" import="true" targetId="daa8-a337-4cff-ba49" type="selectionEntry" />
     <entryLink id="c675-ace6-90ee-8501" name="Unggoy Assault" hidden="false" collective="false" import="true" targetId="fa4b-1349-510f-8e73" type="selectionEntry" />
+    <entryLink id="afc6-06e7-7d55-69ed" name="M6 Spartan Laser" hidden="false" collective="false" import="true" targetId="8b94-efb3-59f4-db29" type="selectionEntry" />
+    <entryLink id="37c3-6ba9-dbe4-dd81" name="Gravity Hammer" hidden="false" collective="false" import="true" targetId="8a63-c042-c023-d322" type="selectionEntry" />
+    <entryLink id="fadc-f6d6-6497-d12e" name="Energy Sword" hidden="false" collective="false" import="true" targetId="437d-a383-5b31-8e6d" type="selectionEntry" />
+    <entryLink id="768e-b0e4-77ed-b9f6" name="Skewer" hidden="false" collective="false" import="true" targetId="d4a3-59c2-65c5-d837" type="selectionEntry" />
+    <entryLink id="bdca-c6f8-880b-ce9f" name="Fuel Rod Gun" hidden="false" collective="false" import="true" targetId="a27d-db87-96c0-bfd6" type="selectionEntry" />
+    <entryLink id="9bf6-0887-9a47-3bb2" name="M41 SPNKr" hidden="false" collective="false" import="true" targetId="6e20-dbef-dca5-36c4" type="selectionEntry" />
+    <entryLink id="635d-cff6-086f-a8bc" name="Covenant Carbine" hidden="false" collective="false" import="true" targetId="f4c4-b526-ba29-4345" type="selectionEntry" />
+    <entryLink id="e11a-d6f4-f20c-43bd" name="Brute Shot" hidden="false" collective="false" import="true" targetId="bc6f-e296-4328-6589" type="selectionEntry" />
+    <entryLink id="cf14-823a-5309-13e0" name="BR75 Battle Rifle" hidden="false" collective="false" import="true" targetId="a099-20e4-f975-fc25" type="selectionEntry" />
+    <entryLink id="c9f4-f44d-a7d2-41f3" name="Shock Rifle" hidden="false" collective="false" import="true" targetId="ba41-1399-9731-7b5c" type="selectionEntry" />
+    <entryLink id="eb43-d633-b974-1390" name="Plasma Launcher" hidden="false" collective="false" import="true" targetId="d54d-1505-b3b0-fb46" type="selectionEntry" />
+    <entryLink id="529e-6581-23c1-6489" name="M7057 Flamethrower" hidden="false" collective="false" import="true" targetId="af99-6ee2-4ce9-b8ec" type="selectionEntry" />
+    <entryLink id="ba48-03a1-c623-3994" name="M319 Grenade Launcher" hidden="false" collective="false" import="true" targetId="4ca9-7f02-f4a9-9188" type="selectionEntry" />
+    <entryLink id="7c70-7e72-246d-fb31" name="Spike Rifle" hidden="false" collective="false" import="true" targetId="4921-063a-26a6-408f" type="selectionEntry" />
+    <entryLink id="44f6-0834-8aa6-7289" name="S7 Sniper Rifle" hidden="false" collective="false" import="true" targetId="cb87-c536-2da1-87c9" type="selectionEntry" />
+    <entryLink id="c9ea-8bb7-b587-5d3b" name="Ravager" hidden="false" collective="false" import="true" targetId="8597-6852-3eb7-4cbf" type="selectionEntry" />
+    <entryLink id="2b9c-37ee-f483-1c94" name="Focus Rifle" hidden="false" collective="false" import="true" targetId="0f34-b48c-4442-3fab" type="selectionEntry" />
+    <entryLink id="4475-311e-6fce-90eb" name="BR55 Battle Rifle" hidden="false" collective="false" import="true" targetId="27bf-42b1-28db-609b" type="selectionEntry" />
+    <entryLink id="fd93-8086-c03b-2072" name="Sentinel Beam" hidden="false" collective="false" import="true" targetId="dbf1-c673-01a9-7655" type="selectionEntry" />
+    <entryLink id="19e6-b846-d93a-471e" name="Plasma Rifle" hidden="false" collective="false" import="true" targetId="216d-527e-abbb-ac43" type="selectionEntry" />
+    <entryLink id="554e-3292-92c3-3c45" name="Needle Rifle" hidden="false" collective="false" import="true" targetId="df44-f548-23ab-1ba9" type="selectionEntry" />
+    <entryLink id="6368-d858-430c-977e" name="M45 Shotgun" hidden="false" collective="false" import="true" targetId="0831-0a27-6152-8aa6" type="selectionEntry" />
+    <entryLink id="f640-ea4e-6dd5-42d5" name="M392 DMR" hidden="false" collective="false" import="true" targetId="b793-744c-e7c0-956e" type="selectionEntry" />
+    <entryLink id="9dd5-1c77-71a7-9ba3" name="Concussion Rifle" hidden="false" collective="false" import="true" targetId="4006-7650-5aeb-50d8" type="selectionEntry" />
+    <entryLink id="4e8d-7801-dd23-853e" name="VK78 Commando" hidden="false" collective="false" import="true" targetId="1937-244f-423e-9aab" type="selectionEntry" />
+    <entryLink id="523b-01ea-6016-db4f" name="MLRS-2 Hydra" hidden="false" collective="false" import="true" targetId="21fa-bdba-8e2a-01fe" type="selectionEntry" />
+    <entryLink id="4b20-b7e1-410b-0d5b" name="MA40 Assault Rifle" hidden="false" collective="false" import="true" targetId="2b54-a146-7ae2-93ba" type="selectionEntry" />
+    <entryLink id="652e-37e7-6420-8f89" name="M90 Shotgun" hidden="false" collective="false" import="true" targetId="34cd-258a-1aab-8de1" type="selectionEntry" />
+    <entryLink id="2d7c-2021-b5df-3b33" name="M7S SMG" hidden="false" collective="false" import="true" targetId="c1d9-77eb-9085-3804" type="selectionEntry" />
+    <entryLink id="5426-3d3a-5804-081c" name="Stalker Rifle" hidden="false" collective="false" import="true" targetId="d382-1049-3988-c13e" type="selectionEntry" />
+    <entryLink id="65a0-5e72-2f0b-e5d4" name="Plasma Repeater" hidden="false" collective="false" import="true" targetId="3d23-2521-b1bb-67ca" type="selectionEntry" />
+    <entryLink id="ded0-2323-32bb-4ff1" name="Needler" hidden="false" collective="false" import="true" targetId="c401-40ae-cfa3-5f44" type="selectionEntry" />
+    <entryLink id="7c25-9435-af47-66de" name="Mangler" hidden="false" collective="false" import="true" targetId="df63-e40a-6578-54c1" type="selectionEntry" />
+    <entryLink id="8b6d-b748-a82d-2c28" name="Pulse Carbine" hidden="false" collective="false" import="true" targetId="c2d1-0c98-6c70-3e11" type="selectionEntry" />
+    <entryLink id="c93e-aad4-c8c3-309e" name="M6G Magnum" hidden="false" collective="false" import="true" targetId="2cc0-6cf7-79f2-3aa8" type="selectionEntry" />
+    <entryLink id="8c19-108f-9efa-2817" name="Heatwave" hidden="false" collective="false" import="true" targetId="ed24-e91f-5069-4215" type="selectionEntry" />
+    <entryLink id="15fe-4e1f-e798-97c7" name="H-165 Target Locator" hidden="false" collective="false" import="true" targetId="5b9a-37fc-24bc-fa29" type="selectionEntry" />
+    <entryLink id="ba71-89f3-0850-1a8f" name="CQS48 Bulldog" hidden="false" collective="false" import="true" targetId="ca8f-d5a3-b3f6-80c6" type="selectionEntry" />
+    <entryLink id="ff5b-2f61-141d-6e54" name="Cindershot" hidden="false" collective="false" import="true" targetId="41ca-68b4-98f4-fe98" type="selectionEntry" />
+    <entryLink id="a36b-e3e5-9acd-abfb" name="Mauler" hidden="false" collective="false" import="true" targetId="84f9-9066-4884-3869" type="selectionEntry" />
+    <entryLink id="c870-6686-6907-0239" name="MA5K 'Avenger' Carbine" hidden="false" collective="false" import="true" targetId="485f-f1cc-cfda-9db1" type="selectionEntry" />
+    <entryLink id="3603-317a-e31c-5db1" name="M6C/SOCOM" hidden="false" collective="false" import="true" targetId="f433-3957-c4ff-8b46" type="selectionEntry" />
+    <entryLink id="3b85-91fe-6c67-6640" name="M11 Combat Knife" hidden="false" collective="false" import="true" targetId="071a-cdce-0907-0f31" type="selectionEntry" />
+    <entryLink id="e8fb-49e3-e9f6-9484" name="Energy Dagger" hidden="false" collective="false" import="true" targetId="8dab-8772-2be1-a1ef" type="selectionEntry" />
+    <entryLink id="b06a-23ac-cde6-f344" name="Disruptor" hidden="false" collective="false" import="true" targetId="2129-26df-7bf3-68fc" type="selectionEntry" />
+    <entryLink id="09c8-6004-f7ce-05b2" name="Combat Knife" hidden="false" collective="false" import="true" targetId="2783-acf5-87d3-061b" type="selectionEntry" />
+    <entryLink id="d50a-56a0-eed2-2a89" name="Demo Charge" hidden="false" collective="false" import="true" targetId="042f-62c6-d521-7f5d" type="selectionEntry" />
+    <entryLink id="1c39-5cf2-8c3d-432d" name="Plasma Grenade" hidden="false" collective="false" import="true" targetId="962f-6b08-205e-1f82" type="selectionEntry" />
+    <entryLink id="8598-bc69-98f6-189d" name="Frag Grenade" hidden="false" collective="false" import="true" targetId="9014-f0b3-15b4-56c7" type="selectionEntry" />
+    <entryLink id="d265-519b-72f3-98df" name="Dynamo Grenade" hidden="false" collective="false" import="true" targetId="4109-b740-be31-762c" type="selectionEntry" />
+    <entryLink id="cb3a-7563-ba13-6071" name="Spike Grenade" hidden="false" collective="false" import="true" targetId="234b-5694-eb4d-5a4d" type="selectionEntry" />
+    <entryLink id="ed62-f6f6-bf8a-7701" name="Hardlight Shield" hidden="false" collective="false" import="true" targetId="84ef-72c4-ac02-defb" type="selectionEntry" />
+    <entryLink id="c871-a1ce-1146-81fe" name="Repair Field" hidden="false" collective="false" import="true" targetId="4cd8-ab1b-9f07-6569" type="selectionEntry" />
+    <entryLink id="e9d3-3617-2176-ca83" name="Grappleshot" hidden="false" collective="false" import="true" targetId="8f50-b256-41f9-0623" type="selectionEntry" />
+    <entryLink id="96da-fc37-9a0d-0c05" name="Health Pack" hidden="false" collective="false" import="true" targetId="ffd8-ed50-80f6-4dc4" type="selectionEntry" />
+    <entryLink id="61bf-1861-85cb-b4bd" name="Quantum Translocator" hidden="false" collective="false" import="true" targetId="864a-bb8d-a569-1ddc" type="selectionEntry" />
+    <entryLink id="61cb-73d2-6b43-f1fc" name="Threat Sensor" hidden="false" collective="false" import="true" targetId="7410-8e86-6589-26d1" type="selectionEntry" />
+    <entryLink id="0232-06fb-8346-7906" name="Shroud Screen" hidden="false" collective="false" import="true" targetId="3304-52c2-0061-b520" type="selectionEntry" />
+    <entryLink id="cdf1-1cd7-8ed4-a82e" name="Thruster" hidden="false" collective="false" import="true" targetId="dfc3-116e-e016-bde4" type="selectionEntry" />
+    <entryLink id="812e-5bac-cd86-780a" name="Active Camo" hidden="false" collective="false" import="true" targetId="0f21-c4b0-d0a2-5c9b" type="selectionEntry" />
+    <entryLink id="bba0-19be-03b2-84d9" name="Explosive Ammo" hidden="false" collective="false" import="true" targetId="35ec-f4cb-59ec-9d01" type="selectionEntry" />
+    <entryLink id="733e-be68-3295-3aab" name="Drop Wall" hidden="false" collective="false" import="true" targetId="2620-ca61-0c56-63a6" type="selectionEntry" />
+    <entryLink id="6a39-ef2a-10b8-3bd9" name="Overshield" hidden="false" collective="false" import="true" targetId="0f10-1a8c-53c3-7040" type="selectionEntry" />
     <entryLink id="508f-f53c-7e5b-56b9" name="Lone Wolf" hidden="false" collective="false" import="true" targetId="3ed6-167e-418c-ab16" type="selectionEntry" />
     <entryLink id="8a6a-a9f0-4fee-58c1" name="Hot Drop" hidden="false" collective="false" import="true" targetId="5547-f07d-a01f-411e" type="selectionEntry" />
     <entryLink id="6d17-af06-b28f-827d" name="Target Acquired" hidden="false" collective="false" import="true" targetId="6b65-ac2c-dacd-136a" type="selectionEntry" />

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<gameSystem id="61c2-d61f-70a4-4d68" name="Halo: Flashpoint (Chief's v1.5 data)" revision="1" battleScribeVersion="2.03" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
-  <readme>Unofficial, homebrew list-building data for Halo: Flashpoint v1.5 (Mantic Games), updated 27 Oct 2026 from the Mantic official list builder (points) and Sept 2026 1.5 errata (stats/keywords). Names, stats, points and short rule summaries only; see Mantic's Halo: Flashpoint Index for full rules. Equipment: max 2 of each item and each grenade per fireteam (Big Team Battles use 4 of each — raise the max by hand for BTB); up to 2 different items and 2 grenade types per model. Extra weapons once each per fireteam. Special Orders 1–3. Humans and aliens never mix in tournament lists. Mantic's site wins over this data.</readme>
+<gameSystem id="61c2-d61f-70a4-4d68" name="Halo: Flashpoint (Chief's v1.5 data)" revision="2" battleScribeVersion="2.03" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+  <readme>Unofficial, homebrew list-building data for Halo: Flashpoint v1.5 (Mantic Games), updated 27 Oct 2026 from the Mantic official list builder (points) and Sept 2026 1.5 errata (stats/keywords). Names, stats, points and short rule summaries only; see Mantic's Halo: Flashpoint Index for full rules. Weapons, Grenades and Items are bought from their own left-menu categories, then attached to a unit with the chain-link button (same NR Leading associations as 40k characters). Max 2 of each item/grenade per fireteam (BTB: raise to 4 by hand); max 1 of each extra weapon per fireteam. Soft (player-checked): up to 2 different items and 2 grenade types per model. Special Orders 1–3. Humans and aliens never mix in tournament lists. Mantic's site wins over this data.</readme>
   <costTypes>
     <costType id="3661-1187-b063-f00f" name="Points" defaultCostLimit="200.0" hidden="false" />
   </costTypes>
@@ -58,6 +58,9 @@
     <categoryEntry id="8bdc-911c-6856-85fb" name="Command Upgrades" hidden="false" />
     <categoryEntry id="2513-309c-fd84-eddb" name="Fireteam Upgrades" hidden="false" />
     <categoryEntry id="e837-d1d4-9fa0-a21a" name="Fireteam Model" hidden="false" />
+    <categoryEntry id="f2b5-da64-fa98-39eb" name="Weapons" hidden="false" />
+    <categoryEntry id="539c-6c19-4e8f-bdb3" name="Grenades" hidden="false" />
+    <categoryEntry id="483f-3fa1-11d6-bda4" name="Items" hidden="false" />
     <categoryEntry id="9655-442a-9c02-0bcf" name="UNSC" hidden="false" />
     <categoryEntry id="f4d5-f2da-e388-a1d4" name="Banished" hidden="false" />
     <categoryEntry id="9824-3651-2dac-2542" name="Legend" hidden="false" />
@@ -108,6 +111,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="8b94-efb3-59f4-db29" name="M6 Spartan Laser" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cfb3-c442-b93f-3245" type="max" />
       </constraints>
@@ -126,6 +130,61 @@
         <infoLink id="8659-5a66-a0f2-c9fc" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
         <infoLink id="82eb-55bf-8561-3268" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="bb68-1236-409f-51ce" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="d190-116d-9285-51aa" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="763c-596d-3d92-fa01" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -141,6 +200,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="8a63-c042-c023-d322" name="Gravity Hammer" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="db47-ec92-ac1f-6712" type="max" />
       </constraints>
@@ -167,6 +227,61 @@
         <infoLink id="6f23-11d7-7a3d-61b8" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
         <infoLink id="f117-758e-6e4d-4e7f" name="Smash [n]" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="dbe2-71d5-d0ca-49a9" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="33e2-8bfc-8251-501f" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="e235-9f0a-bd74-2317" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -182,6 +297,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="437d-a383-5b31-8e6d" name="Energy Sword" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7725-388a-9267-b2ba" type="max" />
       </constraints>
@@ -206,6 +322,61 @@
         <infoLink id="271d-b76a-55be-116c" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
         <infoLink id="f8fa-2227-ee4e-afb6" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="6069-9bc1-545d-1870" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="355d-39d3-3112-1c7a" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="81c8-71a5-8ebb-70f3" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -221,6 +392,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="d4a3-59c2-65c5-d837" name="Skewer" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f3d1-19fe-4803-9ca4" type="max" />
       </constraints>
@@ -239,6 +411,61 @@
         <infoLink id="2159-9ad4-0a40-595e" name="Long" hidden="false" targetId="6d8a-c297-e299-855e" type="rule" />
         <infoLink id="055a-493f-890f-18aa" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="9a6f-bb01-6771-299b" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="eb6b-6c76-8bff-4776" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="1ae2-e739-7658-b77f" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -254,6 +481,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="a27d-db87-96c0-bfd6" name="Fuel Rod Gun" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ec42-279a-bc95-d8c7" type="max" />
       </constraints>
@@ -273,6 +501,61 @@
         <infoLink id="4b5e-0ca4-776a-495d" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
         <infoLink id="3fe6-607b-f9d3-6709" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="ffe2-5dff-4d6f-39e6" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="d227-3668-8d95-8f8f" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="ecb1-4888-1f9b-845a" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -288,6 +571,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="6e20-dbef-dca5-36c4" name="M41 SPNKr" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3a71-4274-b40d-cd79" type="max" />
       </constraints>
@@ -307,6 +591,61 @@
         <infoLink id="3148-a859-1fb2-e3da" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
         <infoLink id="e382-5c09-f704-6cf2" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="7f7e-b08e-37b0-02cd" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="3d62-036f-d78f-e33f" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="b004-036a-04f7-f0b1" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -322,6 +661,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="f4c4-b526-ba29-4345" name="Covenant Carbine" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3376-8a23-57ca-4ab5" type="max" />
       </constraints>
@@ -339,6 +679,61 @@
         <infoLink id="14fd-617d-0bc7-ef4d" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
         <infoLink id="0c92-a496-5dfc-31cb" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="207f-ebe5-6cb5-bd28" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="9a4f-b6f3-d531-dd5d" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="2fbf-4e0e-b7ab-30cc" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -354,6 +749,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="bc6f-e296-4328-6589" name="Brute Shot" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6ea7-82ba-915d-b3e4" type="max" />
       </constraints>
@@ -381,6 +777,61 @@
         <infoLink id="e71e-a278-6986-7075" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
         <infoLink id="e5be-79b6-0577-bfd4" name="Smash [n]" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="8dc6-b9b0-0b54-b943" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="1872-ccd5-c495-099d" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="0329-b8e7-ccc3-e062" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -396,6 +847,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="a099-20e4-f975-fc25" name="BR75 Battle Rifle" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1115-bf39-8805-2ef5" type="max" />
       </constraints>
@@ -413,6 +865,61 @@
         <infoLink id="957a-a50b-f841-be27" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
         <infoLink id="5ab1-3a5c-99c2-1456" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="da98-696a-7a4c-711b" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="21b0-f2d1-fed3-6832" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="7982-7552-5cfd-635d" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -428,6 +935,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="ba41-1399-9731-7b5c" name="Shock Rifle" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6259-7960-32b4-0506" type="max" />
       </constraints>
@@ -445,6 +953,61 @@
         <infoLink id="6b7e-e8e3-1533-35e0" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
         <infoLink id="f186-c9b2-1790-20fe" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="753a-95cc-0f61-66ed" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="6b29-2ce8-3dff-39c4" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="9830-e4d0-a9be-717c" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -460,6 +1023,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="d54d-1505-b3b0-fb46" name="Plasma Launcher" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="afdd-fc2f-c499-cb0f" type="max" />
       </constraints>
@@ -478,6 +1042,61 @@
         <infoLink id="733f-d5b1-8f2b-81e2" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
         <infoLink id="9467-25b5-8d79-5838" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="3fc3-cffc-c67f-e123" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="345b-8000-8e87-a9f4" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="b935-e298-a6f3-029c" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -493,6 +1112,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="af99-6ee2-4ce9-b8ec" name="M7057 Flamethrower" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4df3-12c7-5f72-2a02" type="max" />
       </constraints>
@@ -510,6 +1130,61 @@
         <infoLink id="7f76-61fd-56d5-44a2" name="Incendiary [n]" hidden="false" targetId="9ee0-1406-ed70-3db1" type="rule" />
         <infoLink id="0da0-0d41-62b2-764d" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="d40f-a015-d017-d2c1" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="4cd1-ce35-b85c-75a0" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="4411-bfd0-7917-43b2" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -525,6 +1200,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="4ca9-7f02-f4a9-9188" name="M319 Grenade Launcher" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="60d8-4110-a601-928d" type="max" />
       </constraints>
@@ -550,6 +1226,61 @@
         <infoLink id="fa44-ad8d-8c8c-8dc7" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
         <infoLink id="5327-2b5c-e11e-1745" name="EMP" hidden="false" targetId="eae8-da8a-08f0-ac08" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="b0d4-9749-b36b-8a41" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="892d-2019-1f8f-f150" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="36c8-cbbc-374e-56ab" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -565,6 +1296,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="4921-063a-26a6-408f" name="Spike Rifle" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3468-c66f-234b-66ff" type="max" />
       </constraints>
@@ -590,6 +1322,61 @@
         <infoLink id="468a-a27e-1173-750b" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
         <infoLink id="8441-e1e9-43d1-33ba" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="7c05-998e-9410-c7c0" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="44f0-fe48-ebd9-d9a0" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="48d1-0bbd-73b9-e212" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -605,6 +1392,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="cb87-c536-2da1-87c9" name="S7 Sniper Rifle" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="25ec-fe87-bd1b-b05d" type="max" />
       </constraints>
@@ -622,6 +1410,61 @@
         <infoLink id="c210-8d99-1558-8ab5" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
         <infoLink id="b060-5a9f-a80c-d2e9" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="e744-c435-4602-cf22" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="d13b-8a94-b7b9-cb37" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="05ff-52c2-424b-45b0" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -637,6 +1480,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="8597-6852-3eb7-4cbf" name="Ravager" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fb2c-ca01-26d7-8ee1" type="max" />
       </constraints>
@@ -672,6 +1516,61 @@
         <infoLink id="544e-bd0a-2857-17ff" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
         <infoLink id="aa52-c40e-3ba0-c325" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="fe14-8b57-8f7c-14e2" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="7f0c-6c0f-8ffd-795d" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="17c4-57a7-73ac-0d63" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -687,6 +1586,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="0f34-b48c-4442-3fab" name="Focus Rifle" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="db09-91b6-1d40-d0d6" type="max" />
       </constraints>
@@ -706,6 +1606,61 @@
         <infoLink id="efbd-e9a9-e231-f75c" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
         <infoLink id="dc87-e121-c0ae-54bb" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="0eee-e971-a0e3-4a3a" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="00b4-cbed-bfab-5c1b" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="03a3-78c1-e3f3-b04e" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -721,6 +1676,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="27bf-42b1-28db-609b" name="BR55 Battle Rifle" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d2d3-090b-0785-beab" type="max" />
       </constraints>
@@ -737,6 +1693,61 @@
         <infoLink id="08d0-285c-0eb5-7b23" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
         <infoLink id="0a93-8133-44f8-6da8" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="c6c9-840f-831c-eebb" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="7a54-3f53-52d8-448a" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="7e50-251a-24c9-b431" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -752,6 +1763,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="dbf1-c673-01a9-7655" name="Sentinel Beam" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ca08-cd91-e246-3320" type="max" />
       </constraints>
@@ -768,6 +1780,61 @@
         <infoLink id="1979-af0e-3c6d-75a9" name="Continuous Fire" hidden="false" targetId="8af9-c2bd-d5cf-49de" type="rule" />
         <infoLink id="8ed1-9739-b658-14e0" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="faa2-3d20-de11-e31c" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="5695-50a8-5811-b3b1" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="12ad-6cde-2128-435f" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -783,6 +1850,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="216d-527e-abbb-ac43" name="Plasma Rifle" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fea5-a7e4-3f2b-cf60" type="max" />
       </constraints>
@@ -800,6 +1868,61 @@
         <infoLink id="e4ea-813d-de8a-1e51" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
         <infoLink id="6b9c-9ff7-f018-78d0" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="2fdf-59eb-919b-da27" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="b2e6-3632-1ea7-ead3" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="4365-7b9e-d99b-a5d4" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -815,6 +1938,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="df44-f548-23ab-1ba9" name="Needle Rifle" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7d25-b0f3-a629-2224" type="max" />
       </constraints>
@@ -832,6 +1956,61 @@
         <infoLink id="c079-5f5e-c169-55cf" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
         <infoLink id="656a-be4c-1c46-cd68" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="83df-51b6-d77d-b339" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="de5a-18f9-82f9-14d9" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="f2df-cfba-b2ab-0033" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -847,6 +2026,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="0831-0a27-6152-8aa6" name="M45 Shotgun" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2197-5bd9-298d-5653" type="max" />
       </constraints>
@@ -864,6 +2044,61 @@
         <infoLink id="c908-33d0-db1d-285a" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
         <infoLink id="9a86-fcd4-2b26-5df8" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="e083-f0d7-b75c-6812" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="278d-0ff7-1da7-14fc" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="df5d-8ef7-882a-3ab4" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -879,6 +2114,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="b793-744c-e7c0-956e" name="M392 DMR" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7ad5-a48a-7a2b-62f0" type="max" />
       </constraints>
@@ -895,6 +2131,61 @@
         <infoLink id="2928-4727-e317-cf9f" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
         <infoLink id="e951-6a3f-d2a3-94b4" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="d392-5546-b6e5-f8b4" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="3598-ad29-654e-b5f1" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="56ba-586c-1ce1-e215" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -910,6 +2201,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="4006-7650-5aeb-50d8" name="Concussion Rifle" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f90b-af03-758e-b6ca" type="max" />
       </constraints>
@@ -928,6 +2220,61 @@
         <infoLink id="a8f5-1826-e5dd-501e" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
         <infoLink id="6c3e-3f47-b0e0-a0ff" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="c1b4-63be-9d56-b15d" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="4a9f-b781-74a7-b3f5" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="37f7-4e70-c0b5-8308" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -943,6 +2290,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="1937-244f-423e-9aab" name="VK78 Commando" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0a88-3181-685c-9ea7" type="max" />
       </constraints>
@@ -959,6 +2307,61 @@
         <infoLink id="3440-978f-da54-76ff" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
         <infoLink id="dda0-9a2f-56eb-ab6d" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="3f61-0953-d703-0ba7" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="cf3f-0286-f8b9-4949" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="be30-2cd8-9213-ba5f" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -974,6 +2377,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="21fa-bdba-8e2a-01fe" name="MLRS-2 Hydra" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c23d-f1f9-7b3a-8b65" type="max" />
       </constraints>
@@ -992,6 +2396,61 @@
         <infoLink id="68cb-f75c-5f93-b72e" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
         <infoLink id="23ef-cab2-789b-e84f" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="bb4a-b054-a85d-3f81" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="52fe-e3d0-e871-9bd3" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="25a8-4bb5-dc7f-b60e" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1007,6 +2466,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="2b54-a146-7ae2-93ba" name="MA40 Assault Rifle" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5224-62f8-e4c0-a10c" type="max" />
       </constraints>
@@ -1023,6 +2483,61 @@
         <infoLink id="2c61-a36a-abae-6a34" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
         <infoLink id="b5eb-be26-2c96-11d9" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="97a6-3b70-7d22-9c5b" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="d473-f30d-b0e7-0da2" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="5d2c-b38f-121f-bb48" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1038,6 +2553,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="34cd-258a-1aab-8de1" name="M90 Shotgun" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3c44-30c0-b498-3673" type="max" />
       </constraints>
@@ -1055,6 +2571,61 @@
         <infoLink id="62b2-49bc-2952-c156" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
         <infoLink id="c7cf-7082-f12f-8c4a" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="5fe7-61d8-7367-df91" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="3d14-3de4-2231-7239" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="ec24-fd34-a0b8-a5d7" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1070,6 +2641,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="c1d9-77eb-9085-3804" name="M7S SMG" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5bad-6928-491c-1a25" type="max" />
       </constraints>
@@ -1086,6 +2658,61 @@
         <infoLink id="6956-b1d5-b0ca-7904" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
         <infoLink id="5c4f-4178-b079-8503" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="0b58-735c-f2b0-1102" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="dc55-ba0e-78f9-7264" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="d090-323c-a5e7-e437" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1101,6 +2728,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="d382-1049-3988-c13e" name="Stalker Rifle" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="da0e-059f-c4ca-c111" type="max" />
       </constraints>
@@ -1116,6 +2744,61 @@
       <infoLinks>
         <infoLink id="8d4e-1cde-ead9-39fd" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="e190-cc65-d61e-6c44" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="c6c4-9c00-9a83-bfc4" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="ca74-7a2f-36ae-4fa9" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1131,6 +2814,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="3d23-2521-b1bb-67ca" name="Plasma Repeater" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4cda-cca8-037b-0bf4" type="max" />
       </constraints>
@@ -1147,6 +2831,61 @@
         <infoLink id="c5e9-434a-ef50-9ed4" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
         <infoLink id="5d12-3326-ed03-1a03" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="36be-7fcf-669d-086c" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="8143-80a6-7c81-2db8" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="921a-2a31-572e-835b" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1162,6 +2901,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="c401-40ae-cfa3-5f44" name="Needler" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3edf-0282-19f6-52d6" type="max" />
       </constraints>
@@ -1179,6 +2919,61 @@
         <infoLink id="86f4-e0b2-29d3-8fcb" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
         <infoLink id="dd06-b83d-bc8c-330c" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="6d83-c27c-6e23-3523" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="bdc8-4f4f-0c12-27ef" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="5e4f-1697-16a2-295e" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1194,6 +2989,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="df63-e40a-6578-54c1" name="Mangler" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2126-403d-8037-864a" type="max" />
       </constraints>
@@ -1216,6 +3012,61 @@
       <infoLinks>
         <infoLink id="96f2-40e7-be33-bfb5" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="cf66-f065-32aa-c053" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="ce57-64df-73d9-7926" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="e599-9fa4-0e4b-ea1f" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1231,6 +3082,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="c2d1-0c98-6c70-3e11" name="Pulse Carbine" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dff4-ca30-a07b-ce20" type="max" />
       </constraints>
@@ -1247,6 +3099,61 @@
         <infoLink id="a6a0-26d1-300c-02df" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
         <infoLink id="4037-c47c-e2d6-84de" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="1bb5-1dc3-b640-ec4d" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="b37f-869e-8e43-e405" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="743f-0355-522c-99b3" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1262,6 +3169,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="2cc0-6cf7-79f2-3aa8" name="M6G Magnum" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0dbe-1a49-a8bf-e596" type="max" />
       </constraints>
@@ -1278,6 +3186,61 @@
         <infoLink id="f01f-32cf-dc3d-c4e3" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
         <infoLink id="e30e-81ae-7bb0-396d" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="f036-2542-328d-7f55" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="1473-f547-72e4-85ea" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="981d-00f7-bc82-0d9d" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1293,6 +3256,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="ed24-e91f-5069-4215" name="Heatwave" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f2ea-e033-f511-57a4" type="max" />
       </constraints>
@@ -1309,6 +3273,61 @@
         <infoLink id="1fe8-9707-b9cf-7d3f" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
         <infoLink id="56f6-784f-d772-3b04" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="4c69-8997-f913-ccc2" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="324f-bc36-6aad-6f7c" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="b9c1-a544-64d7-f338" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1324,6 +3343,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="5b9a-37fc-24bc-fa29" name="H-165 Target Locator" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c2a4-87dd-2582-fd8d" type="max" />
       </constraints>
@@ -1343,6 +3363,61 @@
         <infoLink id="7805-54ac-1ecb-2ec9" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
         <infoLink id="f3bc-5997-16d8-93d4" name="Long" hidden="false" targetId="6d8a-c297-e299-855e" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="cc94-cb17-79bc-b70c" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="288f-d995-5247-a146" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="c9dd-2906-b0e0-596e" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1358,6 +3433,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="ca8f-d5a3-b3f6-80c6" name="CQS48 Bulldog" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="40fa-0e93-b0f2-9bcc" type="max" />
       </constraints>
@@ -1374,6 +3450,61 @@
         <infoLink id="36c1-5037-cbf0-b3e4" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
         <infoLink id="980c-fc64-b4df-1726" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="66f7-253f-4406-738f" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="8dcb-8176-a475-5e52" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="397d-cace-f6be-5b10" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1389,6 +3520,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="41ca-68b4-98f4-fe98" name="Cindershot" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bed2-ff18-678b-751e" type="max" />
       </constraints>
@@ -1407,6 +3539,61 @@
         <infoLink id="0b5f-c64a-8a61-aed3" name="Implosion [n]" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
         <infoLink id="0fcb-edfc-1ff5-b898" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="aec0-bf5b-4e89-c2bc" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="e183-1a14-85e2-9b12" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="ff3c-7314-f6e2-1e6d" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1422,6 +3609,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="84f9-9066-4884-3869" name="Mauler" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5b48-ebea-6632-f75c" type="max" />
       </constraints>
@@ -1446,6 +3634,61 @@
         <infoLink id="314d-8c35-6bf5-4617" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
         <infoLink id="c690-0eba-a574-ef81" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="2f55-312d-9fe3-41ff" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="f4ed-bc5f-e949-8766" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="8d46-19fa-53fc-f3df" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1461,6 +3704,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="485f-f1cc-cfda-9db1" name="MA5K 'Avenger' Carbine" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5118-ec68-8d2b-445d" type="max" />
       </constraints>
@@ -1476,6 +3720,61 @@
       <infoLinks>
         <infoLink id="31d8-b4a6-a4a4-1ceb" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="0834-1f5a-c03e-502c" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="17ca-0469-a5d6-70bb" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="7c0f-6a5c-d9c4-0857" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1491,6 +3790,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="f433-3957-c4ff-8b46" name="M6C/SOCOM" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f32e-561c-ae83-d015" type="max" />
       </constraints>
@@ -1506,6 +3806,61 @@
       <infoLinks>
         <infoLink id="6ebd-43a3-f3ca-3d9d" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="87ef-ccf8-28f5-a8ce" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="a513-e5f3-d818-b2b0" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="88ba-72fa-cf85-85fe" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1521,6 +3876,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="071a-cdce-0907-0f31" name="M11 Combat Knife" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Spartan only. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7e64-5b6e-a987-5eff" type="max" />
       </constraints>
@@ -1536,6 +3892,35 @@
       <infoLinks>
         <infoLink id="2c7b-ca4e-5c3d-15be" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="9dd1-0986-5464-0b76" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="b351-c8a2-b539-293b" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="0a6d-1488-9b87-b017" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1551,6 +3936,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="8dab-8772-2be1-a1ef" name="Energy Dagger" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Banished only. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b642-1d90-766c-0500" type="max" />
       </constraints>
@@ -1566,6 +3952,34 @@
       <infoLinks>
         <infoLink id="afcc-f784-b5da-94c0" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="2a71-67ef-4dba-63a9" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="3c45-5805-bf1c-decc" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="15ec-016e-4d28-bc19" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1581,6 +3995,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="2129-26df-7bf3-68fc" name="Disruptor" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: Any model. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5412-1ea8-f9c3-1c7b" type="max" />
       </constraints>
@@ -1597,6 +4012,61 @@
         <infoLink id="9ff5-bbd0-f4e6-a51f" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
         <infoLink id="f7da-72f0-0faf-67a8" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="222b-eb3b-baf6-5986" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="dadf-1126-e91d-a455" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="dc86-2871-a8c6-f623" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1612,6 +4082,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="2783-acf5-87d3-061b" name="Combat Knife" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Weapons, then use the link button to attach to a unit. Restriction: ODST only. Max 1 of this weapon per fireteam.</comment>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b0c5-0bc6-f0eb-1026" type="max" />
       </constraints>
@@ -1624,6 +4095,26 @@
           </characteristics>
         </profile>
       </profiles>
+      <categoryLinks>
+        <categoryLink id="abb0-aad5-cd89-9356" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="6851-c158-3431-2f77" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
       <selectionEntries>
         <selectionEntry id="20a7-0e80-7593-9437" name="Replaces a starting weapon (tick) - leave unticked if added" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1636,6 +4127,1324 @@
       </selectionEntries>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="2.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="042f-62c6-d521-7f5d" name="Demo Charge" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Grenades, then use the link button to attach to a unit. Max 2 of this kind per fireteam; attach at most one of this kind to any one model.</comment>
+      <constraints>
+        <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8088-0913-9cdb-5904" type="max" />
+      </constraints>
+      <profiles>
+        <profile id="47cf-a18c-1d00-77e0" name="Demo Charge" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
+          <characteristics>
+            <characteristic name="Type" typeId="c716-c619-b384-0452">Grenade</characteristic>
+            <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
+            <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">CC, AP2, Blast; EMP; Lethal(1)</characteristic>
+            <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="e5c7-aa4e-7e39-f644" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
+        <infoLink id="b91a-8f51-ec07-d6f1" name="EMP" hidden="false" targetId="eae8-da8a-08f0-ac08" type="rule" />
+        <infoLink id="0230-9ba5-84d4-4177" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="42f2-cdf2-c129-b3c9" name="Grenades" hidden="false" targetId="539c-6c19-4e8f-bdb3" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="c699-1ab9-f698-264a" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="8.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="962f-6b08-205e-1f82" name="Plasma Grenade" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Grenades, then use the link button to attach to a unit. Max 2 of this kind per fireteam; attach at most one of this kind to any one model.</comment>
+      <constraints>
+        <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b198-f9a4-0738-7b9a" type="max" />
+      </constraints>
+      <profiles>
+        <profile id="33fd-71fe-d3c7-06ab" name="Plasma Grenade" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
+          <characteristics>
+            <characteristic name="Type" typeId="c716-c619-b384-0452">Grenade</characteristic>
+            <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
+            <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">R3 (9") Grenade, AP2, Frag(4); Lethal(1); Sticky</characteristic>
+            <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="e5cc-6cdb-7a4f-2c1d" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="1f28-c9e8-f305-bd90" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="278e-e0c1-c24a-e24c" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
+        <infoLink id="d786-2cd2-08f4-f9a2" name="Item (III): Plasma Grenade" hidden="false" targetId="4f17-a781-3533-c1de" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="9136-6ca7-b228-1946" name="Grenades" hidden="false" targetId="539c-6c19-4e8f-bdb3" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="180c-fc2d-f90b-71ed" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="5.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9014-f0b3-15b4-56c7" name="Frag Grenade" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Grenades, then use the link button to attach to a unit. Max 2 of this kind per fireteam; attach at most one of this kind to any one model.</comment>
+      <constraints>
+        <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e1d1-583a-701c-bebb" type="max" />
+      </constraints>
+      <profiles>
+        <profile id="1215-1509-6e04-bb3e" name="Frag Grenade" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
+          <characteristics>
+            <characteristic name="Type" typeId="c716-c619-b384-0452">Grenade</characteristic>
+            <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
+            <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">R3 (9") Grenade, AP1, Frag(5)</characteristic>
+            <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="5375-489c-2d0a-6799" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="ae15-ac42-3fad-5635" name="Grenades" hidden="false" targetId="539c-6c19-4e8f-bdb3" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="7f45-154f-cf68-deb4" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="4.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4109-b740-be31-762c" name="Dynamo Grenade" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Grenades, then use the link button to attach to a unit. Max 2 of this kind per fireteam; attach at most one of this kind to any one model.</comment>
+      <constraints>
+        <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b114-0b84-399f-e2f1" type="max" />
+      </constraints>
+      <profiles>
+        <profile id="1b24-d474-3199-7f32" name="Dynamo Grenade" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
+          <characteristics>
+            <characteristic name="Type" typeId="c716-c619-b384-0452">Grenade</characteristic>
+            <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
+            <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">R4 (12") Grenade, AP -, EMP; Implosion(3)</characteristic>
+            <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="7ed1-8988-d48f-651e" name="EMP" hidden="false" targetId="eae8-da8a-08f0-ac08" type="rule" />
+        <infoLink id="4f23-7d19-4a1f-b79d" name="Implosion [n]" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
+        <infoLink id="0aa0-3ed9-a9c5-bb27" name="Item (III): Dynamo Grenade" hidden="false" targetId="9164-3cbf-9a1d-8c68" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="7a73-8ff5-0f5d-1633" name="Grenades" hidden="false" targetId="539c-6c19-4e8f-bdb3" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="a71a-863e-59a1-5268" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="5.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="234b-5694-eb4d-5a4d" name="Spike Grenade" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Grenades, then use the link button to attach to a unit. Max 2 of this kind per fireteam; attach at most one of this kind to any one model.</comment>
+      <constraints>
+        <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="579b-639c-c4c7-5ac3" type="max" />
+      </constraints>
+      <profiles>
+        <profile id="9fd2-1445-7ee8-1dcd" name="Spike Grenade" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
+          <characteristics>
+            <characteristic name="Type" typeId="c716-c619-b384-0452">Grenade</characteristic>
+            <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
+            <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">R3 (9") Grenade, AP1, Frag(4); Sticky</characteristic>
+            <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="aece-6e01-31e5-63e5" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="4867-3952-4a53-70bf" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
+        <infoLink id="56b3-f994-fc1d-f03c" name="Item (III): Spike Grenade" hidden="false" targetId="1a0f-e427-de6f-6d6d" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="bd15-7234-6eb8-5457" name="Grenades" hidden="false" targetId="539c-6c19-4e8f-bdb3" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="6135-2d8e-ee8e-f597" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="3.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="84ef-72c4-ac02-defb" name="Hardlight Shield" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Items, then use the link button to attach to a unit. Max 2 of this kind per fireteam; attach at most one of this kind to any one model.</comment>
+      <constraints>
+        <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6b21-cf02-7b80-c1e2" type="max" />
+      </constraints>
+      <profiles>
+        <profile id="1acf-e99c-4c07-a20a" name="Hardlight Shield" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
+          <characteristics>
+            <characteristic name="Type" typeId="c716-c619-b384-0452">Item</characteristic>
+            <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">-</characteristic>
+            <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
+            <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">+1 AR until a wound received</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="f2c0-a28b-7cc2-106a" name="Item (I): Hardlight Shield" hidden="false" targetId="4cb2-d0a7-5036-b3f3" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="2b57-579b-7966-54f0" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="8a3b-4f8f-a041-6d30" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="6.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4cd8-ab1b-9f07-6569" name="Repair Field" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Items, then use the link button to attach to a unit. Max 2 of this kind per fireteam; attach at most one of this kind to any one model.</comment>
+      <constraints>
+        <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ff4a-1ce7-6a4b-d205" type="max" />
+      </constraints>
+      <profiles>
+        <profile id="4506-03de-3fa6-26d9" name="Repair Field" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
+          <characteristics>
+            <characteristic name="Type" typeId="c716-c619-b384-0452">Item</characteristic>
+            <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
+            <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
+            <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">Placed in the holder's cube for the rest of the game; any model in that cube at the end of a round heals 1 wound</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="8f01-4003-f65e-320a" name="Item (II): Repair Field" hidden="false" targetId="4733-1420-2fa1-8386" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="7e3b-a2ff-ec96-db3c" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="827f-9f57-68a0-ab6b" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="6.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8f50-b256-41f9-0623" name="Grappleshot" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Items, then use the link button to attach to a unit. Max 2 of this kind per fireteam; attach at most one of this kind to any one model.</comment>
+      <constraints>
+        <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e82b-483e-4adc-f555" type="max" />
+      </constraints>
+      <profiles>
+        <profile id="d7c8-0707-ec17-607c" name="Grappleshot" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
+          <characteristics>
+            <characteristic name="Type" typeId="c716-c619-b384-0452">Item</characteristic>
+            <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
+            <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
+            <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">+1 cube move or grab weapon/item in adjacent cube</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="6fac-21f9-52d6-e317" name="Item (II): Grappleshot" hidden="false" targetId="1ec5-0ab7-20a1-878b" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="c5d2-5cf8-fc8a-7f0a" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="8ea9-c74f-b68c-caed" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="5.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ffd8-ed50-80f6-4dc4" name="Health Pack" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Items, then use the link button to attach to a unit. Max 2 of this kind per fireteam; attach at most one of this kind to any one model.</comment>
+      <constraints>
+        <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="99e9-8115-467d-33be" type="max" />
+      </constraints>
+      <profiles>
+        <profile id="0179-8628-c6bb-adfc" name="Health Pack" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
+          <characteristics>
+            <characteristic name="Type" typeId="c716-c619-b384-0452">Item</characteristic>
+            <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
+            <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
+            <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">+Life Support, or as an Auxiliary Action remove all damage the carrier has suffered; returned when used (Oct '25)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="fa08-6975-151b-99ef" name="Item (I): Health Pack" hidden="false" targetId="17c1-91bd-aa99-b917" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="0de0-3268-06a1-5209" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="8fae-169f-926e-5985" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="5.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="864a-bb8d-a569-1ddc" name="Quantum Translocator" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Items, then use the link button to attach to a unit. Max 2 of this kind per fireteam; attach at most one of this kind to any one model.</comment>
+      <constraints>
+        <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2cde-da77-2510-4d94" type="max" />
+      </constraints>
+      <profiles>
+        <profile id="4902-68a2-a3b7-4faf" name="Quantum Translocator" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
+          <characteristics>
+            <characteristic name="Type" typeId="c716-c619-b384-0452">Item</characteristic>
+            <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
+            <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
+            <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">Before an Advance or Sprint, drop the QT token; until the end of that activation, return to it from within 2 cubes with no Breaking Away and no path through cubes. An enemy there triggers an Assault without the +2 dice. (Oct '25)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="e418-85c4-a5b5-2872" name="Item (II): Quantum Translocator" hidden="false" targetId="b57d-ee99-b91a-3d1a" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="3c8f-487f-32ac-8620" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="0409-fdde-4296-0f9a" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="4.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7410-8e86-6589-26d1" name="Threat Sensor" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Items, then use the link button to attach to a unit. Max 2 of this kind per fireteam; attach at most one of this kind to any one model.</comment>
+      <constraints>
+        <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b7a0-42b2-69fe-03ab" type="max" />
+      </constraints>
+      <profiles>
+        <profile id="4ad2-dbde-dac0-626e" name="Threat Sensor" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
+          <characteristics>
+            <characteristic name="Type" typeId="c716-c619-b384-0452">Item</characteristic>
+            <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
+            <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
+            <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">Pick a cube; for the rest of the round friendly models have LOS to it, its models and all adjacent cubes (Oct '25)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="1156-f986-e611-d729" name="Item (II): Threat Sensor" hidden="false" targetId="ec5d-ba2a-778a-aa37" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="1331-6780-047f-801d" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="92b3-4a2d-9220-2f57" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="4.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3304-52c2-0061-b520" name="Shroud Screen" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Items, then use the link button to attach to a unit. Max 2 of this kind per fireteam; attach at most one of this kind to any one model.</comment>
+      <constraints>
+        <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5acd-af2f-199c-abdd" type="max" />
+      </constraints>
+      <profiles>
+        <profile id="42a4-0440-583c-c282" name="Shroud Screen" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
+          <characteristics>
+            <characteristic name="Type" typeId="c716-c619-b384-0452">Item</characteristic>
+            <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
+            <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
+            <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">Token in holder's cube or an adjacent cube in LOS; blocks LOS into, out of and through it for the rest of the round (the cube itself can still be targeted)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="7fe4-95b8-eee7-3feb" name="Item (II): Shroud Screen" hidden="false" targetId="3b7e-9cc7-6d65-84b2" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="c6c9-de86-6ddb-75ee" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="5aaa-9574-5db2-f540" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="3.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="dfc3-116e-e016-bde4" name="Thruster" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Items, then use the link button to attach to a unit. Max 2 of this kind per fireteam; attach at most one of this kind to any one model.</comment>
+      <constraints>
+        <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="278e-cb98-ba3f-87a5" type="max" />
+      </constraints>
+      <profiles>
+        <profile id="026c-bf83-b977-1a0c" name="Thruster" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
+          <characteristics>
+            <characteristic name="Type" typeId="c716-c619-b384-0452">Item</characteristic>
+            <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
+            <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
+            <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">+1 SP for one Advance or Sprint using normal short or long move; use before the move starts</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="9924-cf0c-a8ee-c09d" name="Item (II): Thruster" hidden="false" targetId="bfaf-b079-7884-831c" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="a1f6-fb64-7560-8198" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="e0a2-27da-a98e-e3e8" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="3.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0f21-c4b0-d0a2-5c9b" name="Active Camo" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Items, then use the link button to attach to a unit. Max 2 of this kind per fireteam; attach at most one of this kind to any one model.</comment>
+      <constraints>
+        <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2939-87dd-597d-499f" type="max" />
+      </constraints>
+      <profiles>
+        <profile id="abfb-6517-52bc-2d62" name="Active Camo" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
+          <characteristics>
+            <characteristic name="Type" typeId="c716-c619-b384-0452">Item</characteristic>
+            <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">-</characteristic>
+            <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
+            <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">+Active Camouflage once activated; lost if the model Sprints, Fights or Shoots (Oct '25)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="99fa-52ec-6b3e-a2b3" name="Item (II): Active Camouflage" hidden="false" targetId="02d1-ca96-c3be-c7ee" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="1620-ff57-9ca6-ca3c" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="7af0-72f9-93f8-8ed8" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="3.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="35ec-f4cb-59ec-9d01" name="Explosive Ammo" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Items, then use the link button to attach to a unit. Max 2 of this kind per fireteam; attach at most one of this kind to any one model.</comment>
+      <constraints>
+        <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9964-8aa8-3282-beab" type="max" />
+      </constraints>
+      <profiles>
+        <profile id="e244-724a-47d1-5fa3" name="Explosive Ammo" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
+          <characteristics>
+            <characteristic name="Type" typeId="c716-c619-b384-0452">Item</characteristic>
+            <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
+            <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
+            <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">+1 die and Lethal(1) on one Ranged test; not with Explosive, Grenade or Lunge weapons</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="d06a-576b-caf2-7787" name="Item (III): Explosive Ammo" hidden="false" targetId="f93c-bfc1-9fec-5741" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="5a8e-31b8-744d-07f4" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="aad8-70ab-461e-d3fb" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="3.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2620-ca61-0c56-63a6" name="Drop Wall" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Items, then use the link button to attach to a unit. Max 2 of this kind per fireteam; attach at most one of this kind to any one model.</comment>
+      <constraints>
+        <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="71cf-2a8d-f8e0-1782" type="max" />
+      </constraints>
+      <profiles>
+        <profile id="ff65-2bda-35f9-161a" name="Drop Wall" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
+          <characteristics>
+            <characteristic name="Type" typeId="c716-c619-b384-0452">Item</characteristic>
+            <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
+            <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
+            <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">Deploy shield cube with ESB(2)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="c4e0-528a-d5ec-7fd3" name="Item (II): Drop Wall" hidden="false" targetId="e59c-8014-0b35-9d1f" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="8678-c0fc-2ce1-6bc7" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="8a0a-f09f-5f23-31b1" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="2.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0f10-1a8c-53c3-7040" name="Overshield" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Buy from Items, then use the link button to attach to a unit. Max 2 of this kind per fireteam; attach at most one of this kind to any one model.</comment>
+      <constraints>
+        <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="723c-e76e-9dfd-8e8e" type="max" />
+      </constraints>
+      <profiles>
+        <profile id="3e2b-3eb8-c6a3-d2ca" name="Overshield" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
+          <characteristics>
+            <characteristic name="Type" typeId="c716-c619-b384-0452">Item</characteristic>
+            <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
+            <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
+            <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">+1 ES that must be used up before the model's own shields; lasts until used or depleted</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="2054-13bc-88de-4616" name="Item (II): Overshield" hidden="false" targetId="fcd1-2825-c67d-0a83" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="4e0a-fcf4-0780-952d" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="true" />
+      </categoryLinks>
+      <associations>
+        <association id="e8ff-0e39-16b2-f5c5" name="Leading" action="group" childId="unit" childName="unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="047a-e8d5-dbec-dbd7" childName="Spartan Zvezda" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="1" />
+                <condition childId="6ebd-e43f-182d-bed1" childName="Spartan HAZOP" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="2" />
+                <condition childId="f33e-e5e6-fcaf-bbd3" childName="Spartan Brawler" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="3" />
+                <condition childId="7d09-5c62-6ae4-567e" childName="Spartan Mk VII" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="4" />
+                <condition childId="978f-df5b-71c7-dcb9" childName="Spartan JFO" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="5" />
+                <condition childId="af93-eabc-e244-7a3b" childName="Tomas Horvath (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="6" />
+                <condition childId="707a-60ef-4d56-65eb" childName="Spartan Gungnir" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="7" />
+                <condition childId="3158-e389-fb04-6287" childName="Spartan Deadeye" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="8" />
+                <condition childId="3859-1abf-2873-475c" childName="Spartan CQB" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="9" />
+                <condition childId="c52b-8443-17a5-7b3f" childName="Jun-A266 Noble Three (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="10" />
+                <condition childId="5cf8-1c43-0f06-73fc" childName="Emile-A239 Noble Four (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="11" />
+                <condition childId="5e16-35f6-f2d9-c552" childName="Kat-B320 Noble Two (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="12" />
+                <condition childId="4deb-fde0-7cb0-984c" childName="Spartan-B312 Noble Six (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="13" />
+                <condition childId="adf8-d842-c1fd-479d" childName="Carter-A259 Noble One (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="14" />
+                <condition childId="5593-2523-2eb7-09ff" childName="Jorge-052 Noble Five (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="15" />
+                <condition childId="4f9f-1376-9ba0-d0c4" childName="Master Chief (Spartan Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="16" />
+                <condition childId="c761-9496-21dd-2499" childName="ODST Special Purpose Trooper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="17" />
+                <condition childId="6200-eabc-e34d-6e64" childName="ODST 2nd Lieutenant" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="18" />
+                <condition childId="4866-e09e-ceec-8f68" childName="ODST Air Assault 'Bullfrog'" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="19" />
+                <condition childId="9bda-deeb-1735-074e" childName="ODST Firebreak" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="20" />
+                <condition childId="ffd4-158e-3760-5d3e" childName="ODST Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="21" />
+                <condition childId="ea2b-147b-2619-2738" childName="Captain Veronica Dare - ONI (UNSC Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="22" />
+                <condition childId="613b-de3f-8591-6d1c" childName="Gunnery Sergeant Edward Buck (ODST Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="23" />
+                <condition childId="d48f-2d71-7d87-a897" childName="UNSC Marine Corporal" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="24" />
+                <condition childId="3be4-405f-298f-bb56" childName="UNSC Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="25" />
+                <condition childId="87a4-b61a-a049-5bfb" childName="UNSC Marine Medic" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="26" />
+                <condition childId="53c5-5fa0-2b47-0684" childName="UNSC Comms Marine" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="27" />
+                <condition childId="3d52-9f42-39d5-df9d" childName="Sangheili Mercenary" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="28" />
+                <condition childId="910e-7ac0-c495-531e" childName="Sangheili Enforcer" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="29" />
+                <condition childId="8866-1550-87dc-0cdb" childName="Jega 'Rdomnai (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="30" />
+                <condition childId="4559-b2a2-2ed8-e34c" childName="Kig-Yar Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="31" />
+                <condition childId="f6e9-3648-45fd-80e2" childName="Kig-Yar Freebooter" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="32" />
+                <condition childId="27e8-38cf-5607-65d0" childName="Jiralhanae Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="33" />
+                <condition childId="6d06-6c5d-723f-0ae1" childName="Jiralhanae Berserker" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="34" />
+                <condition childId="72ea-90e8-fc20-ad9c" childName="Jiralhanae Sniper" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="35" />
+                <condition childId="cd1d-d628-f71a-40a6" childName="Jiralhanae Chosen Warrior" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="36" />
+                <condition childId="8c4f-7d9f-5b0a-21f3" childName="Jiralhanae Captain" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="37" />
+                <condition childId="edf6-a4cb-5afc-6f12" childName="Tovarus (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="38" />
+                <condition childId="c3c2-9338-9bc1-3de1" childName="Hyperius (Jiralhanae Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="39" />
+                <condition childId="768f-887e-b9f3-9df3" childName="Atriox, Jiralhanae Warmaster (Banished Legend)" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="40" />
+                <condition childId="daa8-a337-4cff-ba49" childName="Unggoy Conscript" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="41" />
+                <condition childId="fa4b-1349-510f-8e73" childName="Unggoy Assault" field="selections" scope="self" shared="true" type="instanceOf" value="1" percentValue="false" includeChildSelections="false" includeChildForces="false" sortIndex="42" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </association>
+      </associations>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="1.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="047a-e8d5-dbec-dbd7" name="Spartan Zvezda" hidden="false" collective="false" import="true" type="model">
@@ -1741,10 +5550,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="734c-865e-d1d5-46a6" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="01dc-485d-7162-6b13" type="selectionEntryGroup" />
-        <entryLink id="6b30-4b73-43f0-6344" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -1886,10 +5691,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="550f-43cb-2b14-a971" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="01dc-485d-7162-6b13" type="selectionEntryGroup" />
-        <entryLink id="b07d-5c57-f00e-7099" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -1996,10 +5797,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="45f1-4c0d-b886-9398" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="01dc-485d-7162-6b13" type="selectionEntryGroup" />
-        <entryLink id="727f-7f45-b59c-7a15" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -2104,10 +5901,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="feb4-8374-1cc8-173e" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="01dc-485d-7162-6b13" type="selectionEntryGroup" />
-        <entryLink id="eb67-9a4c-330b-086c" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -2218,10 +6011,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="6e5c-ae89-6047-22f7" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="01dc-485d-7162-6b13" type="selectionEntryGroup" />
-        <entryLink id="d254-3317-87b1-4a3e" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -2311,10 +6100,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="be61-4b71-5e32-2018" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="01dc-485d-7162-6b13" type="selectionEntryGroup" />
-        <entryLink id="02cc-b19f-bfb4-48da" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -2459,10 +6244,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="13d0-aedf-aa4c-a138" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="01dc-485d-7162-6b13" type="selectionEntryGroup" />
-        <entryLink id="362e-0c85-5912-8d21" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -2566,10 +6347,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="4fc9-0a6e-9269-a596" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="01dc-485d-7162-6b13" type="selectionEntryGroup" />
-        <entryLink id="12e8-c429-ac1a-749f" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -2692,10 +6469,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="f09e-f4f2-9a4e-4f54" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="01dc-485d-7162-6b13" type="selectionEntryGroup" />
-        <entryLink id="b088-433d-d4ca-a2b9" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -2779,10 +6552,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="396c-0efa-3504-38ef" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="01dc-485d-7162-6b13" type="selectionEntryGroup" />
-        <entryLink id="aec6-6460-6164-539c" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -2876,10 +6645,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="dd39-b286-bda4-dc2d" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="01dc-485d-7162-6b13" type="selectionEntryGroup" />
-        <entryLink id="4b3d-3de4-8632-c358" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -2972,10 +6737,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="9a93-c173-fec1-5be8" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="01dc-485d-7162-6b13" type="selectionEntryGroup" />
-        <entryLink id="170c-707c-d55c-1432" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -3069,10 +6830,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="ac16-8c7f-8cf5-e0ad" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="01dc-485d-7162-6b13" type="selectionEntryGroup" />
-        <entryLink id="4d3c-47d6-1e43-b370" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -3164,10 +6921,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="6de3-41a9-9cb3-5ea5" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="01dc-485d-7162-6b13" type="selectionEntryGroup" />
-        <entryLink id="679d-929d-c4a7-5adf" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -3253,10 +7006,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="1e66-8bfa-fb88-900a" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="01dc-485d-7162-6b13" type="selectionEntryGroup" />
-        <entryLink id="4342-bc6f-fb73-9fbd" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -3341,10 +7090,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="4d9a-590c-dc89-8fa9" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="01dc-485d-7162-6b13" type="selectionEntryGroup" />
-        <entryLink id="3f08-a3e8-6209-97b5" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -3465,10 +7210,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="ab94-2173-dbf7-99f8" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="26ed-42a3-c5ce-b029" type="selectionEntryGroup" />
-        <entryLink id="4959-71aa-4878-d091" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -3539,10 +7280,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="9acb-5506-8890-3b46" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="26ed-42a3-c5ce-b029" type="selectionEntryGroup" />
-        <entryLink id="f9ba-ad41-8e53-f8ea" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -3647,10 +7384,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="db9e-6c8f-f60e-546f" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="26ed-42a3-c5ce-b029" type="selectionEntryGroup" />
-        <entryLink id="65af-c32c-6180-0c1b" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -3773,10 +7506,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="8b96-dd73-c7b9-dea9" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="26ed-42a3-c5ce-b029" type="selectionEntryGroup" />
-        <entryLink id="3de2-5535-bd87-da74" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -3846,10 +7575,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="caac-2359-2a49-903d" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="26ed-42a3-c5ce-b029" type="selectionEntryGroup" />
-        <entryLink id="401e-e06d-4fd2-56c4" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -3930,10 +7655,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="1266-4890-4d07-c213" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="26ed-42a3-c5ce-b029" type="selectionEntryGroup" />
-        <entryLink id="d99e-9bbc-0dff-1230" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -4015,10 +7736,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="8063-c48a-6cdc-0350" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="26ed-42a3-c5ce-b029" type="selectionEntryGroup" />
-        <entryLink id="528e-b752-32b6-43e2" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -4082,10 +7799,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="c702-296f-86da-e650" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="f481-0398-b4c1-893e" type="selectionEntryGroup" />
-        <entryLink id="0f2c-e260-fff4-524c" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -4253,10 +7966,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="7d74-080f-a0e6-a7c5" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="f481-0398-b4c1-893e" type="selectionEntryGroup" />
-        <entryLink id="d292-c001-3543-fa10" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -4320,10 +8029,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="42f9-2fa3-c220-8410" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="f481-0398-b4c1-893e" type="selectionEntryGroup" />
-        <entryLink id="6f4a-cea5-100f-3e6f" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -4387,10 +8092,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="d48d-644e-5f16-98fe" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="f481-0398-b4c1-893e" type="selectionEntryGroup" />
-        <entryLink id="8115-c64e-36f7-73fa" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -4635,10 +8336,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="0fd7-3174-967c-3a6a" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="646b-bca3-b952-16e8" type="selectionEntryGroup" />
-        <entryLink id="bbf3-31ee-e7eb-3b3f" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -4733,10 +8430,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="7a81-d265-25fb-18f7" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="646b-bca3-b952-16e8" type="selectionEntryGroup" />
-        <entryLink id="2854-edff-dc7c-5bb9" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -4825,10 +8518,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="63d5-adf0-de9c-007f" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="646b-bca3-b952-16e8" type="selectionEntryGroup" />
-        <entryLink id="117f-5495-1f9a-bd2f" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -4907,10 +8596,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="2715-ffdb-ecc9-9d2f" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="646b-bca3-b952-16e8" type="selectionEntryGroup" />
-        <entryLink id="dfd0-223f-df0b-86e5" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -4991,10 +8676,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="2bfb-ad26-798f-5bc9" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="646b-bca3-b952-16e8" type="selectionEntryGroup" />
-        <entryLink id="ca9a-1ddd-6eee-9583" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -5078,10 +8759,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="121b-a76a-d510-2783" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="646b-bca3-b952-16e8" type="selectionEntryGroup" />
-        <entryLink id="9ecf-1596-e4dd-593c" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -5204,10 +8881,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="fa99-287b-34a2-0c5b" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="646b-bca3-b952-16e8" type="selectionEntryGroup" />
-        <entryLink id="4815-dbd6-471e-5c78" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -5317,10 +8990,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="19a7-59c1-df6a-3958" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="646b-bca3-b952-16e8" type="selectionEntryGroup" />
-        <entryLink id="092d-f3b8-89a7-5a3c" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -5399,10 +9068,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="cf7e-cbbd-4f9f-8350" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="646b-bca3-b952-16e8" type="selectionEntryGroup" />
-        <entryLink id="0254-2eef-b847-5a09" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -5517,10 +9182,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="26fb-3f16-8f68-abad" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="646b-bca3-b952-16e8" type="selectionEntryGroup" />
-        <entryLink id="bed3-17b4-d028-e0df" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -5608,10 +9269,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="7c80-b87a-d859-368b" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="646b-bca3-b952-16e8" type="selectionEntryGroup" />
-        <entryLink id="e14b-1a58-8e83-a4c9" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -5701,10 +9358,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="74d7-464f-7944-f2a5" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="646b-bca3-b952-16e8" type="selectionEntryGroup" />
-        <entryLink id="2e90-834f-4f80-1412" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -5784,10 +9437,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="f38a-fbd3-33e7-c350" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="646b-bca3-b952-16e8" type="selectionEntryGroup" />
-        <entryLink id="a105-8b62-c518-3b3b" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -5900,10 +9549,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="84ea-02ee-092d-35ed" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="646b-bca3-b952-16e8" type="selectionEntryGroup" />
-        <entryLink id="2769-4453-6e1d-0e3d" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -6009,10 +9654,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="f5fe-7cde-3160-eda7" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true" targetId="646b-bca3-b952-16e8" type="selectionEntryGroup" />
-        <entryLink id="d83d-00ec-695b-949e" name="Grenades and items" hidden="false" collective="false" import="true" targetId="76ca-e615-4b4c-c713" type="selectionEntryGroup" />
-      </entryLinks>
       <costs>
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
@@ -7439,600 +11080,7 @@
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
-  <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="01dc-485d-7162-6b13" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true">
-      <entryLinks>
-        <entryLink id="27f3-41f6-ea8f-e018" name="BR55 Battle Rifle" hidden="false" collective="false" import="true" targetId="27bf-42b1-28db-609b" type="selectionEntry" />
-        <entryLink id="1a10-b1d2-6f9f-574e" name="BR75 Battle Rifle" hidden="false" collective="false" import="true" targetId="a099-20e4-f975-fc25" type="selectionEntry" />
-        <entryLink id="8504-524a-6871-5229" name="Brute Shot" hidden="false" collective="false" import="true" targetId="bc6f-e296-4328-6589" type="selectionEntry" />
-        <entryLink id="cd97-1598-7d2e-3ef2" name="Cindershot" hidden="false" collective="false" import="true" targetId="41ca-68b4-98f4-fe98" type="selectionEntry" />
-        <entryLink id="c868-54fd-b640-a74e" name="Concussion Rifle" hidden="false" collective="false" import="true" targetId="4006-7650-5aeb-50d8" type="selectionEntry" />
-        <entryLink id="42f0-62cc-5ac1-5171" name="Covenant Carbine" hidden="false" collective="false" import="true" targetId="f4c4-b526-ba29-4345" type="selectionEntry" />
-        <entryLink id="4ebd-21b1-2aa5-dc31" name="CQS48 Bulldog" hidden="false" collective="false" import="true" targetId="ca8f-d5a3-b3f6-80c6" type="selectionEntry" />
-        <entryLink id="04f9-9018-4cc8-be0c" name="Disruptor" hidden="false" collective="false" import="true" targetId="2129-26df-7bf3-68fc" type="selectionEntry" />
-        <entryLink id="cb5c-289f-62fc-53f2" name="Energy Sword" hidden="false" collective="false" import="true" targetId="437d-a383-5b31-8e6d" type="selectionEntry" />
-        <entryLink id="2fb3-2478-fffc-89b0" name="Focus Rifle" hidden="false" collective="false" import="true" targetId="0f34-b48c-4442-3fab" type="selectionEntry" />
-        <entryLink id="55b5-7911-fe39-81d6" name="Fuel Rod Gun" hidden="false" collective="false" import="true" targetId="a27d-db87-96c0-bfd6" type="selectionEntry" />
-        <entryLink id="ea38-91f7-542e-ee4b" name="Gravity Hammer" hidden="false" collective="false" import="true" targetId="8a63-c042-c023-d322" type="selectionEntry" />
-        <entryLink id="a26f-89de-6c3a-c492" name="H-165 Target Locator" hidden="false" collective="false" import="true" targetId="5b9a-37fc-24bc-fa29" type="selectionEntry" />
-        <entryLink id="dafd-e03d-fd3b-d24d" name="Heatwave" hidden="false" collective="false" import="true" targetId="ed24-e91f-5069-4215" type="selectionEntry" />
-        <entryLink id="a326-1b8e-74d6-ed13" name="M11 Combat Knife" hidden="false" collective="false" import="true" targetId="071a-cdce-0907-0f31" type="selectionEntry" />
-        <entryLink id="fee0-5c08-0891-d210" name="M319 Grenade Launcher" hidden="false" collective="false" import="true" targetId="4ca9-7f02-f4a9-9188" type="selectionEntry" />
-        <entryLink id="493b-1d4c-7c74-464d" name="M392 DMR" hidden="false" collective="false" import="true" targetId="b793-744c-e7c0-956e" type="selectionEntry" />
-        <entryLink id="415b-d955-6355-35b4" name="M41 SPNKr" hidden="false" collective="false" import="true" targetId="6e20-dbef-dca5-36c4" type="selectionEntry" />
-        <entryLink id="0d61-d0de-ea40-6bab" name="M45 Shotgun" hidden="false" collective="false" import="true" targetId="0831-0a27-6152-8aa6" type="selectionEntry" />
-        <entryLink id="6bea-1604-4300-b1c6" name="M6 Spartan Laser" hidden="false" collective="false" import="true" targetId="8b94-efb3-59f4-db29" type="selectionEntry" />
-        <entryLink id="4cc8-381d-abf7-45f8" name="M6C/SOCOM" hidden="false" collective="false" import="true" targetId="f433-3957-c4ff-8b46" type="selectionEntry" />
-        <entryLink id="ddf4-bc03-80d0-bd2c" name="M6G Magnum" hidden="false" collective="false" import="true" targetId="2cc0-6cf7-79f2-3aa8" type="selectionEntry" />
-        <entryLink id="2153-30e2-ca63-229d" name="M7057 Flamethrower" hidden="false" collective="false" import="true" targetId="af99-6ee2-4ce9-b8ec" type="selectionEntry" />
-        <entryLink id="b01e-64cf-da18-6ecf" name="M7S SMG" hidden="false" collective="false" import="true" targetId="c1d9-77eb-9085-3804" type="selectionEntry" />
-        <entryLink id="00dd-8c48-692a-9709" name="M90 Shotgun" hidden="false" collective="false" import="true" targetId="34cd-258a-1aab-8de1" type="selectionEntry" />
-        <entryLink id="5855-fe35-2855-a973" name="MA40 Assault Rifle" hidden="false" collective="false" import="true" targetId="2b54-a146-7ae2-93ba" type="selectionEntry" />
-        <entryLink id="29fb-52b4-5cd7-84ef" name="MA5K 'Avenger' Carbine" hidden="false" collective="false" import="true" targetId="485f-f1cc-cfda-9db1" type="selectionEntry" />
-        <entryLink id="3c82-5974-5342-ed8b" name="Mangler" hidden="false" collective="false" import="true" targetId="df63-e40a-6578-54c1" type="selectionEntry" />
-        <entryLink id="cdd1-49e9-b543-b4a3" name="Mauler" hidden="false" collective="false" import="true" targetId="84f9-9066-4884-3869" type="selectionEntry" />
-        <entryLink id="c4b3-beb5-70f2-ea9b" name="MLRS-2 Hydra" hidden="false" collective="false" import="true" targetId="21fa-bdba-8e2a-01fe" type="selectionEntry" />
-        <entryLink id="eb97-d095-051c-4755" name="Needle Rifle" hidden="false" collective="false" import="true" targetId="df44-f548-23ab-1ba9" type="selectionEntry" />
-        <entryLink id="87cc-7ce7-d0cc-ded3" name="Needler" hidden="false" collective="false" import="true" targetId="c401-40ae-cfa3-5f44" type="selectionEntry" />
-        <entryLink id="8edf-84a0-c06f-c9e0" name="Plasma Launcher" hidden="false" collective="false" import="true" targetId="d54d-1505-b3b0-fb46" type="selectionEntry" />
-        <entryLink id="0496-95ae-1327-69a4" name="Plasma Repeater" hidden="false" collective="false" import="true" targetId="3d23-2521-b1bb-67ca" type="selectionEntry" />
-        <entryLink id="c764-9407-98f5-e889" name="Plasma Rifle" hidden="false" collective="false" import="true" targetId="216d-527e-abbb-ac43" type="selectionEntry" />
-        <entryLink id="8f34-16e4-b8a4-41a0" name="Pulse Carbine" hidden="false" collective="false" import="true" targetId="c2d1-0c98-6c70-3e11" type="selectionEntry" />
-        <entryLink id="0c57-d8f9-38fc-d751" name="Ravager" hidden="false" collective="false" import="true" targetId="8597-6852-3eb7-4cbf" type="selectionEntry" />
-        <entryLink id="641d-d909-57c4-e6d3" name="S7 Sniper Rifle" hidden="false" collective="false" import="true" targetId="cb87-c536-2da1-87c9" type="selectionEntry" />
-        <entryLink id="a505-b9a7-2838-a37e" name="Sentinel Beam" hidden="false" collective="false" import="true" targetId="dbf1-c673-01a9-7655" type="selectionEntry" />
-        <entryLink id="603d-78f8-3b41-dc99" name="Shock Rifle" hidden="false" collective="false" import="true" targetId="ba41-1399-9731-7b5c" type="selectionEntry" />
-        <entryLink id="d1e9-0d65-3698-c13a" name="Skewer" hidden="false" collective="false" import="true" targetId="d4a3-59c2-65c5-d837" type="selectionEntry" />
-        <entryLink id="e510-a26f-b7d1-197d" name="Spike Rifle" hidden="false" collective="false" import="true" targetId="4921-063a-26a6-408f" type="selectionEntry" />
-        <entryLink id="677d-7c5c-391c-36dd" name="Stalker Rifle" hidden="false" collective="false" import="true" targetId="d382-1049-3988-c13e" type="selectionEntry" />
-        <entryLink id="0f9d-0bf0-c684-fd73" name="VK78 Commando" hidden="false" collective="false" import="true" targetId="1937-244f-423e-9aab" type="selectionEntry" />
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="26ed-42a3-c5ce-b029" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true">
-      <entryLinks>
-        <entryLink id="4219-c238-28f9-0451" name="BR55 Battle Rifle" hidden="false" collective="false" import="true" targetId="27bf-42b1-28db-609b" type="selectionEntry" />
-        <entryLink id="a6c9-36ac-8774-c5af" name="BR75 Battle Rifle" hidden="false" collective="false" import="true" targetId="a099-20e4-f975-fc25" type="selectionEntry" />
-        <entryLink id="7699-1f24-37f2-dbb0" name="Brute Shot" hidden="false" collective="false" import="true" targetId="bc6f-e296-4328-6589" type="selectionEntry" />
-        <entryLink id="0bf5-549b-675a-fa3d" name="Cindershot" hidden="false" collective="false" import="true" targetId="41ca-68b4-98f4-fe98" type="selectionEntry" />
-        <entryLink id="4f97-d99c-333b-64fc" name="Combat Knife" hidden="false" collective="false" import="true" targetId="2783-acf5-87d3-061b" type="selectionEntry" />
-        <entryLink id="91e1-2590-f215-22a8" name="Concussion Rifle" hidden="false" collective="false" import="true" targetId="4006-7650-5aeb-50d8" type="selectionEntry" />
-        <entryLink id="5c5d-26b8-396d-1a18" name="Covenant Carbine" hidden="false" collective="false" import="true" targetId="f4c4-b526-ba29-4345" type="selectionEntry" />
-        <entryLink id="ce83-8ad9-3477-4d6d" name="CQS48 Bulldog" hidden="false" collective="false" import="true" targetId="ca8f-d5a3-b3f6-80c6" type="selectionEntry" />
-        <entryLink id="04a5-9717-85bf-6ad5" name="Disruptor" hidden="false" collective="false" import="true" targetId="2129-26df-7bf3-68fc" type="selectionEntry" />
-        <entryLink id="ed93-2ade-7983-a4ba" name="Energy Sword" hidden="false" collective="false" import="true" targetId="437d-a383-5b31-8e6d" type="selectionEntry" />
-        <entryLink id="c6df-e0d3-65d3-a878" name="Focus Rifle" hidden="false" collective="false" import="true" targetId="0f34-b48c-4442-3fab" type="selectionEntry" />
-        <entryLink id="abfa-80fa-e086-2c1f" name="Fuel Rod Gun" hidden="false" collective="false" import="true" targetId="a27d-db87-96c0-bfd6" type="selectionEntry" />
-        <entryLink id="4fba-3c32-0476-43a8" name="Gravity Hammer" hidden="false" collective="false" import="true" targetId="8a63-c042-c023-d322" type="selectionEntry" />
-        <entryLink id="fc86-be0a-2c28-bfb6" name="H-165 Target Locator" hidden="false" collective="false" import="true" targetId="5b9a-37fc-24bc-fa29" type="selectionEntry" />
-        <entryLink id="462a-5cd0-eeed-ee1d" name="Heatwave" hidden="false" collective="false" import="true" targetId="ed24-e91f-5069-4215" type="selectionEntry" />
-        <entryLink id="4a41-34a5-f934-6717" name="M319 Grenade Launcher" hidden="false" collective="false" import="true" targetId="4ca9-7f02-f4a9-9188" type="selectionEntry" />
-        <entryLink id="4577-548b-eaa1-3226" name="M392 DMR" hidden="false" collective="false" import="true" targetId="b793-744c-e7c0-956e" type="selectionEntry" />
-        <entryLink id="7bb8-23bc-d597-78a6" name="M41 SPNKr" hidden="false" collective="false" import="true" targetId="6e20-dbef-dca5-36c4" type="selectionEntry" />
-        <entryLink id="36cd-5738-4e1c-32b9" name="M45 Shotgun" hidden="false" collective="false" import="true" targetId="0831-0a27-6152-8aa6" type="selectionEntry" />
-        <entryLink id="e3aa-557f-220f-ce5b" name="M6 Spartan Laser" hidden="false" collective="false" import="true" targetId="8b94-efb3-59f4-db29" type="selectionEntry" />
-        <entryLink id="fa27-d3c1-beec-0291" name="M6C/SOCOM" hidden="false" collective="false" import="true" targetId="f433-3957-c4ff-8b46" type="selectionEntry" />
-        <entryLink id="ec87-5983-0394-5d7c" name="M6G Magnum" hidden="false" collective="false" import="true" targetId="2cc0-6cf7-79f2-3aa8" type="selectionEntry" />
-        <entryLink id="87ad-61d8-bf17-954f" name="M7057 Flamethrower" hidden="false" collective="false" import="true" targetId="af99-6ee2-4ce9-b8ec" type="selectionEntry" />
-        <entryLink id="15ac-420e-b1e2-9ab6" name="M7S SMG" hidden="false" collective="false" import="true" targetId="c1d9-77eb-9085-3804" type="selectionEntry" />
-        <entryLink id="c77d-bd4d-1f35-87a8" name="M90 Shotgun" hidden="false" collective="false" import="true" targetId="34cd-258a-1aab-8de1" type="selectionEntry" />
-        <entryLink id="3966-2c8c-0466-d8b2" name="MA40 Assault Rifle" hidden="false" collective="false" import="true" targetId="2b54-a146-7ae2-93ba" type="selectionEntry" />
-        <entryLink id="a561-2d01-9455-ca3e" name="MA5K 'Avenger' Carbine" hidden="false" collective="false" import="true" targetId="485f-f1cc-cfda-9db1" type="selectionEntry" />
-        <entryLink id="72eb-2153-e9ea-29f8" name="Mangler" hidden="false" collective="false" import="true" targetId="df63-e40a-6578-54c1" type="selectionEntry" />
-        <entryLink id="382f-54b3-fd5f-af76" name="Mauler" hidden="false" collective="false" import="true" targetId="84f9-9066-4884-3869" type="selectionEntry" />
-        <entryLink id="2fe4-aaf1-7dc9-b57f" name="MLRS-2 Hydra" hidden="false" collective="false" import="true" targetId="21fa-bdba-8e2a-01fe" type="selectionEntry" />
-        <entryLink id="1ec2-78aa-1e87-fda7" name="Needle Rifle" hidden="false" collective="false" import="true" targetId="df44-f548-23ab-1ba9" type="selectionEntry" />
-        <entryLink id="a897-9090-770f-5d51" name="Needler" hidden="false" collective="false" import="true" targetId="c401-40ae-cfa3-5f44" type="selectionEntry" />
-        <entryLink id="6b11-8987-a767-96a1" name="Plasma Launcher" hidden="false" collective="false" import="true" targetId="d54d-1505-b3b0-fb46" type="selectionEntry" />
-        <entryLink id="ed3a-4baf-205c-954a" name="Plasma Repeater" hidden="false" collective="false" import="true" targetId="3d23-2521-b1bb-67ca" type="selectionEntry" />
-        <entryLink id="fb1d-9e53-ba1b-34d4" name="Plasma Rifle" hidden="false" collective="false" import="true" targetId="216d-527e-abbb-ac43" type="selectionEntry" />
-        <entryLink id="56e0-575b-8336-d89d" name="Pulse Carbine" hidden="false" collective="false" import="true" targetId="c2d1-0c98-6c70-3e11" type="selectionEntry" />
-        <entryLink id="5b82-1932-123d-63e3" name="Ravager" hidden="false" collective="false" import="true" targetId="8597-6852-3eb7-4cbf" type="selectionEntry" />
-        <entryLink id="0ea0-216a-f9b0-60f6" name="S7 Sniper Rifle" hidden="false" collective="false" import="true" targetId="cb87-c536-2da1-87c9" type="selectionEntry" />
-        <entryLink id="dadf-b9ce-299b-e441" name="Sentinel Beam" hidden="false" collective="false" import="true" targetId="dbf1-c673-01a9-7655" type="selectionEntry" />
-        <entryLink id="8104-8b28-62db-5eab" name="Shock Rifle" hidden="false" collective="false" import="true" targetId="ba41-1399-9731-7b5c" type="selectionEntry" />
-        <entryLink id="91dd-90ce-87c8-bc1f" name="Skewer" hidden="false" collective="false" import="true" targetId="d4a3-59c2-65c5-d837" type="selectionEntry" />
-        <entryLink id="a6d5-b814-abdd-8e28" name="Spike Rifle" hidden="false" collective="false" import="true" targetId="4921-063a-26a6-408f" type="selectionEntry" />
-        <entryLink id="c9ff-d364-ddc3-50a1" name="Stalker Rifle" hidden="false" collective="false" import="true" targetId="d382-1049-3988-c13e" type="selectionEntry" />
-        <entryLink id="d7b6-2515-aad3-b725" name="VK78 Commando" hidden="false" collective="false" import="true" targetId="1937-244f-423e-9aab" type="selectionEntry" />
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="f481-0398-b4c1-893e" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true">
-      <entryLinks>
-        <entryLink id="f638-a66c-0fb5-a80b" name="BR55 Battle Rifle" hidden="false" collective="false" import="true" targetId="27bf-42b1-28db-609b" type="selectionEntry" />
-        <entryLink id="dde8-f00b-8c73-d58c" name="BR75 Battle Rifle" hidden="false" collective="false" import="true" targetId="a099-20e4-f975-fc25" type="selectionEntry" />
-        <entryLink id="9de0-8249-1ccc-2320" name="Brute Shot" hidden="false" collective="false" import="true" targetId="bc6f-e296-4328-6589" type="selectionEntry" />
-        <entryLink id="c096-bebe-2dfd-5a90" name="Cindershot" hidden="false" collective="false" import="true" targetId="41ca-68b4-98f4-fe98" type="selectionEntry" />
-        <entryLink id="fa48-23c8-0ffe-855a" name="Concussion Rifle" hidden="false" collective="false" import="true" targetId="4006-7650-5aeb-50d8" type="selectionEntry" />
-        <entryLink id="3286-20af-d766-89f4" name="Covenant Carbine" hidden="false" collective="false" import="true" targetId="f4c4-b526-ba29-4345" type="selectionEntry" />
-        <entryLink id="313c-da41-2137-ab99" name="CQS48 Bulldog" hidden="false" collective="false" import="true" targetId="ca8f-d5a3-b3f6-80c6" type="selectionEntry" />
-        <entryLink id="00ba-0d89-ab15-2189" name="Disruptor" hidden="false" collective="false" import="true" targetId="2129-26df-7bf3-68fc" type="selectionEntry" />
-        <entryLink id="83fd-1076-02f8-3d09" name="Energy Sword" hidden="false" collective="false" import="true" targetId="437d-a383-5b31-8e6d" type="selectionEntry" />
-        <entryLink id="5fb7-7590-2e02-59a5" name="Focus Rifle" hidden="false" collective="false" import="true" targetId="0f34-b48c-4442-3fab" type="selectionEntry" />
-        <entryLink id="9813-91f1-bcff-b655" name="Fuel Rod Gun" hidden="false" collective="false" import="true" targetId="a27d-db87-96c0-bfd6" type="selectionEntry" />
-        <entryLink id="f62a-457e-a310-195d" name="Gravity Hammer" hidden="false" collective="false" import="true" targetId="8a63-c042-c023-d322" type="selectionEntry" />
-        <entryLink id="9202-6272-9519-4a30" name="H-165 Target Locator" hidden="false" collective="false" import="true" targetId="5b9a-37fc-24bc-fa29" type="selectionEntry" />
-        <entryLink id="4bd4-c00b-d5d5-6845" name="Heatwave" hidden="false" collective="false" import="true" targetId="ed24-e91f-5069-4215" type="selectionEntry" />
-        <entryLink id="c4e8-c005-073f-189b" name="M319 Grenade Launcher" hidden="false" collective="false" import="true" targetId="4ca9-7f02-f4a9-9188" type="selectionEntry" />
-        <entryLink id="2e03-e1a8-b68d-6842" name="M392 DMR" hidden="false" collective="false" import="true" targetId="b793-744c-e7c0-956e" type="selectionEntry" />
-        <entryLink id="ea6a-22ca-ce36-2537" name="M41 SPNKr" hidden="false" collective="false" import="true" targetId="6e20-dbef-dca5-36c4" type="selectionEntry" />
-        <entryLink id="d59c-8ced-cb7e-d6b3" name="M45 Shotgun" hidden="false" collective="false" import="true" targetId="0831-0a27-6152-8aa6" type="selectionEntry" />
-        <entryLink id="6642-a520-c4e4-ee9a" name="M6 Spartan Laser" hidden="false" collective="false" import="true" targetId="8b94-efb3-59f4-db29" type="selectionEntry" />
-        <entryLink id="66c4-f75f-ccc7-1df3" name="M6C/SOCOM" hidden="false" collective="false" import="true" targetId="f433-3957-c4ff-8b46" type="selectionEntry" />
-        <entryLink id="9b98-f7d4-65c1-3315" name="M6G Magnum" hidden="false" collective="false" import="true" targetId="2cc0-6cf7-79f2-3aa8" type="selectionEntry" />
-        <entryLink id="fa29-fe94-f270-51af" name="M7057 Flamethrower" hidden="false" collective="false" import="true" targetId="af99-6ee2-4ce9-b8ec" type="selectionEntry" />
-        <entryLink id="6cfe-295a-e5be-e2d9" name="M7S SMG" hidden="false" collective="false" import="true" targetId="c1d9-77eb-9085-3804" type="selectionEntry" />
-        <entryLink id="d109-e21f-1f9c-8040" name="M90 Shotgun" hidden="false" collective="false" import="true" targetId="34cd-258a-1aab-8de1" type="selectionEntry" />
-        <entryLink id="fa2b-cc1a-3aba-28d8" name="MA40 Assault Rifle" hidden="false" collective="false" import="true" targetId="2b54-a146-7ae2-93ba" type="selectionEntry" />
-        <entryLink id="51cb-defd-8dbf-41f9" name="MA5K 'Avenger' Carbine" hidden="false" collective="false" import="true" targetId="485f-f1cc-cfda-9db1" type="selectionEntry" />
-        <entryLink id="daa4-0d9f-5ad2-afb0" name="Mangler" hidden="false" collective="false" import="true" targetId="df63-e40a-6578-54c1" type="selectionEntry" />
-        <entryLink id="2fc2-9789-8f92-49b0" name="Mauler" hidden="false" collective="false" import="true" targetId="84f9-9066-4884-3869" type="selectionEntry" />
-        <entryLink id="681a-46df-d338-78c6" name="MLRS-2 Hydra" hidden="false" collective="false" import="true" targetId="21fa-bdba-8e2a-01fe" type="selectionEntry" />
-        <entryLink id="b530-7e57-08cd-a647" name="Needle Rifle" hidden="false" collective="false" import="true" targetId="df44-f548-23ab-1ba9" type="selectionEntry" />
-        <entryLink id="bb2d-c24e-361a-2346" name="Needler" hidden="false" collective="false" import="true" targetId="c401-40ae-cfa3-5f44" type="selectionEntry" />
-        <entryLink id="246d-e0ee-eedf-22f5" name="Plasma Launcher" hidden="false" collective="false" import="true" targetId="d54d-1505-b3b0-fb46" type="selectionEntry" />
-        <entryLink id="fdd2-80b4-fa32-b547" name="Plasma Repeater" hidden="false" collective="false" import="true" targetId="3d23-2521-b1bb-67ca" type="selectionEntry" />
-        <entryLink id="b083-5131-2bdb-2a10" name="Plasma Rifle" hidden="false" collective="false" import="true" targetId="216d-527e-abbb-ac43" type="selectionEntry" />
-        <entryLink id="2086-32d4-254a-8094" name="Pulse Carbine" hidden="false" collective="false" import="true" targetId="c2d1-0c98-6c70-3e11" type="selectionEntry" />
-        <entryLink id="a1bf-8aff-8011-2e55" name="Ravager" hidden="false" collective="false" import="true" targetId="8597-6852-3eb7-4cbf" type="selectionEntry" />
-        <entryLink id="9a14-254c-b447-c771" name="S7 Sniper Rifle" hidden="false" collective="false" import="true" targetId="cb87-c536-2da1-87c9" type="selectionEntry" />
-        <entryLink id="2ea8-f6f7-04e0-3e03" name="Sentinel Beam" hidden="false" collective="false" import="true" targetId="dbf1-c673-01a9-7655" type="selectionEntry" />
-        <entryLink id="a4e0-a718-0edc-1b13" name="Shock Rifle" hidden="false" collective="false" import="true" targetId="ba41-1399-9731-7b5c" type="selectionEntry" />
-        <entryLink id="4a62-2f0c-1ccb-0c3f" name="Skewer" hidden="false" collective="false" import="true" targetId="d4a3-59c2-65c5-d837" type="selectionEntry" />
-        <entryLink id="db7a-9356-c4d0-ab18" name="Spike Rifle" hidden="false" collective="false" import="true" targetId="4921-063a-26a6-408f" type="selectionEntry" />
-        <entryLink id="5547-58d9-68a9-05ee" name="Stalker Rifle" hidden="false" collective="false" import="true" targetId="d382-1049-3988-c13e" type="selectionEntry" />
-        <entryLink id="fbfb-d33d-9aa1-184d" name="VK78 Commando" hidden="false" collective="false" import="true" targetId="1937-244f-423e-9aab" type="selectionEntry" />
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="646b-bca3-b952-16e8" name="Extra weapons (bought with points)" hidden="false" collective="false" import="true">
-      <entryLinks>
-        <entryLink id="174c-85ee-25fa-11c8" name="BR55 Battle Rifle" hidden="false" collective="false" import="true" targetId="27bf-42b1-28db-609b" type="selectionEntry" />
-        <entryLink id="c2f0-c986-26a1-2b9b" name="BR75 Battle Rifle" hidden="false" collective="false" import="true" targetId="a099-20e4-f975-fc25" type="selectionEntry" />
-        <entryLink id="a941-0535-51e9-55cd" name="Brute Shot" hidden="false" collective="false" import="true" targetId="bc6f-e296-4328-6589" type="selectionEntry" />
-        <entryLink id="ee3b-7492-b136-0b0c" name="Cindershot" hidden="false" collective="false" import="true" targetId="41ca-68b4-98f4-fe98" type="selectionEntry" />
-        <entryLink id="3de3-b56e-d0ed-e424" name="Concussion Rifle" hidden="false" collective="false" import="true" targetId="4006-7650-5aeb-50d8" type="selectionEntry" />
-        <entryLink id="4245-41eb-b245-6f6f" name="Covenant Carbine" hidden="false" collective="false" import="true" targetId="f4c4-b526-ba29-4345" type="selectionEntry" />
-        <entryLink id="e30f-0d7e-a083-9f38" name="CQS48 Bulldog" hidden="false" collective="false" import="true" targetId="ca8f-d5a3-b3f6-80c6" type="selectionEntry" />
-        <entryLink id="e7c9-2cc2-23fc-226f" name="Disruptor" hidden="false" collective="false" import="true" targetId="2129-26df-7bf3-68fc" type="selectionEntry" />
-        <entryLink id="dfa1-f2cb-b735-6e30" name="Energy Dagger" hidden="false" collective="false" import="true" targetId="8dab-8772-2be1-a1ef" type="selectionEntry" />
-        <entryLink id="69e7-dfd1-a2ca-7ff7" name="Energy Sword" hidden="false" collective="false" import="true" targetId="437d-a383-5b31-8e6d" type="selectionEntry" />
-        <entryLink id="b546-14ee-32d4-178d" name="Focus Rifle" hidden="false" collective="false" import="true" targetId="0f34-b48c-4442-3fab" type="selectionEntry" />
-        <entryLink id="9e7e-86e1-9304-d015" name="Fuel Rod Gun" hidden="false" collective="false" import="true" targetId="a27d-db87-96c0-bfd6" type="selectionEntry" />
-        <entryLink id="6da0-5ed1-4fd0-5a28" name="Gravity Hammer" hidden="false" collective="false" import="true" targetId="8a63-c042-c023-d322" type="selectionEntry" />
-        <entryLink id="0dda-451c-6e44-8f83" name="H-165 Target Locator" hidden="false" collective="false" import="true" targetId="5b9a-37fc-24bc-fa29" type="selectionEntry" />
-        <entryLink id="d662-6fc6-6d80-92f9" name="Heatwave" hidden="false" collective="false" import="true" targetId="ed24-e91f-5069-4215" type="selectionEntry" />
-        <entryLink id="e9c1-9870-32ed-0f1c" name="M319 Grenade Launcher" hidden="false" collective="false" import="true" targetId="4ca9-7f02-f4a9-9188" type="selectionEntry" />
-        <entryLink id="ac48-526d-4277-f74e" name="M392 DMR" hidden="false" collective="false" import="true" targetId="b793-744c-e7c0-956e" type="selectionEntry" />
-        <entryLink id="fa7c-c642-aa29-d607" name="M41 SPNKr" hidden="false" collective="false" import="true" targetId="6e20-dbef-dca5-36c4" type="selectionEntry" />
-        <entryLink id="6c45-0df1-4eb1-996a" name="M45 Shotgun" hidden="false" collective="false" import="true" targetId="0831-0a27-6152-8aa6" type="selectionEntry" />
-        <entryLink id="d45b-6a75-a269-d615" name="M6 Spartan Laser" hidden="false" collective="false" import="true" targetId="8b94-efb3-59f4-db29" type="selectionEntry" />
-        <entryLink id="707e-2d07-9c9b-51c2" name="M6C/SOCOM" hidden="false" collective="false" import="true" targetId="f433-3957-c4ff-8b46" type="selectionEntry" />
-        <entryLink id="5e0a-1148-7fdc-318e" name="M6G Magnum" hidden="false" collective="false" import="true" targetId="2cc0-6cf7-79f2-3aa8" type="selectionEntry" />
-        <entryLink id="e0b5-fc94-2ef7-edcc" name="M7057 Flamethrower" hidden="false" collective="false" import="true" targetId="af99-6ee2-4ce9-b8ec" type="selectionEntry" />
-        <entryLink id="78df-6de6-b0c5-3368" name="M7S SMG" hidden="false" collective="false" import="true" targetId="c1d9-77eb-9085-3804" type="selectionEntry" />
-        <entryLink id="6e42-16c7-7743-54fd" name="M90 Shotgun" hidden="false" collective="false" import="true" targetId="34cd-258a-1aab-8de1" type="selectionEntry" />
-        <entryLink id="5795-2af6-d6ae-4e8e" name="MA40 Assault Rifle" hidden="false" collective="false" import="true" targetId="2b54-a146-7ae2-93ba" type="selectionEntry" />
-        <entryLink id="4c29-5c31-68ef-883e" name="MA5K 'Avenger' Carbine" hidden="false" collective="false" import="true" targetId="485f-f1cc-cfda-9db1" type="selectionEntry" />
-        <entryLink id="11dc-cb22-a802-5930" name="Mangler" hidden="false" collective="false" import="true" targetId="df63-e40a-6578-54c1" type="selectionEntry" />
-        <entryLink id="96af-1a82-fa0a-acb5" name="Mauler" hidden="false" collective="false" import="true" targetId="84f9-9066-4884-3869" type="selectionEntry" />
-        <entryLink id="e3da-665b-daa7-d64d" name="MLRS-2 Hydra" hidden="false" collective="false" import="true" targetId="21fa-bdba-8e2a-01fe" type="selectionEntry" />
-        <entryLink id="21c3-7f7a-f80e-b2a8" name="Needle Rifle" hidden="false" collective="false" import="true" targetId="df44-f548-23ab-1ba9" type="selectionEntry" />
-        <entryLink id="9ad9-11a3-868f-6a8c" name="Needler" hidden="false" collective="false" import="true" targetId="c401-40ae-cfa3-5f44" type="selectionEntry" />
-        <entryLink id="b16d-249e-0aca-dfc5" name="Plasma Launcher" hidden="false" collective="false" import="true" targetId="d54d-1505-b3b0-fb46" type="selectionEntry" />
-        <entryLink id="f148-4db4-400c-1fea" name="Plasma Repeater" hidden="false" collective="false" import="true" targetId="3d23-2521-b1bb-67ca" type="selectionEntry" />
-        <entryLink id="d4f2-c4f0-8740-da1b" name="Plasma Rifle" hidden="false" collective="false" import="true" targetId="216d-527e-abbb-ac43" type="selectionEntry" />
-        <entryLink id="b6ce-2529-51ce-ae0c" name="Pulse Carbine" hidden="false" collective="false" import="true" targetId="c2d1-0c98-6c70-3e11" type="selectionEntry" />
-        <entryLink id="cd52-04ea-d25a-d0b7" name="Ravager" hidden="false" collective="false" import="true" targetId="8597-6852-3eb7-4cbf" type="selectionEntry" />
-        <entryLink id="7fad-1cc6-3e29-75ae" name="S7 Sniper Rifle" hidden="false" collective="false" import="true" targetId="cb87-c536-2da1-87c9" type="selectionEntry" />
-        <entryLink id="ee0d-b9ab-eeff-dd41" name="Sentinel Beam" hidden="false" collective="false" import="true" targetId="dbf1-c673-01a9-7655" type="selectionEntry" />
-        <entryLink id="ddd6-5249-27cb-9ae0" name="Shock Rifle" hidden="false" collective="false" import="true" targetId="ba41-1399-9731-7b5c" type="selectionEntry" />
-        <entryLink id="cbd6-de56-3b52-cfaf" name="Skewer" hidden="false" collective="false" import="true" targetId="d4a3-59c2-65c5-d837" type="selectionEntry" />
-        <entryLink id="9975-48ff-1479-fb7b" name="Spike Rifle" hidden="false" collective="false" import="true" targetId="4921-063a-26a6-408f" type="selectionEntry" />
-        <entryLink id="d77d-c6fe-ff17-0358" name="Stalker Rifle" hidden="false" collective="false" import="true" targetId="d382-1049-3988-c13e" type="selectionEntry" />
-        <entryLink id="e5cd-0352-8b8b-0881" name="VK78 Commando" hidden="false" collective="false" import="true" targetId="1937-244f-423e-9aab" type="selectionEntry" />
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="76ca-e615-4b4c-c713" name="Grenades and items" hidden="false" collective="false" import="true">
-      <selectionEntryGroups>
-        <selectionEntryGroup id="1846-805e-0840-4a3b" name="Grenades (up to 2 types per model)" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dab9-7f22-1c28-3894" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="042f-62c6-d521-7f5d" name="Demo Charge" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5223-3f8c-2870-b198" type="max" />
-                <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8088-0913-9cdb-5904" type="max" />
-              </constraints>
-              <profiles>
-                <profile id="47cf-a18c-1d00-77e0" name="Demo Charge" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
-                  <characteristics>
-                    <characteristic name="Type" typeId="c716-c619-b384-0452">Grenade</characteristic>
-                    <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
-                    <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">CC, AP2, Blast; EMP; Lethal(1)</characteristic>
-                    <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">-</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="e5c7-aa4e-7e39-f644" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-                <infoLink id="b91a-8f51-ec07-d6f1" name="EMP" hidden="false" targetId="eae8-da8a-08f0-ac08" type="rule" />
-                <infoLink id="0230-9ba5-84d4-4177" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="8.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="962f-6b08-205e-1f82" name="Plasma Grenade" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7e7a-7048-45b7-cb83" type="max" />
-                <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b198-f9a4-0738-7b9a" type="max" />
-              </constraints>
-              <profiles>
-                <profile id="33fd-71fe-d3c7-06ab" name="Plasma Grenade" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
-                  <characteristics>
-                    <characteristic name="Type" typeId="c716-c619-b384-0452">Grenade</characteristic>
-                    <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
-                    <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">R3 (9") Grenade, AP2, Frag(4); Lethal(1); Sticky</characteristic>
-                    <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">-</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="e5cc-6cdb-7a4f-2c1d" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-                <infoLink id="1f28-c9e8-f305-bd90" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="278e-e0c1-c24a-e24c" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
-                <infoLink id="d786-2cd2-08f4-f9a2" name="Item (III): Plasma Grenade" hidden="false" targetId="4f17-a781-3533-c1de" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="5.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="9014-f0b3-15b4-56c7" name="Frag Grenade" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7394-58de-e7ef-d13b" type="max" />
-                <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e1d1-583a-701c-bebb" type="max" />
-              </constraints>
-              <profiles>
-                <profile id="1215-1509-6e04-bb3e" name="Frag Grenade" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
-                  <characteristics>
-                    <characteristic name="Type" typeId="c716-c619-b384-0452">Grenade</characteristic>
-                    <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
-                    <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">R3 (9") Grenade, AP1, Frag(5)</characteristic>
-                    <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">-</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="5375-489c-2d0a-6799" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="4.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="4109-b740-be31-762c" name="Dynamo Grenade" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="189b-6a74-5916-6af4" type="max" />
-                <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b114-0b84-399f-e2f1" type="max" />
-              </constraints>
-              <profiles>
-                <profile id="1b24-d474-3199-7f32" name="Dynamo Grenade" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
-                  <characteristics>
-                    <characteristic name="Type" typeId="c716-c619-b384-0452">Grenade</characteristic>
-                    <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
-                    <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">R4 (12") Grenade, AP -, EMP; Implosion(3)</characteristic>
-                    <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">-</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="7ed1-8988-d48f-651e" name="EMP" hidden="false" targetId="eae8-da8a-08f0-ac08" type="rule" />
-                <infoLink id="4f23-7d19-4a1f-b79d" name="Implosion [n]" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
-                <infoLink id="0aa0-3ed9-a9c5-bb27" name="Item (III): Dynamo Grenade" hidden="false" targetId="9164-3cbf-9a1d-8c68" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="5.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="234b-5694-eb4d-5a4d" name="Spike Grenade" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c11b-3b69-3c32-0889" type="max" />
-                <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="579b-639c-c4c7-5ac3" type="max" />
-              </constraints>
-              <profiles>
-                <profile id="9fd2-1445-7ee8-1dcd" name="Spike Grenade" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
-                  <characteristics>
-                    <characteristic name="Type" typeId="c716-c619-b384-0452">Grenade</characteristic>
-                    <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
-                    <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">R3 (9") Grenade, AP1, Frag(4); Sticky</characteristic>
-                    <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">-</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="aece-6e01-31e5-63e5" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-                <infoLink id="4867-3952-4a53-70bf" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
-                <infoLink id="56b3-f994-fc1d-f03c" name="Item (III): Spike Grenade" hidden="false" targetId="1a0f-e427-de6f-6d6d" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="3.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="95fa-d6e5-45ca-c006" name="Items (up to 2 different per model)" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="202a-590c-661c-0743" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="84ef-72c4-ac02-defb" name="Hardlight Shield" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dc06-4379-d9da-317e" type="max" />
-                <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6b21-cf02-7b80-c1e2" type="max" />
-              </constraints>
-              <profiles>
-                <profile id="1acf-e99c-4c07-a20a" name="Hardlight Shield" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
-                  <characteristics>
-                    <characteristic name="Type" typeId="c716-c619-b384-0452">Item</characteristic>
-                    <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">-</characteristic>
-                    <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
-                    <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">+1 AR until a wound received</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="f2c0-a28b-7cc2-106a" name="Item (I): Hardlight Shield" hidden="false" targetId="4cb2-d0a7-5036-b3f3" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="6.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="4cd8-ab1b-9f07-6569" name="Repair Field" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3ed6-feda-9dba-da20" type="max" />
-                <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ff4a-1ce7-6a4b-d205" type="max" />
-              </constraints>
-              <profiles>
-                <profile id="4506-03de-3fa6-26d9" name="Repair Field" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
-                  <characteristics>
-                    <characteristic name="Type" typeId="c716-c619-b384-0452">Item</characteristic>
-                    <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
-                    <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
-                    <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">Placed in the holder's cube for the rest of the game; any model in that cube at the end of a round heals 1 wound</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="8f01-4003-f65e-320a" name="Item (II): Repair Field" hidden="false" targetId="4733-1420-2fa1-8386" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="6.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="8f50-b256-41f9-0623" name="Grappleshot" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b91d-6092-a3a7-0623" type="max" />
-                <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e82b-483e-4adc-f555" type="max" />
-              </constraints>
-              <profiles>
-                <profile id="d7c8-0707-ec17-607c" name="Grappleshot" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
-                  <characteristics>
-                    <characteristic name="Type" typeId="c716-c619-b384-0452">Item</characteristic>
-                    <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
-                    <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
-                    <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">+1 cube move or grab weapon/item in adjacent cube</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="6fac-21f9-52d6-e317" name="Item (II): Grappleshot" hidden="false" targetId="1ec5-0ab7-20a1-878b" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="5.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="ffd8-ed50-80f6-4dc4" name="Health Pack" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="43f2-7d1f-5f71-e8fa" type="max" />
-                <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="99e9-8115-467d-33be" type="max" />
-              </constraints>
-              <profiles>
-                <profile id="0179-8628-c6bb-adfc" name="Health Pack" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
-                  <characteristics>
-                    <characteristic name="Type" typeId="c716-c619-b384-0452">Item</characteristic>
-                    <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
-                    <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
-                    <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">+Life Support, or as an Auxiliary Action remove all damage the carrier has suffered; returned when used (Oct '25)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="fa08-6975-151b-99ef" name="Item (I): Health Pack" hidden="false" targetId="17c1-91bd-aa99-b917" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="5.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="864a-bb8d-a569-1ddc" name="Quantum Translocator" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5d95-ce6c-ee94-1bf3" type="max" />
-                <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2cde-da77-2510-4d94" type="max" />
-              </constraints>
-              <profiles>
-                <profile id="4902-68a2-a3b7-4faf" name="Quantum Translocator" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
-                  <characteristics>
-                    <characteristic name="Type" typeId="c716-c619-b384-0452">Item</characteristic>
-                    <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
-                    <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
-                    <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">Before an Advance or Sprint, drop the QT token; until the end of that activation, return to it from within 2 cubes with no Breaking Away and no path through cubes. An enemy there triggers an Assault without the +2 dice. (Oct '25)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="e418-85c4-a5b5-2872" name="Item (II): Quantum Translocator" hidden="false" targetId="b57d-ee99-b91a-3d1a" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="4.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="7410-8e86-6589-26d1" name="Threat Sensor" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d0f9-e3b8-22b3-06c8" type="max" />
-                <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b7a0-42b2-69fe-03ab" type="max" />
-              </constraints>
-              <profiles>
-                <profile id="4ad2-dbde-dac0-626e" name="Threat Sensor" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
-                  <characteristics>
-                    <characteristic name="Type" typeId="c716-c619-b384-0452">Item</characteristic>
-                    <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
-                    <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
-                    <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">Pick a cube; for the rest of the round friendly models have LOS to it, its models and all adjacent cubes (Oct '25)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="1156-f986-e611-d729" name="Item (II): Threat Sensor" hidden="false" targetId="ec5d-ba2a-778a-aa37" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="4.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="3304-52c2-0061-b520" name="Shroud Screen" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="67ed-dec2-a0b5-71ac" type="max" />
-                <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5acd-af2f-199c-abdd" type="max" />
-              </constraints>
-              <profiles>
-                <profile id="42a4-0440-583c-c282" name="Shroud Screen" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
-                  <characteristics>
-                    <characteristic name="Type" typeId="c716-c619-b384-0452">Item</characteristic>
-                    <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
-                    <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
-                    <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">Token in holder's cube or an adjacent cube in LOS; blocks LOS into, out of and through it for the rest of the round (the cube itself can still be targeted)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="7fe4-95b8-eee7-3feb" name="Item (II): Shroud Screen" hidden="false" targetId="3b7e-9cc7-6d65-84b2" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="3.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="dfc3-116e-e016-bde4" name="Thruster" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="043e-e56b-34c4-a5d3" type="max" />
-                <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="278e-cb98-ba3f-87a5" type="max" />
-              </constraints>
-              <profiles>
-                <profile id="026c-bf83-b977-1a0c" name="Thruster" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
-                  <characteristics>
-                    <characteristic name="Type" typeId="c716-c619-b384-0452">Item</characteristic>
-                    <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
-                    <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
-                    <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">+1 SP for one Advance or Sprint using normal short or long move; use before the move starts</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="9924-cf0c-a8ee-c09d" name="Item (II): Thruster" hidden="false" targetId="bfaf-b079-7884-831c" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="3.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="0f21-c4b0-d0a2-5c9b" name="Active Camo" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e304-3c7e-bc75-dccc" type="max" />
-                <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2939-87dd-597d-499f" type="max" />
-              </constraints>
-              <profiles>
-                <profile id="abfb-6517-52bc-2d62" name="Active Camo" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
-                  <characteristics>
-                    <characteristic name="Type" typeId="c716-c619-b384-0452">Item</characteristic>
-                    <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">-</characteristic>
-                    <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
-                    <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">+Active Camouflage once activated; lost if the model Sprints, Fights or Shoots (Oct '25)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="99fa-52ec-6b3e-a2b3" name="Item (II): Active Camouflage" hidden="false" targetId="02d1-ca96-c3be-c7ee" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="3.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="35ec-f4cb-59ec-9d01" name="Explosive Ammo" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d175-042d-80bb-70c2" type="max" />
-                <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9964-8aa8-3282-beab" type="max" />
-              </constraints>
-              <profiles>
-                <profile id="e244-724a-47d1-5fa3" name="Explosive Ammo" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
-                  <characteristics>
-                    <characteristic name="Type" typeId="c716-c619-b384-0452">Item</characteristic>
-                    <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
-                    <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
-                    <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">+1 die and Lethal(1) on one Ranged test; not with Explosive, Grenade or Lunge weapons</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="d06a-576b-caf2-7787" name="Item (III): Explosive Ammo" hidden="false" targetId="f93c-bfc1-9fec-5741" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="3.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="2620-ca61-0c56-63a6" name="Drop Wall" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b097-b7e5-5d0c-c0d1" type="max" />
-                <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="71cf-2a8d-f8e0-1782" type="max" />
-              </constraints>
-              <profiles>
-                <profile id="ff65-2bda-35f9-161a" name="Drop Wall" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
-                  <characteristics>
-                    <characteristic name="Type" typeId="c716-c619-b384-0452">Item</characteristic>
-                    <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
-                    <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
-                    <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">Deploy shield cube with ESB(2)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="c4e0-528a-d5ec-7fd3" name="Item (II): Drop Wall" hidden="false" targetId="e59c-8014-0b35-9d1f" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="2.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="0f10-1a8c-53c3-7040" name="Overshield" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a3df-97e5-dbd1-88a8" type="max" />
-                <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="723c-e76e-9dfd-8e8e" type="max" />
-              </constraints>
-              <profiles>
-                <profile id="3e2b-3eb8-c6a3-d2ca" name="Overshield" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
-                  <characteristics>
-                    <characteristic name="Type" typeId="c716-c619-b384-0452">Item</characteristic>
-                    <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
-                    <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
-                    <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">+1 ES that must be used up before the model's own shields; lasts until used or depleted</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="2054-13bc-88de-4616" name="Item (II): Overshield" hidden="false" targetId="fcd1-2825-c67d-0a83" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="1.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-    </selectionEntryGroup>
-  </sharedSelectionEntryGroups>
+  <sharedSelectionEntryGroups />
   <sharedRules>
     <rule id="0c36-2543-6a7b-f326" name="Acrobatic" hidden="false">
       <description>In scenarios where kills count toward victory (e.g. Slayer), each enemy this model kills is worth +1 VP. (Updated Oct '25.)</description>
