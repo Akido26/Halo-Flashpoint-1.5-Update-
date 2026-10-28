@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<catalogue id="71e0-7f72-0493-f399" name="UNSC" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="61c2-d61f-70a4-4d68" gameSystemRevision="3" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="71e0-7f72-0493-f399" name="UNSC" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="61c2-d61f-70a4-4d68" gameSystemRevision="6" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>UNSC fireteam: Spartans, ODST and Marines mix freely. Pick the detachment in Fireteam setup (ODST Corps or none). Tournament-legal path.</readme>
   <forceEntries>
     <forceEntry id="e15f-5a93-fa9e-d068" name="UNSC Fireteam" hidden="false">
@@ -120,7 +120,7 @@
     <entryLink id="8210-13a5-5fe3-42a9" name="Drop Wall" hidden="false" collective="false" import="true" targetId="2620-ca61-0c56-63a6" type="selectionEntry" />
     <entryLink id="2ffe-40f9-416d-e384" name="Overshield" hidden="false" collective="false" import="true" targetId="0f10-1a8c-53c3-7040" type="selectionEntry" />
     <entryLink id="6e5d-d47e-3f01-e071" name="Oddball" hidden="false" collective="false" import="true" targetId="7b6b-59c7-7774-0759" type="selectionEntry" />
-    <entryLink id="3f23-19ce-c3b8-5b61" name="Power Seeds" hidden="false" collective="false" import="true" targetId="4107-8d95-271d-2252" type="selectionEntry" />
+    <entryLink id="8a8d-242e-6f4a-8f79" name="Bomb" hidden="false" collective="false" import="true" targetId="cd2c-fe74-27b9-83f2" type="selectionEntry" />
     <entryLink id="9322-80fe-b327-876b" name="Lone Wolf" hidden="false" collective="false" import="true" targetId="3ed6-167e-418c-ab16" type="selectionEntry" />
     <entryLink id="a949-a2e4-eecd-64c1" name="Hot Drop" hidden="false" collective="false" import="true" targetId="5547-f07d-a01f-411e" type="selectionEntry" />
     <entryLink id="7026-59fb-deec-4b64" name="Hot Drop (ODST Corps)" hidden="false" collective="false" import="true" targetId="4a0a-59b6-3c99-8554" type="selectionEntry" />

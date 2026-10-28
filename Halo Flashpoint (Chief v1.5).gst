@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<gameSystem id="61c2-d61f-70a4-4d68" name="Halo: Flashpoint (Chief's v1.5 data)" revision="3" battleScribeVersion="2.03" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
-  <readme>Unofficial, homebrew list-building data for Halo: Flashpoint v1.5 (Mantic Games), updated 28 Oct 2026 from the Mantic official list builder (points) and Sept 2026 1.5 errata (stats/keywords). Names, stats, points and short rule summaries only; see Mantic's Halo: Flashpoint Index for full rules. Weapons, Grenades, Items and Objective Items are bought from their own left-menu categories, then attached to a unit with the chain-link button (same NR Leading associations as 40k characters). Per unit: max 4 Objects (Items + Grenades + Objective Items) and max 1 extra ranged + 1 extra melee weapon (enforced). Force-wide: max 2 of each item/grenade (BTB: raise to 4 by hand); max 1 of each extra weapon type. Special Orders 1–3. Humans and aliens never mix in tournament lists. Mantic's site wins over this data.</readme>
+<gameSystem id="61c2-d61f-70a4-4d68" name="Halo: Flashpoint (Chief's v1.5 data)" revision="6" battleScribeVersion="2.03" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+  <readme>Unofficial, homebrew list-building data for Halo: Flashpoint v1.5 (Mantic Games), updated 28 Oct 2026 from the Mantic official list builder (points) and Sept 2026 1.5 errata (stats/keywords). Names, stats, points and short rule summaries only; see Mantic's Halo: Flashpoint Index for full rules. Weapons, Grenades, Items and Objective Items (Oddball, Bomb — Power Seeds/Flag stay as table tokens) are bought from their left-menu category, then attached to a unit with the chain-link button (same NR attach associations as 40k characters (Group Attached Units)). Per unit: max 4 Objects (Items + Grenades only; Oddball/Bomb are 0-pt Objective Items with melee profiles and do not count as Objects) and max 1 extra ranged + 1 extra melee weapon (enforced). Force-wide: max 2 of each item/grenade (BTB: raise to 4 by hand); max 1 of each extra weapon type. Special Orders 1–3. Humans and aliens never mix in tournament lists. Play Mode wound tracker uses the Wounds characteristic (HP+ES). Mantic's site wins over this data.</readme>
   <costTypes>
     <costType id="3661-1187-b063-f00f" name="Points" defaultCostLimit="200.0" hidden="false" />
   </costTypes>
@@ -11,6 +11,7 @@
         <characteristicType id="f71c-d4e9-5249-ccbf" name="HP" />
         <characteristicType id="8381-e478-0ada-c144" name="AR" />
         <characteristicType id="baac-a14d-979f-803f" name="ES" />
+        <characteristicType id="864e-20dc-0543-8937" name="Wounds" kind="Wound" />
         <characteristicType id="daf1-2d46-f21b-cabb" name="RA" />
         <characteristicType id="4395-eb80-9715-afdd" name="FI" />
         <characteristicType id="4b4c-fa64-06a3-6e29" name="SV" />
@@ -73,7 +74,7 @@
     <categoryEntry id="6b0d-c2d8-e4ac-3b69" name="Jiralhanae" hidden="false" />
     <categoryEntry id="5c4d-42ee-4f9f-c4a6" name="Unggoy" hidden="false" />
     <categoryEntry id="083a-640e-69e2-d56c" name="Kig-Yar" hidden="false" />
-    <categoryEntry id="fdd9-2a68-439d-0b8a" name="Leader" hidden="true" />
+    <categoryEntry id="1cb2-5052-c790-597c" name="Attachment" hidden="true" />
     <categoryEntry id="cbd0-36b6-df6f-4356" name="Object" hidden="true" />
     <categoryEntry id="2c9a-7de5-64ee-a2ae" name="Extra Ranged" hidden="true" />
     <categoryEntry id="a1b8-c083-cccf-472b" name="Extra Melee" hidden="true" />
@@ -172,18 +173,18 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="4008-fc01-9b7b-3b1e" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="4008-fc01-9b7b-3b1e" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
         <infoLink id="c6af-3fb7-bfa1-4c66" name="Long" hidden="false" targetId="6d8a-c297-e299-855e" type="rule" />
         <infoLink id="8659-5a66-a0f2-c9fc" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
-        <infoLink id="82eb-55bf-8561-3268" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="82eb-55bf-8561-3268" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="bb68-1236-409f-51ce" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="9eef-ab77-2ad4-0933" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="5540-1604-7491-1bc6" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="4012-1d31-078f-eb77" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="d190-116d-9285-51aa" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="d190-116d-9285-51aa" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -271,18 +272,18 @@
       </profiles>
       <infoLinks>
         <infoLink id="6e9b-300a-f97e-afa3" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-        <infoLink id="6294-f2c8-9050-4189" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="6294-f2c8-9050-4189" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
         <infoLink id="cfa8-8ab4-e9e6-bdbc" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
-        <infoLink id="6f23-11d7-7a3d-61b8" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-        <infoLink id="f117-758e-6e4d-4e7f" name="Smash [n]" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+        <infoLink id="6f23-11d7-7a3d-61b8" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="f117-758e-6e4d-4e7f" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="dbe2-71d5-d0ca-49a9" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="6d1f-8ea3-a48c-19fb" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="946d-316d-c577-a22a" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="0839-0031-d306-b270" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="33e2-8bfc-8251-501f" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="33e2-8bfc-8251-501f" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -369,17 +370,17 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="4871-8af2-de39-0ce9" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="4871-8af2-de39-0ce9" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
         <infoLink id="271d-b76a-55be-116c" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
-        <infoLink id="f8fa-2227-ee4e-afb6" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="f8fa-2227-ee4e-afb6" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="6069-9bc1-545d-1870" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="b91a-df94-a995-aafd" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="2125-ef05-00b3-e7a7" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="2c66-9917-4e43-0b55" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="355d-39d3-3112-1c7a" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="355d-39d3-3112-1c7a" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -460,17 +461,17 @@
       </profiles>
       <infoLinks>
         <infoLink id="5fed-e655-0d30-1444" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-        <infoLink id="a306-bffb-beab-ec9d" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="a306-bffb-beab-ec9d" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
         <infoLink id="2159-9ad4-0a40-595e" name="Long" hidden="false" targetId="6d8a-c297-e299-855e" type="rule" />
         <infoLink id="055a-493f-890f-18aa" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="9a6f-bb01-6771-299b" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="0e6c-fcf8-5831-ede1" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="595f-7daa-19e7-36f9" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="5711-6dcd-c079-1ae1" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="eb6b-6c76-8bff-4776" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="eb6b-6c76-8bff-4776" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -551,18 +552,18 @@
       </profiles>
       <infoLinks>
         <infoLink id="f3ad-b33b-a0dd-beb1" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-        <infoLink id="b3d6-0bbc-3074-08df" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="b3d6-0bbc-3074-08df" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
         <infoLink id="561f-6f8a-a89d-3449" name="Explosive" hidden="false" targetId="2599-56ef-4404-67aa" type="rule" />
-        <infoLink id="4b5e-0ca4-776a-495d" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-        <infoLink id="3fe6-607b-f9d3-6709" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="4b5e-0ca4-776a-495d" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="3fe6-607b-f9d3-6709" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="ffe2-5dff-4d6f-39e6" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="a45c-3646-4c31-a09c" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="efeb-dedd-e720-8484" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="8626-e26b-677f-70a8" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="d227-3668-8d95-8f8f" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="d227-3668-8d95-8f8f" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -643,18 +644,18 @@
       </profiles>
       <infoLinks>
         <infoLink id="fe10-c85c-019f-6540" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-        <infoLink id="16de-c4d7-b8e3-fec0" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="16de-c4d7-b8e3-fec0" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
         <infoLink id="8df9-03de-a3a6-6094" name="Explosive" hidden="false" targetId="2599-56ef-4404-67aa" type="rule" />
-        <infoLink id="3148-a859-1fb2-e3da" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-        <infoLink id="e382-5c09-f704-6cf2" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="3148-a859-1fb2-e3da" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="e382-5c09-f704-6cf2" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="7f7e-b08e-37b0-02cd" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="cbfd-7993-a72c-4e4e" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="d60e-0471-2f30-2167" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="df0f-2c83-d35c-60bb" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="3d62-036f-d78f-e33f" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="3d62-036f-d78f-e33f" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -735,16 +736,16 @@
       </profiles>
       <infoLinks>
         <infoLink id="d5a2-c36a-4d5f-6ce7" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-        <infoLink id="14fd-617d-0bc7-ef4d" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="14fd-617d-0bc7-ef4d" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
         <infoLink id="0c92-a496-5dfc-31cb" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="207f-ebe5-6cb5-bd28" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="32b5-74bc-7170-d937" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="5adf-1319-ee47-43e7" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="0502-999a-7a92-b415" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="9a4f-b6f3-d531-dd5d" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="9a4f-b6f3-d531-dd5d" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -832,19 +833,19 @@
       </profiles>
       <infoLinks>
         <infoLink id="ea45-13bc-ef34-5f89" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-        <infoLink id="1d0a-4889-7fe2-c5fa" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-        <infoLink id="a96b-9c4c-b198-48aa" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="1d0a-4889-7fe2-c5fa" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="a96b-9c4c-b198-48aa" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
         <infoLink id="8ce9-5594-3548-2b47" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-        <infoLink id="e71e-a278-6986-7075" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-        <infoLink id="e5be-79b6-0577-bfd4" name="Smash [n]" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+        <infoLink id="e71e-a278-6986-7075" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="e5be-79b6-0577-bfd4" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="8dc6-b9b0-0b54-b943" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="3cc5-6558-2a84-8ca9" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="ba94-6f98-1aae-b727" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="317d-db6a-b1bf-67fa" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="1872-ccd5-c495-099d" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="1872-ccd5-c495-099d" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -926,15 +927,15 @@
       <infoLinks>
         <infoLink id="475f-9cc8-5787-29b0" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
         <infoLink id="957a-a50b-f841-be27" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-        <infoLink id="5ab1-3a5c-99c2-1456" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="5ab1-3a5c-99c2-1456" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="da98-696a-7a4c-711b" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="6e7c-66d5-d10b-18ad" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="0eae-680d-48be-2bd8" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="9625-688f-9e93-f3f6" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="21b0-f2d1-fed3-6832" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="21b0-f2d1-fed3-6832" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -1015,16 +1016,16 @@
       </profiles>
       <infoLinks>
         <infoLink id="fb44-3a4f-1e57-d78d" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-        <infoLink id="6b7e-e8e3-1533-35e0" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="6b7e-e8e3-1533-35e0" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
         <infoLink id="f186-c9b2-1790-20fe" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="753a-95cc-0f61-66ed" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="b15c-ca22-47d1-f681" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="b9a9-0dc6-6743-1a4a" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="b9ab-a22e-c5c0-97d2" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="6b29-2ce8-3dff-39c4" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="6b29-2ce8-3dff-39c4" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -1104,18 +1105,18 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="e656-dd18-27d3-057e" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="e656-dd18-27d3-057e" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
         <infoLink id="1765-7d69-eec1-b5f0" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-        <infoLink id="733f-d5b1-8f2b-81e2" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="733f-d5b1-8f2b-81e2" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
         <infoLink id="9467-25b5-8d79-5838" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="3fc3-cffc-c67f-e123" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="d85a-d4cf-d49d-d17c" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="f0b6-705e-161d-ffa8" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="5dbb-4cf1-d99c-17bb" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="345b-8000-8e87-a9f4" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="345b-8000-8e87-a9f4" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -1196,16 +1197,16 @@
       </profiles>
       <infoLinks>
         <infoLink id="c4b8-3f8a-74ae-d81e" name="Continuous Fire" hidden="false" targetId="8af9-c2bd-d5cf-49de" type="rule" />
-        <infoLink id="7f76-61fd-56d5-44a2" name="Incendiary [n]" hidden="false" targetId="9ee0-1406-ed70-3db1" type="rule" />
+        <infoLink id="7f76-61fd-56d5-44a2" name="Incendiary" hidden="false" targetId="9ee0-1406-ed70-3db1" type="rule" />
         <infoLink id="0da0-0d41-62b2-764d" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="d40f-a015-d017-d2c1" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="c2fa-4c39-3f30-8188" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="ef0b-a18f-0bce-32bd" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="c342-1b87-c7aa-ac0e" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="4cd1-ce35-b85c-75a0" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="4cd1-ce35-b85c-75a0" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -1292,18 +1293,18 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="a978-af47-a7f5-00dc" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="a978-af47-a7f5-00dc" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
         <infoLink id="2019-431d-43a0-8367" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
         <infoLink id="fa44-ad8d-8c8c-8dc7" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
         <infoLink id="5327-2b5c-e11e-1745" name="EMP" hidden="false" targetId="eae8-da8a-08f0-ac08" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="b0d4-9749-b36b-8a41" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="8db7-cc60-f0e6-6f45" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="d7e6-3139-5f76-b8a7" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="5bae-30c5-78d5-a731" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="892d-2019-1f8f-f150" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="892d-2019-1f8f-f150" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -1392,16 +1393,16 @@
       <infoLinks>
         <infoLink id="14ec-448c-a243-b20d" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
         <infoLink id="aa8c-5c72-21dd-3fac" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-        <infoLink id="468a-a27e-1173-750b" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-        <infoLink id="8441-e1e9-43d1-33ba" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="468a-a27e-1173-750b" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="8441-e1e9-43d1-33ba" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="7c05-998e-9410-c7c0" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="de87-48e0-17ee-cd0f" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="4c22-8e66-1b88-7a22" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="c760-86c9-77a8-2a19" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="44f0-fe48-ebd9-d9a0" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="44f0-fe48-ebd9-d9a0" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -1481,17 +1482,17 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="f5a4-2429-8296-31c6" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-        <infoLink id="c210-8d99-1558-8ab5" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="f5a4-2429-8296-31c6" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="c210-8d99-1558-8ab5" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
         <infoLink id="b060-5a9f-a80c-d2e9" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="e744-c435-4602-cf22" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="a0c1-1220-3bee-72bb" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="8936-4c3d-1c62-0e0b" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="70dc-a41c-b877-f7a1" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="d13b-8a94-b7b9-cb37" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="d13b-8a94-b7b9-cb37" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -1586,20 +1587,20 @@
       </profiles>
       <infoLinks>
         <infoLink id="e99d-d465-1dc0-abb2" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-        <infoLink id="ab3a-1d18-cb72-0e73" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="ab3a-1d18-cb72-0e73" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
         <infoLink id="d2c2-cdbd-2cfc-0f37" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-        <infoLink id="fa25-57cb-6862-8ae7" name="Implosion [n]" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
+        <infoLink id="fa25-57cb-6862-8ae7" name="Implosion" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
         <infoLink id="065b-2409-08b1-9453" name="Long" hidden="false" targetId="6d8a-c297-e299-855e" type="rule" />
         <infoLink id="544e-bd0a-2857-17ff" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-        <infoLink id="aa52-c40e-3ba0-c325" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="aa52-c40e-3ba0-c325" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="fe14-8b57-8f7c-14e2" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="7f18-7033-0245-6249" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="89bb-9c59-ac1a-d382" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="42c5-b4fc-5991-b4b8" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="7f0c-6c0f-8ffd-795d" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="7f0c-6c0f-8ffd-795d" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -1680,18 +1681,18 @@
       </profiles>
       <infoLinks>
         <infoLink id="9b35-4b5c-4e87-5aaa" name="Continuous Fire" hidden="false" targetId="8af9-c2bd-d5cf-49de" type="rule" />
-        <infoLink id="476f-c7ea-7c6c-38b2" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="476f-c7ea-7c6c-38b2" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
         <infoLink id="0475-cea8-b756-d050" name="Long" hidden="false" targetId="6d8a-c297-e299-855e" type="rule" />
-        <infoLink id="efbd-e9a9-e231-f75c" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="efbd-e9a9-e231-f75c" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
         <infoLink id="dc87-e121-c0ae-54bb" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="0eee-e971-a0e3-4a3a" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="ad7b-309d-e7c7-3d6a" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="c16f-86f3-7bfb-6d86" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="b59d-69ab-d375-3ccb" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="00b4-cbed-bfab-5c1b" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="00b4-cbed-bfab-5c1b" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -1772,15 +1773,15 @@
       </profiles>
       <infoLinks>
         <infoLink id="08d0-285c-0eb5-7b23" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
-        <infoLink id="0a93-8133-44f8-6da8" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="0a93-8133-44f8-6da8" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="c6c9-840f-831c-eebb" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="2f8c-0e8a-86fd-f866" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="e957-5384-037b-9154" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="1deb-c599-0a3f-a1a1" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="7a54-3f53-52d8-448a" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="7a54-3f53-52d8-448a" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -1861,15 +1862,15 @@
       </profiles>
       <infoLinks>
         <infoLink id="1979-af0e-3c6d-75a9" name="Continuous Fire" hidden="false" targetId="8af9-c2bd-d5cf-49de" type="rule" />
-        <infoLink id="8ed1-9739-b658-14e0" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="8ed1-9739-b658-14e0" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="faa2-3d20-de11-e31c" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="2650-a0b4-0256-6cc5" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="cba3-9480-48db-433a" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="013d-1972-db83-4ced" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="5695-50a8-5811-b3b1" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="5695-50a8-5811-b3b1" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -1950,16 +1951,16 @@
       </profiles>
       <infoLinks>
         <infoLink id="59eb-a1ab-f837-b40d" name="Continuous Fire" hidden="false" targetId="8af9-c2bd-d5cf-49de" type="rule" />
-        <infoLink id="e4ea-813d-de8a-1e51" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="e4ea-813d-de8a-1e51" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
         <infoLink id="6b9c-9ff7-f018-78d0" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="2fdf-59eb-919b-da27" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="eff5-6206-6bd7-3259" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="0779-736c-d5e4-eeb9" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="8857-d51a-76b8-fd3a" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="b2e6-3632-1ea7-ead3" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="b2e6-3632-1ea7-ead3" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -2039,17 +2040,17 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="574f-fc58-dc80-d288" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="574f-fc58-dc80-d288" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
         <infoLink id="c079-5f5e-c169-55cf" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
         <infoLink id="656a-be4c-1c46-cd68" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="83df-51b6-d77d-b339" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="f44f-949b-7386-643a" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="c676-28f6-0e13-f2a9" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="8944-ec38-7b14-cc2d" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="de5a-18f9-82f9-14d9" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="de5a-18f9-82f9-14d9" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -2129,17 +2130,17 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="815a-c7b1-b78e-75f0" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="815a-c7b1-b78e-75f0" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
         <infoLink id="c908-33d0-db1d-285a" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-        <infoLink id="9a86-fcd4-2b26-5df8" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="9a86-fcd4-2b26-5df8" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="e083-f0d7-b75c-6812" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="2b8a-76f2-a2d1-a6f4" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="7b57-2109-7a04-0cac" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="4539-8d16-c9e8-98c9" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="278d-0ff7-1da7-14fc" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="278d-0ff7-1da7-14fc" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -2219,16 +2220,16 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="2928-4727-e317-cf9f" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="2928-4727-e317-cf9f" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
         <infoLink id="e951-6a3f-d2a3-94b4" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="d392-5546-b6e5-f8b4" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="d904-bcb5-44ab-5813" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="73e2-f1c8-4d09-af7a" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="477e-3edc-2a44-b5f9" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="3598-ad29-654e-b5f1" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="3598-ad29-654e-b5f1" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -2309,17 +2310,17 @@
       </profiles>
       <infoLinks>
         <infoLink id="1066-3366-ba99-d95e" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-        <infoLink id="85ae-8cd0-1d33-db38" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-        <infoLink id="a8f5-1826-e5dd-501e" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="85ae-8cd0-1d33-db38" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="a8f5-1826-e5dd-501e" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
         <infoLink id="6c3e-3f47-b0e0-a0ff" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="c1b4-63be-9d56-b15d" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="8de7-c324-8b5b-b122" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="761c-9534-90f2-044f" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="c651-5199-5f9b-beff" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="4a9f-b781-74a7-b3f5" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="4a9f-b781-74a7-b3f5" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -2404,11 +2405,11 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="3f61-0953-d703-0ba7" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="b723-8448-cb5a-17ff" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="f270-1bca-f36e-4aaf" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="c76a-0785-b946-e831" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="cf3f-0286-f8b9-4949" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="cf3f-0286-f8b9-4949" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -2488,18 +2489,18 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="3ee4-a87a-c54b-a777" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="3ee4-a87a-c54b-a777" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
         <infoLink id="1bad-3304-c728-5aa6" name="Explosive" hidden="false" targetId="2599-56ef-4404-67aa" type="rule" />
-        <infoLink id="68cb-f75c-5f93-b72e" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-        <infoLink id="23ef-cab2-789b-e84f" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="68cb-f75c-5f93-b72e" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="23ef-cab2-789b-e84f" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="bb4a-b054-a85d-3f81" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="35d2-307d-0e60-2be8" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="d2af-4f9f-ab77-76ca" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="fa40-0987-15fb-2d71" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="52fe-e3d0-e871-9bd3" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="52fe-e3d0-e871-9bd3" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -2580,15 +2581,15 @@
       </profiles>
       <infoLinks>
         <infoLink id="2c61-a36a-abae-6a34" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-        <infoLink id="b5eb-be26-2c96-11d9" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="b5eb-be26-2c96-11d9" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="97a6-3b70-7d22-9c5b" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="430c-b0ac-ca19-3830" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="d778-e3db-baf6-f425" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="eeac-3ec3-117b-06c7" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="d473-f30d-b0e7-0da2" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="d473-f30d-b0e7-0da2" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -2668,17 +2669,17 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="767e-bd00-b9db-0e60" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="767e-bd00-b9db-0e60" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
         <infoLink id="62b2-49bc-2952-c156" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-        <infoLink id="c7cf-7082-f12f-8c4a" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="c7cf-7082-f12f-8c4a" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="5fe7-61d8-7367-df91" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="0b45-1087-bf0f-8f61" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="d4e5-6d62-8f02-2c95" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="bb8d-a8c0-5503-b58f" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="3d14-3de4-2231-7239" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="3d14-3de4-2231-7239" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -2759,15 +2760,15 @@
       </profiles>
       <infoLinks>
         <infoLink id="6956-b1d5-b0ca-7904" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
-        <infoLink id="5c4f-4178-b079-8503" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="5c4f-4178-b079-8503" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="0b58-735c-f2b0-1102" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="4bdf-71a3-8836-1aec" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="4bad-de76-12d2-6dc4" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="96bd-4ea8-3b28-c686" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="dc55-ba0e-78f9-7264" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="dc55-ba0e-78f9-7264" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -2851,11 +2852,11 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="e190-cc65-d61e-6c44" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="4a0f-ef98-adb8-8ada" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="8473-904e-67ea-6e16" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="5bdb-5df5-b252-cf79" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="c6c4-9c00-9a83-bfc4" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="c6c4-9c00-9a83-bfc4" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -2935,16 +2936,16 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="c5e9-434a-ef50-9ed4" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-        <infoLink id="5d12-3326-ed03-1a03" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="c5e9-434a-ef50-9ed4" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="5d12-3326-ed03-1a03" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="36be-7fcf-669d-086c" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="88e4-501d-0c79-94d4" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="2b75-a904-68c5-904d" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="203f-261a-208f-68f0" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="8143-80a6-7c81-2db8" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="8143-80a6-7c81-2db8" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -3024,17 +3025,17 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="f5f9-0f88-ed68-c74b" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="f5f9-0f88-ed68-c74b" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
         <infoLink id="86f4-e0b2-29d3-8fcb" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-        <infoLink id="dd06-b83d-bc8c-330c" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="dd06-b83d-bc8c-330c" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="6d83-c27c-6e23-3523" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="371b-c635-b140-628a" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="206f-7c78-322c-27bf" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="b06b-c797-d6a0-417e" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="bdc8-4f4f-0c12-27ef" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="bdc8-4f4f-0c12-27ef" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -3121,15 +3122,15 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="96f2-40e7-be33-bfb5" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="96f2-40e7-be33-bfb5" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="cf66-f065-32aa-c053" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="8c19-84dd-1f14-c27f" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="4fcc-faa4-946f-f1a1" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="4c19-6fa6-8f02-5008" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="ce57-64df-73d9-7926" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="ce57-64df-73d9-7926" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -3209,16 +3210,16 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="a6a0-26d1-300c-02df" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-        <infoLink id="4037-c47c-e2d6-84de" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="a6a0-26d1-300c-02df" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="4037-c47c-e2d6-84de" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="1bb5-1dc3-b640-ec4d" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="1116-eb6f-4259-eaaa" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="4701-0042-82a3-5367" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="c7ca-35fb-b3d2-138e" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="b37f-869e-8e43-e405" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="b37f-869e-8e43-e405" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -3303,11 +3304,11 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="f036-2542-328d-7f55" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="f4f5-3202-4468-cf1e" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="7fea-a757-10d6-5915" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="2f67-c412-b9d9-849f" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="1473-f547-72e4-85ea" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="1473-f547-72e4-85ea" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -3387,16 +3388,16 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="1fe8-9707-b9cf-7d3f" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-        <infoLink id="56f6-784f-d772-3b04" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="1fe8-9707-b9cf-7d3f" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="56f6-784f-d772-3b04" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="4c69-8997-f913-ccc2" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="5fbd-7a3f-9df0-7be3" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="f41e-5fe1-daa2-a6de" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="df93-4f93-e0b3-85f4" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="324f-bc36-6aad-6f7c" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="324f-bc36-6aad-6f7c" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -3478,17 +3479,17 @@
       <infoLinks>
         <infoLink id="fced-aca4-2120-da7e" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
         <infoLink id="c409-475f-f1ea-d277" name="Explosive" hidden="false" targetId="2599-56ef-4404-67aa" type="rule" />
-        <infoLink id="32c6-785b-f6a2-4422" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-        <infoLink id="7805-54ac-1ecb-2ec9" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="32c6-785b-f6a2-4422" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="7805-54ac-1ecb-2ec9" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
         <infoLink id="f3bc-5997-16d8-93d4" name="Long" hidden="false" targetId="6d8a-c297-e299-855e" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="cc94-cb17-79bc-b70c" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="e7c9-d452-d500-0702" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="9a24-545d-5332-1f64" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="ed2d-9c58-d97b-3a45" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="288f-d995-5247-a146" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="288f-d995-5247-a146" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -3569,15 +3570,15 @@
       </profiles>
       <infoLinks>
         <infoLink id="36c1-5037-cbf0-b3e4" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-        <infoLink id="980c-fc64-b4df-1726" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="980c-fc64-b4df-1726" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="66f7-253f-4406-738f" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="a920-3fb6-429a-1db7" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="f251-aa86-6d69-d037" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="90d9-f85e-5b0a-b9fe" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="8dcb-8176-a475-5e52" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="8dcb-8176-a475-5e52" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -3657,18 +3658,18 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="7e5e-ebb4-14c8-903d" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="7e5e-ebb4-14c8-903d" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
         <infoLink id="0362-5cc8-41c6-523a" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-        <infoLink id="0b5f-c64a-8a61-aed3" name="Implosion [n]" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
-        <infoLink id="0fcb-edfc-1ff5-b898" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="0b5f-c64a-8a61-aed3" name="Implosion" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
+        <infoLink id="0fcb-edfc-1ff5-b898" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="aec0-bf5b-4e89-c2bc" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="659b-0341-a6c8-6c98" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="1360-4dc6-6bde-8c25" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="dcba-d24a-337b-bf9d" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="e183-1a14-85e2-9b12" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="e183-1a14-85e2-9b12" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -3755,17 +3756,17 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="f585-9680-6cd7-75f0" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="f585-9680-6cd7-75f0" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
         <infoLink id="314d-8c35-6bf5-4617" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-        <infoLink id="c690-0eba-a574-ef81" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="c690-0eba-a574-ef81" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="2f55-312d-9fe3-41ff" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="8025-27ed-3661-3103" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="32e6-4979-54b6-704b" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="ae7d-8537-7e2e-cb09" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="f4ed-bc5f-e949-8766" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="f4ed-bc5f-e949-8766" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -3845,15 +3846,15 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="31d8-b4a6-a4a4-1ceb" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="31d8-b4a6-a4a4-1ceb" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="0834-1f5a-c03e-502c" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="8ed4-28ec-9c32-34e7" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="4ed5-eaea-a143-3a76" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="d3b4-9c45-fbda-4e96" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="17ca-0469-a5d6-70bb" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="17ca-0469-a5d6-70bb" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -3937,11 +3938,11 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="87ef-ccf8-28f5-a8ce" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="5409-c9d4-7b79-3368" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="073d-63f4-6584-1311" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="4e3e-970a-3958-8eb5" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="a513-e5f3-d818-b2b0" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="a513-e5f3-d818-b2b0" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -4021,15 +4022,15 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="2c7b-ca4e-5c3d-15be" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="2c7b-ca4e-5c3d-15be" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="9dd1-0986-5464-0b76" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="982d-47e5-4037-45ae" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="5d7b-589c-87a3-d5ad" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="1568-b69b-0920-34b3" name="Extra Melee" hidden="false" targetId="a1b8-c083-cccf-472b" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="b351-c8a2-b539-293b" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="b351-c8a2-b539-293b" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -4083,15 +4084,15 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="afcc-f784-b5da-94c0" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="afcc-f784-b5da-94c0" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="2a71-67ef-4dba-63a9" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="77cc-3441-6ed7-c067" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="4cf9-fdbd-7a9d-c8ff" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="fc73-dfb0-17d8-3b98" name="Extra Melee" hidden="false" targetId="a1b8-c083-cccf-472b" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="3c45-5805-bf1c-decc" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="3c45-5805-bf1c-decc" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -4144,16 +4145,16 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="9ff5-bbd0-f4e6-a51f" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="9ff5-bbd0-f4e6-a51f" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
         <infoLink id="f7da-72f0-0faf-67a8" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="222b-eb3b-baf6-5986" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="bfa4-a63b-b2fb-bf4f" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="7268-f1dc-0993-5e9c" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="008c-b64a-e239-e0f4" name="Extra Ranged" hidden="false" targetId="2c9a-7de5-64ee-a2ae" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="dadf-1126-e91d-a455" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="dadf-1126-e91d-a455" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -4234,11 +4235,11 @@
       </profiles>
       <categoryLinks>
         <categoryLink id="abb0-aad5-cd89-9356" name="Weapons" hidden="false" targetId="f2b5-da64-fa98-39eb" primary="true" />
-        <categoryLink id="426a-c977-28a9-b41f" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="c1d2-2bc4-af4e-022d" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="b0da-1ad0-7622-3d4e" name="Extra Melee" hidden="false" targetId="a1b8-c083-cccf-472b" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="6851-c158-3431-2f77" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="6851-c158-3431-2f77" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -4286,15 +4287,15 @@
       <infoLinks>
         <infoLink id="e5c7-aa4e-7e39-f644" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
         <infoLink id="b91a-8f51-ec07-d6f1" name="EMP" hidden="false" targetId="eae8-da8a-08f0-ac08" type="rule" />
-        <infoLink id="0230-9ba5-84d4-4177" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="0230-9ba5-84d4-4177" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="42f2-cdf2-c129-b3c9" name="Grenades" hidden="false" targetId="539c-6c19-4e8f-bdb3" primary="true" />
-        <categoryLink id="991a-4a7b-2ac6-081f" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="49af-0f21-f4eb-6a35" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="e567-0ddf-1d4a-3943" name="Object" hidden="false" targetId="cbd0-36b6-df6f-4356" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="c699-1ab9-f698-264a" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="c699-1ab9-f698-264a" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -4365,18 +4366,18 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="e5cc-6cdb-7a4f-2c1d" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-        <infoLink id="1f28-c9e8-f305-bd90" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="e5cc-6cdb-7a4f-2c1d" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="1f28-c9e8-f305-bd90" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
         <infoLink id="278e-e0c1-c24a-e24c" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
         <infoLink id="d786-2cd2-08f4-f9a2" name="Item (III): Plasma Grenade" hidden="false" targetId="4f17-a781-3533-c1de" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="9136-6ca7-b228-1946" name="Grenades" hidden="false" targetId="539c-6c19-4e8f-bdb3" primary="true" />
-        <categoryLink id="66c9-12a9-6569-06f4" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="afb6-ccf4-af8f-cf38" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="ffca-ec5f-b9c2-0f2e" name="Object" hidden="false" targetId="cbd0-36b6-df6f-4356" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="180c-fc2d-f90b-71ed" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="180c-fc2d-f90b-71ed" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -4447,15 +4448,15 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="5375-489c-2d0a-6799" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="5375-489c-2d0a-6799" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="ae15-ac42-3fad-5635" name="Grenades" hidden="false" targetId="539c-6c19-4e8f-bdb3" primary="true" />
-        <categoryLink id="8e1e-2dec-a42c-6e99" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="9039-0cb5-9c75-c28a" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="521e-1ae3-9df1-f0ec" name="Object" hidden="false" targetId="cbd0-36b6-df6f-4356" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="7f45-154f-cf68-deb4" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="7f45-154f-cf68-deb4" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -4527,16 +4528,16 @@
       </profiles>
       <infoLinks>
         <infoLink id="7ed1-8988-d48f-651e" name="EMP" hidden="false" targetId="eae8-da8a-08f0-ac08" type="rule" />
-        <infoLink id="4f23-7d19-4a1f-b79d" name="Implosion [n]" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
+        <infoLink id="4f23-7d19-4a1f-b79d" name="Implosion" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
         <infoLink id="0aa0-3ed9-a9c5-bb27" name="Item (III): Dynamo Grenade" hidden="false" targetId="9164-3cbf-9a1d-8c68" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="7a73-8ff5-0f5d-1633" name="Grenades" hidden="false" targetId="539c-6c19-4e8f-bdb3" primary="true" />
-        <categoryLink id="5658-6485-07b0-54cb" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="769b-c82c-e53c-32f2" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="36e4-efe2-ccfd-1e1c" name="Object" hidden="false" targetId="cbd0-36b6-df6f-4356" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="a71a-863e-59a1-5268" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="a71a-863e-59a1-5268" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -4607,17 +4608,17 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="aece-6e01-31e5-63e5" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="aece-6e01-31e5-63e5" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
         <infoLink id="4867-3952-4a53-70bf" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
         <infoLink id="56b3-f994-fc1d-f03c" name="Item (III): Spike Grenade" hidden="false" targetId="1a0f-e427-de6f-6d6d" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="bd15-7234-6eb8-5457" name="Grenades" hidden="false" targetId="539c-6c19-4e8f-bdb3" primary="true" />
-        <categoryLink id="9095-010b-89fb-b7b2" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="0daf-6db8-e6bb-7d35" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="8bdd-9d31-7ad2-7b64" name="Object" hidden="false" targetId="cbd0-36b6-df6f-4356" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="6135-2d8e-ee8e-f597" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="6135-2d8e-ee8e-f597" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -4692,11 +4693,11 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="2b57-579b-7966-54f0" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="true" />
-        <categoryLink id="6f89-340b-6b68-8346" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="995e-f90a-9fdb-9ec2" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="0ebb-439c-bd41-9741" name="Object" hidden="false" targetId="cbd0-36b6-df6f-4356" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="8a3b-4f8f-a041-6d30" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="8a3b-4f8f-a041-6d30" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -4771,11 +4772,11 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="7e3b-a2ff-ec96-db3c" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="true" />
-        <categoryLink id="022b-0736-367d-91c5" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="1efe-85d4-365a-c116" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="ecde-b76e-59f8-24ea" name="Object" hidden="false" targetId="cbd0-36b6-df6f-4356" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="827f-9f57-68a0-ab6b" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="827f-9f57-68a0-ab6b" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -4850,11 +4851,11 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="c5d2-5cf8-fc8a-7f0a" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="true" />
-        <categoryLink id="0060-7a60-3c15-67a2" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="31db-d7b4-6e3e-b1df" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="a243-3f7a-86b2-d7c5" name="Object" hidden="false" targetId="cbd0-36b6-df6f-4356" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="8ea9-c74f-b68c-caed" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="8ea9-c74f-b68c-caed" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -4929,11 +4930,11 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="0de0-3268-06a1-5209" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="true" />
-        <categoryLink id="8997-a2f3-4923-ee52" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="ac08-43fc-4e26-a7fb" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="3b42-4a9a-5ebf-74f8" name="Object" hidden="false" targetId="cbd0-36b6-df6f-4356" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="8fae-169f-926e-5985" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="8fae-169f-926e-5985" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -5008,11 +5009,11 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="3c8f-487f-32ac-8620" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="true" />
-        <categoryLink id="188f-2491-7483-a209" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="0152-1b11-ae60-af90" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="f070-46ef-fc84-0456" name="Object" hidden="false" targetId="cbd0-36b6-df6f-4356" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="0409-fdde-4296-0f9a" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="0409-fdde-4296-0f9a" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -5087,11 +5088,11 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="1331-6780-047f-801d" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="true" />
-        <categoryLink id="a79c-ba1d-dae6-51fa" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="ec12-e1c3-2878-b2ff" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="7d44-6f07-679d-2e7b" name="Object" hidden="false" targetId="cbd0-36b6-df6f-4356" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="92b3-4a2d-9220-2f57" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="92b3-4a2d-9220-2f57" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -5166,11 +5167,11 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="c6c9-de86-6ddb-75ee" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="true" />
-        <categoryLink id="6fbf-f1a9-4ee9-2155" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="812a-3615-416d-7d04" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="5eeb-ed1c-15ac-1acb" name="Object" hidden="false" targetId="cbd0-36b6-df6f-4356" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="5aaa-9574-5db2-f540" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="5aaa-9574-5db2-f540" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -5245,11 +5246,11 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a1f6-fb64-7560-8198" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="true" />
-        <categoryLink id="3c83-a95b-4ec9-a342" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="d88b-8575-55b5-ddd9" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="31f9-7234-c609-0251" name="Object" hidden="false" targetId="cbd0-36b6-df6f-4356" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="e0a2-27da-a98e-e3e8" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="e0a2-27da-a98e-e3e8" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -5324,11 +5325,11 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="1620-ff57-9ca6-ca3c" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="true" />
-        <categoryLink id="7da1-514b-fd57-007f" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="1dbc-586f-5582-148e" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="7855-c240-7253-4d9c" name="Object" hidden="false" targetId="cbd0-36b6-df6f-4356" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="7af0-72f9-93f8-8ed8" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="7af0-72f9-93f8-8ed8" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -5403,11 +5404,11 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="5a8e-31b8-744d-07f4" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="true" />
-        <categoryLink id="444b-9a2a-f954-7db6" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="7ecc-8637-8555-dbc3" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="554a-5cfa-2c0e-c5cc" name="Object" hidden="false" targetId="cbd0-36b6-df6f-4356" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="aad8-70ab-461e-d3fb" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="aad8-70ab-461e-d3fb" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -5482,11 +5483,11 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="8678-c0fc-2ce1-6bc7" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="true" />
-        <categoryLink id="f65f-d28e-b587-e1f3" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="10ff-262d-588b-02ec" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="9cf0-6ff4-b3ca-29ca" name="Object" hidden="false" targetId="cbd0-36b6-df6f-4356" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="8a0a-f09f-5f23-31b1" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="8a0a-f09f-5f23-31b1" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -5561,11 +5562,11 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="4e0a-fcf4-0780-952d" name="Items" hidden="false" targetId="483f-3fa1-11d6-bda4" primary="true" />
-        <categoryLink id="71eb-7c21-2ab0-0c80" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
+        <categoryLink id="5e2d-4508-757c-1d78" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
         <categoryLink id="d118-eaaa-bd7a-11a1" name="Object" hidden="false" targetId="cbd0-36b6-df6f-4356" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="e8ff-0e39-16b2-f5c5" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="e8ff-0e39-16b2-f5c5" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -5621,27 +5622,26 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="7b6b-59c7-7774-0759" name="Oddball" hidden="false" collective="false" import="true" type="model">
-      <comment>Buy from Objective Items, then attach to a unit. Counts as 1 Object (max 4 Objects per unit). Cost 0.</comment>
-      <constraints>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6b3b-5d3d-2ff1-ed56" type="max" />
-      </constraints>
+      <comment>Buy from Objective Items, then attach to a unit. Cost 0; does not count as an Object or Extra Melee. Oddball scenario melee. Carrier drop/weapon limits are scenario rules (not coded). Score per the card.</comment>
       <profiles>
-        <profile id="f24c-e1a9-196f-7a10" name="Oddball" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
+        <profile id="635a-848d-cf73-f330" name="Oddball" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
           <characteristics>
-            <characteristic name="Type" typeId="c716-c619-b384-0452">Objective Item</characteristic>
-            <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">-</characteristic>
-            <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
-            <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">Scenario objective. Carried Object; score per the scenario card.</characteristic>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Lethal(1)</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="16ef-6b11-0df8-ecaa" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="0fb8-3675-55e0-cd10" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="2243-3357-d4cf-35a8" name="Objective Items" hidden="false" targetId="98a4-2a82-7a3d-1735" primary="true" />
-        <categoryLink id="e7b1-0a2b-51f9-c867" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
-        <categoryLink id="eeb1-5fa8-aa13-ae06" name="Object" hidden="false" targetId="cbd0-36b6-df6f-4356" primary="false" />
+        <categoryLink id="2c8f-1c08-8a59-82ed" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="b2e5-d02c-b673-a4f6" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="b2e5-d02c-b673-a4f6" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -5696,28 +5696,27 @@
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
     </selectionEntry>
-    <selectionEntry id="4107-8d95-271d-2252" name="Power Seeds" hidden="false" collective="false" import="true" type="model">
-      <comment>Buy from Objective Items, then attach to a unit. Counts as 1 Object (max 4 Objects per unit). Cost 0.</comment>
-      <constraints>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f5b7-6c5d-452b-2461" type="max" />
-      </constraints>
+    <selectionEntry id="cd2c-fe74-27b9-83f2" name="Bomb" hidden="false" collective="false" import="true" type="model">
+      <comment>Buy from Objective Items, then attach to a unit. Cost 0; does not count as an Object or Extra Melee. Assault (Bomb) scenario melee (Slam). Carrier drop/pass/Shoot limits are scenario rules (not coded).</comment>
       <profiles>
-        <profile id="4956-5355-1ccd-1e2d" name="Power Seeds" hidden="false" typeId="12aa-018e-0800-87dd" typeName="Equipment">
+        <profile id="953f-8ea5-5217-0c43" name="Slam" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
           <characteristics>
-            <characteristic name="Type" typeId="c716-c619-b384-0452">Objective Item</characteristic>
-            <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">-</characteristic>
-            <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
-            <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">Scenario object (Pack Mule example). Carried Object; score per the scenario card.</characteristic>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Knockback; Unstoppable</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="d26f-e229-5c18-5758" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
+        <infoLink id="e98d-6a0e-a9bf-1055" name="Unstoppable" hidden="false" targetId="b812-96c4-4f04-6234" type="rule" />
+      </infoLinks>
       <categoryLinks>
-        <categoryLink id="1849-3053-64e9-077e" name="Objective Items" hidden="false" targetId="98a4-2a82-7a3d-1735" primary="true" />
-        <categoryLink id="c4fc-05ea-dd13-a64e" name="Leader" hidden="false" targetId="fdd9-2a68-439d-0b8a" primary="false" />
-        <categoryLink id="f19f-6c61-1f01-9301" name="Object" hidden="false" targetId="cbd0-36b6-df6f-4356" primary="false" />
+        <categoryLink id="0158-43ab-19a9-c71b" name="Objective Items" hidden="false" targetId="98a4-2a82-7a3d-1735" primary="true" />
+        <categoryLink id="7aa1-e278-45aa-d2a9" name="Attachment" hidden="false" targetId="1cb2-5052-c790-597c" primary="false" />
       </categoryLinks>
       <associations>
-        <association id="049d-278b-9de4-abfc" name="Leading" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Attached to" max="1" min="0" scope="force">
+        <association id="e892-b30a-a033-fcb4" name="Attaching" action="group" childId="model-or-unit" childName="model-or-unit" includeChildSelections="true" label="Equipped with" max="1" min="0" scope="force">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -5798,6 +5797,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">4+</characteristic>
@@ -5807,9 +5807,9 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="709e-8533-c90c-190c" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="709e-8533-c90c-190c" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="871a-480f-2004-0d85" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
-        <infoLink id="66c6-2b0d-4f92-a623" name="Tactician (n)" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="66c6-2b0d-4f92-a623" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="de9d-2aa8-24b5-ca9b" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
@@ -5867,10 +5867,10 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="d31e-c03a-559f-5fc3" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="d31e-c03a-559f-5fc3" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="2121-0cc0-087a-cdb3" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="7592-11ac-2880-4f19" name="Implosion [n]" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
-                <infoLink id="a304-17dc-215a-2dff" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="7592-11ac-2880-4f19" name="Implosion" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
+                <infoLink id="a304-17dc-215a-2dff" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="38.0" />
@@ -5909,6 +5909,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -5918,7 +5919,7 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="8521-9137-ff76-3bc8" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="8521-9137-ff76-3bc8" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="931a-d360-adf8-b5cf" name="Jump Pack" hidden="false" targetId="7b06-42c9-226e-bf26" type="rule" />
       </infoLinks>
       <categoryLinks>
@@ -5953,9 +5954,9 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="f6d6-403d-ff62-41f3" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="f6d6-403d-ff62-41f3" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="1a23-1e47-da01-2ae6" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-                <infoLink id="50cc-4a87-1ca8-2cc8" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="50cc-4a87-1ca8-2cc8" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="37.0" />
@@ -5988,8 +5989,8 @@
               <infoLinks>
                 <infoLink id="4117-bb16-83fc-7eed" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
                 <infoLink id="0275-c3a4-8cec-d0bd" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="29c4-903a-f323-868f" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="ef22-810c-4642-77ed" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="29c4-903a-f323-868f" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="ef22-810c-4642-77ed" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="37.0" />
@@ -6013,7 +6014,7 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="591f-0f7e-2914-9518" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="591f-0f7e-2914-9518" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="ff8f-a761-6423-d80a" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
                 <infoLink id="6691-9fa6-a6b8-8456" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
               </infoLinks>
@@ -6054,6 +6055,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">3+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -6063,7 +6065,7 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="c4dc-775d-793c-19c0" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="c4dc-775d-793c-19c0" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="badf-ae4a-f76a-e505" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
@@ -6096,9 +6098,9 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="2c93-e5bd-02fd-4b8a" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="2c93-e5bd-02fd-4b8a" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="2582-f266-c27e-4667" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-                <infoLink id="8176-cf68-50a5-f8c9" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="8176-cf68-50a5-f8c9" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="36.0" />
@@ -6122,10 +6124,10 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="a0fd-b9b3-554d-1eca" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="4c09-a70b-f433-029e" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="a0fd-b9b3-554d-1eca" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="4c09-a70b-f433-029e" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="90a6-d570-ac67-dd4c" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="da27-e2ac-3c07-a0c5" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="da27-e2ac-3c07-a0c5" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="36.0" />
@@ -6164,6 +6166,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -6173,8 +6176,8 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="1163-f367-9fe2-1208" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="18f9-48e3-822a-aad5" name="Tactician (n)" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="1163-f367-9fe2-1208" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="18f9-48e3-822a-aad5" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="ed93-1b9c-c8c0-5bf2" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
@@ -6207,8 +6210,8 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="6758-c51f-5bb2-a6cd" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="1c5b-13b3-1b70-e5eb" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="6758-c51f-5bb2-a6cd" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="1c5b-13b3-1b70-e5eb" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="42.0" />
@@ -6233,7 +6236,7 @@
               </profiles>
               <infoLinks>
                 <infoLink id="2e94-f8c9-8df0-a0e9" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="3992-c0ce-5837-a211" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="3992-c0ce-5837-a211" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="44.0" />
@@ -6272,6 +6275,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">3</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -6281,9 +6285,9 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="d5bf-6892-1bdd-60c5" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="d5bf-6892-1bdd-60c5" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="3ca1-2805-3c5b-860c" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
-        <infoLink id="4add-ed54-7c50-7671" name="Tactician (n)" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="4add-ed54-7c50-7671" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="5583-be87-181f-d836" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
@@ -6318,8 +6322,8 @@
               <infoLinks>
                 <infoLink id="0b96-2f6c-f5a0-9679" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
                 <infoLink id="f23b-12be-6be0-7d46" name="Explosive" hidden="false" targetId="2599-56ef-4404-67aa" type="rule" />
-                <infoLink id="1d0d-395b-8790-412b" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-                <infoLink id="85f8-d327-b141-d9e3" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="1d0d-395b-8790-412b" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+                <infoLink id="85f8-d327-b141-d9e3" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="2536-a1e1-aa1e-9187" name="Long" hidden="false" targetId="6d8a-c297-e299-855e" type="rule" />
               </infoLinks>
               <costs>
@@ -6345,8 +6349,8 @@
               </profiles>
               <infoLinks>
                 <infoLink id="431b-d446-7b2e-f11c" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-                <infoLink id="a347-5df9-2da5-8d34" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="f0ef-d74d-cf4c-7f2d" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+                <infoLink id="a347-5df9-2da5-8d34" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="f0ef-d74d-cf4c-7f2d" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
                 <infoLink id="8c71-1ccb-d5f9-3a55" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
               </infoLinks>
               <costs>
@@ -6386,6 +6390,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -6396,7 +6401,7 @@
       </profiles>
       <infoLinks>
         <infoLink id="75ca-41ae-57f3-cec7" name="Active Camouflage" hidden="false" targetId="e7f4-cc64-081b-32af" type="rule" />
-        <infoLink id="5dfb-e33c-ead8-2f24" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="5dfb-e33c-ead8-2f24" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="ea20-a276-e512-a2e1" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
       </infoLinks>
       <categoryLinks>
@@ -6437,8 +6442,8 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="4b0d-bc70-82f4-7dd7" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="775d-0e63-b872-1116" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+                <infoLink id="4b0d-bc70-82f4-7dd7" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="775d-0e63-b872-1116" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
                 <infoLink id="db5d-c36a-4f47-21dd" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
                 <infoLink id="75fb-cc42-bcc8-9cc9" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
               </infoLinks>
@@ -6479,6 +6484,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -6488,7 +6494,7 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="c27f-254e-4882-0b26" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="c27f-254e-4882-0b26" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="8caf-7d10-f741-53b2" name="Guarded" hidden="false" targetId="380e-cfa0-0786-1b4f" type="rule" />
         <infoLink id="f1f0-b518-1212-e1ce" name="Stable" hidden="false" targetId="955f-e5b9-7014-393a" type="rule" />
       </infoLinks>
@@ -6523,9 +6529,9 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="312d-c240-b24a-fdde" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+                <infoLink id="312d-c240-b24a-fdde" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
                 <infoLink id="5255-32b0-245d-a3f4" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="e3d9-d157-99c8-0096" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="e3d9-d157-99c8-0096" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="02b8-04cd-7ebb-e8a6" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
               </infoLinks>
               <costs>
@@ -6557,7 +6563,7 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="6270-e5fb-4636-bf6f" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+                <infoLink id="6270-e5fb-4636-bf6f" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
                 <infoLink id="97ca-6894-135b-2643" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
                 <infoLink id="eee5-084c-2b2d-8613" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
                 <infoLink id="b051-b1a8-d0dd-4d32" name="EMP" hidden="false" targetId="eae8-da8a-08f0-ac08" type="rule" />
@@ -6585,10 +6591,10 @@
               </profiles>
               <infoLinks>
                 <infoLink id="5e51-dfa5-8a57-ed70" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-                <infoLink id="8bb8-45d1-b77b-c0cd" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="8bb8-45d1-b77b-c0cd" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="e009-54e4-20f9-e9fd" name="Explosive" hidden="false" targetId="2599-56ef-4404-67aa" type="rule" />
-                <infoLink id="c950-7eaf-d08f-49be" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-                <infoLink id="4ed2-89bc-3285-3cf7" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="c950-7eaf-d08f-49be" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+                <infoLink id="4ed2-89bc-3285-3cf7" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="47.0" />
@@ -6627,6 +6633,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">3+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -6636,7 +6643,7 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="3d87-4220-700c-1c5b" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="3d87-4220-700c-1c5b" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="eee9-25d8-6d9f-6c6a" name="Fast Transition" hidden="false" targetId="c9dc-8bd3-4011-712e" type="rule" />
       </infoLinks>
       <categoryLinks>
@@ -6694,7 +6701,7 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="b5d9-0c53-6601-3f45" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="b5d9-0c53-6601-3f45" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="e191-b361-aa81-104a" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
               </infoLinks>
               <costs>
@@ -6734,6 +6741,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">5</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">3</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">7</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">6+</characteristic>
@@ -6743,7 +6751,7 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="2b2c-6268-db3e-0bfa" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="2b2c-6268-db3e-0bfa" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="ee8b-cb84-6fbc-856b" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
       </infoLinks>
       <categoryLinks>
@@ -6784,8 +6792,8 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="31dc-f1d2-1a7c-9051" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="9389-b8c7-7228-4d91" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="31dc-f1d2-1a7c-9051" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="9389-b8c7-7228-4d91" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="0d33-ce38-2c62-5695" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
               </infoLinks>
               <costs>
@@ -6817,10 +6825,10 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="a541-de55-d52a-9c4c" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="a541-de55-d52a-9c4c" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="221a-2469-93d5-05d1" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-                <infoLink id="1166-d665-5b0d-27cd" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="0bbf-28be-cfe1-bea5" name="Smash [n]" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+                <infoLink id="1166-d665-5b0d-27cd" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="0bbf-28be-cfe1-bea5" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
                 <infoLink id="8cef-023a-b605-4ca4" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
               </infoLinks>
               <costs>
@@ -6860,6 +6868,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">3+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">4+</characteristic>
@@ -6870,7 +6879,7 @@
       </profiles>
       <infoLinks>
         <infoLink id="40cd-bae9-0c61-6893" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
-        <infoLink id="288e-6855-1cda-c92e" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="288e-6855-1cda-c92e" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="0e22-3241-07f1-f84e" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
         <infoLink id="e9e9-ce93-ef59-7989" name="Stealthy" hidden="false" targetId="ac0f-f7f4-da63-0f57" type="rule" />
       </infoLinks>
@@ -6906,8 +6915,8 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="6551-6f22-7c35-00cb" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="45d1-ad5c-457b-7247" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="6551-6f22-7c35-00cb" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="45d1-ad5c-457b-7247" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="a294-b895-ebff-030e" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
               </infoLinks>
               <costs>
@@ -6947,6 +6956,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">3+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -6958,7 +6968,7 @@
       <infoLinks>
         <infoLink id="87bf-64f0-86dd-8a97" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
         <infoLink id="e6f3-4085-4584-41a4" name="Acrobatic" hidden="false" targetId="0c36-2543-6a7b-f326" type="rule" />
-        <infoLink id="fdbb-474c-bea2-c978" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="fdbb-474c-bea2-c978" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="33a3-9eb5-222e-180a" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
       </infoLinks>
       <categoryLinks>
@@ -7000,10 +7010,10 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="0c51-c8e6-1835-27bf" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="cfa3-194b-256d-8b47" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="0c51-c8e6-1835-27bf" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="cfa3-194b-256d-8b47" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="85a2-c8ab-4afa-d6d1" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-                <infoLink id="c37d-fd24-aa39-abd1" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+                <infoLink id="c37d-fd24-aa39-abd1" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
                 <infoLink id="f2da-4fce-b3ef-7647" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
                 <infoLink id="9e20-a19d-77e4-9891" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
               </infoLinks>
@@ -7044,6 +7054,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -7055,9 +7066,9 @@
       <infoLinks>
         <infoLink id="63ef-8db2-35df-ff1f" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
         <infoLink id="696b-8807-7998-da20" name="Counter Intelligence" hidden="false" targetId="3f70-9737-1ce4-5826" type="rule" />
-        <infoLink id="42e2-b2fb-b67b-2323" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="42e2-b2fb-b67b-2323" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="93b5-c8cd-5d60-ebfd" name="Fast Transition" hidden="false" targetId="c9dc-8bd3-4011-712e" type="rule" />
-        <infoLink id="3324-63d2-e42c-72d2" name="Tactician (n)" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="3324-63d2-e42c-72d2" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="4c81-61b1-d74a-491f" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
@@ -7098,8 +7109,8 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="d6b2-198f-9ec0-2642" name="Smash [n]" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
-                <infoLink id="e22f-1c32-1f93-09b9" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="d6b2-198f-9ec0-2642" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+                <infoLink id="e22f-1c32-1f93-09b9" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="ca4d-a321-a762-64c2" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
                 <infoLink id="342a-ed79-f3ed-2065" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
               </infoLinks>
@@ -7140,6 +7151,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -7152,7 +7164,7 @@
         <infoLink id="e8b5-3507-7f29-61d4" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
         <infoLink id="f1d7-a1fa-3586-8fb7" name="Acrobatic" hidden="false" targetId="0c36-2543-6a7b-f326" type="rule" />
         <infoLink id="b830-cc03-6549-95f1" name="Counter Intelligence" hidden="false" targetId="3f70-9737-1ce4-5826" type="rule" />
-        <infoLink id="ce2b-38fd-ac98-c9de" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="ce2b-38fd-ac98-c9de" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="0200-32ca-5071-9bb9" name="Stealthy" hidden="false" targetId="ac0f-f7f4-da63-0f57" type="rule" />
       </infoLinks>
       <categoryLinks>
@@ -7194,10 +7206,10 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="e4e7-4b4f-88fd-8502" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="e4e7-4b4f-88fd-8502" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="0699-e4fb-6d0f-c6b4" name="Long" hidden="false" targetId="6d8a-c297-e299-855e" type="rule" />
                 <infoLink id="93b2-6309-3ad4-e640" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
-                <infoLink id="5a38-40a6-b0d4-a63b" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="5a38-40a6-b0d4-a63b" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
                 <infoLink id="9517-da87-4bbf-21ea" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
               </infoLinks>
               <costs>
@@ -7237,6 +7249,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -7247,9 +7260,9 @@
       </profiles>
       <infoLinks>
         <infoLink id="6e9d-48ae-1786-2a46" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
-        <infoLink id="6d87-2e29-3b56-d978" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="6d87-2e29-3b56-d978" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="4584-e148-4a03-efa8" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
-        <infoLink id="fdc7-5f1c-1af8-b60e" name="Tactician (n)" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="fdc7-5f1c-1af8-b60e" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="2b05-27c1-7db4-a0da" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
@@ -7290,8 +7303,8 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="1331-5f09-87d5-73e0" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="cc8f-d2c5-f36e-61ff" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="1331-5f09-87d5-73e0" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="cc8f-d2c5-f36e-61ff" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="89f7-b42c-5d32-8bd2" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
                 <infoLink id="2c99-2431-f20a-2fde" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
               </infoLinks>
@@ -7332,6 +7345,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">6</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">3</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">9</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">4+</characteristic>
@@ -7342,10 +7356,10 @@
       </profiles>
       <infoLinks>
         <infoLink id="3b05-7414-f28f-f5ba" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
-        <infoLink id="bf17-7df4-a12c-5a0a" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="bf17-7df4-a12c-5a0a" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="0a4a-be4c-ab26-073a" name="High Value Target (HVT)" hidden="false" targetId="a15c-2e11-e3cd-8b3c" type="rule" />
         <infoLink id="8a41-1f8e-84fc-eaf3" name="Stoic" hidden="false" targetId="5674-1123-3fe9-3dd6" type="rule" />
-        <infoLink id="fccf-1667-ee85-054f" name="Tactician (n)" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="fccf-1667-ee85-054f" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="1e6f-8b50-1137-fec5" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
@@ -7379,10 +7393,10 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="b1fe-84fd-1da8-1eaa" name="Firing Platform [n]" hidden="false" targetId="4e98-72a7-a073-68d6" type="rule" />
-                <infoLink id="ce3a-17a6-217c-318e" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="b1fe-84fd-1da8-1eaa" name="Firing Platform" hidden="false" targetId="4e98-72a7-a073-68d6" type="rule" />
+                <infoLink id="ce3a-17a6-217c-318e" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="3311-a217-7501-494c" name="Suppression" hidden="false" targetId="3ee6-86b5-e526-7c22" type="rule" />
-                <infoLink id="64a9-d7bd-bafe-856f" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="64a9-d7bd-bafe-856f" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="70.0" />
@@ -7421,6 +7435,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">5</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">3</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">8</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">3+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">3+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">3+</characteristic>
@@ -7431,10 +7446,10 @@
       </profiles>
       <infoLinks>
         <infoLink id="3a84-952c-a9d4-12db" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
-        <infoLink id="39d6-14f0-ebb0-fbeb" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="39d6-14f0-ebb0-fbeb" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="08fd-6b09-949c-01aa" name="High Value Target (HVT)" hidden="false" targetId="a15c-2e11-e3cd-8b3c" type="rule" />
         <infoLink id="28ff-a6d2-d346-35b8" name="Stoic" hidden="false" targetId="5674-1123-3fe9-3dd6" type="rule" />
-        <infoLink id="9e5b-97b1-c609-5d1f" name="Tactician (n)" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="9e5b-97b1-c609-5d1f" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="2eb4-71f2-aba0-8857" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
@@ -7468,8 +7483,8 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="a954-2967-a57c-7c4a" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="e672-d625-e2c7-2cd9" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="a954-2967-a57c-7c4a" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="e672-d625-e2c7-2cd9" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="56c9-a7b5-62db-fb53" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
               </infoLinks>
               <costs>
@@ -7496,6 +7511,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -7545,7 +7561,7 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="a597-ac40-4ce5-a956" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="a597-ac40-4ce5-a956" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="a3f1-1f09-74c1-1861" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
               </infoLinks>
               <costs>
@@ -7570,8 +7586,8 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="4bff-2c33-8153-4d63" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="e1d7-5de2-8906-63f6" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="4bff-2c33-8153-4d63" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="e1d7-5de2-8906-63f6" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="22.0" />
@@ -7596,7 +7612,7 @@
               </profiles>
               <infoLinks>
                 <infoLink id="6ff4-f0a4-2bff-28cc" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
-                <infoLink id="a86a-cb9d-6cb5-c509" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="a86a-cb9d-6cb5-c509" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="26.0" />
@@ -7622,6 +7638,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -7632,7 +7649,7 @@
       </profiles>
       <infoLinks>
         <infoLink id="3d22-be3b-a9f9-e748" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
-        <infoLink id="ba63-5f27-7a0f-cf4f" name="Tactician (n)" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="ba63-5f27-7a0f-cf4f" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="86f4-1cfe-cf9e-b3da" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
@@ -7672,7 +7689,7 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="8fd5-efd2-d57a-bad0" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="8fd5-efd2-d57a-bad0" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="31.0" />
@@ -7698,6 +7715,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -7750,7 +7768,7 @@
               </profiles>
               <infoLinks>
                 <infoLink id="b1bd-5a77-98ca-9a86" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="4140-8ea7-acfa-e114" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="4140-8ea7-acfa-e114" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="28.0" />
@@ -7782,7 +7800,7 @@
               </profiles>
               <infoLinks>
                 <infoLink id="b33d-6364-660e-8e87" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
-                <infoLink id="6fa0-5fb0-546f-6291" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="6fa0-5fb0-546f-6291" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="29.0" />
@@ -7808,6 +7826,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -7862,11 +7881,11 @@
               </profiles>
               <infoLinks>
                 <infoLink id="e644-64a0-6eb2-adb9" name="Continuous Fire" hidden="false" targetId="8af9-c2bd-d5cf-49de" type="rule" />
-                <infoLink id="60de-1426-ed5a-0230" name="Incendiary [n]" hidden="false" targetId="9ee0-1406-ed70-3db1" type="rule" />
+                <infoLink id="60de-1426-ed5a-0230" name="Incendiary" hidden="false" targetId="9ee0-1406-ed70-3db1" type="rule" />
                 <infoLink id="490f-f4f1-243b-b6c9" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
                 <infoLink id="fcb8-7ab3-8bb3-35da" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
                 <infoLink id="6b78-86de-6e17-d84e" name="EMP" hidden="false" targetId="eae8-da8a-08f0-ac08" type="rule" />
-                <infoLink id="1bd1-d7c7-460d-2e2d" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="1bd1-d7c7-460d-2e2d" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="0327-c79c-26b0-fa36" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
               </infoLinks>
               <costs>
@@ -7905,9 +7924,9 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="23a3-7caf-d29a-5700" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="23a3-7caf-d29a-5700" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="893f-af2c-7e29-b33c" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-                <infoLink id="b6c0-4941-a723-c045" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="b6c0-4941-a723-c045" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="8baa-19c0-9654-a672" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
                 <infoLink id="6b80-0a96-a5bb-a863" name="EMP" hidden="false" targetId="eae8-da8a-08f0-ac08" type="rule" />
                 <infoLink id="1f16-1a85-2652-ffeb" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
@@ -7936,6 +7955,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -7945,7 +7965,7 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="53f7-77ec-b4cb-2cce" name="Tactician (n)" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="53f7-77ec-b4cb-2cce" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="cc73-aa2e-cde5-76c8" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
@@ -8024,6 +8044,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">6+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -8035,7 +8056,7 @@
       <infoLinks>
         <infoLink id="338b-93dd-b1fc-218e" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
         <infoLink id="d6eb-cfaf-e88f-3992" name="Stealthy" hidden="false" targetId="ac0f-f7f4-da63-0f57" type="rule" />
-        <infoLink id="4aa9-f952-dc67-70c1" name="Tactician (n)" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="4aa9-f952-dc67-70c1" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="19ce-257a-5e39-4dc0" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
@@ -8095,6 +8116,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">3+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">4+</characteristic>
@@ -8107,7 +8129,7 @@
         <infoLink id="cf85-fde3-e3a9-2ccc" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
         <infoLink id="bcd0-11cb-47cb-d9aa" name="Fast Transition" hidden="false" targetId="c9dc-8bd3-4011-712e" type="rule" />
         <infoLink id="30ed-6635-3384-c7e0" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
-        <infoLink id="6cc4-eb08-62d1-1450" name="Tactician (n)" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="6cc4-eb08-62d1-1450" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="b98f-41bd-59e8-17ff" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
@@ -8155,7 +8177,7 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="1dbc-580d-5c8c-cb18" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="1dbc-580d-5c8c-cb18" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
                 <infoLink id="b203-be52-95b3-ef33" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
               </infoLinks>
               <costs>
@@ -8182,6 +8204,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">6+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -8192,7 +8215,7 @@
       </profiles>
       <infoLinks>
         <infoLink id="a0eb-73a9-408b-0fb1" name="Support" hidden="false" targetId="03f8-5a2f-73f3-d61e" type="rule" />
-        <infoLink id="1828-7981-c57f-eaee" name="Tactician (n)" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="1828-7981-c57f-eaee" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="aec1-459d-60c7-e285" name="Marines" hidden="false" targetId="c964-7c65-c947-c4e9" primary="true" />
@@ -8225,7 +8248,7 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="b472-9a6f-0ae0-6009" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="b472-9a6f-0ae0-6009" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="25.0" />
@@ -8251,6 +8274,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">6+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">6+</characteristic>
@@ -8294,10 +8318,10 @@
               </profiles>
               <infoLinks>
                 <infoLink id="523d-acb3-466e-071d" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-                <infoLink id="14b3-9694-6b75-d6ea" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="14b3-9694-6b75-d6ea" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="18af-02b9-855c-4cee" name="Explosive" hidden="false" targetId="2599-56ef-4404-67aa" type="rule" />
-                <infoLink id="85b7-a438-d3fe-289f" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-                <infoLink id="7959-be29-7929-f63f" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="85b7-a438-d3fe-289f" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+                <infoLink id="7959-be29-7929-f63f" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="21.0" />
@@ -8321,8 +8345,8 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="15c6-6f44-688c-194c" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="4f62-75ac-ff90-9807" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="15c6-6f44-688c-194c" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="4f62-75ac-ff90-9807" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="3da8-89d5-b857-aa76" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
               </infoLinks>
               <costs>
@@ -8348,7 +8372,7 @@
               </profiles>
               <infoLinks>
                 <infoLink id="cf71-92d0-1198-8a6e" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
-                <infoLink id="d947-14bc-ad23-5208" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="d947-14bc-ad23-5208" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="18.0" />
@@ -8397,8 +8421,8 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="cf38-8a45-91c6-06f7" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="18ed-b377-17f6-8752" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="cf38-8a45-91c6-06f7" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="18ed-b377-17f6-8752" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="16.0" />
@@ -8424,6 +8448,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">6+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">6+</characteristic>
@@ -8493,6 +8518,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">6+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">6+</characteristic>
@@ -8536,7 +8562,7 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="88d0-181c-440c-5e04" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="88d0-181c-440c-5e04" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="18.0" />
@@ -8575,6 +8601,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">3</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">4+</characteristic>
@@ -8584,7 +8611,7 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="523d-dccd-e6c9-47a1" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="523d-dccd-e6c9-47a1" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="16c7-fe7b-6e3a-1cab" name="Evade" hidden="false" targetId="da0a-bc9e-6c78-3f5f" type="rule" />
       </infoLinks>
       <categoryLinks>
@@ -8625,12 +8652,12 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="bfb6-4bb0-17b4-3efd" name="Smash [n]" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
-                <infoLink id="211b-97c9-d65d-1a90" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="a116-6530-6d51-bbd0" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="1808-a0d6-34f0-e1a6" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+                <infoLink id="bfb6-4bb0-17b4-3efd" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+                <infoLink id="211b-97c9-d65d-1a90" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="a116-6530-6d51-bbd0" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="1808-a0d6-34f0-e1a6" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
                 <infoLink id="2728-8d51-2f02-6d6b" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="205a-3f4b-e697-6b36" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="205a-3f4b-e697-6b36" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="9f05-2349-ddc8-081f" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
                 <infoLink id="3726-0e0e-9f85-5503" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
               </infoLinks>
@@ -8663,11 +8690,11 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="8865-4a9f-a783-7edd" name="Smash [n]" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
-                <infoLink id="d81d-9bcd-d733-373d" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="8865-4a9f-a783-7edd" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+                <infoLink id="d81d-9bcd-d733-373d" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="fae9-c9c8-ded6-041d" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="0617-c927-2e34-9563" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="65e4-cfb2-d3a8-3883" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+                <infoLink id="0617-c927-2e34-9563" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="65e4-cfb2-d3a8-3883" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
                 <infoLink id="638e-d6c2-9062-197a" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
                 <infoLink id="3767-a90e-9baa-3b61" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
                 <infoLink id="ea1a-ebff-f990-7507" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
@@ -8701,13 +8728,13 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="0bac-ff5b-e07b-dc1c" name="Smash [n]" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+                <infoLink id="0bac-ff5b-e07b-dc1c" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
                 <infoLink id="49ca-a93f-4085-5c03" name="Continuous Fire" hidden="false" targetId="8af9-c2bd-d5cf-49de" type="rule" />
-                <infoLink id="7a01-ac98-e185-8f89" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="7a01-ac98-e185-8f89" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="57ab-1b68-37ad-256d" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="fdc7-fc5e-5cfb-51a3" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+                <infoLink id="fdc7-fc5e-5cfb-51a3" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
                 <infoLink id="4aed-986f-7b1b-ba16" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="ee72-c0f0-009e-14e5" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="ee72-c0f0-009e-14e5" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="1770-2320-580f-4ca7" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
                 <infoLink id="6140-aa9e-c32e-e347" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
               </infoLinks>
@@ -8740,10 +8767,10 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="e568-4eaf-a50b-0367" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="8045-4b18-5584-b889" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="e568-4eaf-a50b-0367" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="8045-4b18-5584-b889" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="465e-78f0-c282-6e82" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
-                <infoLink id="2149-328e-02f8-a321" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+                <infoLink id="2149-328e-02f8-a321" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
                 <infoLink id="2d05-554e-79d9-8c45" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
                 <infoLink id="1014-a3d4-1347-fc3b" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
                 <infoLink id="ba7b-abb6-8a55-ab6f" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
@@ -8777,12 +8804,12 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="e958-6691-d5d8-73f2" name="Smash [n]" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+                <infoLink id="e958-6691-d5d8-73f2" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
                 <infoLink id="e642-2033-22c7-fd73" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-                <infoLink id="5310-dfd6-2093-2f4d" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="caf5-bb2b-0eea-bb95" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+                <infoLink id="5310-dfd6-2093-2f4d" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="caf5-bb2b-0eea-bb95" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
                 <infoLink id="ddfe-9cda-3406-8106" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="3efa-f811-f159-15ac" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="3efa-f811-f159-15ac" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="e5a0-6e69-9873-7d34" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
                 <infoLink id="72ab-5a47-9d1b-fb32" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
               </infoLinks>
@@ -8823,6 +8850,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">4</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">8</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">4+</characteristic>
@@ -8832,9 +8860,9 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="3403-c94a-0d9e-6f47" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="3403-c94a-0d9e-6f47" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="ca69-28b7-2e09-bbd7" name="Evade" hidden="false" targetId="da0a-bc9e-6c78-3f5f" type="rule" />
-        <infoLink id="c507-9365-18c0-9dc3" name="Tactician (n)" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="c507-9365-18c0-9dc3" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a8f1-9e8e-5b45-7db3" name="Sangheili" hidden="false" targetId="76d6-aa41-a970-e81a" primary="true" />
@@ -8874,13 +8902,13 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="d12e-1c65-4135-657a" name="Smash [n]" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+                <infoLink id="d12e-1c65-4135-657a" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
                 <infoLink id="5637-8f33-251c-c9ec" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-                <infoLink id="67f9-51dd-2200-28b6" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="67f9-51dd-2200-28b6" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="b034-a10d-c458-0083" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
-                <infoLink id="f33a-0cb1-18bb-9559" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+                <infoLink id="f33a-0cb1-18bb-9559" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
                 <infoLink id="5d7a-e717-6999-494f" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="9951-ec1b-7896-2f4b" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="9951-ec1b-7896-2f4b" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="a3f5-8de1-0c10-0e17" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
                 <infoLink id="e134-14df-822b-13ef" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
               </infoLinks>
@@ -8921,6 +8949,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">3</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">7</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">3+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">4+</characteristic>
@@ -8932,12 +8961,12 @@
       <infoLinks>
         <infoLink id="2e25-4ed3-19bf-fc25" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
         <infoLink id="e08b-311c-554e-068a" name="Active Camouflage" hidden="false" targetId="e7f4-cc64-081b-32af" type="rule" />
-        <infoLink id="1a72-1e48-4fbd-0bf7" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="1a72-1e48-4fbd-0bf7" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="318a-36c5-bc7c-2041" name="Evade" hidden="false" targetId="da0a-bc9e-6c78-3f5f" type="rule" />
         <infoLink id="33f2-a888-272d-a067" name="Fearless" hidden="false" targetId="c209-35bd-6caa-3a50" type="rule" />
         <infoLink id="84d4-0790-8a71-fc7c" name="High Value Target (HVT)" hidden="false" targetId="a15c-2e11-e3cd-8b3c" type="rule" />
         <infoLink id="3ece-4e45-ad61-23cc" name="Spartan Killer" hidden="false" targetId="1f56-e733-55df-2362" type="rule" />
-        <infoLink id="3319-d028-c5b0-f2b6" name="Tactician (n)" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="3319-d028-c5b0-f2b6" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="f77a-45b1-3df9-3f4c" name="Sangheili" hidden="false" targetId="76d6-aa41-a970-e81a" primary="true" />
@@ -8971,10 +9000,10 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="fc64-e08e-fe6c-ee22" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="0a0b-2e21-b91c-bda0" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="fc64-e08e-fe6c-ee22" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="0a0b-2e21-b91c-bda0" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="7165-8133-ff0c-6fbe" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
-                <infoLink id="0c40-0fee-ebaa-6298" name="Smash [n]" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+                <infoLink id="0c40-0fee-ebaa-6298" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="75.0" />
@@ -9013,6 +9042,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">0</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">6+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -9095,6 +9125,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">0</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">5</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">6+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -9104,7 +9135,7 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="da05-22e3-5d72-4413" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="da05-22e3-5d72-4413" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="236d-1630-7c15-f0d6" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
       </infoLinks>
       <categoryLinks>
@@ -9138,9 +9169,9 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="b5b6-d2ee-65dc-f1ef" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="b5b6-d2ee-65dc-f1ef" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="c63c-c66c-10db-b787" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="bc1c-2b12-35c8-4bdb" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="bc1c-2b12-35c8-4bdb" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="20.0" />
@@ -9166,6 +9197,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">6</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -9226,7 +9258,7 @@
                 <infoLink id="bf6b-bf38-ca44-b472" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
                 <infoLink id="847d-f533-28bd-9bfd" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
                 <infoLink id="8dd2-bd53-f18e-957e" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="ec96-ae1f-a41b-75a4" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+                <infoLink id="ec96-ae1f-a41b-75a4" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
                 <infoLink id="9883-9d1a-ef9f-f903" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
                 <infoLink id="1275-1748-d1ea-d5f1" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
                 <infoLink id="b0d9-d90a-086e-7e5a" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
@@ -9250,7 +9282,7 @@
       </constraints>
       <infoLinks>
         <infoLink id="60a6-20d5-7b96-5712" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
-        <infoLink id="38de-2850-ec3f-b776" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="38de-2850-ec3f-b776" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="3eba-781f-773a-d772" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
@@ -9280,6 +9312,7 @@
                     <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">6</characteristic>
                     <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
                     <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+                    <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
                     <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">6+</characteristic>
                     <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
                     <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">6+</characteristic>
@@ -9304,10 +9337,10 @@
               </profiles>
               <infoLinks>
                 <infoLink id="58e1-684a-9a4c-98b4" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-                <infoLink id="e70a-2dc7-0ab4-9097" name="Smash [n]" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+                <infoLink id="e70a-2dc7-0ab4-9097" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
                 <infoLink id="d313-41ff-a01e-83f0" name="EMP" hidden="false" targetId="eae8-da8a-08f0-ac08" type="rule" />
                 <infoLink id="350c-0c54-0b1f-16de" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="cbb4-a129-892e-c149" name="Implosion [n]" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
+                <infoLink id="cbb4-a129-892e-c149" name="Implosion" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
                 <infoLink id="c963-97ab-2acb-6598" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
               </infoLinks>
               <costs>
@@ -9329,6 +9362,7 @@
                     <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">6</characteristic>
                     <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
                     <characteristic name="ES" typeId="baac-a14d-979f-803f">1</characteristic>
+                    <characteristic name="Wounds" typeId="864e-20dc-0543-8937">7</characteristic>
                     <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">6+</characteristic>
                     <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
                     <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">6+</characteristic>
@@ -9353,8 +9387,8 @@
               </profiles>
               <infoLinks>
                 <infoLink id="5506-7117-5cf7-9814" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-                <infoLink id="2bd4-c32a-153e-e6c7" name="Smash [n]" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
-                <infoLink id="128b-f689-dc0d-a5bc" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+                <infoLink id="2bd4-c32a-153e-e6c7" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+                <infoLink id="128b-f689-dc0d-a5bc" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
                 <infoLink id="0c62-b255-b608-1236" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
                 <infoLink id="19b6-1434-5920-5e57" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
                 <infoLink id="8324-5158-c7e4-f489" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
@@ -9383,6 +9417,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">6</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">0</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">8</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -9392,7 +9427,7 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="8888-ca7d-c86c-1f52" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="8888-ca7d-c86c-1f52" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="b2a1-26da-530c-de9d" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
         <infoLink id="8a4b-cbfe-aa7a-461d" name="Stable" hidden="false" targetId="955f-e5b9-7014-393a" type="rule" />
       </infoLinks>
@@ -9436,7 +9471,7 @@
               <infoLinks>
                 <infoLink id="adfa-2b51-046e-d472" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
                 <infoLink id="f289-d738-f957-e5c6" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-                <infoLink id="25d6-9123-d885-faa3" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="25d6-9123-d885-faa3" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="9296-2190-e6d5-d01a" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
                 <infoLink id="0ce5-7332-e337-8fef" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
               </infoLinks>
@@ -9470,7 +9505,7 @@
               </profiles>
               <infoLinks>
                 <infoLink id="fd3f-d6fa-dc23-9be4" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-                <infoLink id="87fd-2c8a-710d-05a8" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="87fd-2c8a-710d-05a8" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="a5dc-da47-f421-49b4" name="Long" hidden="false" targetId="6d8a-c297-e299-855e" type="rule" />
                 <infoLink id="440e-ec3a-12f5-dea8" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
               </infoLinks>
@@ -9498,6 +9533,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">6</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">1</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">7</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -9507,10 +9543,10 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="d608-f357-6dbe-c122" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="d608-f357-6dbe-c122" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="bba6-dbf1-79b9-073c" name="Guarded" hidden="false" targetId="380e-cfa0-0786-1b4f" type="rule" />
         <infoLink id="625c-1a11-e2e3-c6a3" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
-        <infoLink id="9c85-7fed-4f98-f005" name="Tactician (n)" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="9c85-7fed-4f98-f005" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="48bc-0454-b64a-4070" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
@@ -9552,8 +9588,8 @@
               <infoLinks>
                 <infoLink id="e5e0-c147-a007-ce91" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
                 <infoLink id="3e48-323c-ff35-1ebb" name="Continuous Fire" hidden="false" targetId="8af9-c2bd-d5cf-49de" type="rule" />
-                <infoLink id="ef9b-1606-c404-1958" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="303e-b4d1-d241-ae5d" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+                <infoLink id="ef9b-1606-c404-1958" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="303e-b4d1-d241-ae5d" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
                 <infoLink id="8bbc-dfcb-6de6-a16f" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
                 <infoLink id="5b3c-387e-9bf9-61a7" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
                 <infoLink id="bf10-bb2c-1092-05ea" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
@@ -9582,6 +9618,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">7</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">9</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -9591,10 +9628,10 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="dd99-502d-413b-e7bf" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="dd99-502d-413b-e7bf" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="6cc5-c1ea-d04a-512c" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
         <infoLink id="e11f-8da3-ca12-1cc9" name="Jump Pack" hidden="false" targetId="7b06-42c9-226e-bf26" type="rule" />
-        <infoLink id="10bd-b4de-3dc5-f9c5" name="Tactician (n)" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="10bd-b4de-3dc5-f9c5" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="2d27-8183-314d-10b2" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
@@ -9636,10 +9673,10 @@
               </profiles>
               <infoLinks>
                 <infoLink id="f75c-ca58-d367-4450" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-                <infoLink id="014a-2a92-7b58-dcd2" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="014a-2a92-7b58-dcd2" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="07c0-f1b5-fa33-9a9c" name="Explosive" hidden="false" targetId="2599-56ef-4404-67aa" type="rule" />
-                <infoLink id="35e8-35d1-6685-9867" name="Frag [n]" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-                <infoLink id="0fcb-81bd-3fc0-3757" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="35e8-35d1-6685-9867" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+                <infoLink id="0fcb-81bd-3fc0-3757" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="51.0" />
@@ -9670,12 +9707,12 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="b212-a4f5-8265-c058" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="b212-a4f5-8265-c058" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="3102-1a68-7004-f7ad" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
                 <infoLink id="0618-9c8c-1176-2c02" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-                <infoLink id="6d0a-472a-d712-868e" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="6d0a-472a-d712-868e" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="7624-01de-a738-e0e1" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="ed5d-0c83-b49c-e1b0" name="Implosion [n]" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
+                <infoLink id="ed5d-0c83-b49c-e1b0" name="Implosion" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
                 <infoLink id="f1a0-9271-71f6-2503" name="Long" hidden="false" targetId="6d8a-c297-e299-855e" type="rule" />
               </infoLinks>
               <costs>
@@ -9702,6 +9739,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">7</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">9</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -9712,7 +9750,7 @@
       </profiles>
       <infoLinks>
         <infoLink id="3458-5554-4725-b083" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
-        <infoLink id="3a40-db77-a524-1dec" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="3a40-db77-a524-1dec" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="3774-96ca-ae75-0d07" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
         <infoLink id="6ec3-21e8-d796-9831" name="Jump Pack" hidden="false" targetId="7b06-42c9-226e-bf26" type="rule" />
         <infoLink id="78ef-0c9a-7909-f4d1" name="Spartan Killer" hidden="false" targetId="1f56-e733-55df-2362" type="rule" />
@@ -9764,11 +9802,11 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="ec04-0566-f026-0942" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="7658-aa8f-2173-610a" name="Smash [n]" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
-                <infoLink id="a1e4-5087-adef-185a" name="Firing Platform [n]" hidden="false" targetId="4e98-72a7-a073-68d6" type="rule" />
+                <infoLink id="ec04-0566-f026-0942" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="7658-aa8f-2173-610a" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+                <infoLink id="a1e4-5087-adef-185a" name="Firing Platform" hidden="false" targetId="4e98-72a7-a073-68d6" type="rule" />
                 <infoLink id="4366-961a-240c-6294" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-                <infoLink id="fccb-003b-e7a8-f4eb" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="fccb-003b-e7a8-f4eb" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
                 <infoLink id="8f71-2ca3-1d3b-6fff" name="Suppression" hidden="false" targetId="3ee6-86b5-e526-7c22" type="rule" />
               </infoLinks>
               <costs>
@@ -9795,6 +9833,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">7</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">9</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -9805,12 +9844,12 @@
       </profiles>
       <infoLinks>
         <infoLink id="c718-ee41-2c7e-6c50" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
-        <infoLink id="8ca4-cd46-e6e8-afa0" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="8ca4-cd46-e6e8-afa0" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="94bf-62da-70e0-05e2" name="High Value Target (HVT)" hidden="false" targetId="a15c-2e11-e3cd-8b3c" type="rule" />
         <infoLink id="154b-d9d7-c479-0892" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
         <infoLink id="202f-66c0-ee97-5506" name="Jump Pack" hidden="false" targetId="7b06-42c9-226e-bf26" type="rule" />
         <infoLink id="cca8-0480-0b5c-dcba" name="Spartan Killer" hidden="false" targetId="1f56-e733-55df-2362" type="rule" />
-        <infoLink id="1845-7260-1374-e324" name="Tactician (n)" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="1845-7260-1374-e324" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="ade6-f4ac-77a3-f733" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
@@ -9860,10 +9899,10 @@
               </profiles>
               <infoLinks>
                 <infoLink id="cee9-554e-44b7-9b96" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-                <infoLink id="6213-20a4-b1ae-d365" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="6213-20a4-b1ae-d365" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="379b-01e4-7964-2569" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="1878-c4c0-ba9d-5e21" name="Implosion [n]" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
-                <infoLink id="a1e0-3032-cfdc-3389" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="1878-c4c0-ba9d-5e21" name="Implosion" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
+                <infoLink id="a1e0-3032-cfdc-3389" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="e62d-362c-a0df-04fc" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
               </infoLinks>
               <costs>
@@ -9890,6 +9929,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">8</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">10</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">3+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">4+</characteristic>
@@ -9899,11 +9939,11 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="9c17-627d-512e-ba6c" name="Energy Shield [n]" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="9c17-627d-512e-ba6c" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="fd69-5495-c742-a9ab" name="Fearless" hidden="false" targetId="c209-35bd-6caa-3a50" type="rule" />
         <infoLink id="8428-986d-fdb8-a8a9" name="High Value Target (HVT)" hidden="false" targetId="a15c-2e11-e3cd-8b3c" type="rule" />
         <infoLink id="ea56-a59d-0c8b-ec4d" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
-        <infoLink id="8f4d-7319-f873-04f6" name="Tactician (n)" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="8f4d-7319-f873-04f6" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
         <infoLink id="a89e-0f18-41b3-3cfe" name="Unstoppable" hidden="false" targetId="b812-96c4-4f04-6234" type="rule" />
       </infoLinks>
       <categoryLinks>
@@ -9946,10 +9986,10 @@
               </profiles>
               <infoLinks>
                 <infoLink id="fcdf-c3d7-13b9-d53c" name="Concussive" hidden="false" targetId="2797-0b62-17dd-e54b" type="rule" />
-                <infoLink id="6d2c-913b-a539-7e6a" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="6d2c-913b-a539-7e6a" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="1c46-c579-b076-766e" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
-                <infoLink id="9850-2d45-2b11-7843" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="f6cc-8ee5-6671-9e1c" name="Smash [n]" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+                <infoLink id="9850-2d45-2b11-7843" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="f6cc-8ee5-6671-9e1c" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="75.0" />
@@ -9988,6 +10028,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">6+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">6+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">6+</characteristic>
@@ -10039,7 +10080,7 @@
               </profiles>
               <infoLinks>
                 <infoLink id="35ed-88da-8b2c-30a3" name="Continuous Fire" hidden="false" targetId="8af9-c2bd-d5cf-49de" type="rule" />
-                <infoLink id="dffe-1962-e57c-2030" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="dffe-1962-e57c-2030" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="15.0" />
@@ -10063,9 +10104,9 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="7686-cdf0-aedb-c03d" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="7686-cdf0-aedb-c03d" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="c10d-1ff0-77e6-ebe2" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="3cea-c1da-14bd-17eb" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="3cea-c1da-14bd-17eb" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="16.0" />
@@ -10104,6 +10145,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">6+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -10147,9 +10189,9 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="159d-c70b-da4a-91da" name="Lethal [n]" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="159d-c70b-da4a-91da" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="110a-9c7e-bd0e-c7c3" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="669a-9b8e-e191-592c" name="Weight of Fire (n)" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="669a-9b8e-e191-592c" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="18.0" />
@@ -10173,7 +10215,7 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="3772-a58b-a41d-c46f" name="Energy Shield Depleter (ESD) [n]" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="3772-a58b-a41d-c46f" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="0103-e07c-0f21-8210" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
               </infoLinks>
               <costs>
@@ -11674,13 +11716,13 @@
     <rule id="eae8-da8a-08f0-ac08" name="EMP" hidden="false">
       <description>Depletes all Energy Shields on every model in the target's cube, including the target. If the weapon targets a cube, every model hit in it is affected.</description>
     </rule>
-    <rule id="4ba0-e76c-b8cb-ece6" name="Energy Shield [n]" hidden="false">
+    <rule id="4ba0-e76c-b8cb-ece6" name="Energy Shield" hidden="false">
       <description>Starts with n full shields. Hits from a lost opposed test remove one shield each until all are blocked or the shields run out; only leftover Hits then go to Armour and AP. Shields from several sources are all used before armour. At the start of each Round, regain 1 depleted shield (up to n).</description>
     </rule>
-    <rule id="62c5-743f-d5e9-aa9d" name="Energy Shield Barrier [n]" hidden="false">
+    <rule id="62c5-743f-d5e9-aa9d" name="Energy Shield Barrier" hidden="false">
       <description>A stationary shield covering every model in its cube, friend or foe, against Ranged attacks only (not CC Assaults from inside). Place n shield tokens with it. Barrier shields go first, then the model's own. Removed when emptied; does not regenerate.</description>
     </rule>
-    <rule id="e993-cd21-a2aa-32d5" name="Energy Shield Depleter (ESD) [n]" hidden="false">
+    <rule id="e993-cd21-a2aa-32d5" name="Energy Shield Depleter (ESD)" hidden="false">
       <description>When a Shoot or Assault with this weapon hits, first deplete n shields from the target (Barrier first, then the model's own), then resolve the Hits against what's left.</description>
     </rule>
     <rule id="da0a-bc9e-6c78-3f5f" name="Evade" hidden="false">
@@ -11701,16 +11743,16 @@
     <rule id="a599-d672-62ce-4539" name="Fight (FI)" hidden="false">
       <description>Roll this number or higher for a success in a Fight test (close combat in an Assault).</description>
     </rule>
-    <rule id="b66c-69b7-3dea-ca1d" name="Fire" hidden="false">
+    <rule id="b66c-69b7-3dea-ca1d" name="Fire Token" hidden="false">
       <description>On activation, a model with a Fire token may take an Auxiliary action to remove it; if not, it takes 1 wound at the end of its activation and then removes the token. If that kills it, the opponent gets the kill (Slayer, VIP). A model only ever has 1 Fire token; extras are ignored. (Updated Oct '25.)</description>
     </rule>
-    <rule id="4e98-72a7-a073-68d6" name="Firing Platform [n]" hidden="false">
+    <rule id="4e98-72a7-a073-68d6" name="Firing Platform" hidden="false">
       <description>+n dice when making a Shoot action with this weapon.</description>
     </rule>
     <rule id="7e33-b56e-849f-48b0" name="Flight" hidden="false">
       <description>Retired. Mantic folded it into Jump Pack (the HAZOP switched from Flight to Jump Pack in v1.5). No current card uses it. Can move through cubes with no walls or floors and change levels without climbing, but must end in a cube where it can physically stand. Takes no damage and isn't Pinned if it falls. It still needs enough movement for every cube, so the movement isn't free. (Updated Apr '25.)</description>
     </rule>
-    <rule id="834f-932b-1b95-aa20" name="Frag [n]" hidden="false">
+    <rule id="834f-932b-1b95-aa20" name="Frag" hidden="false">
       <description>After an Explosive or Grenade weapon hits, roll an n-dice 4+ test (no modifiers or rerolls). Every model in the cube, friend or foe, rolls its own 3-dice Survive test. If Frag has more successes, the difference is Hits. If Frag ties or wins, a surviving model is also Pinned and thrown 1 cube in a random direction. (Updated Oct '25.)</description>
     </rule>
     <rule id="99da-5e42-c473-ef19" name="Grenade" hidden="false">
@@ -11728,13 +11770,13 @@
     <rule id="2618-5915-8acb-4a97" name="Horde" hidden="false">
       <description>In close combat, +1 die for each other friendly Horde model in the same cube, on top of the normal friendly-model bonus.</description>
     </rule>
-    <rule id="b2eb-de9b-903b-7cf1" name="Implosion [n]" hidden="false">
+    <rule id="b2eb-de9b-903b-7cf1" name="Implosion" hidden="false">
       <description>After an Explosive or Grenade weapon hits, roll an n-dice 4+ test (no modifiers or rerolls) vs each model's 3-dice Survive test, friend or foe. The difference in successes is Hits. Unlike Frag, it doesn't throw models.</description>
     </rule>
     <rule id="bbaf-8fa7-8de0-0964" name="Imposing" hidden="false">
       <description>+1 die on Fight or Survive tests during an Assault.</description>
     </rule>
-    <rule id="9ee0-1406-ed70-3db1" name="Incendiary [n]" hidden="false">
+    <rule id="9ee0-1406-ed70-3db1" name="Incendiary" hidden="false">
       <description>Shoot at a cube in range and LOS: roll an n-dice Ranged test (no modifiers) vs a 3-dice Survive test from every model in the cube; Hits work as a normal Shoot. If the Ranged test scored at least 1 success, every model in the target cube also gains a Fire token. (Updated Oct '26.)</description>
     </rule>
     <rule id="7b06-42c9-226e-bf26" name="Jump Pack" hidden="false">
@@ -11743,7 +11785,7 @@
     <rule id="b418-1ae4-4e98-e9c3" name="Knockback" hidden="false">
       <description>If the attacker's Ranged or Fight test beats the target's (wounds or not), push the target 1 cube on the same level, directly away along the line of sight. In the same cube (Assault), the attacker picks any adjacent cube. If unclear, roll for it. Forced Movement rules apply.</description>
     </rule>
-    <rule id="c9c5-689d-d66f-f6ed" name="Lethal [n]" hidden="false">
+    <rule id="c9c5-689d-d66f-f6ed" name="Lethal" hidden="false">
       <description>A model that takes wounds from this weapon (after shields and armour) takes n extra wounds in total, not per wound. Multiple Lethal modifiers on one attack add together.</description>
     </rule>
     <rule id="1c27-e8e5-7228-21e3" name="Life Support" hidden="false">
@@ -11788,7 +11830,7 @@
     <rule id="133a-4688-8c67-2e88" name="Slammed into Wall" hidden="false">
       <description>When forced movement is blocked by a wall, the model stays in its cube. The opponent rolls a 4-dice 4+ test for the wall vs the model's 3-dice Survive test. If the wall wins, the model is Pinned and takes Hits equal to the difference (no AP). On a tie or a model win, nothing happens.</description>
     </rule>
-    <rule id="ebf9-8f7b-c2af-15d7" name="Smash [n]" hidden="false">
+    <rule id="ebf9-8f7b-c2af-15d7" name="Smash" hidden="false">
       <description>+n dice on Fight tests.</description>
     </rule>
     <rule id="3c1d-2e6b-7914-1be8" name="Sniper Scope" hidden="false">
@@ -11827,7 +11869,7 @@
     <rule id="46d0-b42e-85b3-d10c" name="Survive (SV)" hidden="false">
       <description>Roll this or higher for a success on a Survive test, used when the model is attacked or otherwise in danger.</description>
     </rule>
-    <rule id="f5c2-c9d7-09f7-6bc0" name="Tactician (n)" hidden="false">
+    <rule id="f5c2-c9d7-09f7-6bc0" name="Tactician" hidden="false">
       <description>While on the board (not waiting to respawn), adds n Command Dice to the Round roll, allows n rerolls (all together, must keep new results; first-Turn player rerolls first), and lets up to n unspent Command Dice carry over to the next Round. Carried-over dice replace the Tactician's extra dice rather than adding to them (rulebook p14 example: Tactician(1), 1 die saved, next Round roll 2 and add the saved one). Several Tacticians add their n values together.</description>
     </rule>
     <rule id="10b2-7bae-93c5-d46c" name="Turret Weapons" hidden="false">
@@ -11836,7 +11878,7 @@
     <rule id="b812-96c4-4f04-6234" name="Unstoppable" hidden="false">
       <description>When this model triggers an Assault by moving into a cube, it gets +3 dice on the Fight test instead of the normal +2.</description>
     </rule>
-    <rule id="bc27-150a-ad89-e8ea" name="Weight of Fire (n)" hidden="false">
+    <rule id="bc27-150a-ad89-e8ea" name="Weight of Fire" hidden="false">
       <description>May reroll n dice on Ranged tests. Cumulative: several sources add their n values together.</description>
     </rule>
     <rule id="ef9f-2ed6-93a0-6776" name="Item (I): Intel" hidden="false">
@@ -11899,7 +11941,7 @@
     <rule id="e1fd-af76-ca19-3419" name="Injured" hidden="false">
       <description>A model that has taken wounds but isn't killed. Enemies get +1 die on Fight tests against it, and its opponent gets +1 die on Survive tests in an Assault against it.</description>
     </rule>
-    <rule id="548d-3c13-7c92-f327" name="Ablative Armour [n]" hidden="false">
+    <rule id="548d-3c13-7c92-f327" name="Ablative Armour" hidden="false">
       <description>Has n points of Ablative Armour. After Energy Shields are used, each leftover Hit spends 1 Ablative point to block it until Hits are gone or Ablative runs out; any Hits still left then go to normal Armour/damage. (Updated Oct '26.)</description>
     </rule>
     <rule id="e00d-7365-2450-192c" name="Agile" hidden="false">
@@ -11926,7 +11968,7 @@
     <rule id="cea0-d5b0-de49-3ca6" name="Hulking" hidden="false">
       <description>Occupies 2 spaces in a cube; cannot pick up or be given Items or weapons. Ignores face-down tokens entirely, but still interacts with Scenario Objects as normal. (Updated Oct '26.)</description>
     </rule>
-    <rule id="039b-980d-9a42-ee23" name="Platform" hidden="false">
+    <rule id="039b-980d-9a42-ee23" name="Platform (terrain)" hidden="false">
       <description>Raised floor / large step inside a cube. Does not change capacity. The model is in the cube where the centre of its base sits, even if its head sticks into the cube above. (Updated Oct '26.)</description>
     </rule>
     <rule id="c974-c96a-dd1a-6968" name="Respawn" hidden="false">

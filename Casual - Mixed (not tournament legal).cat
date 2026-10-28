@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<catalogue id="e2ae-511d-6428-889e" name="Casual - Mixed Human and Alien (not tournament legal)" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="61c2-d61f-70a4-4d68" gameSystemRevision="3" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e2ae-511d-6428-889e" name="Casual - Mixed Human and Alien (not tournament legal)" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="61c2-d61f-70a4-4d68" gameSystemRevision="6" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>CASUAL ONLY. Lets one list mix UNSC and Banished units. Tournament lists never mix humans and aliens. No detachments here.</readme>
   <forceEntries>
     <forceEntry id="34cd-1bfd-c9da-8697" name="Casual Mixed Fireteam (not tournament legal)" hidden="false">
@@ -137,7 +137,7 @@
     <entryLink id="733e-be68-3295-3aab" name="Drop Wall" hidden="false" collective="false" import="true" targetId="2620-ca61-0c56-63a6" type="selectionEntry" />
     <entryLink id="6a39-ef2a-10b8-3bd9" name="Overshield" hidden="false" collective="false" import="true" targetId="0f10-1a8c-53c3-7040" type="selectionEntry" />
     <entryLink id="9d47-bd43-6598-fe34" name="Oddball" hidden="false" collective="false" import="true" targetId="7b6b-59c7-7774-0759" type="selectionEntry" />
-    <entryLink id="b5cb-c190-700b-c065" name="Power Seeds" hidden="false" collective="false" import="true" targetId="4107-8d95-271d-2252" type="selectionEntry" />
+    <entryLink id="2916-d60c-2077-ef23" name="Bomb" hidden="false" collective="false" import="true" targetId="cd2c-fe74-27b9-83f2" type="selectionEntry" />
     <entryLink id="508f-f53c-7e5b-56b9" name="Lone Wolf" hidden="false" collective="false" import="true" targetId="3ed6-167e-418c-ab16" type="selectionEntry" />
     <entryLink id="8a6a-a9f0-4fee-58c1" name="Hot Drop" hidden="false" collective="false" import="true" targetId="5547-f07d-a01f-411e" type="selectionEntry" />
     <entryLink id="6d17-af06-b28f-827d" name="Target Acquired" hidden="false" collective="false" import="true" targetId="6b65-ac2c-dacd-136a" type="selectionEntry" />
