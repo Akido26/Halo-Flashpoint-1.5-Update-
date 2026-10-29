@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<catalogue id="71e0-7f72-0493-f399" name="UNSC" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="61c2-d61f-70a4-4d68" gameSystemRevision="6" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="71e0-7f72-0493-f399" name="UNSC" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="61c2-d61f-70a4-4d68" gameSystemRevision="7" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>UNSC fireteam: Spartans, ODST and Marines mix freely. Pick the detachment in Fireteam setup (ODST Corps or none). Tournament-legal path.</readme>
   <forceEntries>
     <forceEntry id="e15f-5a93-fa9e-d068" name="UNSC Fireteam" hidden="false">

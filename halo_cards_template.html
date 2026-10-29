@@ -1,0 +1,370 @@
+<template>
+  <!-- Halo Flashpoint card-style export for New Recruit.
+       Based on NR's built-in Pretty Cards tags (units, profiles, characteristics, costs, …).
+       Hides Play Mode "Wounds (HP+ES)" and the helper "DT1S" columns; orders model stats like the physical cards. -->
+  <setting id="includeModels" label="Models / options row" type="checkbox" default="false" />
+  <setting id="includeRules" label="Rule names on each card" type="checkbox" default="true" />
+  <set name="ruleProfiles" value="special rule,rule,rules,command,Special Order,Upgrade"/>
+  <set name="hideModelChars" value="Wounds (HP+ES),DT1S,Keywords"/>
+  <set name="modelStatOrder" value="HP,AR,ES,RA,FI,SV,SP"/>
+
+  <div class="section cards roster">
+    <div class="roster-title">
+      <span class="roster-name">{{name}}</span>
+      <span class="roster-costs">
+        <costs>
+          <span class="cost"><span>{{ value }}</span> <span>{{ cost.name }}</span></span>
+        </costs>
+      </span>
+    </div>
+
+    <units dedupe="true">
+      <if type="has-profile" recursive="true">
+        <div class="unit card-wrapper" type="card">
+          <table class="section card movable">
+            <!-- Name bar + points -->
+            <tr class="section card-header">
+              <td>
+                <span class="costs">
+                  <costs>
+                    <span class="cost">
+                      <span>{{ value }}</span>
+                      <span>{{ cost.name }}</span>
+                    </span>
+                  </costs>
+                </span>
+                <if field="customName">
+                  <span class="custom-name">{{customName}}</span>
+                </if>
+                <span class="name">{{name}}</span>
+                <if field="dupeCount" type=">" value="1">
+                  <span class="count">{{dupeCount}}</span>
+                </if>
+              </td>
+            </tr>
+
+            <!-- Optional models / options row (off by default for Flashpoint) -->
+            <tr if="settings.includeModels.state">
+              <td>
+                <table class="section card-models group">
+                  <models max="1">
+                    <tr class="header model profile">
+                      <td class="section cell nowrap header"><span class="header name">Models</span></td>
+                      <td class="section cell header"><span class="header options">Options</span></td>
+                    </tr>
+                  </models>
+                  <models dedupe="true">
+                    <tr class="model profile">
+                      <td class="section cell nowrap">
+                        <span class="count">{{dupeCount}}</span>x
+                        <span class="name">{{name}}</span>
+                      </td>
+                      <td class="section cell">
+                        <span class="options"><options constants="true"/></span>
+                      </td>
+                    </tr>
+                  </models>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Nested attached units (e.g. Group Attached Units) -->
+            <entries max="1" self="false">
+              <if field="type" type="equals" value="unit">
+                <tr class="section card-units card-row group">
+                  <td>
+                    <span class="header secondary cell"><span class="header name">Attached</span></span>
+                    <div class="secondaries cell">
+                      <unit.entries self="false">
+                        <if field="type" type="equals" value="unit">
+                          <span class="name">{{ amount }}x {{ name}}</span>
+                        </if>
+                      </unit.entries>
+                    </div>
+                  </td>
+                </tr>
+              </if>
+            </entries>
+
+            <!-- Model stat row: HP AR ES RA FI SV SP (Wounds (HP+ES) + DT1S + Keywords hidden here) -->
+            <tr class="section profile-row profiles group">
+              <td>
+                <profiles grouped="true" include="Model">
+                  <table class="profile-group group removable model-stats">
+                    <items max="1">
+                      <tr class="header profile">
+                        <td class="header name cell"><span>Model</span></td>
+                        <characteristics exclude="{{hideModelChars}}" order="{{modelStatOrder}}">
+                          <td class="header characteristic small cell data">
+                            <span class="header value">{{name}}</span>
+                          </td>
+                        </characteristics>
+                      </tr>
+                    </items>
+                    <items>
+                      <tr class="section profile row removable">
+                        <td class="name cell">{{name}}</td>
+                        <characteristics exclude="{{hideModelChars}}" order="{{modelStatOrder}}">
+                          <td class="characteristic small cell data">
+                            <span type="markdown">{{value}}</span>
+                          </td>
+                        </characteristics>
+                      </tr>
+                    </items>
+                  </table>
+                </profiles>
+              </td>
+            </tr>
+
+            <!-- Weapons (and other non-rule profiles): Range / AP / Keywords -->
+            <tr class="section profile-row profiles group">
+              <td>
+                <profiles grouped="true" exclude="Model,{{ruleProfiles}}">
+                  <table class="profile-group group removable weapon-stats">
+                    <items max="1">
+                      <tr class="header profile">
+                        <td class="header name cell">
+                          <span>{{typeName}}</span>
+                          <if field="group"> ({{group}})</if>
+                        </td>
+                        <characteristics>
+                          <td class="header characteristic small cell data">
+                            <span class="header value">{{name}}</span>
+                          </td>
+                        </characteristics>
+                      </tr>
+                    </items>
+                    <items>
+                      <tr class="section profile row removable">
+                        <td class="name cell">{{name}}</td>
+                        <characteristics>
+                          <td class="characteristic small cell data">
+                            <span type="markdown">{{value}}</span>
+                          </td>
+                        </characteristics>
+                      </tr>
+                    </items>
+                  </table>
+                </profiles>
+              </td>
+            </tr>
+
+            <!-- Keywords strip from the Model profile -->
+            <tr class="section card-keywords card-row group">
+              <td>
+                <span class="header secondary cell"><span class="header name">Keywords</span></span>
+                <div class="secondaries cell keywords-line">
+                  <profiles include="Model">
+                    <items>
+                      <characteristics include="Keywords">
+                        <span class="keyword-text" type="markdown">{{value}}</span>
+                      </characteristics>
+                    </items>
+                  </profiles>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Rule / ability names on the card (short names only; turn off in settings if noisy) -->
+            <tr class="section card-rules card-row" if="settings.includeRules.state">
+              <td>
+                <profiles include-rules="true" grouped="true" include="{{ruleProfiles}}">
+                  <div class="profiles profile-row profiles group">
+                    <span class="header secondary cell">
+                      <items max="1"><span class="name nowrap">{{typeName}}</span></items>
+                    </span>
+                    <span class="secondaries cell">
+                      <items><span class="name">{{name}}</span></items>
+                    </span>
+                  </div>
+                </profiles>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </if>
+    </units>
+  </div>
+</template>
+
+<style>
+@charset "UTF-8";
+
+/* Halo Flashpoint–inspired print cards for New Recruit.
+   Colours are original (not Mantic art). Tuned for A4 / Letter. */
+
+html, body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f1ea;
+  color: #1a1f18;
+  margin: 0;
+  padding: 8px;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.roster-title {
+  text-align: center;
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #2c3a28;
+}
+.roster-title .roster-costs {
+  margin-left: 10px;
+  font-weight: 600;
+  color: #5a6b52;
+}
+
+.cards {
+  column-count: 2;
+  column-gap: 10px;
+  width: 100%;
+}
+
+.unit.card-wrapper {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  width: 100%;
+  margin: 0 0 10px 0;
+  display: inline-table;
+  position: relative;
+  font-size: 9px;
+}
+
+.card {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fffdf8;
+  border: 2px solid #2c3a28;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.12);
+}
+
+.card-header {
+  background: #2c3a28;
+  color: #f4f1ea;
+  text-align: center;
+  position: relative;
+  padding: 4px 6px;
+}
+.card-header .name,
+.card-header .custom-name {
+  color: #f4f1ea;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.03em;
+}
+.card-header .custom-name { margin-right: 4px; }
+.card-header .costs {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #d8e0c8;
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.card-header .count {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #d8e0c8;
+  font-weight: 700;
+}
+.card-header .count::before { content: "×"; }
+
+.cost-value-0 { display: none; }
+
+.profile-group {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+}
+.profile-group tr.header.profile {
+  background: #4a5c42;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 8px;
+  letter-spacing: 0.04em;
+}
+.profile-group tr.header.profile td,
+.profile-group tr.header.profile span {
+  color: #fff !important;
+}
+.profile-group td,
+.profile-group th {
+  border: 1px solid #c5cdb8;
+  padding: 2px 4px;
+  vertical-align: middle;
+}
+.profile-group tr.profile.row:nth-child(even) { background: #eef2e6; }
+.profile-group .name.cell { font-weight: 700; white-space: nowrap; max-width: 110px; }
+.profile-group .characteristic.cell {
+  text-align: center;
+  min-width: 22px;
+  font-variant-numeric: tabular-nums;
+}
+
+.model-stats .characteristic.cell { font-size: 10px; font-weight: 700; }
+.weapon-stats .name.cell { white-space: normal; }
+
+.card-row {
+  border-top: 1px solid #c5cdb8;
+}
+.card-row .header.secondary.cell,
+.card-row .header.name {
+  display: inline-block;
+  background: #4a5c42;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 8px;
+  padding: 2px 6px;
+  letter-spacing: 0.04em;
+}
+.card-row .secondaries.cell,
+.card-row .keywords-line {
+  display: block;
+  padding: 3px 6px;
+  font-size: 8.5px;
+  line-height: 1.25;
+}
+.keywords-line .keyword-text { font-weight: 600; color: #2c3a28; }
+
+.card-rules .name:not(:last-child)::after { content: ", "; }
+.card-units .name:not(:last-child)::after { content: ", "; }
+
+.section:empty { display: none; }
+
+@media print {
+  html, body {
+    background: white;
+    font-size: 9px;
+    padding: 0;
+  }
+  .cards {
+    column-count: 2 !important;
+    column-gap: 8px !important;
+  }
+  .card-header,
+  .profile-group tr.header.profile,
+  .card-row .header.secondary.cell,
+  .card-row .header.name {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .cards { column-count: 1; }
+}
+</style>

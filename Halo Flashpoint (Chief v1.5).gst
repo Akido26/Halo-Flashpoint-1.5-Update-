@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<gameSystem id="61c2-d61f-70a4-4d68" name="Halo: Flashpoint (Chief's v1.5 data)" revision="6" battleScribeVersion="2.03" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
-  <readme>Unofficial, homebrew list-building data for Halo: Flashpoint v1.5 (Mantic Games), updated 28 Oct 2026 from the Mantic official list builder (points) and Sept 2026 1.5 errata (stats/keywords). Names, stats, points and short rule summaries only; see Mantic's Halo: Flashpoint Index for full rules. Weapons, Grenades, Items and Objective Items (Oddball, Bomb — Power Seeds/Flag stay as table tokens) are bought from their left-menu category, then attached to a unit with the chain-link button (same NR attach associations as 40k characters (Group Attached Units)). Per unit: max 4 Objects (Items + Grenades only; Oddball/Bomb are 0-pt Objective Items with melee profiles and do not count as Objects) and max 1 extra ranged + 1 extra melee weapon (enforced). Force-wide: max 2 of each item/grenade (BTB: raise to 4 by hand); max 1 of each extra weapon type. Special Orders 1–3. Humans and aliens never mix in tournament lists. Play Mode wound tracker uses the Wounds characteristic (HP+ES). Mantic's site wins over this data.</readme>
+<gameSystem id="61c2-d61f-70a4-4d68" name="Halo: Flashpoint (Chief's v1.5 data)" revision="7" battleScribeVersion="2.03" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+  <readme>Unofficial, homebrew list-building data for Halo: Flashpoint v1.5 (Mantic Games), updated 28 Oct 2026 from the Mantic official list builder (points) and Sept 2026 1.5 errata (stats/keywords). Names, stats, points and short rule summaries only; see Mantic's Halo: Flashpoint Index for full rules. Weapons, Grenades, Items and Objective Items (Oddball, Bomb — Power Seeds/Flag stay as table tokens) are bought from their left-menu category, then attached to a unit with the chain-link button (same NR attach associations as 40k characters (Group Attached Units)). Per unit: max 4 Objects (Items + Grenades only; Oddball/Bomb are 0-pt Objective Items with melee profiles and do not count as Objects) and max 1 extra ranged + 1 extra melee weapon (enforced). Force-wide: max 2 of each item/grenade (BTB: raise to 4 by hand); max 1 of each extra weapon type. Special Orders 1–3. Humans and aliens never mix in tournament lists. Play Mode wound tracker uses the Wounds (HP+ES) characteristic (kind=Wound; total of Health + Energy Shields). Mantic's site wins over this data.</readme>
   <costTypes>
     <costType id="3661-1187-b063-f00f" name="Points" defaultCostLimit="200.0" hidden="false" />
   </costTypes>
@@ -11,7 +11,7 @@
         <characteristicType id="f71c-d4e9-5249-ccbf" name="HP" />
         <characteristicType id="8381-e478-0ada-c144" name="AR" />
         <characteristicType id="baac-a14d-979f-803f" name="ES" />
-        <characteristicType id="864e-20dc-0543-8937" name="Wounds" kind="Wound" />
+        <characteristicType id="6845-839c-610d-8982" name="Wounds (HP+ES)" kind="Wound" />
         <characteristicType id="daf1-2d46-f21b-cabb" name="RA" />
         <characteristicType id="4395-eb80-9715-afdd" name="FI" />
         <characteristicType id="4b4c-fa64-06a3-6e29" name="SV" />
@@ -5797,7 +5797,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">4+</characteristic>
@@ -5810,6 +5810,7 @@
         <infoLink id="709e-8533-c90c-190c" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="871a-480f-2004-0d85" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
         <infoLink id="66c6-2b0d-4f92-a623" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="31df-cde7-969f-9255" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="de9d-2aa8-24b5-ca9b" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
@@ -5844,6 +5845,7 @@
               <infoLinks>
                 <infoLink id="121a-4fe7-afcd-4ef3" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
                 <infoLink id="dcdb-8966-39dc-d887" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+                <infoLink id="8660-6d42-06d0-0c3d" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="39.0" />
@@ -5871,6 +5873,7 @@
                 <infoLink id="2121-0cc0-087a-cdb3" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
                 <infoLink id="7592-11ac-2880-4f19" name="Implosion" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
                 <infoLink id="a304-17dc-215a-2dff" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="737e-c7e7-74f4-045d" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="38.0" />
@@ -5909,7 +5912,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -5921,6 +5924,7 @@
       <infoLinks>
         <infoLink id="8521-9137-ff76-3bc8" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="931a-d360-adf8-b5cf" name="Jump Pack" hidden="false" targetId="7b06-42c9-226e-bf26" type="rule" />
+        <infoLink id="5bf1-5ede-5abd-1270" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="d49a-77fc-5056-7951" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
@@ -5957,6 +5961,7 @@
                 <infoLink id="f6d6-403d-ff62-41f3" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="1a23-1e47-da01-2ae6" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
                 <infoLink id="50cc-4a87-1ca8-2cc8" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="4a61-d21c-c521-3ac3" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="37.0" />
@@ -5991,6 +5996,7 @@
                 <infoLink id="0275-c3a4-8cec-d0bd" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
                 <infoLink id="29c4-903a-f323-868f" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
                 <infoLink id="ef22-810c-4642-77ed" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="c45b-bf1e-4bb1-f61d" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="37.0" />
@@ -6017,6 +6023,7 @@
                 <infoLink id="591f-0f7e-2914-9518" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="ff8f-a761-6423-d80a" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
                 <infoLink id="6691-9fa6-a6b8-8456" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+                <infoLink id="11cf-8628-38b4-c3ff" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="38.0" />
@@ -6055,7 +6062,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">3+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -6066,6 +6073,7 @@
       </profiles>
       <infoLinks>
         <infoLink id="c4dc-775d-793c-19c0" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="c94f-b0b9-afd8-dab9" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="badf-ae4a-f76a-e505" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
@@ -6101,6 +6109,7 @@
                 <infoLink id="2c93-e5bd-02fd-4b8a" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="2582-f266-c27e-4667" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
                 <infoLink id="8176-cf68-50a5-f8c9" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="ef31-545e-8fec-3600" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="36.0" />
@@ -6128,6 +6137,7 @@
                 <infoLink id="4c09-a70b-f433-029e" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="90a6-d570-ac67-dd4c" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
                 <infoLink id="da27-e2ac-3c07-a0c5" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="8fd5-4dc6-8b74-02c2" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="36.0" />
@@ -6166,7 +6176,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -6178,6 +6188,7 @@
       <infoLinks>
         <infoLink id="1163-f367-9fe2-1208" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="18f9-48e3-822a-aad5" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="974d-cb6e-0ba3-b643" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="ed93-1b9c-c8c0-5bf2" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
@@ -6212,6 +6223,7 @@
               <infoLinks>
                 <infoLink id="6758-c51f-5bb2-a6cd" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="1c5b-13b3-1b70-e5eb" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="723e-1b93-6c1d-0363" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="42.0" />
@@ -6237,6 +6249,7 @@
               <infoLinks>
                 <infoLink id="2e94-f8c9-8df0-a0e9" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
                 <infoLink id="3992-c0ce-5837-a211" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="8bfa-d5c0-9979-db00" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="44.0" />
@@ -6275,7 +6288,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">3</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -6288,6 +6301,7 @@
         <infoLink id="d5bf-6892-1bdd-60c5" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="3ca1-2805-3c5b-860c" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
         <infoLink id="4add-ed54-7c50-7671" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="87be-e785-8bb1-5676" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="5583-be87-181f-d836" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
@@ -6325,6 +6339,7 @@
                 <infoLink id="1d0d-395b-8790-412b" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
                 <infoLink id="85f8-d327-b141-d9e3" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="2536-a1e1-aa1e-9187" name="Long" hidden="false" targetId="6d8a-c297-e299-855e" type="rule" />
+                <infoLink id="7740-3552-258a-c947" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="48.0" />
@@ -6352,6 +6367,7 @@
                 <infoLink id="a347-5df9-2da5-8d34" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="f0ef-d74d-cf4c-7f2d" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
                 <infoLink id="8c71-1ccb-d5f9-3a55" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
+                <infoLink id="d02b-fb21-90be-f369" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="54.0" />
@@ -6390,7 +6406,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -6403,6 +6419,7 @@
         <infoLink id="75ca-41ae-57f3-cec7" name="Active Camouflage" hidden="false" targetId="e7f4-cc64-081b-32af" type="rule" />
         <infoLink id="5dfb-e33c-ead8-2f24" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="ea20-a276-e512-a2e1" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
+        <infoLink id="6419-4bf7-0d7a-a637" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="ea27-842a-4ec0-08aa" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
@@ -6446,6 +6463,7 @@
                 <infoLink id="775d-0e63-b872-1116" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
                 <infoLink id="db5d-c36a-4f47-21dd" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
                 <infoLink id="75fb-cc42-bcc8-9cc9" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
+                <infoLink id="27da-276e-f7fe-8d70" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="46.0" />
@@ -6484,7 +6502,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -6497,6 +6515,7 @@
         <infoLink id="c27f-254e-4882-0b26" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="8caf-7d10-f741-53b2" name="Guarded" hidden="false" targetId="380e-cfa0-0786-1b4f" type="rule" />
         <infoLink id="f1f0-b518-1212-e1ce" name="Stable" hidden="false" targetId="955f-e5b9-7014-393a" type="rule" />
+        <infoLink id="99b2-f3a1-ef74-bd43" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="39c5-2ec6-694f-f3fe" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
@@ -6533,6 +6552,7 @@
                 <infoLink id="5255-32b0-245d-a3f4" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
                 <infoLink id="e3d9-d157-99c8-0096" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="02b8-04cd-7ebb-e8a6" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
+                <infoLink id="a92f-b997-8ea1-0002" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="46.0" />
@@ -6567,6 +6587,7 @@
                 <infoLink id="97ca-6894-135b-2643" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
                 <infoLink id="eee5-084c-2b2d-8613" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
                 <infoLink id="b051-b1a8-d0dd-4d32" name="EMP" hidden="false" targetId="eae8-da8a-08f0-ac08" type="rule" />
+                <infoLink id="4685-0c6c-d90c-2111" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="46.0" />
@@ -6595,6 +6616,7 @@
                 <infoLink id="e009-54e4-20f9-e9fd" name="Explosive" hidden="false" targetId="2599-56ef-4404-67aa" type="rule" />
                 <infoLink id="c950-7eaf-d08f-49be" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
                 <infoLink id="4ed2-89bc-3285-3cf7" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="73d2-7a7e-ca29-ec40" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="47.0" />
@@ -6633,7 +6655,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">3+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -6645,6 +6667,7 @@
       <infoLinks>
         <infoLink id="3d87-4220-700c-1c5b" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="eee9-25d8-6d9f-6c6a" name="Fast Transition" hidden="false" targetId="c9dc-8bd3-4011-712e" type="rule" />
+        <infoLink id="6856-18e3-e37f-94a1" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="33a9-1096-4313-2d6b" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
@@ -6678,6 +6701,7 @@
               </profiles>
               <infoLinks>
                 <infoLink id="06ba-f852-d31f-ef9a" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
+                <infoLink id="8596-77bf-e765-ec25" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="44.0" />
@@ -6703,6 +6727,7 @@
               <infoLinks>
                 <infoLink id="b5d9-0c53-6601-3f45" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="e191-b361-aa81-104a" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
+                <infoLink id="be43-5cd1-1115-dabd" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="45.0" />
@@ -6741,7 +6766,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">5</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">3</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">7</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">7</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">6+</characteristic>
@@ -6753,6 +6778,7 @@
       <infoLinks>
         <infoLink id="2b2c-6268-db3e-0bfa" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="ee8b-cb84-6fbc-856b" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
+        <infoLink id="04d7-da07-232b-1ba3" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="ca93-41b6-4dfe-5a2b" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
@@ -6795,6 +6821,7 @@
                 <infoLink id="31dc-f1d2-1a7c-9051" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="9389-b8c7-7228-4d91" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="0d33-ce38-2c62-5695" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
+                <infoLink id="8f58-95e8-a3cf-9938" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="49.0" />
@@ -6830,6 +6857,7 @@
                 <infoLink id="1166-d665-5b0d-27cd" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="0bbf-28be-cfe1-bea5" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
                 <infoLink id="8cef-023a-b605-4ca4" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
+                <infoLink id="6f68-b690-f8b1-bab5" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="49.0" />
@@ -6868,7 +6896,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">3+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">4+</characteristic>
@@ -6882,6 +6910,7 @@
         <infoLink id="288e-6855-1cda-c92e" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="0e22-3241-07f1-f84e" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
         <infoLink id="e9e9-ce93-ef59-7989" name="Stealthy" hidden="false" targetId="ac0f-f7f4-da63-0f57" type="rule" />
+        <infoLink id="fd81-1ec9-0d43-e11f" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="d73d-30ff-928e-96db" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
@@ -6918,6 +6947,7 @@
                 <infoLink id="6551-6f22-7c35-00cb" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="45d1-ad5c-457b-7247" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="a294-b895-ebff-030e" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
+                <infoLink id="fe28-77e0-9d62-cbfb" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="48.0" />
@@ -6956,7 +6986,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">3+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -6970,6 +7000,7 @@
         <infoLink id="e6f3-4085-4584-41a4" name="Acrobatic" hidden="false" targetId="0c36-2543-6a7b-f326" type="rule" />
         <infoLink id="fdbb-474c-bea2-c978" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="33a3-9eb5-222e-180a" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
+        <infoLink id="2547-f08e-aa1b-f524" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="ceed-004c-ee96-bb3e" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
@@ -7016,6 +7047,7 @@
                 <infoLink id="c37d-fd24-aa39-abd1" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
                 <infoLink id="f2da-4fce-b3ef-7647" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
                 <infoLink id="9e20-a19d-77e4-9891" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
+                <infoLink id="9c1b-48c3-a136-4cb8" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="58.0" />
@@ -7054,7 +7086,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -7069,6 +7101,7 @@
         <infoLink id="42e2-b2fb-b67b-2323" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="93b5-c8cd-5d60-ebfd" name="Fast Transition" hidden="false" targetId="c9dc-8bd3-4011-712e" type="rule" />
         <infoLink id="3324-63d2-e42c-72d2" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="db6e-1df6-467e-fb4d" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="4c81-61b1-d74a-491f" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
@@ -7113,6 +7146,7 @@
                 <infoLink id="e22f-1c32-1f93-09b9" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="ca4d-a321-a762-64c2" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
                 <infoLink id="342a-ed79-f3ed-2065" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+                <infoLink id="c891-b52e-80f9-0956" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="54.0" />
@@ -7151,7 +7185,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -7166,6 +7200,7 @@
         <infoLink id="b830-cc03-6549-95f1" name="Counter Intelligence" hidden="false" targetId="3f70-9737-1ce4-5826" type="rule" />
         <infoLink id="ce2b-38fd-ac98-c9de" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="0200-32ca-5071-9bb9" name="Stealthy" hidden="false" targetId="ac0f-f7f4-da63-0f57" type="rule" />
+        <infoLink id="c87d-ab51-0a4e-79d1" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="7e5f-7e7b-ab10-3b96" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
@@ -7211,6 +7246,7 @@
                 <infoLink id="93b2-6309-3ad4-e640" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
                 <infoLink id="5a38-40a6-b0d4-a63b" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
                 <infoLink id="9517-da87-4bbf-21ea" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+                <infoLink id="37ff-063b-61af-cb5b" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="62.0" />
@@ -7249,7 +7285,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -7263,6 +7299,7 @@
         <infoLink id="6d87-2e29-3b56-d978" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="4584-e148-4a03-efa8" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
         <infoLink id="fdc7-5f1c-1af8-b60e" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="6df1-ae8f-a17e-dd4a" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="2b05-27c1-7db4-a0da" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
@@ -7307,6 +7344,7 @@
                 <infoLink id="cc8f-d2c5-f36e-61ff" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="89f7-b42c-5d32-8bd2" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
                 <infoLink id="2c99-2431-f20a-2fde" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+                <infoLink id="a357-8c93-6b03-0578" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="58.0" />
@@ -7345,7 +7383,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">6</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">3</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">9</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">9</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">4+</characteristic>
@@ -7360,6 +7398,7 @@
         <infoLink id="0a4a-be4c-ab26-073a" name="High Value Target (HVT)" hidden="false" targetId="a15c-2e11-e3cd-8b3c" type="rule" />
         <infoLink id="8a41-1f8e-84fc-eaf3" name="Stoic" hidden="false" targetId="5674-1123-3fe9-3dd6" type="rule" />
         <infoLink id="fccf-1667-ee85-054f" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="b80d-7f95-5582-f020" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="1e6f-8b50-1137-fec5" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
@@ -7397,6 +7436,7 @@
                 <infoLink id="ce3a-17a6-217c-318e" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="3311-a217-7501-494c" name="Suppression" hidden="false" targetId="3ee6-86b5-e526-7c22" type="rule" />
                 <infoLink id="64a9-d7bd-bafe-856f" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="e4e5-8970-a20b-aa8e" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="70.0" />
@@ -7435,7 +7475,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">5</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">3</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">8</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">8</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">3+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">3+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">3+</characteristic>
@@ -7450,6 +7490,7 @@
         <infoLink id="08fd-6b09-949c-01aa" name="High Value Target (HVT)" hidden="false" targetId="a15c-2e11-e3cd-8b3c" type="rule" />
         <infoLink id="28ff-a6d2-d346-35b8" name="Stoic" hidden="false" targetId="5674-1123-3fe9-3dd6" type="rule" />
         <infoLink id="9e5b-97b1-c609-5d1f" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="a945-e3cb-bdf4-9e81" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="2eb4-71f2-aba0-8857" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
@@ -7486,6 +7527,7 @@
                 <infoLink id="a954-2967-a57c-7c4a" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="e672-d625-e2c7-2cd9" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="56c9-a7b5-62db-fb53" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
+                <infoLink id="3178-f615-b799-a3ba" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="72.0" />
@@ -7511,7 +7553,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -7522,6 +7564,7 @@
       </profiles>
       <infoLinks>
         <infoLink id="f040-da4d-386a-19c7" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
+        <infoLink id="19eb-7ba6-1977-6729" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="fb50-890a-ecb6-f769" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
@@ -7563,6 +7606,7 @@
               <infoLinks>
                 <infoLink id="a597-ac40-4ce5-a956" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="a3f1-1f09-74c1-1861" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
+                <infoLink id="17d9-de52-dc35-210b" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="24.0" />
@@ -7588,6 +7632,7 @@
               <infoLinks>
                 <infoLink id="4bff-2c33-8153-4d63" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="e1d7-5de2-8906-63f6" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="aa10-5bb6-b0d4-4342" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="22.0" />
@@ -7613,6 +7658,7 @@
               <infoLinks>
                 <infoLink id="6ff4-f0a4-2bff-28cc" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
                 <infoLink id="a86a-cb9d-6cb5-c509" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="f758-39f0-f232-b76b" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="26.0" />
@@ -7638,7 +7684,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -7650,6 +7696,7 @@
       <infoLinks>
         <infoLink id="3d22-be3b-a9f9-e748" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
         <infoLink id="ba63-5f27-7a0f-cf4f" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="6351-459e-a704-514e" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="86f4-1cfe-cf9e-b3da" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
@@ -7690,6 +7737,7 @@
               </profiles>
               <infoLinks>
                 <infoLink id="8fd5-efd2-d57a-bad0" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="6f94-5fc6-c377-2a3b" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="31.0" />
@@ -7715,7 +7763,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -7727,6 +7775,7 @@
       <infoLinks>
         <infoLink id="e74d-dd74-cfbd-b860" name="Acrobatic" hidden="false" targetId="0c36-2543-6a7b-f326" type="rule" />
         <infoLink id="e509-771c-2e41-6c31" name="Jump Pack" hidden="false" targetId="7b06-42c9-226e-bf26" type="rule" />
+        <infoLink id="3fe1-6898-52a3-6148" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="5959-240e-9f34-6aa6" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
@@ -7769,6 +7818,7 @@
               <infoLinks>
                 <infoLink id="b1bd-5a77-98ca-9a86" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
                 <infoLink id="4140-8ea7-acfa-e114" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="1f23-d84d-e6a1-b100" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="28.0" />
@@ -7801,6 +7851,7 @@
               <infoLinks>
                 <infoLink id="b33d-6364-660e-8e87" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
                 <infoLink id="6fa0-5fb0-546f-6291" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="2eda-eaf8-c133-5138" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="29.0" />
@@ -7826,7 +7877,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -7835,6 +7886,9 @@
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="9ce8-bafd-f52c-152e" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="388d-ec98-8bf0-1a9c" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
         <categoryLink id="e267-8f45-d8d1-a6f9" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
@@ -7887,6 +7941,7 @@
                 <infoLink id="6b78-86de-6e17-d84e" name="EMP" hidden="false" targetId="eae8-da8a-08f0-ac08" type="rule" />
                 <infoLink id="1bd1-d7c7-460d-2e2d" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="0327-c79c-26b0-fa36" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
+                <infoLink id="0ecb-8d6c-2a5e-73c1" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="29.0" />
@@ -7930,6 +7985,7 @@
                 <infoLink id="8baa-19c0-9654-a672" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
                 <infoLink id="6b80-0a96-a5bb-a863" name="EMP" hidden="false" targetId="eae8-da8a-08f0-ac08" type="rule" />
                 <infoLink id="1f16-1a85-2652-ffeb" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
+                <infoLink id="dd69-40ea-09ab-b971" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="27.0" />
@@ -7955,7 +8011,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -7966,6 +8022,7 @@
       </profiles>
       <infoLinks>
         <infoLink id="53f7-77ec-b4cb-2cce" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="dea7-64e4-cff0-c018" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="cc73-aa2e-cde5-76c8" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
@@ -8006,6 +8063,7 @@
               </profiles>
               <infoLinks>
                 <infoLink id="2c01-a358-d339-74ee" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
+                <infoLink id="6bc8-511c-36e4-2986" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="36.0" />
@@ -8044,7 +8102,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">6+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -8057,6 +8115,7 @@
         <infoLink id="338b-93dd-b1fc-218e" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
         <infoLink id="d6eb-cfaf-e88f-3992" name="Stealthy" hidden="false" targetId="ac0f-f7f4-da63-0f57" type="rule" />
         <infoLink id="4aa9-f952-dc67-70c1" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="aa8d-c0c4-c5fa-4577" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="19ce-257a-5e39-4dc0" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
@@ -8091,6 +8150,7 @@
               </profiles>
               <infoLinks>
                 <infoLink id="8ec3-b52e-7e4c-c546" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
+                <infoLink id="aeaa-5693-5c0d-cab4" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="39.0" />
@@ -8116,7 +8176,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">3+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">4+</characteristic>
@@ -8130,6 +8190,7 @@
         <infoLink id="bcd0-11cb-47cb-d9aa" name="Fast Transition" hidden="false" targetId="c9dc-8bd3-4011-712e" type="rule" />
         <infoLink id="30ed-6635-3384-c7e0" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
         <infoLink id="6cc4-eb08-62d1-1450" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="81fa-b92e-c7c1-0d5d" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="b98f-41bd-59e8-17ff" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
@@ -8179,6 +8240,7 @@
               <infoLinks>
                 <infoLink id="1dbc-580d-5c8c-cb18" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
                 <infoLink id="b203-be52-95b3-ef33" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
+                <infoLink id="bb36-9790-2247-946f" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="48.0" />
@@ -8204,7 +8266,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">6+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -8216,6 +8278,7 @@
       <infoLinks>
         <infoLink id="a0eb-73a9-408b-0fb1" name="Support" hidden="false" targetId="03f8-5a2f-73f3-d61e" type="rule" />
         <infoLink id="1828-7981-c57f-eaee" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="64c7-10ec-8531-d8ae" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="aec1-459d-60c7-e285" name="Marines" hidden="false" targetId="c964-7c65-c947-c4e9" primary="true" />
@@ -8249,6 +8312,7 @@
               </profiles>
               <infoLinks>
                 <infoLink id="b472-9a6f-0ae0-6009" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="252f-6f39-23a0-9f61" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="25.0" />
@@ -8274,7 +8338,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">6+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">6+</characteristic>
@@ -8285,6 +8349,7 @@
       </profiles>
       <infoLinks>
         <infoLink id="3b06-15b2-19f8-1090" name="Support" hidden="false" targetId="03f8-5a2f-73f3-d61e" type="rule" />
+        <infoLink id="9c75-4762-da94-3255" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="98c0-6e61-821b-eea1" name="Marines" hidden="false" targetId="c964-7c65-c947-c4e9" primary="true" />
@@ -8322,6 +8387,7 @@
                 <infoLink id="18af-02b9-855c-4cee" name="Explosive" hidden="false" targetId="2599-56ef-4404-67aa" type="rule" />
                 <infoLink id="85b7-a438-d3fe-289f" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
                 <infoLink id="7959-be29-7929-f63f" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="98bc-2e1a-4364-9cb5" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="21.0" />
@@ -8348,6 +8414,7 @@
                 <infoLink id="15c6-6f44-688c-194c" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="4f62-75ac-ff90-9807" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="3da8-89d5-b857-aa76" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
+                <infoLink id="0918-4e90-1a16-092a" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="18.0" />
@@ -8373,6 +8440,7 @@
               <infoLinks>
                 <infoLink id="cf71-92d0-1198-8a6e" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
                 <infoLink id="d947-14bc-ad23-5208" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="70b2-1ca7-e573-1b96" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="18.0" />
@@ -8398,6 +8466,7 @@
               <infoLinks>
                 <infoLink id="ac89-5f49-c2d2-7f72" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
                 <infoLink id="ec18-a3b8-a57b-12b6" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+                <infoLink id="3c1a-3572-d3c1-abf1" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="17.0" />
@@ -8423,6 +8492,7 @@
               <infoLinks>
                 <infoLink id="cf38-8a45-91c6-06f7" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="18ed-b377-17f6-8752" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="b842-a63d-8fa2-fd99" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="16.0" />
@@ -8448,7 +8518,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">6+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">6+</characteristic>
@@ -8460,6 +8530,7 @@
       <infoLinks>
         <infoLink id="400b-0115-36f9-a5bd" name="Support" hidden="false" targetId="03f8-5a2f-73f3-d61e" type="rule" />
         <infoLink id="95e7-5019-4528-eb42" name="Medic" hidden="false" targetId="effe-9ac1-576d-f6ac" type="rule" />
+        <infoLink id="f2de-d96d-e648-2cba" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="df71-d7bc-1ff4-4af4" name="Marines" hidden="false" targetId="c964-7c65-c947-c4e9" primary="true" />
@@ -8493,6 +8564,7 @@
               </profiles>
               <infoLinks>
                 <infoLink id="f92b-402a-c6ae-aa3b" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
+                <infoLink id="fbf4-a000-6ff7-cfa9" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="19.0" />
@@ -8518,7 +8590,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">6+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">6+</characteristic>
@@ -8530,6 +8602,7 @@
       <infoLinks>
         <infoLink id="ad4f-d69d-f1cf-120d" name="Support" hidden="false" targetId="03f8-5a2f-73f3-d61e" type="rule" />
         <infoLink id="1ba5-3fe5-6aa4-fc25" name="Comms Relay" hidden="false" targetId="78fb-f832-8458-709a" type="rule" />
+        <infoLink id="a341-0b63-a115-d6c0" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a379-28d7-15dd-c1ea" name="Marines" hidden="false" targetId="c964-7c65-c947-c4e9" primary="true" />
@@ -8563,6 +8636,7 @@
               </profiles>
               <infoLinks>
                 <infoLink id="88d0-181c-440c-5e04" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="fe5b-48cc-6e85-f78b" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="18.0" />
@@ -8601,7 +8675,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">3</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">4+</characteristic>
@@ -8613,6 +8687,7 @@
       <infoLinks>
         <infoLink id="523d-dccd-e6c9-47a1" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="16c7-fe7b-6e3a-1cab" name="Evade" hidden="false" targetId="da0a-bc9e-6c78-3f5f" type="rule" />
+        <infoLink id="ba58-5824-e7a8-b070" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="3a00-f1db-b9bb-f3fe" name="Sangheili" hidden="false" targetId="76d6-aa41-a970-e81a" primary="true" />
@@ -8660,6 +8735,7 @@
                 <infoLink id="205a-3f4b-e697-6b36" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="9f05-2349-ddc8-081f" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
                 <infoLink id="3726-0e0e-9f85-5503" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
+                <infoLink id="d3ed-3a68-d8d0-1080" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="41.0" />
@@ -8698,6 +8774,7 @@
                 <infoLink id="638e-d6c2-9062-197a" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
                 <infoLink id="3767-a90e-9baa-3b61" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
                 <infoLink id="ea1a-ebff-f990-7507" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
+                <infoLink id="0d04-c599-0541-e682" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="42.0" />
@@ -8737,6 +8814,7 @@
                 <infoLink id="ee72-c0f0-009e-14e5" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="1770-2320-580f-4ca7" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
                 <infoLink id="6140-aa9e-c32e-e347" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
+                <infoLink id="9722-0d4b-b34c-dfab" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="44.0" />
@@ -8774,6 +8852,7 @@
                 <infoLink id="2d05-554e-79d9-8c45" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
                 <infoLink id="1014-a3d4-1347-fc3b" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
                 <infoLink id="ba7b-abb6-8a55-ab6f" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
+                <infoLink id="b9d1-f0da-1b54-9764" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="47.0" />
@@ -8812,6 +8891,7 @@
                 <infoLink id="3efa-f811-f159-15ac" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="e5a0-6e69-9873-7d34" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
                 <infoLink id="72ab-5a47-9d1b-fb32" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
+                <infoLink id="e3a3-b387-b4a9-f927" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="47.0" />
@@ -8850,7 +8930,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">4</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">8</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">8</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">4+</characteristic>
@@ -8863,6 +8943,7 @@
         <infoLink id="3403-c94a-0d9e-6f47" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="ca69-28b7-2e09-bbd7" name="Evade" hidden="false" targetId="da0a-bc9e-6c78-3f5f" type="rule" />
         <infoLink id="c507-9365-18c0-9dc3" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="0dba-23e2-bb2e-1e98" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a8f1-9e8e-5b45-7db3" name="Sangheili" hidden="false" targetId="76d6-aa41-a970-e81a" primary="true" />
@@ -8911,6 +8992,7 @@
                 <infoLink id="9951-ec1b-7896-2f4b" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="a3f5-8de1-0c10-0e17" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
                 <infoLink id="e134-14df-822b-13ef" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
+                <infoLink id="4f00-b1af-8e0d-53c6" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="56.0" />
@@ -8949,7 +9031,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">3</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">7</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">7</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">3+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">4+</characteristic>
@@ -8967,6 +9049,7 @@
         <infoLink id="84d4-0790-8a71-fc7c" name="High Value Target (HVT)" hidden="false" targetId="a15c-2e11-e3cd-8b3c" type="rule" />
         <infoLink id="3ece-4e45-ad61-23cc" name="Spartan Killer" hidden="false" targetId="1f56-e733-55df-2362" type="rule" />
         <infoLink id="3319-d028-c5b0-f2b6" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="fd0c-8cce-29fa-83b5" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="f77a-45b1-3df9-3f4c" name="Sangheili" hidden="false" targetId="76d6-aa41-a970-e81a" primary="true" />
@@ -9004,6 +9087,7 @@
                 <infoLink id="0a0b-2e21-b91c-bda0" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="7165-8133-ff0c-6fbe" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
                 <infoLink id="0c40-0fee-ebaa-6298" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+                <infoLink id="c01e-7bad-d7f1-843d" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="75.0" />
@@ -9042,7 +9126,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">0</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">6+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -9054,6 +9138,7 @@
       <infoLinks>
         <infoLink id="5f2d-a0f1-5c1a-a0a2" name="Agile" hidden="false" targetId="e00d-7365-2450-192c" type="rule" />
         <infoLink id="7a9a-14d7-bc41-1589" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
+        <infoLink id="93f8-362d-e113-9bc7" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="29fa-b559-1f1c-0272" name="Kig-Yar" hidden="false" targetId="083a-640e-69e2-d56c" primary="true" />
@@ -9087,6 +9172,7 @@
               </profiles>
               <infoLinks>
                 <infoLink id="2e5f-5afc-e9b5-00c5" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
+                <infoLink id="2195-5b1a-9f0f-2d0c" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="26.0" />
@@ -9125,7 +9211,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">0</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">5</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">5</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">6+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -9137,6 +9223,7 @@
       <infoLinks>
         <infoLink id="da05-22e3-5d72-4413" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="236d-1630-7c15-f0d6" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
+        <infoLink id="d3cf-e54d-41c8-1cf9" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="223e-cb43-3836-382a" name="Kig-Yar" hidden="false" targetId="083a-640e-69e2-d56c" primary="true" />
@@ -9172,6 +9259,7 @@
                 <infoLink id="b5b6-d2ee-65dc-f1ef" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="c63c-c66c-10db-b787" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
                 <infoLink id="bc1c-2b12-35c8-4bdb" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="1956-6455-4c1d-6eef" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="20.0" />
@@ -9197,7 +9285,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">6</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -9209,6 +9297,7 @@
       <infoLinks>
         <infoLink id="9ad5-c4bc-a645-b74b" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
         <infoLink id="f712-6034-cec5-36b0" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
+        <infoLink id="9547-a926-cc02-c18a" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="4716-a942-50c2-271b" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
@@ -9262,6 +9351,7 @@
                 <infoLink id="9883-9d1a-ef9f-f903" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
                 <infoLink id="1275-1748-d1ea-d5f1" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
                 <infoLink id="b0d9-d90a-086e-7e5a" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
+                <infoLink id="4748-2d5f-dac1-4770" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="32.0" />
@@ -9283,6 +9373,7 @@
       <infoLinks>
         <infoLink id="60a6-20d5-7b96-5712" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
         <infoLink id="38de-2850-ec3f-b776" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="8681-6f2e-5b31-1e8a" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="3eba-781f-773a-d772" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
@@ -9312,7 +9403,7 @@
                     <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">6</characteristic>
                     <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
                     <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
-                    <characteristic name="Wounds" typeId="864e-20dc-0543-8937">6</characteristic>
+                    <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
                     <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">6+</characteristic>
                     <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
                     <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">6+</characteristic>
@@ -9342,6 +9433,7 @@
                 <infoLink id="350c-0c54-0b1f-16de" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
                 <infoLink id="cbb4-a129-892e-c149" name="Implosion" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
                 <infoLink id="c963-97ab-2acb-6598" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
+                <infoLink id="b501-b4ae-2d7b-856f" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="33.0" />
@@ -9362,7 +9454,7 @@
                     <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">6</characteristic>
                     <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
                     <characteristic name="ES" typeId="baac-a14d-979f-803f">1</characteristic>
-                    <characteristic name="Wounds" typeId="864e-20dc-0543-8937">7</characteristic>
+                    <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">7</characteristic>
                     <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">6+</characteristic>
                     <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
                     <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">6+</characteristic>
@@ -9392,6 +9484,7 @@
                 <infoLink id="0c62-b255-b608-1236" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
                 <infoLink id="19b6-1434-5920-5e57" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
                 <infoLink id="8324-5158-c7e4-f489" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
+                <infoLink id="bdc4-c5e1-0043-1759" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="34.0" />
@@ -9417,7 +9510,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">6</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">0</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">8</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">8</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -9430,6 +9523,7 @@
         <infoLink id="8888-ca7d-c86c-1f52" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
         <infoLink id="b2a1-26da-530c-de9d" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
         <infoLink id="8a4b-cbfe-aa7a-461d" name="Stable" hidden="false" targetId="955f-e5b9-7014-393a" type="rule" />
+        <infoLink id="e425-7799-7a46-7fe2" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="726c-5955-561f-671a" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
@@ -9474,6 +9568,7 @@
                 <infoLink id="25d6-9123-d885-faa3" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="9296-2190-e6d5-d01a" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
                 <infoLink id="0ce5-7332-e337-8fef" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+                <infoLink id="e7ef-dd04-d361-a20e" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="36.0" />
@@ -9508,6 +9603,7 @@
                 <infoLink id="87fd-2c8a-710d-05a8" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="a5dc-da47-f421-49b4" name="Long" hidden="false" targetId="6d8a-c297-e299-855e" type="rule" />
                 <infoLink id="440e-ec3a-12f5-dea8" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
+                <infoLink id="596d-412e-158d-a24d" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="42.0" />
@@ -9533,7 +9629,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">6</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">1</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">7</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">7</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -9547,6 +9643,7 @@
         <infoLink id="bba6-dbf1-79b9-073c" name="Guarded" hidden="false" targetId="380e-cfa0-0786-1b4f" type="rule" />
         <infoLink id="625c-1a11-e2e3-c6a3" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
         <infoLink id="9c85-7fed-4f98-f005" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="e3f0-b61b-dfdf-6503" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="48bc-0454-b64a-4070" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
@@ -9593,6 +9690,7 @@
                 <infoLink id="8bbc-dfcb-6de6-a16f" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
                 <infoLink id="5b3c-387e-9bf9-61a7" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
                 <infoLink id="bf10-bb2c-1092-05ea" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
+                <infoLink id="a956-79a5-5354-3a9e" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="44.0" />
@@ -9618,7 +9716,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">7</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">9</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">9</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -9632,6 +9730,7 @@
         <infoLink id="6cc5-c1ea-d04a-512c" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
         <infoLink id="e11f-8da3-ca12-1cc9" name="Jump Pack" hidden="false" targetId="7b06-42c9-226e-bf26" type="rule" />
         <infoLink id="10bd-b4de-3dc5-f9c5" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="7571-b6bb-21dc-ff5b" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="2d27-8183-314d-10b2" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
@@ -9677,6 +9776,7 @@
                 <infoLink id="07c0-f1b5-fa33-9a9c" name="Explosive" hidden="false" targetId="2599-56ef-4404-67aa" type="rule" />
                 <infoLink id="35e8-35d1-6685-9867" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
                 <infoLink id="0fcb-81bd-3fc0-3757" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+                <infoLink id="9246-e0da-34c9-0d61" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="51.0" />
@@ -9714,6 +9814,7 @@
                 <infoLink id="7624-01de-a738-e0e1" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
                 <infoLink id="ed5d-0c83-b49c-e1b0" name="Implosion" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
                 <infoLink id="f1a0-9271-71f6-2503" name="Long" hidden="false" targetId="6d8a-c297-e299-855e" type="rule" />
+                <infoLink id="299f-6cc0-a87e-60a0" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="51.0" />
@@ -9739,7 +9840,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">7</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">9</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">9</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -9754,6 +9855,7 @@
         <infoLink id="3774-96ca-ae75-0d07" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
         <infoLink id="6ec3-21e8-d796-9831" name="Jump Pack" hidden="false" targetId="7b06-42c9-226e-bf26" type="rule" />
         <infoLink id="78ef-0c9a-7909-f4d1" name="Spartan Killer" hidden="false" targetId="1f56-e733-55df-2362" type="rule" />
+        <infoLink id="c362-5c99-3587-9a0a" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="0da2-41f8-d77b-2702" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
@@ -9808,6 +9910,7 @@
                 <infoLink id="4366-961a-240c-6294" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
                 <infoLink id="fccb-003b-e7a8-f4eb" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
                 <infoLink id="8f71-2ca3-1d3b-6fff" name="Suppression" hidden="false" targetId="3ee6-86b5-e526-7c22" type="rule" />
+                <infoLink id="5c25-856d-0109-bb92" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="56.0" />
@@ -9833,7 +9936,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">7</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">9</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">9</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -9850,6 +9953,7 @@
         <infoLink id="202f-66c0-ee97-5506" name="Jump Pack" hidden="false" targetId="7b06-42c9-226e-bf26" type="rule" />
         <infoLink id="cca8-0480-0b5c-dcba" name="Spartan Killer" hidden="false" targetId="1f56-e733-55df-2362" type="rule" />
         <infoLink id="1845-7260-1374-e324" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="8043-9799-8009-e714" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="ade6-f4ac-77a3-f733" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
@@ -9904,6 +10008,7 @@
                 <infoLink id="1878-c4c0-ba9d-5e21" name="Implosion" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
                 <infoLink id="a1e0-3032-cfdc-3389" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="e62d-362c-a0df-04fc" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
+                <infoLink id="870a-ae49-66cb-07be" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="65.0" />
@@ -9929,7 +10034,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">8</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">10</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">10</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">3+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">4+</characteristic>
@@ -9945,6 +10050,7 @@
         <infoLink id="ea56-a59d-0c8b-ec4d" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
         <infoLink id="8f4d-7319-f873-04f6" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
         <infoLink id="a89e-0f18-41b3-3cfe" name="Unstoppable" hidden="false" targetId="b812-96c4-4f04-6234" type="rule" />
+        <infoLink id="1519-eddd-80ef-689b" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="6ace-cde7-8db6-73b4" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
@@ -9990,6 +10096,7 @@
                 <infoLink id="1c46-c579-b076-766e" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
                 <infoLink id="9850-2d45-2b11-7843" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="f6cc-8ee5-6671-9e1c" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+                <infoLink id="0345-0985-dd1d-361b" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="75.0" />
@@ -10028,7 +10135,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">6+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">6+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">6+</characteristic>
@@ -10040,6 +10147,7 @@
       <infoLinks>
         <infoLink id="01ef-1a97-49a1-c1cb" name="Horde" hidden="false" targetId="2618-5915-8acb-4a97" type="rule" />
         <infoLink id="7a50-a301-0715-b895" name="Support" hidden="false" targetId="03f8-5a2f-73f3-d61e" type="rule" />
+        <infoLink id="8e71-ef09-fee1-d2b2" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="3691-0c6b-92c5-cb6f" name="Unggoy" hidden="false" targetId="5c4d-42ee-4f9f-c4a6" primary="true" />
@@ -10081,6 +10189,7 @@
               <infoLinks>
                 <infoLink id="35ed-88da-8b2c-30a3" name="Continuous Fire" hidden="false" targetId="8af9-c2bd-d5cf-49de" type="rule" />
                 <infoLink id="dffe-1962-e57c-2030" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+                <infoLink id="ea60-c705-5f3a-77c4" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="15.0" />
@@ -10107,6 +10216,7 @@
                 <infoLink id="7686-cdf0-aedb-c03d" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="c10d-1ff0-77e6-ebe2" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
                 <infoLink id="3cea-c1da-14bd-17eb" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="4385-6cdb-9087-65e7" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="16.0" />
@@ -10145,7 +10255,7 @@
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
             <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
             <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
-            <characteristic name="Wounds" typeId="864e-20dc-0543-8937">3</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">3</characteristic>
             <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">6+</characteristic>
             <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
             <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
@@ -10157,6 +10267,7 @@
       <infoLinks>
         <infoLink id="a4ba-b435-4631-3eb6" name="Horde" hidden="false" targetId="2618-5915-8acb-4a97" type="rule" />
         <infoLink id="3595-fd98-bcc3-8b87" name="Support" hidden="false" targetId="03f8-5a2f-73f3-d61e" type="rule" />
+        <infoLink id="6e40-4a24-7dfc-4c77" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="731b-4b08-6e37-5711" name="Unggoy" hidden="false" targetId="5c4d-42ee-4f9f-c4a6" primary="true" />
@@ -10192,6 +10303,7 @@
                 <infoLink id="159d-c70b-da4a-91da" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
                 <infoLink id="110a-9c7e-bd0e-c7c3" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
                 <infoLink id="669a-9b8e-e191-592c" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+                <infoLink id="c379-5f36-6d31-d17d" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="18.0" />
@@ -10217,6 +10329,7 @@
               <infoLinks>
                 <infoLink id="3772-a58b-a41d-c46f" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
                 <infoLink id="0103-e07c-0f21-8210" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+                <infoLink id="442a-b736-dc75-6d75" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Points" typeId="3661-1187-b063-f00f" value="17.0" />
@@ -12000,6 +12113,9 @@
     </rule>
     <rule id="54aa-1db6-48c7-dd4c" name="Points Values (Fireteam Building)" hidden="false">
       <description>Agree a points limit (e.g. 150 small, 200 standard, 250+ large) and build up to it from profiles, weapons, items, grenades and upgrades. Bought weapons and items fill normal carry slots (1 pick-up weapon, 2 items); if dropped they're set aside, not left on the board, and they always return with the model on respawn. Enemies can't take them. (Updated Core p44.)</description>
+    </rule>
+    <rule id="6d02-109b-9e04-2f72" name="Wounds (HP+ES)" hidden="false">
+      <description>New Recruit Play Mode tracker total: Health (HP) + Energy Shields (ES). NR only shows one wound counter per model, so this number covers both. In play, still lose shields before Health as usual — track shields vs health with the normal rules; use this counter as the combined remaining pool (HP+ES).</description>
     </rule>
   </sharedRules>
 </gameSystem>
