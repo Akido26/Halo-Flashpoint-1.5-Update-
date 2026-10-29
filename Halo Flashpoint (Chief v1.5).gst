@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<gameSystem id="61c2-d61f-70a4-4d68" name="Halo: Flashpoint (Chief's v1.5 data)" revision="7" battleScribeVersion="2.03" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="61c2-d61f-70a4-4d68" name="Halo: Flashpoint (Chief's v1.5 data)" revision="8" battleScribeVersion="2.03" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <readme>Unofficial, homebrew list-building data for Halo: Flashpoint v1.5 (Mantic Games), updated 28 Oct 2026 from the Mantic official list builder (points) and Sept 2026 1.5 errata (stats/keywords). Names, stats, points and short rule summaries only; see Mantic's Halo: Flashpoint Index for full rules. Weapons, Grenades, Items and Objective Items (Oddball, Bomb — Power Seeds/Flag stay as table tokens) are bought from their left-menu category, then attached to a unit with the chain-link button (same NR attach associations as 40k characters (Group Attached Units)). Per unit: max 4 Objects (Items + Grenades only; Oddball/Bomb are 0-pt Objective Items with melee profiles and do not count as Objects) and max 1 extra ranged + 1 extra melee weapon (enforced). Force-wide: max 2 of each item/grenade (BTB: raise to 4 by hand); max 1 of each extra weapon type. Special Orders 1–3. Humans and aliens never mix in tournament lists. Play Mode wound tracker uses the Wounds (HP+ES) characteristic (kind=Wound; total of Health + Energy Shields). Mantic's site wins over this data.</readme>
   <costTypes>
     <costType id="3661-1187-b063-f00f" name="Points" defaultCostLimit="200.0" hidden="false" />
@@ -5543,7 +5543,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="0f10-1a8c-53c3-7040" name="Overshield" hidden="false" collective="false" import="true" type="model">
-      <comment>Buy from Items, then use the link button to attach to a unit. Counts as 1 Object (max 4 Objects per unit). Max 2 of this kind per fireteam.</comment>
+      <comment>Buy from Items, then link-attach to any unit. Host gets +1 ES and +1 Wounds (HP+ES) for Play Mode (extra shield lost first; One-Use resets on respawn). Counts as 1 Object (max 4/unit). Max 2 per fireteam.</comment>
+      <modifiers>
+        <modifier type="increment" field="6845-839c-610d-8982" value="1" affects="self.entries.recursive.associations.profiles.Model" />
+        <modifier type="increment" field="baac-a14d-979f-803f" value="1" affects="self.entries.recursive.associations.profiles.Model" />
+        <modifier type="append" field="name" value=" [Overshield +1]" affects="self.entries.recursive.associations" />
+        <modifier type="add" field="add-info" value="f5fe-c25f-ea7a-f93d" affects="self.entries.recursive.associations" />
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="723c-e76e-9dfd-8e8e" type="max" />
       </constraints>
@@ -5553,7 +5559,7 @@
             <characteristic name="Type" typeId="c716-c619-b384-0452">Item</characteristic>
             <characteristic name="Uses" typeId="7a2e-a8ea-3fca-70d1">1</characteristic>
             <characteristic name="Profile" typeId="8b6c-14a9-d3be-ffa2">-</characteristic>
-            <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">+1 ES that must be used up before the model's own shields; lasts until used or depleted</characteristic>
+            <characteristic name="Effect" typeId="9a6a-9724-2ead-7c82">+1 Energy Shield spent before the model's own shields (One-Use). Attached unit: +1 ES and +1 Wounds (HP+ES) in NR Play Mode. Lost first when damaged; One-Use resets on respawn so the extra shield returns with the model.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -12013,7 +12019,7 @@
       <description>A free one-cube Advance on top of other moves that turn, or pick up an item or weapon token in LOS in an adjacent cube. One-Use.</description>
     </rule>
     <rule id="fcd1-2825-c67d-0a83" name="Item (II): Overshield" hidden="false">
-      <description>+1 Energy Shield until used or depleted, spent before the model's own shields. One-Use.</description>
+      <description>+1 Energy Shield until used or depleted, spent before the model's own shields. One-Use. In New Recruit, attaching this item adds +1 to the host's ES and Wounds (HP+ES) Play Mode tracker. Extra shield is lost first; One-Use gear resets on respawn so it returns with the model.</description>
     </rule>
     <rule id="b57d-ee99-b91a-3d1a" name="Item (II): Quantum Translocator" hidden="false">
       <description>Drop the QT token before an Advance or Sprint; until the end of that activation, return to it from within 2 cubes (no Breaking Away, not blocked by terrain). An enemy in that cube triggers an Assault without the +2 dice. Returned at the end of the activation. One-Use. (Updated Oct '25.)</description>
@@ -12115,7 +12121,10 @@
       <description>Agree a points limit (e.g. 150 small, 200 standard, 250+ large) and build up to it from profiles, weapons, items, grenades and upgrades. Bought weapons and items fill normal carry slots (1 pick-up weapon, 2 items); if dropped they're set aside, not left on the board, and they always return with the model on respawn. Enemies can't take them. (Updated Core p44.)</description>
     </rule>
     <rule id="6d02-109b-9e04-2f72" name="Wounds (HP+ES)" hidden="false">
-      <description>New Recruit Play Mode tracker total: Health (HP) + Energy Shields (ES). NR only shows one wound counter per model, so this number covers both. In play, still lose shields before Health as usual — track shields vs health with the normal rules; use this counter as the combined remaining pool (HP+ES).</description>
+      <description>New Recruit Play Mode tracker total: Health (HP) + Energy Shields (ES). NR only shows one wound counter per model, so this number covers both. In play, still lose shields before Health as usual — track shields vs health with the normal rules; use this counter as the combined remaining pool (HP+ES). If an Overshield item is attached, this total (and ES) goes up by 1: that extra shield is lost first and One-Use gear resets on respawn, so the +1 returns with the model. Play Mode cannot auto-drop the +1 mid-life when the Overshield is spent — adjust by hand if you track that.</description>
+    </rule>
+    <rule id="f5fe-c25f-ea7a-f93d" name="Overshield (+1 Wound)" hidden="false">
+      <description>This model has an Overshield attached: +1 Energy Shield and +1 Wounds (HP+ES) on the Play Mode tracker. The extra shield is spent before the model's own shields. Overshield is One-Use (gone when depleted); on respawn, One-Use gear resets, so the extra shield returns with the model. Play Mode will not automatically reduce the tracker when the Overshield is spent mid-life — tick down by hand if needed.</description>
     </rule>
   </sharedRules>
 </gameSystem>

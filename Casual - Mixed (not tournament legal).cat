@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<catalogue id="e2ae-511d-6428-889e" name="Casual - Mixed Human and Alien (not tournament legal)" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="61c2-d61f-70a4-4d68" gameSystemRevision="7" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e2ae-511d-6428-889e" name="Casual - Mixed Human and Alien (not tournament legal)" revision="8" battleScribeVersion="2.03" library="false" gameSystemId="61c2-d61f-70a4-4d68" gameSystemRevision="8" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>CASUAL ONLY. Lets one list mix UNSC and Banished units. Tournament lists never mix humans and aliens. No detachments here.</readme>
   <forceEntries>
     <forceEntry id="34cd-1bfd-c9da-8697" name="Casual Mixed Fireteam (not tournament legal)" hidden="false">
