@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<gameSystem id="61c2-d61f-70a4-4d68" name="Halo: Flashpoint (Chief's v1.5 data)" revision="8" battleScribeVersion="2.03" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="61c2-d61f-70a4-4d68" name="Halo: Flashpoint (Chief's v1.5 data)" revision="10" battleScribeVersion="2.03" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <readme>Unofficial, homebrew list-building data for Halo: Flashpoint v1.5 (Mantic Games), updated 28 Oct 2026 from the Mantic official list builder (points) and Sept 2026 1.5 errata (stats/keywords). Names, stats, points and short rule summaries only; see Mantic's Halo: Flashpoint Index for full rules. Weapons, Grenades, Items and Objective Items (Oddball, Bomb — Power Seeds/Flag stay as table tokens) are bought from their left-menu category, then attached to a unit with the chain-link button (same NR attach associations as 40k characters (Group Attached Units)). Per unit: max 4 Objects (Items + Grenades only; Oddball/Bomb are 0-pt Objective Items with melee profiles and do not count as Objects) and max 1 extra ranged + 1 extra melee weapon (enforced). Force-wide: max 2 of each item/grenade (BTB: raise to 4 by hand); max 1 of each extra weapon type. Special Orders 1–3. Humans and aliens never mix in tournament lists. Play Mode wound tracker uses the Wounds (HP+ES) characteristic (kind=Wound; total of Health + Energy Shields). Mantic's site wins over this data.</readme>
   <costTypes>
     <costType id="3661-1187-b063-f00f" name="Points" defaultCostLimit="200.0" hidden="false" />
@@ -5777,27 +5777,27 @@
         <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
       </costs>
     </selectionEntry>
-    <selectionEntry id="047a-e8d5-dbec-dbd7" name="Spartan Zvezda" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="047a-e8d5-dbec-dbd7" name="Spartan Zvezda (VK78 Commando)" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
-        <modifier type="set" field="61ed-2bd9-b2d8-81b0" value="0.0">
+        <modifier type="set" field="19f4-e94c-3f6e-b087" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="61ed-2bd9-b2d8-81b0" type="max" />
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fbc7-b396-f0fd-0291" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f174-eddc-8a93-47d1" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="78eb-9ee4-b523-58ee" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="19f4-e94c-3f6e-b087" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a498-a063-68ae-9384" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd12-200c-1795-2835" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5aa7-e608-ae9c-e3e9" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="1d2b-27e5-2873-125e" name="Spartan Zvezda" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="ccbc-eb4d-3cff-4dd1" name="Spartan Zvezda (VK78 Commando)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
@@ -5811,108 +5811,129 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(2); Scout; Tactician(1)</characteristic>
           </characteristics>
         </profile>
+        <profile id="de71-7f0a-2f9d-4663" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e011-9668-e0d5-7516" name="VK78 Commando" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics; Rapid Fire</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="709e-8533-c90c-190c" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="871a-480f-2004-0d85" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
-        <infoLink id="66c6-2b0d-4f92-a623" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
-        <infoLink id="31df-cde7-969f-9255" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="5213-4e32-110e-7441" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="0bbc-e0eb-77d2-08cc" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
+        <infoLink id="0666-8524-e107-f7f8" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="a31a-9c13-12b0-74ff" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
+        <infoLink id="8d0b-c2ca-409a-1ff2" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+        <infoLink id="6546-93a8-a56c-7287" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="de9d-2aa8-24b5-ca9b" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
-        <categoryLink id="764e-adb9-fb20-aee6" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="35ad-1fb3-59b1-ed92" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="51bd-f8b9-6557-2d95" name="Spartan Zvezda" hidden="false" targetId="a10e-b593-d298-afb8" primary="false" />
+        <categoryLink id="f768-d102-6d4e-76dc" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="f440-1101-6cb2-a81c" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="8331-810a-0be5-b090" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="6ad8-79e3-5e5c-fbf3" name="Spartan Zvezda" hidden="false" targetId="a10e-b593-d298-afb8" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="ab9b-9db6-1ef2-bdad" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="215e-bde4-151a-482f">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="007b-047e-b2dd-3c8b" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0d8e-401f-2366-9ce4" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="215e-bde4-151a-482f" name="VK78 Commando" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="f77d-fed1-a45d-38f8" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="e5d7-4129-0fc3-a0dd" name="VK78 Commando" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics; Rapid Fire</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="121a-4fe7-afcd-4ef3" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
-                <infoLink id="dcdb-8966-39dc-d887" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="8660-6d42-06d0-0c3d" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="39.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="e6ec-42b0-4fcf-0e49" name="Cindershot" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="7420-591b-1f32-56cc" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="3ec4-fccb-e20a-5dc9" name="Cindershot" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Grenade; Implosion(5); Lethal(1)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="d31e-c03a-559f-5fc3" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="2121-0cc0-087a-cdb3" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="7592-11ac-2880-4f19" name="Implosion" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
-                <infoLink id="a304-17dc-215a-2dff" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="737e-c7e7-74f4-045d" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="38.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="39.0" />
       </costs>
     </selectionEntry>
-    <selectionEntry id="6ebd-e43f-182d-bed1" name="Spartan HAZOP" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="df86-09c1-bb71-8718" name="Spartan Zvezda (Cindershot)" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
-        <modifier type="set" field="c9bc-c3ef-7326-98d4" value="0.0">
+        <modifier type="set" field="a537-64d9-c989-563c" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c9bc-c3ef-7326-98d4" type="max" />
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bb36-570a-dde0-0b70" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d049-b5cd-1296-76a2" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7be6-1330-3f04-07c1" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a537-64d9-c989-563c" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="917b-cfc7-ef65-b480" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c681-729c-2198-4d3f" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c51-ff8a-70fe-b848" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="7661-397e-9dcd-3206" name="Spartan HAZOP" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="10bd-3ad7-5c08-11b6" name="Spartan Zvezda (Cindershot)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">4+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">1 (3") / 3 (9")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(2); Scout; Tactician(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1ad5-1f58-b746-9a64" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="bf6a-aa1e-2abf-c84e" name="Cindershot" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Grenade; Implosion(5); Lethal(1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="23f1-395e-dc87-21da" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="1a88-7df7-e2b4-6d26" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
+        <infoLink id="f600-70cd-657a-9968" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="1b4f-084b-c93e-a07b" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="e056-2a7b-613a-39a0" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
+        <infoLink id="91bc-006b-bbea-6daf" name="Implosion" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
+        <infoLink id="a890-5aab-59a7-15f2" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="7132-83bb-e47a-d4f6" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="37d2-2ef5-3b86-8f98" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="9ced-0d15-146d-4f28" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="081f-d21f-4329-043e" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="197c-2671-65da-c933" name="Spartan Zvezda" hidden="false" targetId="a10e-b593-d298-afb8" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="38.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6ebd-e43f-182d-bed1" name="Spartan HAZOP (M45 Shotgun)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+        <modifier type="set" field="7ffc-89aa-058f-ceea" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7ffc-89aa-058f-ceea" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4284-cc7e-25c5-72f5" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3faa-c1bf-7ad2-d395" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e3ca-fb76-df46-8125" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="7742-c651-c880-5a0c" name="Spartan HAZOP (M45 Shotgun)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
@@ -5926,143 +5947,205 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(2); Jump Pack</characteristic>
           </characteristics>
         </profile>
+        <profile id="7eb8-c827-162c-c22f" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="71b1-5607-7efd-e66d" name="M45 Shotgun" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Knockback; Lethal(2)</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="8521-9137-ff76-3bc8" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="931a-d360-adf8-b5cf" name="Jump Pack" hidden="false" targetId="7b06-42c9-226e-bf26" type="rule" />
-        <infoLink id="5bf1-5ede-5abd-1270" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="9503-c0de-e0dd-27ea" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="d15b-99e2-739d-a05f" name="Jump Pack" hidden="false" targetId="7b06-42c9-226e-bf26" type="rule" />
+        <infoLink id="b3b7-9b32-db8b-aced" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="91e5-74e7-2736-0363" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
+        <infoLink id="57ca-62b1-3904-0dea" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="a670-737e-a956-0697" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="d49a-77fc-5056-7951" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
-        <categoryLink id="c5d5-5cf3-921a-e9f6" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="5101-994f-8d81-375c" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="14a7-49e6-17f4-940d" name="Jump Pack" hidden="false" targetId="d251-6fa8-833c-d2d3" primary="false" />
-        <categoryLink id="b36f-22eb-4f68-51e1" name="Spartan HAZOP" hidden="false" targetId="e624-a5f6-5b6d-b081" primary="false" />
+        <categoryLink id="81c3-b1e0-6a68-38d2" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="2792-ce7f-3fbe-4259" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="18e7-e216-4873-95bc" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="b89d-acc4-c54b-335d" name="Jump Pack" hidden="false" targetId="d251-6fa8-833c-d2d3" primary="false" />
+        <categoryLink id="156b-8472-6727-e822" name="Spartan HAZOP" hidden="false" targetId="e624-a5f6-5b6d-b081" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="265b-ed08-d904-d8af" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="cee6-6214-751b-2867">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4c12-ff13-e224-a7da" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7543-7141-3b48-7993" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="cee6-6214-751b-2867" name="M45 Shotgun" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="93f3-478f-a1b9-4b24" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="2a19-3a17-f6ea-6a0c" name="M45 Shotgun" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Knockback; Lethal(2)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="f6d6-403d-ff62-41f3" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="1a23-1e47-da01-2ae6" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-                <infoLink id="50cc-4a87-1ca8-2cc8" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="4a61-d21c-c521-3ac3" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="37.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="bf6a-3551-0f13-5175" name="Spike Rifle" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="0e86-85d1-71a3-4f54" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="bddf-b633-2486-7839" name="Spike Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Knockback; Rapid Fire; Weight of Fire(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="6579-d9ab-61b3-360f" name="Spike Rifle blades" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="4117-bb16-83fc-7eed" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-                <infoLink id="0275-c3a4-8cec-d0bd" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="29c4-903a-f323-868f" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="ef22-810c-4642-77ed" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="c45b-bf1e-4bb1-f61d" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="37.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="ab50-0d30-a3d3-923a" name="Needle Rifle" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="eb6d-9580-54e4-24b3" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="b3e6-c181-22d8-690b" name="Needle Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1); Optics; Rapid Fire</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="591f-0f7e-2914-9518" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="ff8f-a761-6423-d80a" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
-                <infoLink id="6691-9fa6-a6b8-8456" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="11cf-8628-38b4-c3ff" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="38.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="37.0" />
       </costs>
     </selectionEntry>
-    <selectionEntry id="f33e-e5e6-fcaf-bbd3" name="Spartan Brawler" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="3c33-b8b3-7ede-0826" name="Spartan HAZOP (Spike Rifle)" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
-        <modifier type="set" field="d51b-ff59-de8a-568f" value="0.0">
+        <modifier type="set" field="1772-37a0-c817-3a26" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d51b-ff59-de8a-568f" type="max" />
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b953-afc8-5c25-557b" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="674e-3f78-220a-4984" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e36c-b8a6-8f71-e150" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1772-37a0-c817-3a26" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="55fa-6a9a-28a7-887c" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="07a8-73e1-0d94-0129" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a8cd-872d-db0b-9130" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="f442-fc5a-8b78-0c82" name="Spartan Brawler" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="d5c7-e6d9-959c-99c7" name="Spartan HAZOP (Spike Rifle)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">2 (6") / 3 (9")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(2); Jump Pack</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a4e6-dafa-3f34-da4b" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e4d0-eebd-ac3f-20eb" name="Spike Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Knockback; Rapid Fire; Weight of Fire(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e0ae-db30-58b3-b56a" name="Spike Rifle blades" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="f12d-88a0-c5f2-8068" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="03a9-bb04-3edb-dc9e" name="Jump Pack" hidden="false" targetId="7b06-42c9-226e-bf26" type="rule" />
+        <infoLink id="85fb-5a11-ee1f-ce2a" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
+        <infoLink id="38f8-2c44-a6f6-e938" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+        <infoLink id="ff6e-63ca-07c3-7892" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="aacf-5a07-7426-9dda" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="3977-a9bc-653f-b5d7" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="64c0-842d-85ae-f5b5" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="2335-71d3-0312-e2c7" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="472c-fe2e-ae68-2ed2" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="7bb7-8b81-b03d-34cf" name="Jump Pack" hidden="false" targetId="d251-6fa8-833c-d2d3" primary="false" />
+        <categoryLink id="e4ba-fe18-090b-a9b8" name="Spartan HAZOP" hidden="false" targetId="e624-a5f6-5b6d-b081" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="37.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8bc0-8488-0308-710a" name="Spartan HAZOP (Needle Rifle)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+        <modifier type="set" field="4cf1-82d1-b295-a0b1" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4cf1-82d1-b295-a0b1" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a26-3431-d81f-178f" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c17-6429-30f9-0d8e" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a1d-83eb-1cd6-cbbb" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="fb5e-1813-b827-de46" name="Spartan HAZOP (Needle Rifle)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">2 (6") / 3 (9")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(2); Jump Pack</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6837-33ff-f2c0-b1bb" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e754-05a5-e2b3-2b69" name="Needle Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1); Optics; Rapid Fire</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="c158-3261-3964-c328" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="0f15-fcfe-8b55-5e04" name="Jump Pack" hidden="false" targetId="7b06-42c9-226e-bf26" type="rule" />
+        <infoLink id="0f7c-fdd8-730d-16f7" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="9771-52d5-27ed-eed1" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
+        <infoLink id="c44e-5439-7623-b336" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+        <infoLink id="aa65-9db8-00f7-c6b2" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="7d3c-bbc7-024c-13e3" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="5417-42d9-7d04-89f3" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="1b3a-9761-e232-c74d" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="7e98-432a-65d4-cdbf" name="Jump Pack" hidden="false" targetId="d251-6fa8-833c-d2d3" primary="false" />
+        <categoryLink id="11c6-6b9f-95e5-b9f0" name="Spartan HAZOP" hidden="false" targetId="e624-a5f6-5b6d-b081" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="38.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f33e-e5e6-fcaf-bbd3" name="Spartan Brawler (CQS48 Bulldog)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+        <modifier type="set" field="f8d7-9a59-1c8d-874a" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f8d7-9a59-1c8d-874a" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e277-2829-9580-db32" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c76-2dce-081a-771f" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="35b8-e616-9ed2-a3f8" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="d3fe-8b12-cae1-be65" name="Spartan Brawler (CQS48 Bulldog)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
@@ -6076,107 +6159,126 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(2)</characteristic>
           </characteristics>
         </profile>
+        <profile id="4bc6-5309-75d0-2ec1" name="M11 Combat Knife" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ec50-3da4-0b4b-d4e0" name="CQS48 Bulldog" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R2 (6")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Knockback; Lethal(1)</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="c4dc-775d-793c-19c0" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="c94f-b0b9-afd8-dab9" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="1961-0af4-b46d-e227" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="8cde-eaaf-3a53-b15f" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="6b54-5b3f-93f7-452a" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
+        <infoLink id="d1bb-7fd7-21a3-cdd8" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="891e-49a2-1f98-bfe5" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="badf-ae4a-f76a-e505" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
-        <categoryLink id="6b8d-9905-7a3f-d400" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="c023-b03d-09fc-8d5c" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="1e99-b272-885f-095e" name="Spartan Brawler" hidden="false" targetId="d1ff-d813-8d19-67ca" primary="false" />
+        <categoryLink id="868a-0e4e-8075-02b6" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="6f99-6630-f6c4-a474" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="7b60-0586-245d-4dd7" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="0118-6bce-0f6b-9dfb" name="Spartan Brawler" hidden="false" targetId="d1ff-d813-8d19-67ca" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="97d2-9d05-0b39-6509" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="216e-7c43-765d-ff66">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7bea-5dba-cc55-9fb2" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="538c-47f2-8a0b-91ab" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="216e-7c43-765d-ff66" name="CQS48 Bulldog" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="3b4b-1b24-5aa9-ddcf" name="M11 Combat Knife" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="ee15-ae5b-f1d1-6d91" name="CQS48 Bulldog" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R2 (6")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Knockback; Lethal(1)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="2c93-e5bd-02fd-4b8a" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="2582-f266-c27e-4667" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-                <infoLink id="8176-cf68-50a5-f8c9" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="ef31-545e-8fec-3600" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="36.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="c990-f6ad-2d51-526a" name="Needler" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="0272-a6d9-82a0-d3a9" name="M11 Combat Knife" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="495d-5eea-86d6-78e1" name="Needler" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1); Rapid Fire; Weight of Fire(1)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="a0fd-b9b3-554d-1eca" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="4c09-a70b-f433-029e" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="90a6-d570-ac67-dd4c" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="da27-e2ac-3c07-a0c5" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="8fd5-4dc6-8b74-02c2" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="36.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="36.0" />
       </costs>
     </selectionEntry>
-    <selectionEntry id="7d09-5c62-6ae4-567e" name="Spartan Mk VII" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="eb80-c258-8794-1df1" name="Spartan Brawler (Needler)" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
-        <modifier type="set" field="04fc-d11d-4901-cfba" value="0.0">
+        <modifier type="set" field="7ffa-67b0-709d-9908" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="04fc-d11d-4901-cfba" type="max" />
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="52af-9476-e49f-3758" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c2e-40f4-9486-0a44" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e54-a706-4330-42bc" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7ffa-67b0-709d-9908" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bcb9-45ed-7f61-44c2" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0876-d74f-8365-4881" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c2fa-2a2b-70dd-bc7a" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="4f72-1eb7-480e-86a8" name="Spartan Mk VII" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="7deb-316d-6516-9a3f" name="Spartan Brawler (Needler)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">3+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">2 (6") / 3 (9")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(2)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="433b-4569-784f-9aa7" name="M11 Combat Knife" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0be0-302f-fc2c-d1fd" name="Needler" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1); Rapid Fire; Weight of Fire(1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="2ff6-34bf-a683-d8bf" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="7456-8f81-5a72-cf50" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="7a98-aa33-9b84-3546" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="3938-f12c-9c3d-03c2" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+        <infoLink id="466f-334a-0ed4-d683" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="0b0a-1b0b-abc3-3ebb" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="7119-641b-ffe5-93a3" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="5507-24f5-7506-9cb2" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="243b-b719-d48a-3f60" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="edf3-f4e8-cf2a-7d1b" name="Spartan Brawler" hidden="false" targetId="d1ff-d813-8d19-67ca" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="36.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7d09-5c62-6ae4-567e" name="Spartan Mk VII (Pulse Carbine)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+        <modifier type="set" field="5d7e-7f5d-04e9-de6d" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5d7e-7f5d-04e9-de6d" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b82-cbf1-3733-051e" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf22-ffe0-3a4d-0a58" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b794-50a2-4eb1-f811" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="3442-46ea-e29b-8c95" name="Spartan Mk VII (Pulse Carbine)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
@@ -6190,105 +6292,125 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(2); Tactician(1)</characteristic>
           </characteristics>
         </profile>
+        <profile id="a474-fee4-e01b-6cc9" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="14ea-ef1a-841c-a77c" name="Pulse Carbine" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Weight of Fire(1)</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="1163-f367-9fe2-1208" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="18f9-48e3-822a-aad5" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
-        <infoLink id="974d-cb6e-0ba3-b643" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="fd42-fcd2-8b83-245c" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="26c4-517e-61ed-ccf1" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="7199-f66c-76a4-d9e4" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="9422-1e38-881e-92fd" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="3bf6-53d2-2ea6-a98b" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="ed93-1b9c-c8c0-5bf2" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
-        <categoryLink id="ff47-055d-556e-db6e" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="2a9b-4ccf-a687-d114" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="573d-227a-4253-478b" name="Spartan Mk VII" hidden="false" targetId="2afd-60a0-c921-3b1e" primary="false" />
+        <categoryLink id="9539-abdf-c429-558d" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="734e-2afa-e427-fed2" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="86d1-3076-d2e9-5152" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="6edd-fd67-9427-df32" name="Spartan Mk VII" hidden="false" targetId="2afd-60a0-c921-3b1e" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="1f12-ead2-c46a-1d8c" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="7d50-7a5a-c4c4-5362">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4ddd-9448-2521-a8ab" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7268-35ac-b227-e42c" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="7d50-7a5a-c4c4-5362" name="Pulse Carbine" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="a3cc-006f-91df-fe3d" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="b828-c4f5-4760-f1df" name="Pulse Carbine" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Weight of Fire(1)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="6758-c51f-5bb2-a6cd" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="1c5b-13b3-1b70-e5eb" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="723e-1b93-6c1d-0363" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="42.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="4431-e987-3c56-d5dc" name="MA40 Assault Rifle" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="6c3c-5c4f-bc4a-0626" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="2013-bc71-91ec-3a2a" name="MA40 Assault Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Rapid Fire; Weight of Fire(2)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="2e94-f8c9-8df0-a0e9" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="3992-c0ce-5837-a211" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="8bfa-d5c0-9979-db00" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="44.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="42.0" />
       </costs>
     </selectionEntry>
-    <selectionEntry id="978f-df5b-71c7-dcb9" name="Spartan JFO" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="805c-c9dc-0f20-91ba" name="Spartan Mk VII (MA40 Assault Rifle)" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
-        <modifier type="set" field="5a41-3468-86e0-1b24" value="0.0">
+        <modifier type="set" field="0c15-274b-9eec-56d0" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5a41-3468-86e0-1b24" type="max" />
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1278-d153-5cb3-8beb" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="557a-169d-da2d-89ec" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d89-c742-db4d-2dd5" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0c15-274b-9eec-56d0" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="03e4-70e2-f00b-8865" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ba0-8c0f-8d91-d409" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="84a8-4f0f-207a-1797" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="d65e-32c1-2a54-23e4" name="Spartan JFO" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="2eed-edfb-7446-5a52" name="Spartan Mk VII (MA40 Assault Rifle)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">2 (6") / 3 (9")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(2); Tactician(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1e47-3593-a860-56ce" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f0ec-ee54-05db-11c9" name="MA40 Assault Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Rapid Fire; Weight of Fire(2)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="c372-4172-47c2-ee92" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="e54c-60cf-1750-959d" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="b180-5d00-b631-9942" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+        <infoLink id="1294-306d-f6a3-c249" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="ef70-f813-92be-c07e" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="ec60-b156-74e5-3c7e" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="5253-12b9-555e-f5ae" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="253e-70be-5340-de20" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="de4c-c449-82bd-279e" name="Spartan Mk VII" hidden="false" targetId="2afd-60a0-c921-3b1e" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="44.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="978f-df5b-71c7-dcb9" name="Spartan JFO (H-165 Target Locator)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+        <modifier type="set" field="9472-ec03-2397-c1a6" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9472-ec03-2397-c1a6" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3757-926f-1608-5bd3" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d78-b8d6-a1ec-be38" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ff4-78af-8aff-c1fc" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="46de-9022-2668-a43c" name="Spartan JFO (H-165 Target Locator)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">9</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
@@ -6302,88 +6424,109 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(2); Scout; Tactician(2)</characteristic>
           </characteristics>
         </profile>
+        <profile id="387c-18e7-1a24-7f05" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c1e9-e791-eb0a-0fe4" name="H-165 Target Locator" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Blast; Explosive; Frag(6); Lethal(1); Long; Two Use</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="d5bf-6892-1bdd-60c5" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="3ca1-2805-3c5b-860c" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
-        <infoLink id="4add-ed54-7c50-7671" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
-        <infoLink id="87be-e785-8bb1-5676" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="63d4-7c95-cfce-f5d6" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="7fc1-ec39-473e-9e18" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
+        <infoLink id="4bd5-c5b3-dc90-ff5f" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="0860-689c-7ad8-fe79" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
+        <infoLink id="60a1-1a75-66fa-09c8" name="Explosive" hidden="false" targetId="2599-56ef-4404-67aa" type="rule" />
+        <infoLink id="d516-7562-eada-b393" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="ce6b-ba0d-574f-fb93" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="2395-dddc-3856-0057" name="Long" hidden="false" targetId="6d8a-c297-e299-855e" type="rule" />
+        <infoLink id="6206-167c-ed28-cdb8" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="5583-be87-181f-d836" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
-        <categoryLink id="60ce-e603-1542-2759" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="4df8-039b-b2e6-f17e" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="2734-526d-edd5-d806" name="Spartan JFO" hidden="false" targetId="8ce3-2c17-336a-28e6" primary="false" />
+        <categoryLink id="05ca-08f7-f390-2c90" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="3ac2-8e82-da09-d48b" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="c6f7-6bd6-bbf4-8375" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="da5b-6ec0-4739-384e" name="Spartan JFO" hidden="false" targetId="8ce3-2c17-336a-28e6" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="b0f8-95f1-1ccc-69dc" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="e08e-cac7-21e9-1cfa">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="acd4-55b4-8937-a7e0" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d117-6271-a253-b166" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="e08e-cac7-21e9-1cfa" name="H-165 Target Locator" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="6189-8b75-d3c3-2e65" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="50eb-1949-83b5-9ffc" name="H-165 Target Locator" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Blast; Explosive; Frag(6); Lethal(1); Long; Two Use</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="0b96-2f6c-f5a0-9679" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-                <infoLink id="f23b-12be-6be0-7d46" name="Explosive" hidden="false" targetId="2599-56ef-4404-67aa" type="rule" />
-                <infoLink id="1d0d-395b-8790-412b" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-                <infoLink id="85f8-d327-b141-d9e3" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="2536-a1e1-aa1e-9187" name="Long" hidden="false" targetId="6d8a-c297-e299-855e" type="rule" />
-                <infoLink id="7740-3552-258a-c947" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="48.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="1d14-a19b-44c1-e1b5" name="Concussion Rifle" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="5cf6-1029-2742-151c" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="6ffa-4507-3416-441c" name="Concussion Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R5 (15")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Blast; ESD(1); Frag(4); Grenade</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="431b-d446-7b2e-f11c" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-                <infoLink id="a347-5df9-2da5-8d34" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="f0ef-d74d-cf4c-7f2d" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-                <infoLink id="8c71-1ccb-d5f9-3a55" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="d02b-fb21-90be-f369" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="54.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="48.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="653e-85ba-334e-dd97" name="Spartan JFO (Concussion Rifle)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+        <modifier type="set" field="eaee-0831-348d-43aa" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eaee-0831-348d-43aa" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc08-abbe-5232-a386" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0969-cec7-1c7d-cff4" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d31f-bf99-e674-0624" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="a850-0861-d469-1c79" name="Spartan JFO (Concussion Rifle)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">9</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">3</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">2 (6") / 3 (9")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(2); Scout; Tactician(2)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2c5a-ba7a-c07a-4213" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3205-bb47-c30d-9979" name="Concussion Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R5 (15")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Blast; ESD(1); Frag(4); Grenade</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="e30f-12dc-e912-2167" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="25bd-f39a-a3a7-ed28" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
+        <infoLink id="beab-0854-06c8-ed38" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="005f-49ff-5cda-c9d8" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
+        <infoLink id="abf1-54a6-3df5-6bfe" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="316b-58d1-bc7d-0081" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="fd1b-0100-d200-0089" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
+        <infoLink id="afe4-3880-2ba6-6af2" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="dfe2-a2cc-40ee-9e2d" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="d7dc-4c94-9c42-5748" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="bcc5-89d6-82ec-1263" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="4e74-3a3c-fda4-80ae" name="Spartan JFO" hidden="false" targetId="8ce3-2c17-336a-28e6" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="54.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="af93-eabc-e244-7a3b" name="Tomas Horvath (Spartan Legend)" hidden="false" collective="false" import="true" type="model">
@@ -6393,20 +6536,20 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
-        <modifier type="set" field="1d41-e973-10f4-1cb3" value="0.0">
+        <modifier type="set" field="2725-c943-acfb-d11c" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1d41-e973-10f4-1cb3" type="max" />
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8822-79ab-f7a9-f3fe" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d03-342f-9866-1e5d" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee93-b71d-2c38-49d2" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2725-c943-acfb-d11c" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9085-39b9-ea14-8304" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a311-40b4-54fd-ee67" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe2c-e3e5-f524-b7fd" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="2d7c-6b41-ab8a-ca61" name="Tomas Horvath (Spartan Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="8bf1-864f-1b36-6df9" name="Tomas Horvath (Spartan Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
@@ -6420,89 +6563,69 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Active Camouflage; Energy Shield(2); Scout</characteristic>
           </characteristics>
         </profile>
+        <profile id="52b6-e02f-1845-2680" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3bb5-308b-13c6-3665" name="MA5K 'Avenger' Carbine" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Weight of Fire(3)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7648-8703-30b8-fa36" name="Fragmentation Grenade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(5); Grenade; One-Use</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="75ca-41ae-57f3-cec7" name="Active Camouflage" hidden="false" targetId="e7f4-cc64-081b-32af" type="rule" />
-        <infoLink id="5dfb-e33c-ead8-2f24" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="ea20-a276-e512-a2e1" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
-        <infoLink id="6419-4bf7-0d7a-a637" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="8b30-70c8-4fa3-45dc" name="Active Camouflage" hidden="false" targetId="e7f4-cc64-081b-32af" type="rule" />
+        <infoLink id="2743-ee32-eed8-12a9" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="0755-c1d9-bdee-65b3" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
+        <infoLink id="bdae-1721-26af-f463" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="9bec-f21c-9e84-fd00" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="6d22-5c88-b855-e2e8" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
+        <infoLink id="fbef-3628-f5df-716e" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
+        <infoLink id="c9ec-941c-1e6d-225d" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="ea27-842a-4ec0-08aa" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
-        <categoryLink id="1d3f-3d1e-eb78-3659" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="c583-84e3-0800-3cd1" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="a778-2898-fae7-ca54" name="Tomas Horvath (Spartan Legend)" hidden="false" targetId="7122-e606-9f15-6998" primary="false" />
+        <categoryLink id="c759-4250-015c-b163" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="f485-f8f2-5616-faad" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="b230-c785-a7eb-0aa2" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="963e-b86c-78d3-841e" name="Tomas Horvath (Spartan Legend)" hidden="false" targetId="7122-e606-9f15-6998" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="ec58-6518-6007-b35c" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="4e83-c33b-dc73-030d">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="691e-08e0-3f79-ba23" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ca7c-28d6-50b5-1851" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="4e83-c33b-dc73-030d" name="MA5K Avenger Carbine" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="f0a1-b6ba-a357-0daf" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="c444-9b1f-d056-44d3" name="MA5K 'Avenger' Carbine" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Weight of Fire(3)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="936b-538a-334b-69ad" name="Fragmentation Grenade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(5); Grenade; One-Use</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="4b0d-bc70-82f4-7dd7" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="775d-0e63-b872-1116" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-                <infoLink id="db5d-c36a-4f47-21dd" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="75fb-cc42-bcc8-9cc9" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
-                <infoLink id="27da-276e-f7fe-8d70" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="46.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="46.0" />
       </costs>
     </selectionEntry>
-    <selectionEntry id="707a-60ef-4d56-65eb" name="Spartan Gungnir" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="707a-60ef-4d56-65eb" name="Spartan Gungnir (Plasma Launcher)" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
-        <modifier type="set" field="7d94-0173-2db2-14ab" value="0.0">
+        <modifier type="set" field="e5f0-9825-c923-e203" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7d94-0173-2db2-14ab" type="max" />
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8943-09d6-af83-e93e" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ebb-3134-0536-0090" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e019-8010-1082-3074" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e5f0-9825-c923-e203" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7db0-84a4-5c8e-53b0" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e9f-bab4-2e45-2c1b" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4593-c958-89b3-d6e8" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="5480-9e2e-c163-ae51" name="Spartan Gungnir" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="432f-3c2c-230d-1fba" name="Spartan Gungnir (Plasma Launcher)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
@@ -6516,146 +6639,208 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(2); Guarded; Stable</characteristic>
           </characteristics>
         </profile>
+        <profile id="2ad5-d5ae-5765-faa7" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a53a-d811-4f5b-3475" name="Plasma Launcher" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R5 (15")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(4); Grenade; Lethal(1); Sticky</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="c27f-254e-4882-0b26" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="8caf-7d10-f741-53b2" name="Guarded" hidden="false" targetId="380e-cfa0-0786-1b4f" type="rule" />
-        <infoLink id="f1f0-b518-1212-e1ce" name="Stable" hidden="false" targetId="955f-e5b9-7014-393a" type="rule" />
-        <infoLink id="99b2-f3a1-ef74-bd43" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="3321-277a-f1b3-79f5" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="664a-8c0d-1efa-6879" name="Guarded" hidden="false" targetId="380e-cfa0-0786-1b4f" type="rule" />
+        <infoLink id="aaba-725e-baa7-24f0" name="Stable" hidden="false" targetId="955f-e5b9-7014-393a" type="rule" />
+        <infoLink id="39a2-7bf5-7ecf-df2a" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="3e5f-abb3-7ae0-1ae2" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
+        <infoLink id="95d7-97df-660e-5bf0" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="12f8-09a5-7002-1987" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
+        <infoLink id="7886-34e0-d540-c7be" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="39c5-2ec6-694f-f3fe" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
-        <categoryLink id="3c1a-e35b-2514-333c" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="47c4-051d-4bde-7b26" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="bdeb-66d8-7559-372e" name="Spartan Gungnir" hidden="false" targetId="d20c-fce2-4759-1b9f" primary="false" />
+        <categoryLink id="561f-05fe-382d-febc" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="f6a3-004d-d073-a4be" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="6f8a-bd2e-eb29-dfe0" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="f4fd-8e0a-82b8-cab6" name="Spartan Gungnir" hidden="false" targetId="d20c-fce2-4759-1b9f" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="a5e1-a56b-70cb-0972" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="28e6-a538-eee2-2c06">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a497-ea3b-696f-7f59" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="792e-6417-ff48-c761" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="28e6-a538-eee2-2c06" name="Plasma Launcher" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="cf11-854b-0fe1-5828" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="67cf-0a19-9174-d6ad" name="Plasma Launcher" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R5 (15")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(4); Grenade; Lethal(1); Sticky</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="312d-c240-b24a-fdde" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-                <infoLink id="5255-32b0-245d-a3f4" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="e3d9-d157-99c8-0096" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="02b8-04cd-7ebb-e8a6" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
-                <infoLink id="a92f-b997-8ea1-0002" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="46.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="05a7-f504-efa3-dd7d" name="M319 Grenade Launcher" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="f897-bee1-18ae-fa2f" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="1d40-46d9-79db-42e3" name="M319 Grenade Launcher (frag)" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(5); Grenade</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="4621-edfe-78f4-2bc6" name="M319 Grenade Launcher (EMP)" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Blast; EMP; Frag(3); Grenade</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="6270-e5fb-4636-bf6f" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-                <infoLink id="97ca-6894-135b-2643" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="eee5-084c-2b2d-8613" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-                <infoLink id="b051-b1a8-d0dd-4d32" name="EMP" hidden="false" targetId="eae8-da8a-08f0-ac08" type="rule" />
-                <infoLink id="4685-0c6c-d90c-2111" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="46.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="03d3-aab2-8bc8-32d3" name="M41 SPNKr" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="8cc2-dd75-325d-88c5" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="c137-0db9-59d3-de51" name="M41 SPNKr" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Blast; ESD(2); Explosive; Frag(5); Lethal(1); Two Use</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="5e51-dfa5-8a57-ed70" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-                <infoLink id="8bb8-45d1-b77b-c0cd" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="e009-54e4-20f9-e9fd" name="Explosive" hidden="false" targetId="2599-56ef-4404-67aa" type="rule" />
-                <infoLink id="c950-7eaf-d08f-49be" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-                <infoLink id="4ed2-89bc-3285-3cf7" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="73d2-7a7e-ca29-ec40" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="47.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="46.0" />
       </costs>
     </selectionEntry>
-    <selectionEntry id="3158-e389-fb04-6287" name="Spartan Deadeye" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="607d-ca40-02b3-fa28" name="Spartan Gungnir (M319 Grenade Launcher)" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
-        <modifier type="set" field="9715-cb88-299e-2f0b" value="0.0">
+        <modifier type="set" field="568f-8627-8eb7-33a4" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9715-cb88-299e-2f0b" type="max" />
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f389-e59c-5c69-862b" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6eb2-5476-3d92-0858" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="734f-f74f-d80a-5c9d" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="568f-8627-8eb7-33a4" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="facf-45db-a4cc-588f" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dffd-e47a-885e-6cc8" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d58-4e99-c543-27b4" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="ff72-a169-e243-353e" name="Spartan Deadeye" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="31fe-aaa3-d700-665c" name="Spartan Gungnir (M319 Grenade Launcher)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">2 (6") / 3 (9")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(2); Guarded; Stable</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="84e6-ac79-389e-bff3" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ddae-b786-a327-4010" name="M319 Grenade Launcher (frag)" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(5); Grenade</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="704d-4b8a-cbf3-e7cc" name="M319 Grenade Launcher (EMP)" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Blast; EMP; Frag(3); Grenade</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="70d1-5f96-cfea-ab8c" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="f5e6-ccf1-27f0-b5f3" name="Guarded" hidden="false" targetId="380e-cfa0-0786-1b4f" type="rule" />
+        <infoLink id="9fc2-7024-3b0f-7bd5" name="Stable" hidden="false" targetId="955f-e5b9-7014-393a" type="rule" />
+        <infoLink id="538c-7788-996d-570d" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="b34f-8293-815b-cb42" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
+        <infoLink id="7765-4e04-77d6-5c0a" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
+        <infoLink id="0d30-bca7-5784-be69" name="EMP" hidden="false" targetId="eae8-da8a-08f0-ac08" type="rule" />
+        <infoLink id="4ca2-50cc-569c-2fbc" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="f66a-ae80-d3c8-f779" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="0468-e269-572e-e20b" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="a7cf-7035-a192-8dfa" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="4e12-dd0c-eb14-9282" name="Spartan Gungnir" hidden="false" targetId="d20c-fce2-4759-1b9f" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="46.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1ed8-43ee-d0c9-d09a" name="Spartan Gungnir (M41 SPNKr)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+        <modifier type="set" field="e369-e8ae-b691-c647" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e369-e8ae-b691-c647" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6b6-5270-68d1-fccb" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f2df-46ae-47b0-cf0e" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="22bc-aaa1-ab3a-5e77" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="1d42-b1bb-6346-553f" name="Spartan Gungnir (M41 SPNKr)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">2 (6") / 3 (9")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(2); Guarded; Stable</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="818f-77eb-95c2-0564" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c092-96eb-8a8e-7a2e" name="M41 SPNKr" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Blast; ESD(2); Explosive; Frag(5); Lethal(1); Two Use</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="135e-9f06-c8c7-af5f" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="8b0c-a58b-f800-7497" name="Guarded" hidden="false" targetId="380e-cfa0-0786-1b4f" type="rule" />
+        <infoLink id="e5d3-c398-f3b3-17cd" name="Stable" hidden="false" targetId="955f-e5b9-7014-393a" type="rule" />
+        <infoLink id="59c6-6914-5c64-7723" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
+        <infoLink id="0a13-db6f-2c41-b12c" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="5d3b-97d1-f0f5-95e8" name="Explosive" hidden="false" targetId="2599-56ef-4404-67aa" type="rule" />
+        <infoLink id="4479-2b05-2d10-8d55" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="eb19-4925-eb94-2106" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="4d35-e50a-b298-3331" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="18c8-0601-319e-d4f5" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="51b2-7325-e714-7d3a" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="5304-46e9-4509-3c27" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="fefa-bcc8-7750-afb7" name="Spartan Gungnir" hidden="false" targetId="d20c-fce2-4759-1b9f" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="47.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3158-e389-fb04-6287" name="Spartan Deadeye (Stalker Rifle)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+        <modifier type="set" field="fdf0-4e00-44f9-2ed7" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fdf0-4e00-44f9-2ed7" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b308-ad97-3b93-c7a0" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee77-8220-d69a-1551" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0715-f619-eda9-5a38" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="1069-9198-b2b1-820a" name="Spartan Deadeye (Stalker Rifle)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
@@ -6669,104 +6854,124 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(2); Fast Transition</characteristic>
           </characteristics>
         </profile>
+        <profile id="95db-0cb7-4082-3fba" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="078f-c436-cb6e-20f0" name="Stalker Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Sniper Scope</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="3d87-4220-700c-1c5b" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="eee9-25d8-6d9f-6c6a" name="Fast Transition" hidden="false" targetId="c9dc-8bd3-4011-712e" type="rule" />
-        <infoLink id="6856-18e3-e37f-94a1" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="ba68-07ff-d72c-85b6" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="be89-474c-c4ea-0ca6" name="Fast Transition" hidden="false" targetId="c9dc-8bd3-4011-712e" type="rule" />
+        <infoLink id="f43a-5cec-4eaa-43e8" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
+        <infoLink id="da04-8b2f-6b92-bc7f" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="33a9-1096-4313-2d6b" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
-        <categoryLink id="a8bd-f086-79a0-3070" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="a497-4064-e249-ff45" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="fc11-2276-32b2-4c76" name="Spartan Deadeye" hidden="false" targetId="4153-02a1-1a31-dd82" primary="false" />
+        <categoryLink id="6471-05ce-ddf0-31ae" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="f861-96dc-6023-ac14" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="7a33-766d-b0e6-078b" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="2ee3-6a52-a5f9-e70f" name="Spartan Deadeye" hidden="false" targetId="4153-02a1-1a31-dd82" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="8970-7068-d660-84f7" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="b034-147a-60f5-825b">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="89aa-d071-b0fb-03ed" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="681c-4149-8d07-674a" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="b034-147a-60f5-825b" name="Stalker Rifle" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="caa4-7bc6-6b50-567c" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="c1a0-cd72-fd6d-8b48" name="Stalker Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Sniper Scope</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="06ba-f852-d31f-ef9a" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
-                <infoLink id="8596-77bf-e765-ec25" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="44.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="62bd-19fc-ee86-8c80" name="M392 DMR" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="cb6e-7a1e-a97c-e996" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="9f4b-2fb7-a7f4-26c3" name="M392 DMR" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1); Optics</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="b5d9-0c53-6601-3f45" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="e191-b361-aa81-104a" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
-                <infoLink id="be43-5cd1-1115-dabd" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="45.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="44.0" />
       </costs>
     </selectionEntry>
-    <selectionEntry id="3859-1abf-2873-475c" name="Spartan CQB" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="aae5-0040-c3a2-299e" name="Spartan Deadeye (M392 DMR)" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
-        <modifier type="set" field="239d-37c5-da1f-9079" value="0.0">
+        <modifier type="set" field="8c0f-1cd4-9059-f9a1" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="239d-37c5-da1f-9079" type="max" />
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1688-fa87-6231-5dee" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="23a0-953b-a26e-0bd7" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="063c-1ccb-d3b6-d724" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8c0f-1cd4-9059-f9a1" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa75-ac82-da4a-a785" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f75-4b81-0e64-8de5" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fac6-efc5-ce12-bafc" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="5bf1-7bcb-80f1-745d" name="Spartan CQB" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="e66e-1322-6e36-6377" name="Spartan Deadeye (M392 DMR)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">3+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">2 (6") / 3 (9")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(2); Fast Transition</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9991-9897-ca7c-3612" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c06f-6b27-483b-2caa" name="M392 DMR" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1); Optics</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="f275-8391-97b1-7423" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="0ea0-c6b7-1119-35a7" name="Fast Transition" hidden="false" targetId="c9dc-8bd3-4011-712e" type="rule" />
+        <infoLink id="f516-90a9-354f-2209" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="ecbc-4660-b3b5-3ffd" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
+        <infoLink id="750e-2f9a-0b5a-2d30" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="c5c4-7116-e5b5-2329" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="e84b-e91a-578c-46a1" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="1c09-8f3e-df63-43c7" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="8221-03eb-dfc2-c476" name="Spartan Deadeye" hidden="false" targetId="4153-02a1-1a31-dd82" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="45.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3859-1abf-2873-475c" name="Spartan CQB (Energy Sword)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+        <modifier type="set" field="4472-804d-18c7-e014" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4472-804d-18c7-e014" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="657d-e299-dbbc-d81c" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="84c3-1804-55b4-ad15" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d3ba-65b6-ca90-f142" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="f945-aaed-e92d-894f" name="Spartan CQB (Energy Sword)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">10</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">5</characteristic>
@@ -6780,100 +6985,120 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(2); Imposing</characteristic>
           </characteristics>
         </profile>
+        <profile id="4e04-96a9-ef45-73e1" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a115-d417-c8bf-915b" name="Energy Sword" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP3</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(2); Lethal(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ef1e-9068-e8ea-5745" name="Energy Sword lunge" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R1 (3")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP3</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Lunge</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="2b2c-6268-db3e-0bfa" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="ee8b-cb84-6fbc-856b" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
-        <infoLink id="04d7-da07-232b-1ba3" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="7e30-8e40-fd65-aafe" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="f23d-df3d-5e6a-05bf" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
+        <infoLink id="43cb-11c0-14d9-c440" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="a71b-9b4c-da46-bf99" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="3736-5670-9f10-471e" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
+        <infoLink id="4b8e-e6c9-a1dd-6323" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="ca93-41b6-4dfe-5a2b" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
-        <categoryLink id="7de0-a5f5-d05b-56cb" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="701e-c159-e6ab-03eb" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="d611-4100-9c1f-9ea4" name="Spartan CQB" hidden="false" targetId="0217-314f-6bf1-6669" primary="false" />
+        <categoryLink id="b535-1065-5dff-7954" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="f81d-401a-16a1-5f87" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="a591-464a-21dc-8402" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="dee7-b5c3-9050-d27c" name="Spartan CQB" hidden="false" targetId="0217-314f-6bf1-6669" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="cb94-4aab-d163-60ce" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="2e68-67a3-c867-63c7">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b25f-dad5-89cb-d4a8" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="88fb-511e-32da-0c96" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="2e68-67a3-c867-63c7" name="Energy Sword" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="de2c-b080-7452-cc79" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="fc33-1ce2-a507-cbbd" name="Energy Sword" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP3</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(2); Lethal(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="1387-7bb1-7e99-169c" name="Energy Sword lunge" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R1 (3")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP3</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Lunge</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="31dc-f1d2-1a7c-9051" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="9389-b8c7-7228-4d91" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="0d33-ce38-2c62-5695" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
-                <infoLink id="8f58-95e8-a3cf-9938" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="49.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="6726-bf91-80ce-36e4" name="Gravity Hammer" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="1144-72ec-6786-a8d2" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="5504-e0d5-58ca-34eb" name="Gravity Hammer" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Knockback; Lethal(1); Smash(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="7cd4-5498-4074-16fe" name="Gravity Hammer lunge" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R1 (3")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Knockback; Lethal(1); Lunge</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="a541-de55-d52a-9c4c" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="221a-2469-93d5-05d1" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-                <infoLink id="1166-d665-5b0d-27cd" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="0bbf-28be-cfe1-bea5" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
-                <infoLink id="8cef-023a-b605-4ca4" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
-                <infoLink id="6f68-b690-f8b1-bab5" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="49.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="49.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="56c9-d829-77c3-9b9e" name="Spartan CQB (Gravity Hammer)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+        <modifier type="set" field="07f3-6c19-a26a-3000" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="07f3-6c19-a26a-3000" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dfb1-ae2b-739b-95b1" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc9f-fc71-5001-d121" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aaa6-bb45-170e-813c" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="3daf-7795-7833-2a33" name="Spartan CQB (Gravity Hammer)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">10</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">5</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">3</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">7</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">6+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">2 (6") / 3 (9")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(2); Imposing</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="60d0-abba-40b0-ed1a" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0382-2637-e062-877a" name="Gravity Hammer" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Knockback; Lethal(1); Smash(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="bf1a-2f1f-69ed-f778" name="Gravity Hammer lunge" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R1 (3")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Knockback; Lethal(1); Lunge</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="95f3-57f9-9d49-c24d" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="67f3-f3d1-9244-2d9b" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
+        <infoLink id="a301-9699-37d3-de50" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="6875-1c4e-34e0-7ff9" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
+        <infoLink id="d395-59a2-ab25-a527" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="c92b-b0b4-3a50-e259" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+        <infoLink id="5210-87d7-ac2d-0abe" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
+        <infoLink id="ff99-a1c5-2f2a-cc8a" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="e8d8-5b1c-9d54-c0c8" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="144a-a4bd-59a4-a3ab" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="90dd-dd39-99f4-065d" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="15b8-36c7-96dd-11d6" name="Spartan CQB" hidden="false" targetId="0217-314f-6bf1-6669" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="49.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="c52b-8443-17a5-7b3f" name="Jun-A266 Noble Three (Spartan Legend)" hidden="false" collective="false" import="true" type="model">
@@ -6883,20 +7108,20 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
-        <modifier type="set" field="391a-b1ac-3d94-5dd8" value="0.0">
+        <modifier type="set" field="ee05-24c4-d402-9dc7" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="391a-b1ac-3d94-5dd8" type="max" />
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cc28-9d2d-ce78-713c" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd26-a5f2-7b2a-cd1f" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d98-fb26-035e-7cc2" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ee05-24c4-d402-9dc7" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6916-9898-7155-d688" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d665-db72-7086-ac27" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b52-31b7-8efd-49a4" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="45f4-b8aa-f3a4-a7c9" name="Jun-A266 Noble Three (Spartan Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="8af4-cefb-eba0-acdc" name="Jun-A266 Noble Three (Spartan Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
@@ -6910,60 +7135,40 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Legend; Energy Shield(2); Scout; Stealthy</characteristic>
           </characteristics>
         </profile>
+        <profile id="40dc-7b34-5f65-9c40" name="M11 Combat Knife" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2193-d043-22bc-ba9f" name="SRS-99 Sniper Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1); Sniper Scope</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="40cd-bae9-0c61-6893" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
-        <infoLink id="288e-6855-1cda-c92e" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="0e22-3241-07f1-f84e" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
-        <infoLink id="e9e9-ce93-ef59-7989" name="Stealthy" hidden="false" targetId="ac0f-f7f4-da63-0f57" type="rule" />
-        <infoLink id="fd81-1ec9-0d43-e11f" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="1b8c-0834-a07a-265e" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
+        <infoLink id="c1db-2faf-deaf-9349" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="0da4-f3f2-5359-5f02" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
+        <infoLink id="5210-55f8-e142-2b90" name="Stealthy" hidden="false" targetId="ac0f-f7f4-da63-0f57" type="rule" />
+        <infoLink id="5fe4-9e85-8956-0bbf" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="adfd-11c2-f94b-2e99" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="c68e-523d-3901-14bd" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
+        <infoLink id="86c9-1658-2840-7273" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="d73d-30ff-928e-96db" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
-        <categoryLink id="3e4c-780a-2f10-18cb" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="908e-0779-606b-d535" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="fb81-7eb8-0183-8951" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
-        <categoryLink id="2c1e-63c9-4da4-6490" name="Jun-A266 Noble Three (Spartan Legend)" hidden="false" targetId="c330-72f5-5781-a41d" primary="false" />
+        <categoryLink id="da2a-c3f4-4e91-fd94" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="02dc-f104-bb68-8d9e" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="e326-c805-ea4c-4d2b" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="1a8d-c026-6856-33f6" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
+        <categoryLink id="3499-8807-59e8-cb32" name="Jun-A266 Noble Three (Spartan Legend)" hidden="false" targetId="c330-72f5-5781-a41d" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="455a-41b8-26ab-8a3b" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="89e1-7332-7438-93a7">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b2ef-ddbf-2377-305b" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c81a-363e-e223-1634" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="89e1-7332-7438-93a7" name="SRS-99 Sniper Rifle" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="2118-0808-e4ec-a132" name="M11 Combat Knife" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="56fb-1843-dada-16ec" name="SRS-99 Sniper Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1); Sniper Scope</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="6551-6f22-7c35-00cb" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="45d1-ad5c-457b-7247" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="a294-b895-ebff-030e" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
-                <infoLink id="fe28-77e0-9d62-cbfb" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="48.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="48.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="5cf8-1c43-0f06-73fc" name="Emile-A239 Noble Four (Spartan Legend)" hidden="false" collective="false" import="true" type="model">
@@ -6973,20 +7178,20 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
-        <modifier type="set" field="4fc0-accf-db8c-5008" value="0.0">
+        <modifier type="set" field="46f3-618e-b43d-8553" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4fc0-accf-db8c-5008" type="max" />
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6498-96fd-ac37-314f" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="444a-d98f-00cd-8ec5" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2e96-c033-797c-5fe2" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="46f3-618e-b43d-8553" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4861-b13d-baca-dc80" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="47b3-6a07-6696-c0dc" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5364-528f-0726-ea18" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="67e9-b901-51d7-4b12" name="Emile-A239 Noble Four (Spartan Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="7560-99b1-780f-2008" name="Emile-A239 Noble Four (Spartan Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
@@ -7000,70 +7205,50 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Legend; Acrobatic; Energy Shield(2); Imposing</characteristic>
           </characteristics>
         </profile>
+        <profile id="5fc9-e770-2273-052d" name="Kukri Blade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Lethal(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="be82-c113-235f-cab2" name="M45 Shotgun" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Knockback; Lethal(2)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b920-df0a-9975-875e" name="Fragmentation Grenade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(5); Grenade; One-Use</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="87bf-64f0-86dd-8a97" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
-        <infoLink id="e6f3-4085-4584-41a4" name="Acrobatic" hidden="false" targetId="0c36-2543-6a7b-f326" type="rule" />
-        <infoLink id="fdbb-474c-bea2-c978" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="33a3-9eb5-222e-180a" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
-        <infoLink id="2547-f08e-aa1b-f524" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="58e1-c206-264d-ecc1" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
+        <infoLink id="dada-cbac-968e-d6d9" name="Acrobatic" hidden="false" targetId="0c36-2543-6a7b-f326" type="rule" />
+        <infoLink id="dde1-d490-fa9c-62f5" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="be1a-65a4-bddf-9d1b" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
+        <infoLink id="7f7e-69a4-30cc-bb3b" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="92dc-e19a-130e-4b4a" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="4ac8-ac49-ab6b-0d18" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
+        <infoLink id="8d9a-325f-c8b7-579d" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="236f-9b31-db19-011d" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
+        <infoLink id="0065-dd8a-ae06-e840" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
+        <infoLink id="1f1e-6530-89e2-af23" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="ceed-004c-ee96-bb3e" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
-        <categoryLink id="25ae-0dea-8db6-eba9" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="adb1-265f-ac9e-faa6" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="05a7-3949-be5e-de91" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
-        <categoryLink id="3d3b-2f90-4c09-492a" name="Emile-A239 Noble Four (Spartan Legend)" hidden="false" targetId="ea38-a7ee-d666-e67f" primary="false" />
+        <categoryLink id="99da-0214-1823-23ba" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="307c-adf2-b6a4-21db" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="f8d0-dc63-452a-16ed" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="5b29-7886-f4bb-2fc1" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
+        <categoryLink id="2bb5-f5d6-3c56-5395" name="Emile-A239 Noble Four (Spartan Legend)" hidden="false" targetId="ea38-a7ee-d666-e67f" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="00a4-b72f-c6ae-580a" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="efd8-9701-f4af-2326">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c940-9393-80f2-21ba" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d13a-a8a3-5624-01db" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="efd8-9701-f4af-2326" name="M45 Shotgun" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="4e27-5bdf-eea4-8539" name="Kukri Blade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Lethal(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="d954-94b3-69d8-b496" name="M45 Shotgun" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Knockback; Lethal(2)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="113e-f22c-ce76-9ba5" name="Fragmentation Grenade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(5); Grenade; One-Use</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="0c51-c8e6-1835-27bf" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="cfa3-194b-256d-8b47" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="85a2-c8ab-4afa-d6d1" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-                <infoLink id="c37d-fd24-aa39-abd1" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-                <infoLink id="f2da-4fce-b3ef-7647" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="9e20-a19d-77e4-9891" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
-                <infoLink id="9c1b-48c3-a136-4cb8" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="58.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="58.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="5e16-35f6-f2d9-c552" name="Kat-B320 Noble Two (Spartan Legend)" hidden="false" collective="false" import="true" type="model">
@@ -7073,20 +7258,20 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
-        <modifier type="set" field="c593-d03b-85a6-38a5" value="0.0">
+        <modifier type="set" field="ad96-4f21-8519-712d" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c593-d03b-85a6-38a5" type="max" />
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6561-a4f0-b218-356c" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="09e0-71ea-2eda-a855" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dcd9-ddd2-2654-6f9e" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ad96-4f21-8519-712d" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c67-2dbb-23bd-55bf" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c2d2-9f0c-1dd1-f81d" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d5c-58a5-359a-10be" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="1761-c9aa-f6ec-9b0c" name="Kat-B320 Noble Two (Spartan Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="7095-581f-6d4e-c64a" name="Kat-B320 Noble Two (Spartan Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
@@ -7100,69 +7285,49 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Legend; Counter Intelligence; Energy Shield(2); Fast Transition; Tactician(1)</characteristic>
           </characteristics>
         </profile>
+        <profile id="f3ea-0093-6f32-323f" name="Robotic Arm" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Smash(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c5ea-12e6-fdee-0858" name="M6 Modified" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1); Optics; Rapid Fire</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="731a-8e7b-3989-15ad" name="M6G Magnum" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics; Rapid Fire</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="63ef-8db2-35df-ff1f" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
-        <infoLink id="696b-8807-7998-da20" name="Counter Intelligence" hidden="false" targetId="3f70-9737-1ce4-5826" type="rule" />
-        <infoLink id="42e2-b2fb-b67b-2323" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="93b5-c8cd-5d60-ebfd" name="Fast Transition" hidden="false" targetId="c9dc-8bd3-4011-712e" type="rule" />
-        <infoLink id="3324-63d2-e42c-72d2" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
-        <infoLink id="db6e-1df6-467e-fb4d" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="e459-05ed-9694-db13" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
+        <infoLink id="737b-7047-f913-06b7" name="Counter Intelligence" hidden="false" targetId="3f70-9737-1ce4-5826" type="rule" />
+        <infoLink id="45f1-ff31-8e6c-a367" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="6119-ea14-9fcd-fd75" name="Fast Transition" hidden="false" targetId="c9dc-8bd3-4011-712e" type="rule" />
+        <infoLink id="680e-fe94-9b70-b25c" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="93f8-781e-9433-3adc" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+        <infoLink id="938a-bb7b-05a2-da19" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="9f5f-925a-73cc-4782" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
+        <infoLink id="8266-f7be-6cfd-64fd" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+        <infoLink id="0961-72dd-1fcc-8096" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="4c81-61b1-d74a-491f" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
-        <categoryLink id="0dca-046f-5808-58c5" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="566a-e9b4-3a76-c1cb" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="18ec-8991-13d4-4792" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
-        <categoryLink id="1a4c-8bec-b7f7-f447" name="Kat-B320 Noble Two (Spartan Legend)" hidden="false" targetId="a4fd-ac3c-97c8-f964" primary="false" />
+        <categoryLink id="7bef-91ee-0b75-d850" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="6277-e7bc-e670-25e9" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="1595-1089-0c41-d46c" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="ff37-2111-9ca9-cbd6" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
+        <categoryLink id="9dd6-608b-a449-3544" name="Kat-B320 Noble Two (Spartan Legend)" hidden="false" targetId="a4fd-ac3c-97c8-f964" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="03e8-1562-733d-4309" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="d501-2415-f1b3-6b54">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9e3d-21df-4e8b-efcd" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e4e5-b3e8-7411-fac5" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="d501-2415-f1b3-6b54" name="Pistols" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="6cee-1916-fd02-3a9c" name="Robotic Arm" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Smash(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="a22b-13e4-33d6-2da1" name="M6 Modified" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1); Optics; Rapid Fire</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="7bae-9a30-4c4a-fe70" name="M6G Magnum" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics; Rapid Fire</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="d6b2-198f-9ec0-2642" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
-                <infoLink id="e22f-1c32-1f93-09b9" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="ca4d-a321-a762-64c2" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
-                <infoLink id="342a-ed79-f3ed-2065" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="c891-b52e-80f9-0956" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="54.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="54.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="4deb-fde0-7cb0-984c" name="Spartan-B312 Noble Six (Spartan Legend)" hidden="false" collective="false" import="true" type="model">
@@ -7172,20 +7337,20 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
-        <modifier type="set" field="20b7-bcc8-a4eb-d7b7" value="0.0">
+        <modifier type="set" field="919a-8f75-76a6-b8bb" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="20b7-bcc8-a4eb-d7b7" type="max" />
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bb7f-fcd2-6396-545f" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2dfb-6aad-e01d-c155" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5ad9-eeb8-9a6f-cea3" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="919a-8f75-76a6-b8bb" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d96-355f-c26b-b507" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e1d4-e81c-8419-3a0f" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="58f5-1661-2b17-34e3" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="8c8e-4788-5b33-b1c7" name="Spartan-B312 Noble Six (Spartan Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="68df-c1f9-bb57-5734" name="Spartan-B312 Noble Six (Spartan Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
@@ -7199,70 +7364,50 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Legend; Acrobatic; Counter Intelligence; Energy Shield(2); Stealthy</characteristic>
           </characteristics>
         </profile>
+        <profile id="02a4-a6fd-68fe-ccbf" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b84d-78d4-8bb8-409a" name="M6 Spartan Laser" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R7 (21")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP4</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(2); Long; Optics; Weight of Fire(2)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5c9b-c13a-db8a-5a2c" name="M6G Magnum" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics; Rapid Fire</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="e8b5-3507-7f29-61d4" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
-        <infoLink id="f1d7-a1fa-3586-8fb7" name="Acrobatic" hidden="false" targetId="0c36-2543-6a7b-f326" type="rule" />
-        <infoLink id="b830-cc03-6549-95f1" name="Counter Intelligence" hidden="false" targetId="3f70-9737-1ce4-5826" type="rule" />
-        <infoLink id="ce2b-38fd-ac98-c9de" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="0200-32ca-5071-9bb9" name="Stealthy" hidden="false" targetId="ac0f-f7f4-da63-0f57" type="rule" />
-        <infoLink id="c87d-ab51-0a4e-79d1" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="f434-cf68-c54c-a2b3" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
+        <infoLink id="009a-b2fe-369f-3064" name="Acrobatic" hidden="false" targetId="0c36-2543-6a7b-f326" type="rule" />
+        <infoLink id="b58b-b1c0-4f93-9984" name="Counter Intelligence" hidden="false" targetId="3f70-9737-1ce4-5826" type="rule" />
+        <infoLink id="7289-db4b-c4ad-e309" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="97ed-c7dd-ad01-15dd" name="Stealthy" hidden="false" targetId="ac0f-f7f4-da63-0f57" type="rule" />
+        <infoLink id="1b26-9bd9-93cf-ea37" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="3dea-c5e5-f3ec-997c" name="Long" hidden="false" targetId="6d8a-c297-e299-855e" type="rule" />
+        <infoLink id="0e10-712d-1a9b-ff52" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
+        <infoLink id="031e-fc23-098e-c48f" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="315f-3a11-af55-7ffd" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+        <infoLink id="991e-f5c8-0cff-7424" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="7e5f-7e7b-ab10-3b96" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
-        <categoryLink id="ee8d-2337-95d5-2d38" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="67ef-519a-c9c1-ac42" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="65a4-4b70-f865-85b4" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
-        <categoryLink id="1b6c-9c5a-15a7-88d5" name="Spartan-B312 Noble Six (Spartan Legend)" hidden="false" targetId="856e-82c9-e689-b50f" primary="false" />
+        <categoryLink id="e8e1-908a-4983-0631" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="9de3-b2cb-28b9-82b0" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="f038-d3a4-8b7d-4a75" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="7cf2-3887-97ab-9d52" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
+        <categoryLink id="4b13-f39b-15a6-bc4f" name="Spartan-B312 Noble Six (Spartan Legend)" hidden="false" targetId="856e-82c9-e689-b50f" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="f08f-564a-eb20-8a86" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="43b8-e1de-0157-e6ca">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5c71-1fd3-8207-a0ca" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2606-13ce-2e71-8e06" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="43b8-e1de-0157-e6ca" name="M6 Spartan Laser" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="7294-5965-b0dc-5b24" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="1df4-5e83-bf11-8d16" name="M6 Spartan Laser" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R7 (21")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP4</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(2); Long; Optics; Weight of Fire(2)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="fbb9-90fa-e32f-4681" name="M6G Magnum" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics; Rapid Fire</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="e4e7-4b4f-88fd-8502" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="0699-e4fb-6d0f-c6b4" name="Long" hidden="false" targetId="6d8a-c297-e299-855e" type="rule" />
-                <infoLink id="93b2-6309-3ad4-e640" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
-                <infoLink id="5a38-40a6-b0d4-a63b" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="9517-da87-4bbf-21ea" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="37ff-063b-61af-cb5b" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="62.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="62.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="adf8-d842-c1fd-479d" name="Carter-A259 Noble One (Spartan Legend)" hidden="false" collective="false" import="true" type="model">
@@ -7272,20 +7417,20 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
-        <modifier type="set" field="9b05-4a6b-f465-bf70" value="0.0">
+        <modifier type="set" field="6a24-b57f-5752-6d4f" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9b05-4a6b-f465-bf70" type="max" />
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c20b-6764-e8b8-407c" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c59d-134f-c827-80ea" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1406-c3be-1e2f-8f64" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6a24-b57f-5752-6d4f" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f88-e3c9-735b-4f45" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eee2-fb88-eac5-aac2" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f71e-df08-9222-6e8b" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="e280-17ee-11ef-e82d" name="Carter-A259 Noble One (Spartan Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="2e58-0cd7-0dfe-f140" name="Carter-A259 Noble One (Spartan Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
@@ -7299,68 +7444,48 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Legend; Energy Shield(2); Scout; Tactician(2)</characteristic>
           </characteristics>
         </profile>
+        <profile id="934b-d9d0-396e-1f79" name="M11 Combat Knife" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1e8a-5ef4-5496-02ff" name="M392 DMR" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1); Optics</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="acd5-09b7-f279-1429" name="M6G Magnum" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics; Rapid Fire</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="6e9d-48ae-1786-2a46" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
-        <infoLink id="6d87-2e29-3b56-d978" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="4584-e148-4a03-efa8" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
-        <infoLink id="fdc7-5f1c-1af8-b60e" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
-        <infoLink id="6df1-ae8f-a17e-dd4a" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="cf1b-45aa-fb4a-8abb" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
+        <infoLink id="2b67-7ec1-7d20-ae85" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="1bc1-6db0-2a10-c5ba" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
+        <infoLink id="afc7-d5be-003b-3da8" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="d1ab-f086-456a-14c8" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="5f55-99de-a306-bbed" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="a7eb-275d-1b6f-3265" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
+        <infoLink id="4758-ac26-4474-64ce" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+        <infoLink id="a8cb-90da-eb6e-bf18" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="2b05-27c1-7db4-a0da" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
-        <categoryLink id="705e-42ee-7a35-5b3f" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="56b8-ed6a-cf03-edca" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="a02e-c3d5-2915-ae32" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
-        <categoryLink id="243e-863b-dff0-439a" name="Carter-A259 Noble One (Spartan Legend)" hidden="false" targetId="3359-4950-4cce-8cdd" primary="false" />
+        <categoryLink id="7ab8-d50b-a434-e5a4" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="f1c9-0a84-cd71-fb63" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="41f3-53b8-9367-6d91" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="113d-61b3-587d-860e" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
+        <categoryLink id="6ba8-eb15-64de-e77c" name="Carter-A259 Noble One (Spartan Legend)" hidden="false" targetId="3359-4950-4cce-8cdd" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="0165-05a1-e068-84bb" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="e375-5707-c532-fc28">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="15c1-f900-bd7b-1e96" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0ef0-1514-51bc-d95a" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="e375-5707-c532-fc28" name="DMR/Magnum" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="e102-d122-aaab-9e26" name="M11 Combat Knife" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="7d6e-5a81-1852-cade" name="M392 DMR" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1); Optics</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="cb25-e5ed-d504-b0dd" name="M6G Magnum" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics; Rapid Fire</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="1331-5f09-87d5-73e0" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="cc8f-d2c5-f36e-61ff" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="89f7-b42c-5d32-8bd2" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
-                <infoLink id="2c99-2431-f20a-2fde" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="a357-8c93-6b03-0578" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="58.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="58.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="5593-2523-2eb7-09ff" name="Jorge-052 Noble Five (Spartan Legend)" hidden="false" collective="false" import="true" type="model">
@@ -7370,20 +7495,20 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
-        <modifier type="set" field="ecea-85a5-272d-8bf4" value="0.0">
+        <modifier type="set" field="79bf-03ad-c3fa-e8ac" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ecea-85a5-272d-8bf4" type="max" />
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="25c5-b97f-5089-6655" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d11-4207-0efb-1571" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3faa-fb7c-7ab2-a576" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="79bf-03ad-c3fa-e8ac" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f6e-960a-af73-1044" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9ffb-15fa-9808-1b09" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="66e9-296b-fe6e-0bbb" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="8534-06ed-700a-d7d4" name="Jorge-052 Noble Five (Spartan Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="5cb9-f556-ce45-feae" name="Jorge-052 Noble Five (Spartan Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">11</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">6</characteristic>
@@ -7397,62 +7522,42 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Legend; Energy Shield(3); High Value Target; Stoic; Tactician(1)</characteristic>
           </characteristics>
         </profile>
+        <profile id="b6b8-737c-3cc1-9159" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="96c9-7aeb-7596-ea9e" name="M247H HMG" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R5 (15")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Firing Platform(1); Lethal(1); Suppression; Weight of Fire(2)</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="3b05-7414-f28f-f5ba" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
-        <infoLink id="bf17-7df4-a12c-5a0a" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="0a4a-be4c-ab26-073a" name="High Value Target (HVT)" hidden="false" targetId="a15c-2e11-e3cd-8b3c" type="rule" />
-        <infoLink id="8a41-1f8e-84fc-eaf3" name="Stoic" hidden="false" targetId="5674-1123-3fe9-3dd6" type="rule" />
-        <infoLink id="fccf-1667-ee85-054f" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
-        <infoLink id="b80d-7f95-5582-f020" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="0644-4ac0-626e-2d0c" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
+        <infoLink id="4cdd-55d8-7d29-1a56" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="1d20-4483-8e91-8573" name="High Value Target (HVT)" hidden="false" targetId="a15c-2e11-e3cd-8b3c" type="rule" />
+        <infoLink id="dbb4-a26c-e885-c155" name="Stoic" hidden="false" targetId="5674-1123-3fe9-3dd6" type="rule" />
+        <infoLink id="c7d5-80ee-4cd8-1b41" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="9943-3094-68fb-c5be" name="Firing Platform" hidden="false" targetId="4e98-72a7-a073-68d6" type="rule" />
+        <infoLink id="9110-71cc-1b66-f5f3" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="ab8e-9213-56d5-daac" name="Suppression" hidden="false" targetId="3ee6-86b5-e526-7c22" type="rule" />
+        <infoLink id="f82b-201e-9a20-0cf8" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="0d8a-536a-4c52-cd5d" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="1e6f-8b50-1137-fec5" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
-        <categoryLink id="230e-e43a-e892-3bc7" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="25ea-2cb3-2515-55a1" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="21aa-f744-0e6d-452b" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
-        <categoryLink id="1dfd-2cc4-ab34-9f89" name="Jorge-052 Noble Five (Spartan Legend)" hidden="false" targetId="8772-9d46-422c-9f36" primary="false" />
+        <categoryLink id="e9fc-3456-5986-eea5" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="7cfe-3b09-de29-1d8d" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="35d6-7e48-01de-bb4e" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="5e5e-9321-38db-6a40" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
+        <categoryLink id="6508-2f21-f855-6c4c" name="Jorge-052 Noble Five (Spartan Legend)" hidden="false" targetId="8772-9d46-422c-9f36" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="35ec-352f-9fb0-ddf2" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="4419-91e8-ec44-bb98">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="187c-b962-a6c0-f20e" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="195a-ed0f-4733-22dc" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="4419-91e8-ec44-bb98" name="M247H HMG" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="614e-c892-6e27-1cfa" name="Spartan Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="d379-4c09-ecbe-cc34" name="M247H HMG" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R5 (15")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Firing Platform(1); Lethal(1); Suppression; Weight of Fire(2)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="b1fe-84fd-1da8-1eaa" name="Firing Platform" hidden="false" targetId="4e98-72a7-a073-68d6" type="rule" />
-                <infoLink id="ce3a-17a6-217c-318e" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="3311-a217-7501-494c" name="Suppression" hidden="false" targetId="3ee6-86b5-e526-7c22" type="rule" />
-                <infoLink id="64a9-d7bd-bafe-856f" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="e4e5-8970-a20b-aa8e" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="70.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="70.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="4f9f-1376-9ba0-d0c4" name="Master Chief (Spartan Legend)" hidden="false" collective="false" import="true" type="model">
@@ -7462,20 +7567,20 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
-        <modifier type="set" field="4265-14cd-c38b-dad8" value="0.0">
+        <modifier type="set" field="af97-df3f-3877-b3c3" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4265-14cd-c38b-dad8" type="max" />
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="00a4-172d-0cd9-fd68" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="030c-2bc4-b6d5-ca48" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="606d-94f6-231c-a3bb" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="af97-df3f-3877-b3c3" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d31a-e4fb-18c0-c68e" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a159-9eae-b9ab-f83b" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51da-45f4-e680-8a32" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="437c-054c-b589-a7be" name="Master Chief (Spartan Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="14dd-2c74-521e-7462" name="Master Chief (Spartan Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">10</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">5</characteristic>
@@ -7489,71 +7594,58 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Legend; Energy Shield(3); High Value Target; Stoic; Tactician(3)</characteristic>
           </characteristics>
         </profile>
+        <profile id="ed72-c4c1-a1da-9bbc" name="Energy Sword" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP3</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(2); Lethal(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="dcbc-2f04-98aa-10d8" name="Energy Sword lunge" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R1 (3")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP3</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Lunge</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="3a84-952c-a9d4-12db" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
-        <infoLink id="39d6-14f0-ebb0-fbeb" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="08fd-6b09-949c-01aa" name="High Value Target (HVT)" hidden="false" targetId="a15c-2e11-e3cd-8b3c" type="rule" />
-        <infoLink id="28ff-a6d2-d346-35b8" name="Stoic" hidden="false" targetId="5674-1123-3fe9-3dd6" type="rule" />
-        <infoLink id="9e5b-97b1-c609-5d1f" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
-        <infoLink id="a945-e3cb-bdf4-9e81" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="de91-6ad2-3450-a1f2" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
+        <infoLink id="33ac-0906-6ba8-c887" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="7d16-f499-db86-fb31" name="High Value Target (HVT)" hidden="false" targetId="a15c-2e11-e3cd-8b3c" type="rule" />
+        <infoLink id="73f6-dd27-31ff-0123" name="Stoic" hidden="false" targetId="5674-1123-3fe9-3dd6" type="rule" />
+        <infoLink id="63d9-ec7b-2c11-3686" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="0457-f9d7-9820-95cb" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="5967-2bd0-50d4-8911" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="e22e-e434-24f2-fc87" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
+        <infoLink id="c1e3-9527-aa9f-647d" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="2eb4-71f2-aba0-8857" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
-        <categoryLink id="1a75-37e1-db94-c07a" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="5a48-62e8-8cde-01e4" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="2e0d-85b4-b330-c9eb" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
-        <categoryLink id="4182-0404-b102-fe96" name="Master Chief (Spartan Legend)" hidden="false" targetId="ebbf-5662-b1a7-3f45" primary="false" />
+        <categoryLink id="8f71-e2c8-b1f5-4051" name="Spartans" hidden="false" targetId="a4c9-8152-47e0-0cb7" primary="true" />
+        <categoryLink id="de7a-673a-6916-637c" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="d6df-6283-6930-c65e" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="32b5-6293-49be-586d" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
+        <categoryLink id="cd58-3e78-9b42-2b47" name="Master Chief (Spartan Legend)" hidden="false" targetId="ebbf-5662-b1a7-3f45" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="2ea3-fb77-dc5c-2791" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="a16e-f014-477f-d858">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d69a-96e5-e7c4-a747" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0785-6093-835a-efd2" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="a16e-f014-477f-d858" name="Energy Sword" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="5cbc-6b84-2672-a1b3" name="Energy Sword" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP3</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(2); Lethal(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="7573-2ca4-a6dc-702d" name="Energy Sword lunge" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R1 (3")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP3</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Lunge</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="a954-2967-a57c-7c4a" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="e672-d625-e2c7-2cd9" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="56c9-a7b5-62db-fb53" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
-                <infoLink id="3178-f615-b799-a3ba" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="72.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="72.0" />
       </costs>
     </selectionEntry>
-    <selectionEntry id="c761-9496-21dd-2499" name="ODST Special Purpose Trooper" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="c761-9496-21dd-2499" name="ODST Special Purpose Trooper (M392 DMR)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="3661-1187-b063-f00f" value="22.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd72-9982-e5d7-74a1" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="056b-d8a9-4b0d-8f54" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="15a3-6536-ea7b-f4bd" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e6f-8cf0-4f38-063c" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c48e-4a0a-42f9-26d5" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7883-a452-c86d-ab08" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="e3f4-93e6-a0ce-8606" name="ODST Special Purpose Trooper" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="85ed-0e9a-c4a1-378d" name="ODST Special Purpose Trooper (M392 DMR)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">4</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
@@ -7567,124 +7659,156 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Scout</characteristic>
           </characteristics>
         </profile>
+        <profile id="f9f3-a3cd-1d54-26de" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="15ce-b8e8-6410-6522" name="M392 DMR" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1); Optics</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="f040-da4d-386a-19c7" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
-        <infoLink id="19eb-7ba6-1977-6729" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="e985-d151-61b7-6308" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
+        <infoLink id="8d7c-6548-1341-7012" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="4b5a-b69e-1e00-78df" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
+        <infoLink id="c0a4-9942-34aa-6fff" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="fb50-890a-ecb6-f769" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
-        <categoryLink id="4176-1f07-dd9d-9ff4" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="2307-08ad-0a6a-1888" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="92c2-a0ac-4938-fb64" name="ODST Special Purpose Trooper" hidden="false" targetId="f666-f549-a4dc-07a3" primary="false" />
+        <categoryLink id="9c87-acab-c118-223f" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
+        <categoryLink id="ac5e-c773-d5fe-2d65" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="9835-072f-4b85-df2e" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="21a6-7331-b03d-24d5" name="ODST Special Purpose Trooper" hidden="false" targetId="f666-f549-a4dc-07a3" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="ac5d-e675-0f1a-c77e" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="5985-4a7b-5917-67aa">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e5c5-46d0-376c-cf9b" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e950-ac7b-489b-bfff" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="5985-4a7b-5917-67aa" name="M392 DMR" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="3661-1187-b063-f00f" value="22.0">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile id="ab30-179a-ce73-5eb4" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="c667-6410-4da4-97f5" name="M392 DMR" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1); Optics</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="a597-ac40-4ce5-a956" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="a3f1-1f09-74c1-1861" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
-                <infoLink id="17d9-de52-dc35-210b" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="24.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="50f6-ba3d-cfd9-5288" name="Pulse Carbine" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="00ef-2495-6846-fd5e" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="c978-83c3-cc37-3990" name="Pulse Carbine" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Weight of Fire(1)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="4bff-2c33-8153-4d63" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="e1d7-5de2-8906-63f6" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="aa10-5bb6-b0d4-4342" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="22.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="47df-a963-f38c-4bee" name="BR55 Battle Rifle" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="b5af-42e6-a540-6599" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="bbad-5bf8-3205-334a" name="BR55 Battle Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R5 (15")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics; Weight of Fire(1)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="6ff4-f0a4-2bff-28cc" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
-                <infoLink id="a86a-cb9d-6cb5-c509" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="f758-39f0-f232-b76b" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="26.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="24.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b02e-55b7-7367-4018" name="ODST Special Purpose Trooper (Pulse Carbine)" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad75-3eed-6d18-9abc" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b95d-32da-a52a-5f60" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1062-dc2a-043c-edd3" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="f1dd-fa39-ef03-4dd1" name="ODST Special Purpose Trooper (Pulse Carbine)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">4</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">3</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">1 (3") / 2 (6")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Scout</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f31c-dc5f-9edd-d29c" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b32c-61a6-6982-aa24" name="Pulse Carbine" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Weight of Fire(1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="2f2e-8fa3-3de0-cf96" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
+        <infoLink id="9b2e-95b0-7cb0-9e85" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="57ac-3241-83be-b1dd" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="639a-d08c-ed42-f452" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="c3d5-322b-73e9-5592" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
+        <categoryLink id="afbf-81a8-671f-2ba2" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="a4f2-a499-1fc6-8ffa" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="ebe4-d41b-5400-f900" name="ODST Special Purpose Trooper" hidden="false" targetId="f666-f549-a4dc-07a3" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="22.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="731d-cad0-2896-a7a2" name="ODST Special Purpose Trooper (BR55 Battle Rifle)" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f77a-130c-9f10-ce85" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5683-ad61-e347-fbc8" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1359-2365-f609-8b0c" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="4efe-bbb4-78f6-93dd" name="ODST Special Purpose Trooper (BR55 Battle Rifle)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">4</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">3</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">1 (3") / 2 (6")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Scout</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5970-b8e6-0155-07ca" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9511-0f66-7de4-14db" name="BR55 Battle Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R5 (15")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics; Weight of Fire(1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="c6e5-42ef-acad-5d7b" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
+        <infoLink id="4419-c81e-516b-c0de" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
+        <infoLink id="a34c-218e-ee92-9dd2" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="b44c-a1d3-ac8e-8fed" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="ffe7-8dcf-1c56-e18f" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
+        <categoryLink id="93e2-768d-0e04-08ba" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="6726-976a-6a9b-023e" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="1b92-655a-cd1d-714c" name="ODST Special Purpose Trooper" hidden="false" targetId="f666-f549-a4dc-07a3" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="26.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="6200-eabc-e34d-6e64" name="ODST 2nd Lieutenant" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="3661-1187-b063-f00f" value="30.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="17a2-8103-aad8-80d2" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e9d9-ef7f-a783-f2f3" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e26-80b6-2578-3f92" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9790-778b-b864-7f53" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="96e8-18b0-b744-0cde" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="05d5-c84e-b583-5f1f" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="22d5-3320-56c1-50c4" name="ODST 2nd Lieutenant" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="81b7-e6b8-2af2-54fa" name="ODST 2nd Lieutenant" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">4</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
@@ -7698,72 +7822,52 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Scout; Tactician(1)</characteristic>
           </characteristics>
         </profile>
+        <profile id="c382-6331-aa30-fd9f" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="844b-d854-26a8-074a" name="MA5K 'Avenger' Carbine" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Weight of Fire(3)</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="3d22-be3b-a9f9-e748" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
-        <infoLink id="ba63-5f27-7a0f-cf4f" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
-        <infoLink id="6351-459e-a704-514e" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="347f-795c-cb0d-72eb" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
+        <infoLink id="205b-d5d4-b220-2d0e" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="ad1a-996d-a76c-8516" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="1478-0aa0-9350-ed79" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="86f4-1cfe-cf9e-b3da" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
-        <categoryLink id="78f8-05c5-078e-dbbe" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="ce71-db31-7288-516a" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="c16b-daf4-e9d0-825d" name="ODST 2nd Lieutenant" hidden="false" targetId="f146-61c3-1e15-8056" primary="false" />
+        <categoryLink id="03a1-4a4e-705f-eceb" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
+        <categoryLink id="6af4-b002-ed01-a1e3" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="af14-b5d0-be52-65b0" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="001e-325f-e84f-d721" name="ODST 2nd Lieutenant" hidden="false" targetId="f146-61c3-1e15-8056" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="e18d-2733-23f4-9d92" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="809d-6dc4-1e23-4a86">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f967-a22f-89e5-07a3" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="87f4-8f9f-47a0-b211" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="809d-6dc4-1e23-4a86" name="MA5K Avenger Carbine" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="3661-1187-b063-f00f" value="30.0">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile id="d48d-9dbe-dcda-0cad" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="6342-9b8b-91df-345b" name="MA5K 'Avenger' Carbine" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Weight of Fire(3)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="8fd5-efd2-d57a-bad0" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="6f94-5fc6-c377-2a3b" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="31.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="31.0" />
       </costs>
     </selectionEntry>
-    <selectionEntry id="4866-e09e-ceec-8f68" name="ODST Air Assault 'Bullfrog'" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="4866-e09e-ceec-8f68" name="ODST Air Assault 'Bullfrog' (MA40 Assault Rifle)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="3661-1187-b063-f00f" value="25.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f569-8785-66fb-afb5" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d662-6995-e66b-4bf7" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bcdb-72b2-7f5d-d094" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1fc3-338c-7136-0894" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c51-117f-f65e-7348" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb59-bd13-963c-c0c1" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="14b4-4382-d359-213c" name="ODST Air Assault 'Bullfrog'" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="dce2-751c-c6d4-48af" name="ODST Air Assault 'Bullfrog' (MA40 Assault Rifle)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">4</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
@@ -7777,107 +7881,115 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Acrobatic; Jump Pack</characteristic>
           </characteristics>
         </profile>
+        <profile id="12cf-80ca-1648-1298" name="Combat Knife" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f6ae-cc84-250a-72c2" name="MA40 Assault Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Rapid Fire; Weight of Fire(2)</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="e74d-dd74-cfbd-b860" name="Acrobatic" hidden="false" targetId="0c36-2543-6a7b-f326" type="rule" />
-        <infoLink id="e509-771c-2e41-6c31" name="Jump Pack" hidden="false" targetId="7b06-42c9-226e-bf26" type="rule" />
-        <infoLink id="3fe1-6898-52a3-6148" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="fad7-8363-7bcd-50be" name="Acrobatic" hidden="false" targetId="0c36-2543-6a7b-f326" type="rule" />
+        <infoLink id="4fee-c8f7-5dc0-9c1d" name="Jump Pack" hidden="false" targetId="7b06-42c9-226e-bf26" type="rule" />
+        <infoLink id="108f-1aae-a15f-1ddd" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+        <infoLink id="028d-de9f-9311-f72f" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="bae9-91d6-804d-abb4" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="5959-240e-9f34-6aa6" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
-        <categoryLink id="4ade-8f99-edd2-5955" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="ee55-4a20-4f7e-b407" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="fc38-7c06-4141-8a94" name="Jump Pack" hidden="false" targetId="d251-6fa8-833c-d2d3" primary="false" />
-        <categoryLink id="148f-46df-13d8-28d0" name="ODST Air Assault 'Bullfrog'" hidden="false" targetId="31e6-ba0b-89a2-b362" primary="false" />
+        <categoryLink id="8386-d6a9-c0f2-6528" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
+        <categoryLink id="213f-722a-84dd-eecf" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="1c1c-de04-beff-9473" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="6bac-d1ef-de8b-1469" name="Jump Pack" hidden="false" targetId="d251-6fa8-833c-d2d3" primary="false" />
+        <categoryLink id="e40b-30ed-c3c1-544b" name="ODST Air Assault 'Bullfrog'" hidden="false" targetId="31e6-ba0b-89a2-b362" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="38a9-cd85-d5e6-c060" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="2cd2-57aa-29fb-1d36">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5b66-c604-78f7-90d0" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="80f1-7c0e-ee8d-54b0" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="2cd2-57aa-29fb-1d36" name="MA40 Assault Rifle" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="3661-1187-b063-f00f" value="25.0">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile id="b47e-cc1c-dddf-f740" name="Combat Knife" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="ad20-80f4-affb-40e6" name="MA40 Assault Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Rapid Fire; Weight of Fire(2)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="b1bd-5a77-98ca-9a86" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="4140-8ea7-acfa-e114" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="1f23-d84d-e6a1-b100" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="28.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="24c5-a121-0125-b1af" name="M7S SMG" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="3661-1187-b063-f00f" value="26.0">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile id="bf2a-f991-d786-6724" name="Combat Knife" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="6ec9-7a87-b084-c559" name="M7S SMG" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics; Weight of Fire(2)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="b33d-6364-660e-8e87" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
-                <infoLink id="6fa0-5fb0-546f-6291" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="2eda-eaf8-c133-5138" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="29.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="28.0" />
       </costs>
     </selectionEntry>
-    <selectionEntry id="9bda-deeb-1735-074e" name="ODST Firebreak" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="1c54-a70c-6968-e7fd" name="ODST Air Assault 'Bullfrog' (M7S SMG)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="3661-1187-b063-f00f" value="26.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9325-9ec8-8e3d-64f4" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4181-ac7c-e161-1490" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="029f-4e18-21b8-08ea" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a3b-42ba-9d8c-40ee" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="774e-3513-0b7e-728e" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd5c-6e0c-9ca7-8dca" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="beaf-246e-d7bf-19f9" name="ODST Firebreak" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="c78b-9c77-a022-a824" name="ODST Air Assault 'Bullfrog' (M7S SMG)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">4</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">3</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">1 (3") / 3 (9")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Acrobatic; Jump Pack</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="35b8-8918-5848-9d5e" name="Combat Knife" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="70c8-fcb9-9b4e-bdb4" name="M7S SMG" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics; Weight of Fire(2)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="49d1-1202-d9bd-0710" name="Acrobatic" hidden="false" targetId="0c36-2543-6a7b-f326" type="rule" />
+        <infoLink id="1d92-1908-ad83-ffac" name="Jump Pack" hidden="false" targetId="7b06-42c9-226e-bf26" type="rule" />
+        <infoLink id="2df4-7280-52e5-c49d" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
+        <infoLink id="2e06-c432-00ac-47b8" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="68e1-4f58-ed97-d347" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="0304-9113-530d-b0b5" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
+        <categoryLink id="67bb-143f-b3a9-916d" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="af96-771c-e012-cdcd" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="dc0f-e3ea-7313-564e" name="Jump Pack" hidden="false" targetId="d251-6fa8-833c-d2d3" primary="false" />
+        <categoryLink id="679a-035c-3a88-dbe9" name="ODST Air Assault 'Bullfrog'" hidden="false" targetId="31e6-ba0b-89a2-b362" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="29.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9bda-deeb-1735-074e" name="ODST Firebreak (M7057 Flamethrower)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="3661-1187-b063-f00f" value="28.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f533-5f47-9466-05db" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b20-c0ea-720d-8d61" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c377-d528-4fe2-ca16" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="58ca-b82d-93c1-660d" name="ODST Firebreak (M7057 Flamethrower)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">4</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
@@ -7891,127 +8003,132 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">-</characteristic>
           </characteristics>
         </profile>
+        <profile id="3672-8b66-9ca1-6e77" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5cfb-4e14-c55e-530e" name="M7057 Flamethrower" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R2 (6")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Continuous Fire; Incendiary(5); Sticky</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="15e7-a785-0a34-fd35" name="M168 Demo Charge" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Blast; EMP; Lethal(1); One-Use</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="9ce8-bafd-f52c-152e" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="75cb-4856-712a-c9d5" name="Continuous Fire" hidden="false" targetId="8af9-c2bd-d5cf-49de" type="rule" />
+        <infoLink id="9ca0-84a3-529d-6b42" name="Incendiary" hidden="false" targetId="9ee0-1406-ed70-3db1" type="rule" />
+        <infoLink id="1d33-2d07-97b2-1d1f" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
+        <infoLink id="f055-0f6c-1345-d73f" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
+        <infoLink id="c584-f0aa-7392-624b" name="EMP" hidden="false" targetId="eae8-da8a-08f0-ac08" type="rule" />
+        <infoLink id="93f3-320b-c2b5-4ed9" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="05fd-f92e-70d7-86d0" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
+        <infoLink id="6876-192a-1fcf-36fd" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="388d-ec98-8bf0-1a9c" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
-        <categoryLink id="e267-8f45-d8d1-a6f9" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="7e36-6f7d-aabb-8cac" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="7f9d-b8e0-45cb-f5c4" name="ODST Firebreak" hidden="false" targetId="ef33-aadc-cc4e-17e3" primary="false" />
+        <categoryLink id="9141-9ccf-aae7-ea25" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
+        <categoryLink id="c1f0-614c-5a23-92a1" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="19dc-b351-1dfb-9b41" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="5518-cbab-6007-e418" name="ODST Firebreak" hidden="false" targetId="ef33-aadc-cc4e-17e3" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="657a-42e5-e413-c9c1" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="9b57-dec3-3960-bae3">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dafa-d8ec-e66c-dcb1" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0175-4829-87e9-8a3b" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="9b57-dec3-3960-bae3" name="M7057 Flamethrower" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="3661-1187-b063-f00f" value="28.0">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile id="d6a6-a47e-ca79-aa4c" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="51fc-a8e5-2dfa-b867" name="M7057 Flamethrower" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R2 (6")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Continuous Fire; Incendiary(5); Sticky</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="4a11-c074-a010-014e" name="M168 Demo Charge" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Blast; EMP; Lethal(1); One-Use</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="e644-64a0-6eb2-adb9" name="Continuous Fire" hidden="false" targetId="8af9-c2bd-d5cf-49de" type="rule" />
-                <infoLink id="60de-1426-ed5a-0230" name="Incendiary" hidden="false" targetId="9ee0-1406-ed70-3db1" type="rule" />
-                <infoLink id="490f-f4f1-243b-b6c9" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
-                <infoLink id="fcb8-7ab3-8bb3-35da" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-                <infoLink id="6b78-86de-6e17-d84e" name="EMP" hidden="false" targetId="eae8-da8a-08f0-ac08" type="rule" />
-                <infoLink id="1bd1-d7c7-460d-2e2d" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="0327-c79c-26b0-fa36" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
-                <infoLink id="0ecb-8d6c-2a5e-73c1" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="29.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="4eb0-00f9-8418-f3b7" name="M90 Shotgun" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="3661-1187-b063-f00f" value="24.0">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile id="3793-8ffc-5c3b-a1a4" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="0e03-3f90-1186-d10d" name="M90 Shotgun" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Knockback; Lethal(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="6f0e-dc9d-9f41-a677" name="M168 Demo Charge" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Blast; EMP; Lethal(1); One-Use</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="23a3-7caf-d29a-5700" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="893f-af2c-7e29-b33c" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-                <infoLink id="b6c0-4941-a723-c045" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="8baa-19c0-9654-a672" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-                <infoLink id="6b80-0a96-a5bb-a863" name="EMP" hidden="false" targetId="eae8-da8a-08f0-ac08" type="rule" />
-                <infoLink id="1f16-1a85-2652-ffeb" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
-                <infoLink id="dd69-40ea-09ab-b971" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="27.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="29.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="97fa-8d84-e21b-8c18" name="ODST Firebreak (M90 Shotgun)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="3661-1187-b063-f00f" value="24.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e0c3-bcf7-1da1-7c13" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e9fe-bc39-f52f-ab1d" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="132f-172e-c4b8-8b1c" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="1af7-d09d-e36a-0e4a" name="ODST Firebreak (M90 Shotgun)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">4</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">3</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">1 (3") / 2 (6")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="43c9-a07f-b2cc-01af" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a343-00b8-0c87-7bb4" name="M90 Shotgun" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Knockback; Lethal(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9df8-c3a3-be65-fd2d" name="M168 Demo Charge" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Blast; EMP; Lethal(1); One-Use</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="69ec-03ea-e15c-547c" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="796f-cae0-49d4-27c3" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
+        <infoLink id="5f16-ce90-e0db-d242" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="78fb-602c-5dda-4426" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
+        <infoLink id="3c1b-db61-fc1f-33cc" name="EMP" hidden="false" targetId="eae8-da8a-08f0-ac08" type="rule" />
+        <infoLink id="fc13-8b8a-a3d6-5ed1" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
+        <infoLink id="49af-9270-0ccc-d058" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="2ece-8d8d-7806-a5e9" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
+        <categoryLink id="8ddc-d19a-08dc-b636" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="e28c-4efd-e661-980c" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="835b-9dcd-70e1-ff7d" name="ODST Firebreak" hidden="false" targetId="ef33-aadc-cc4e-17e3" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="27.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="ffd4-158e-3760-5d3e" name="ODST Captain" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="3661-1187-b063-f00f" value="34.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d3b3-08e0-01de-1b13" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b4e9-2aec-3909-d0b2" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ab3-7c60-7e9d-4304" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6943-8cb3-a751-bd2b" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="30e1-0f37-322e-8b41" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="26f0-2a45-d081-20f8" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="8de0-a9b4-16d7-b9bc" name="ODST Captain" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="a908-97a5-308f-b21f" name="ODST Captain" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">4</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
@@ -8025,61 +8142,34 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Tactician(2)</characteristic>
           </characteristics>
         </profile>
+        <profile id="46de-99aa-98d1-d9c9" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="dfc3-3841-7959-ef73" name="M6C/SOCOM" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="53f7-77ec-b4cb-2cce" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
-        <infoLink id="dea7-64e4-cff0-c018" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="1545-5bbc-556c-1677" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="da53-8aed-e58b-d9d0" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
+        <infoLink id="189c-c68d-c18f-1b59" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="cc73-aa2e-cde5-76c8" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
-        <categoryLink id="92a7-c63b-99c4-25b0" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="86b7-3316-8c1b-13ff" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="cf37-64d6-0ebc-afdb" name="ODST Captain" hidden="false" targetId="9353-25b2-180d-dc9b" primary="false" />
+        <categoryLink id="ba03-7345-1456-86a3" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
+        <categoryLink id="c436-2c0b-894a-cd2d" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="e41d-cbf3-55e3-8ce5" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="6446-0c3e-2441-21eb" name="ODST Captain" hidden="false" targetId="9353-25b2-180d-dc9b" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="834e-41f9-70f6-743e" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="0ae4-6717-8181-f433">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8bad-092f-30db-e491" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d665-18c6-7d44-8ff8" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="0ae4-6717-8181-f433" name="M6C/SOCOM" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="3661-1187-b063-f00f" value="34.0">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile id="17c8-2ff3-f0d6-3214" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="c59a-2c9d-e212-70a9" name="M6C/SOCOM" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="2c01-a358-d339-74ee" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
-                <infoLink id="6bc8-511c-36e4-2986" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="36.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="36.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="ea2b-147b-2619-2738" name="Captain Veronica Dare - ONI (UNSC Legend)" hidden="false" collective="false" import="true" type="model">
@@ -8089,20 +8179,20 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
-        <modifier type="set" field="eef8-e3eb-04f6-e766" value="0.0">
+        <modifier type="set" field="38a7-be61-8755-4bc2" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eef8-e3eb-04f6-e766" type="max" />
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="733f-1b63-03bb-f820" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1684-f410-cdd2-1029" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a6af-e850-77c6-300f" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="38a7-be61-8755-4bc2" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a603-9694-3875-c7d9" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c32f-ae1d-de06-e307" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4197-a7c1-719e-2a7b" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="bee5-a1dc-c9ad-4638" name="Captain Veronica Dare - ONI (UNSC Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="4bad-7f01-2c4f-3656" name="Captain Veronica Dare - ONI (UNSC Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">4</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
@@ -8116,67 +8206,54 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Legend; Stealthy; Tactician(2)</characteristic>
           </characteristics>
         </profile>
+        <profile id="4e15-1447-2f7b-40b1" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4361-fdc3-2c4f-19a7" name="M6C/SOCOM" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="338b-93dd-b1fc-218e" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
-        <infoLink id="d6eb-cfaf-e88f-3992" name="Stealthy" hidden="false" targetId="ac0f-f7f4-da63-0f57" type="rule" />
-        <infoLink id="4aa9-f952-dc67-70c1" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
-        <infoLink id="aa8d-c0c4-c5fa-4577" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="1815-62f7-2d15-7271" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
+        <infoLink id="921d-d037-a776-d611" name="Stealthy" hidden="false" targetId="ac0f-f7f4-da63-0f57" type="rule" />
+        <infoLink id="578b-e9df-95e6-8461" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="d310-7f94-b3be-57c0" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
+        <infoLink id="1d23-7128-1e9c-ec3a" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="19ce-257a-5e39-4dc0" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
-        <categoryLink id="461c-7d41-c70e-fb3b" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="b7b6-7325-c44d-4a8c" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="0531-f0b4-ec49-1bff" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
-        <categoryLink id="6cb2-1fdc-0786-fe0e" name="Captain Veronica Dare - ONI (UNSC Legend)" hidden="false" targetId="d517-e9cc-736c-3652" primary="false" />
+        <categoryLink id="ed18-f68f-68c1-6ae2" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
+        <categoryLink id="2ae8-237c-022b-b4ac" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="6182-b0be-4a4f-0cdb" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="de5d-783f-b76f-62f0" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
+        <categoryLink id="7e83-e7a5-7b66-fd04" name="Captain Veronica Dare - ONI (UNSC Legend)" hidden="false" targetId="d517-e9cc-736c-3652" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="5db5-07f4-8919-3c44" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="e035-0a91-ae86-e72b">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0b2a-4164-ad0b-4923" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b8aa-f291-ee2f-34eb" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="e035-0a91-ae86-e72b" name="M6C/SOCOM" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="061d-4bf0-885a-12e8" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="4991-87f8-d860-bbe0" name="M6C/SOCOM" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="8ec3-b52e-7e4c-c546" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
-                <infoLink id="aeaa-5693-5c0d-cab4" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="39.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="39.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="613b-de3f-8591-6d1c" name="Gunnery Sergeant Edward Buck (ODST Legend)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="3661-1187-b063-f00f" value="45.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3162-00ea-d2e5-f6ff" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="23ff-4da3-bac5-a0c5" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="03e3-2614-0665-0b04" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="34f4-9d6c-8896-3bb8" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9e74-6bf5-c47a-5224" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5363-2ce5-d43a-53be" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="0a90-74e9-dd7c-de59" name="Gunnery Sergeant Edward Buck (ODST Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="925a-ef7f-55aa-c671" name="Gunnery Sergeant Edward Buck (ODST Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">4</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
@@ -8190,83 +8267,56 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Legend; Fast Transition; Scout; Tactician(1)</characteristic>
           </characteristics>
         </profile>
+        <profile id="c104-e1c5-1002-db7a" name="Combat Knife" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="bbc7-190f-1156-8797" name="MA5D Assault Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R5 (15")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Weight of Fire(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c450-cb4f-bf3c-ea33" name="M6H2 Magnum" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="cf85-fde3-e3a9-2ccc" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
-        <infoLink id="bcd0-11cb-47cb-d9aa" name="Fast Transition" hidden="false" targetId="c9dc-8bd3-4011-712e" type="rule" />
-        <infoLink id="30ed-6635-3384-c7e0" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
-        <infoLink id="6cc4-eb08-62d1-1450" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
-        <infoLink id="81fa-b92e-c7c1-0d5d" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="cfdf-0b30-ef54-94ef" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
+        <infoLink id="2b74-d310-4470-a27c" name="Fast Transition" hidden="false" targetId="c9dc-8bd3-4011-712e" type="rule" />
+        <infoLink id="1f43-5cd3-0724-e312" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
+        <infoLink id="ab69-019e-1e6c-0b95" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="f297-0153-655a-ee29" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="24dd-a5a9-6ed0-7b8d" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
+        <infoLink id="8ce6-87e9-59a0-897c" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="b98f-41bd-59e8-17ff" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
-        <categoryLink id="4404-5707-f906-7695" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="6fab-3a7a-4926-71cb" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="8e66-735b-d33e-0a69" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
-        <categoryLink id="80d9-52c1-9491-37f3" name="Gunnery Sergeant Edward Buck (ODST Legend)" hidden="false" targetId="bf1b-de2a-538e-4105" primary="false" />
+        <categoryLink id="8e9f-7d1c-9395-5cd1" name="ODST" hidden="false" targetId="9f5b-6fa7-b09b-17ba" primary="true" />
+        <categoryLink id="e3d1-122d-6ad6-a273" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="fa2a-5cc1-9f0a-3cda" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="4ebf-1d48-a484-0a01" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
+        <categoryLink id="30f1-bf99-3ea3-cdaf" name="Gunnery Sergeant Edward Buck (ODST Legend)" hidden="false" targetId="bf1b-de2a-538e-4105" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="37ef-db5c-7885-cc28" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="e1af-d982-8a99-755a">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3d72-bf18-c006-2680" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5295-c7f8-a747-540a" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="e1af-d982-8a99-755a" name="MA5D/Magnum" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="3661-1187-b063-f00f" value="45.0">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="atLeast" />
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile id="3cc6-f192-a52d-6528" name="Combat Knife" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="04e3-57d2-73e8-2245" name="MA5D Assault Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R5 (15")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Weight of Fire(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="df65-5818-23de-bdf4" name="M6H2 Magnum" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="1dbc-580d-5c8c-cb18" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="b203-be52-95b3-ef33" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
-                <infoLink id="bb36-9790-2247-946f" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="48.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="48.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="d48f-2d71-7d87-a897" name="UNSC Marine Corporal" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="02f3-ec94-7c28-c42f" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b7f9-91c7-4e00-be5f" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="263f-de76-1ac8-2d45" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ed6-7672-2b35-b2ed" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2623-23ee-4690-8593" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f794-4184-b575-4be0" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="d1dd-f2a6-9bb6-a3ed" name="UNSC Marine Corporal" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="19b4-175f-eac2-3a38" name="UNSC Marine Corporal" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">4</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
@@ -8280,65 +8330,45 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Support; Tactician(1)</characteristic>
           </characteristics>
         </profile>
+        <profile id="81d1-dcbc-4fa0-2e77" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e273-2fff-8bc7-7628" name="MA5K 'Avenger' Carbine" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Weight of Fire(3)</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="a0eb-73a9-408b-0fb1" name="Support" hidden="false" targetId="03f8-5a2f-73f3-d61e" type="rule" />
-        <infoLink id="1828-7981-c57f-eaee" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
-        <infoLink id="64c7-10ec-8531-d8ae" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="9513-4edd-afd0-5c5a" name="Support" hidden="false" targetId="03f8-5a2f-73f3-d61e" type="rule" />
+        <infoLink id="54f0-33c0-9ec4-08e7" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="f96b-1dc7-1f0a-3305" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="5b80-70d0-9a64-c382" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="aec1-459d-60c7-e285" name="Marines" hidden="false" targetId="c964-7c65-c947-c4e9" primary="true" />
-        <categoryLink id="bd5f-05b3-33d6-dd6e" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="8451-c8a0-19aa-5781" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="3323-57f2-5271-6c7e" name="UNSC Marine Corporal" hidden="false" targetId="612c-dbc5-3099-4283" primary="false" />
+        <categoryLink id="138a-2b95-abf9-7c6f" name="Marines" hidden="false" targetId="c964-7c65-c947-c4e9" primary="true" />
+        <categoryLink id="c435-6300-6675-1031" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="aa1c-4887-6ebd-774e" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="b1c6-58e7-ffd4-1e2d" name="UNSC Marine Corporal" hidden="false" targetId="612c-dbc5-3099-4283" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="95c1-c999-2a82-d91c" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="118c-3ce3-69c3-b64e">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="42ea-63b4-0eb6-02aa" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4dd5-36a8-6478-2391" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="118c-3ce3-69c3-b64e" name="MA5K Avenger Carbine" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="10fc-44bf-eaf4-8089" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="d4e0-e540-bdf8-65fb" name="MA5K 'Avenger' Carbine" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Weight of Fire(3)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="b472-9a6f-0ae0-6009" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="252f-6f39-23a0-9f61" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="25.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="25.0" />
       </costs>
     </selectionEntry>
-    <selectionEntry id="3be4-405f-298f-bb56" name="UNSC Marine" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="3be4-405f-298f-bb56" name="UNSC Marine (M41 SPNKr)" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd64-1be7-6d8a-b32f" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc2f-4194-d05b-8ba5" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="423f-1075-2f32-8fb3" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e2d5-74d8-2d86-ccd9" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a9b-e17f-c256-3c0f" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5343-2656-57e5-1a73" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="dc4d-a6a9-ee2a-f737" name="UNSC Marine" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="680b-45f9-4226-d69c" name="UNSC Marine (M41 SPNKr)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">4</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
@@ -8352,173 +8382,257 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Support</characteristic>
           </characteristics>
         </profile>
+        <profile id="70a3-9147-f682-2e64" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2858-5cdd-071a-c899" name="M41 SPNKr" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Blast; ESD(2); Explosive; Frag(5); Lethal(1); Two Use</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="3b06-15b2-19f8-1090" name="Support" hidden="false" targetId="03f8-5a2f-73f3-d61e" type="rule" />
-        <infoLink id="9c75-4762-da94-3255" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="5555-2912-5217-0d3e" name="Support" hidden="false" targetId="03f8-5a2f-73f3-d61e" type="rule" />
+        <infoLink id="5f0e-20fb-e741-3e2c" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
+        <infoLink id="1ea4-2729-7561-4f90" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="4f52-909e-0fe1-9d87" name="Explosive" hidden="false" targetId="2599-56ef-4404-67aa" type="rule" />
+        <infoLink id="24d5-0a52-ecfa-313b" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="5f9b-312c-e500-0016" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="2723-2de5-f8f6-5c68" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="98c0-6e61-821b-eea1" name="Marines" hidden="false" targetId="c964-7c65-c947-c4e9" primary="true" />
-        <categoryLink id="eb5f-7239-1d65-07f3" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="ef68-30f5-7130-cb96" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="7f33-4473-9d60-275a" name="UNSC Marine" hidden="false" targetId="a203-1b51-ae41-021a" primary="false" />
+        <categoryLink id="9ddd-3ad2-1952-a232" name="Marines" hidden="false" targetId="c964-7c65-c947-c4e9" primary="true" />
+        <categoryLink id="b38d-1afd-1c2a-aa28" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="9dee-d125-1aef-6670" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="1f0e-5de0-f4db-7a3f" name="UNSC Marine" hidden="false" targetId="a203-1b51-ae41-021a" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="b43a-1ef8-f62a-0b89" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="6e28-d227-fe37-dcb4">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="de23-e7fe-d670-830f" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dd00-311c-f75f-8034" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="6e28-d227-fe37-dcb4" name="M41 SPNKr" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="94ae-5964-b25a-a8e4" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="85fb-e99d-adf4-ac8b" name="M41 SPNKr" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Blast; ESD(2); Explosive; Frag(5); Lethal(1); Two Use</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="523d-acb3-466e-071d" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-                <infoLink id="14b3-9694-6b75-d6ea" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="18af-02b9-855c-4cee" name="Explosive" hidden="false" targetId="2599-56ef-4404-67aa" type="rule" />
-                <infoLink id="85b7-a438-d3fe-289f" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-                <infoLink id="7959-be29-7929-f63f" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="98bc-2e1a-4364-9cb5" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="21.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="7473-6c1d-ad76-3957" name="S7 Sniper Rifle" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="a014-1cdf-6734-67d3" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="2997-7710-ed2a-6133" name="S7 Sniper Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R7 (21")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Lethal(1); Sniper Scope</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="15c6-6f44-688c-194c" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="4f62-75ac-ff90-9807" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="3da8-89d5-b857-aa76" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
-                <infoLink id="0918-4e90-1a16-092a" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="18.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="2ab1-8514-97e6-121f" name="BR55 Battle Rifle" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="497c-beae-0add-8d67" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="d1b8-e1b2-e28a-81e8" name="BR55 Battle Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R5 (15")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics; Weight of Fire(1)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="cf71-92d0-1198-8a6e" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
-                <infoLink id="d947-14bc-ad23-5208" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="70b2-1ca7-e573-1b96" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="18.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="dbfa-1685-97b6-6a66" name="VK78 Commando" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="e8f9-ba27-4e62-7f61" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="3dd3-8e00-80b9-f980" name="VK78 Commando" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics; Rapid Fire</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="ac89-5f49-c2d2-7f72" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
-                <infoLink id="ec18-a3b8-a57b-12b6" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="3c1a-3572-d3c1-abf1" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="17.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="1709-accd-0ed9-9d5d" name="Pulse Carbine" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="0c32-1245-c86d-4c57" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="9f07-fb50-164d-8ac8" name="Pulse Carbine" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Weight of Fire(1)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="cf38-8a45-91c6-06f7" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="18ed-b377-17f6-8752" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="b842-a63d-8fa2-fd99" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="16.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="21.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3d97-1fad-e3d1-dfc1" name="UNSC Marine (S7 Sniper Rifle)" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ea25-d31c-a907-9a5a" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd7e-f802-1794-f040" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7321-b6fc-cfd6-be6f" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="e07d-033a-6141-f575" name="UNSC Marine (S7 Sniper Rifle)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">4</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">3</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">6+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">6+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">1 (3") / 2 (6")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Support</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4898-a86b-b127-3c69" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9de1-b012-8986-fad6" name="S7 Sniper Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R7 (21")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Lethal(1); Sniper Scope</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="6f0e-ea44-c81b-edd0" name="Support" hidden="false" targetId="03f8-5a2f-73f3-d61e" type="rule" />
+        <infoLink id="913e-127d-09b2-7088" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="654f-a2b8-e071-6114" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="49eb-d1b9-ddaf-5042" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
+        <infoLink id="db2c-51d5-5009-33ac" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="4580-3460-3188-1ed3" name="Marines" hidden="false" targetId="c964-7c65-c947-c4e9" primary="true" />
+        <categoryLink id="a0bf-9ee0-16e2-a186" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="2e06-b091-5efa-2e19" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="3d24-a4f9-6da2-e3b0" name="UNSC Marine" hidden="false" targetId="a203-1b51-ae41-021a" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="18.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="52bf-f4a0-fee2-c8d4" name="UNSC Marine (BR55 Battle Rifle)" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9ec8-08d8-6a51-9dcb" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="50d2-03e8-dc5b-d0d9" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7527-ee7d-00e3-c600" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="6aa6-1693-2cd7-b207" name="UNSC Marine (BR55 Battle Rifle)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">4</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">3</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">6+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">6+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">1 (3") / 2 (6")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Support</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9336-73b9-401b-4b6f" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ccc8-71fb-f532-859f" name="BR55 Battle Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R5 (15")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics; Weight of Fire(1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="6ab5-11c8-9221-24d3" name="Support" hidden="false" targetId="03f8-5a2f-73f3-d61e" type="rule" />
+        <infoLink id="6bb9-6f08-8664-e1ef" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
+        <infoLink id="57fb-1c43-8df7-b640" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="f888-51b1-a30d-ab6e" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="25ac-b2bb-356a-9760" name="Marines" hidden="false" targetId="c964-7c65-c947-c4e9" primary="true" />
+        <categoryLink id="993d-d678-57d4-62df" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="73bc-cdf3-0b39-ab17" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="2ded-ddad-cb1f-676c" name="UNSC Marine" hidden="false" targetId="a203-1b51-ae41-021a" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="18.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="21e3-fdb5-d81c-12af" name="UNSC Marine (VK78 Commando)" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9020-37a7-ce74-565d" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5cfe-7fc0-fe7a-e5bd" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="788b-9e0e-2d12-a3c1" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="bc6f-6dbe-077c-8971" name="UNSC Marine (VK78 Commando)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">4</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">3</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">6+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">6+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">1 (3") / 2 (6")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Support</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="cd13-0be1-8743-9592" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="aa48-5400-e9b1-ea5f" name="VK78 Commando" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics; Rapid Fire</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="c1fd-a9f2-e55f-530e" name="Support" hidden="false" targetId="03f8-5a2f-73f3-d61e" type="rule" />
+        <infoLink id="8b28-f29e-59fb-014f" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
+        <infoLink id="6c85-e824-9a23-cd8a" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+        <infoLink id="d108-91f6-23d7-54d6" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="c799-90c6-4e45-2041" name="Marines" hidden="false" targetId="c964-7c65-c947-c4e9" primary="true" />
+        <categoryLink id="d900-e808-0594-dadb" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="5682-cc03-b203-8718" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="eb8b-8e0e-a111-f057" name="UNSC Marine" hidden="false" targetId="a203-1b51-ae41-021a" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="17.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8d98-887f-4b87-75d2" name="UNSC Marine (Pulse Carbine)" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5685-6e26-ce17-b997" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf2b-7228-257c-d9b7" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e1a5-d8ff-73bd-7cb9" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="04a1-471f-93b2-189f" name="UNSC Marine (Pulse Carbine)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">4</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">3</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">5+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">6+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">6+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">1 (3") / 2 (6")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Support</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a59c-721b-fb9a-967d" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0666-5932-403a-76f4" name="Pulse Carbine" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Weight of Fire(1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="2808-1eb4-045d-7632" name="Support" hidden="false" targetId="03f8-5a2f-73f3-d61e" type="rule" />
+        <infoLink id="86b9-000f-3fd0-6e4f" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="f25e-69e7-fa92-ec0f" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="57c7-9ab0-0621-92c3" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="0051-03e5-2a13-5cb1" name="Marines" hidden="false" targetId="c964-7c65-c947-c4e9" primary="true" />
+        <categoryLink id="f6aa-0986-539a-0793" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="29ef-33db-82c5-7824" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="8126-75b4-5187-2858" name="UNSC Marine" hidden="false" targetId="a203-1b51-ae41-021a" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="16.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="87a4-b61a-a049-5bfb" name="UNSC Marine Medic" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="946a-bd21-9dd4-be79" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ea02-93e6-cd88-c773" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b2ba-5b14-ef5f-2492" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a52b-a218-77e5-2fd3" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="89bf-cd0b-115c-4211" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="afa9-ae82-30d1-545b" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="8c17-8e92-e31f-7a53" name="UNSC Marine Medic" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="96f4-00e3-bcdd-f2ed" name="UNSC Marine Medic" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">4</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
@@ -8532,65 +8646,45 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Support; Medic</characteristic>
           </characteristics>
         </profile>
+        <profile id="fc79-feff-9aa8-faf6" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e8b8-c9d2-7ed3-7b96" name="M6C/SOCOM" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="400b-0115-36f9-a5bd" name="Support" hidden="false" targetId="03f8-5a2f-73f3-d61e" type="rule" />
-        <infoLink id="95e7-5019-4528-eb42" name="Medic" hidden="false" targetId="effe-9ac1-576d-f6ac" type="rule" />
-        <infoLink id="f2de-d96d-e648-2cba" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="841a-b058-5e36-b226" name="Support" hidden="false" targetId="03f8-5a2f-73f3-d61e" type="rule" />
+        <infoLink id="0270-0574-db26-fbcb" name="Medic" hidden="false" targetId="effe-9ac1-576d-f6ac" type="rule" />
+        <infoLink id="0626-d9f7-d05b-b5f9" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
+        <infoLink id="880c-75da-cfa7-6147" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="df71-d7bc-1ff4-4af4" name="Marines" hidden="false" targetId="c964-7c65-c947-c4e9" primary="true" />
-        <categoryLink id="3a40-154d-ef33-9faa" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="0e41-2dd9-f21b-340f" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="588e-e7b7-af9d-d925" name="UNSC Marine Medic" hidden="false" targetId="8af4-de31-89e3-a079" primary="false" />
+        <categoryLink id="1f89-5d4a-48d6-9ba6" name="Marines" hidden="false" targetId="c964-7c65-c947-c4e9" primary="true" />
+        <categoryLink id="ccaa-3c3f-4344-da50" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="5e98-53be-1ff2-3079" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="033b-73de-0d60-037e" name="UNSC Marine Medic" hidden="false" targetId="8af4-de31-89e3-a079" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="8985-62ec-53c3-c037" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="10c9-7aa8-4267-0f5d">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e5e8-b54f-2b67-9adb" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a8e5-608b-a76d-7a5e" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="10c9-7aa8-4267-0f5d" name="M6C/SOCOM" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="9006-1069-a988-c258" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="82df-bf32-be56-9db6" name="M6C/SOCOM" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="f92b-402a-c6ae-aa3b" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
-                <infoLink id="fbf4-a000-6ff7-cfa9" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="19.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="19.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="53c5-5fa0-2b47-0684" name="UNSC Comms Marine" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1374-42b6-3d50-1330" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c3c-ff1f-b3bd-d6c5" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb57-b4a3-ec44-fda3" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a11b-bfed-2748-6a0d" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aeea-c992-29b9-e7c9" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9785-7c3a-ac3f-ef99" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="2a23-1d32-9d27-3128" name="UNSC Comms Marine" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="ee1d-dfb1-9c22-7b30" name="UNSC Comms Marine" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">4</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
@@ -8604,78 +8698,58 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Support; Comms Relay</characteristic>
           </characteristics>
         </profile>
+        <profile id="7643-d83a-c9d7-679e" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="720a-1da6-f277-27e4" name="MA5D Assault Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R5 (15")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Weight of Fire(1)</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="ad4f-d69d-f1cf-120d" name="Support" hidden="false" targetId="03f8-5a2f-73f3-d61e" type="rule" />
-        <infoLink id="1ba5-3fe5-6aa4-fc25" name="Comms Relay" hidden="false" targetId="78fb-f832-8458-709a" type="rule" />
-        <infoLink id="a341-0b63-a115-d6c0" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="41eb-9397-f038-1b99" name="Support" hidden="false" targetId="03f8-5a2f-73f3-d61e" type="rule" />
+        <infoLink id="e07a-ba71-8b48-dd96" name="Comms Relay" hidden="false" targetId="78fb-f832-8458-709a" type="rule" />
+        <infoLink id="89b8-3907-e48e-5e63" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="d95f-1f77-138c-b419" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="a379-28d7-15dd-c1ea" name="Marines" hidden="false" targetId="c964-7c65-c947-c4e9" primary="true" />
-        <categoryLink id="b52c-6138-ffec-dd87" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="a89f-322a-dff2-a6af" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
-        <categoryLink id="00ed-b534-3030-b318" name="UNSC Comms Marine" hidden="false" targetId="ca11-4290-05f0-8af5" primary="false" />
+        <categoryLink id="65ae-a6fd-03b8-7191" name="Marines" hidden="false" targetId="c964-7c65-c947-c4e9" primary="true" />
+        <categoryLink id="31ac-a5b6-2f24-ba52" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="8536-6f14-6e20-30b4" name="UNSC" hidden="false" targetId="9655-442a-9c02-0bcf" primary="false" />
+        <categoryLink id="de98-4fc4-9c6a-5a82" name="UNSC Comms Marine" hidden="false" targetId="ca11-4290-05f0-8af5" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="ff57-eb41-b272-5a35" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="97f3-e1b8-37e9-25e9">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7e90-4f35-c361-169b" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="685f-c7b8-1431-15a1" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="97f3-e1b8-37e9-25e9" name="MA5D Assault Rifle" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="a8e1-47b0-0328-f111" name="Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="774e-a88e-e360-1219" name="MA5D Assault Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R5 (15")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Weight of Fire(1)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="88d0-181c-440c-5e04" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="fe5b-48cc-6e85-f78b" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="18.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="18.0" />
       </costs>
     </selectionEntry>
-    <selectionEntry id="3d52-9f42-39d5-df9d" name="Sangheili Mercenary" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="3d52-9f42-39d5-df9d" name="Sangheili Mercenary (Pulse Carbine)" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
           </conditions>
         </modifier>
-        <modifier type="set" field="391f-0cdd-13c0-ba42" value="0.0">
+        <modifier type="set" field="8d84-a263-6979-9c3c" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="391f-0cdd-13c0-ba42" type="max" />
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="70db-9ec9-a671-ed1e" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2e5f-bcb8-3d5b-595e" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0918-81c0-59e3-0f3b" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8d84-a263-6979-9c3c" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f63c-bf8a-739e-6799" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bcda-eee6-2644-5635" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c8a-66b0-2129-4f52" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="7000-608f-ce7d-78af" name="Sangheili Mercenary" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="5865-7911-c275-7e35" name="Sangheili Mercenary (Pulse Carbine)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">7</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
@@ -8689,225 +8763,365 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(3); Evade</characteristic>
           </characteristics>
         </profile>
+        <profile id="a3ad-5218-c9b1-b04d" name="Sangheili Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Smash(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f50b-6e3c-d6a3-c814" name="Pulse Carbine" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Weight of Fire(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="354a-e06d-3c58-c411" name="Plasma Grenade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(4); Grenade; Lethal(1); One-Use; Sticky</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="523d-dccd-e6c9-47a1" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="16c7-fe7b-6e3a-1cab" name="Evade" hidden="false" targetId="da0a-bc9e-6c78-3f5f" type="rule" />
-        <infoLink id="ba58-5824-e7a8-b070" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="b9ba-2045-22ab-ec66" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="7dc9-1c3d-f840-b53e" name="Evade" hidden="false" targetId="da0a-bc9e-6c78-3f5f" type="rule" />
+        <infoLink id="1305-769a-beef-c1e6" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+        <infoLink id="c38b-8633-c314-fde7" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="a7c7-7127-d0f8-a47f" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="0a9b-a7f7-fb9e-fe0d" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="3659-268c-18c2-16cf" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
+        <infoLink id="5eb4-b331-7514-0a05" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="cd12-e82e-85a0-eccb" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
+        <infoLink id="ff22-5493-fb1e-34b6" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
+        <infoLink id="0b89-767c-097f-cb2f" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="3a00-f1db-b9bb-f3fe" name="Sangheili" hidden="false" targetId="76d6-aa41-a970-e81a" primary="true" />
-        <categoryLink id="2b85-35b1-1c62-199f" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="6a94-ab06-45c5-1b80" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
-        <categoryLink id="5ef2-12a7-6b44-c92a" name="Sangheili Mercenary" hidden="false" targetId="7cb9-aa0b-123e-9c1c" primary="false" />
+        <categoryLink id="82ba-1ef1-d916-26df" name="Sangheili" hidden="false" targetId="76d6-aa41-a970-e81a" primary="true" />
+        <categoryLink id="60b2-5ca2-4e44-9792" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="80c6-e40a-dfd4-8bf5" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
+        <categoryLink id="9dc8-b4b6-22af-9a22" name="Sangheili Mercenary" hidden="false" targetId="7cb9-aa0b-123e-9c1c" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="1a31-a7e2-fefc-d246" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="0587-7214-a64c-7d5f">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="918d-66d9-65ca-f8e9" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ee16-e23b-92b5-7572" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="0587-7214-a64c-7d5f" name="Pulse Carbine" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="c02a-7404-1def-a5b7" name="Sangheili Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Smash(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="15e0-7ba5-5ee9-8769" name="Pulse Carbine" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Weight of Fire(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="e188-dba2-85d9-9d73" name="Plasma Grenade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(4); Grenade; Lethal(1); One-Use; Sticky</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="bfb6-4bb0-17b4-3efd" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
-                <infoLink id="211b-97c9-d65d-1a90" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="a116-6530-6d51-bbd0" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="1808-a0d6-34f0-e1a6" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-                <infoLink id="2728-8d51-2f02-6d6b" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="205a-3f4b-e697-6b36" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="9f05-2349-ddc8-081f" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
-                <infoLink id="3726-0e0e-9f85-5503" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
-                <infoLink id="d3ed-3a68-d8d0-1080" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="41.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="2c8e-6f7c-ac76-383f" name="Needler" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="ede7-eaa7-4cb5-51ee" name="Sangheili Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Smash(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="f11e-ee2d-391e-61bb" name="Needler" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1); Rapid Fire; Weight of Fire(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="c6bd-bc72-2b83-8729" name="Plasma Grenade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(4); Grenade; Lethal(1); One-Use; Sticky</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="8865-4a9f-a783-7edd" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
-                <infoLink id="d81d-9bcd-d733-373d" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="fae9-c9c8-ded6-041d" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="0617-c927-2e34-9563" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="65e4-cfb2-d3a8-3883" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-                <infoLink id="638e-d6c2-9062-197a" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="3767-a90e-9baa-3b61" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
-                <infoLink id="ea1a-ebff-f990-7507" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
-                <infoLink id="0d04-c599-0541-e682" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="42.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="57ee-0780-bfce-f16c" name="Plasma Rifle" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="9ad3-ed57-18e9-98fc" name="Sangheili Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Smash(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="6175-2199-314d-decb" name="Plasma Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Continuous Fire; ESD(1); Rapid Fire</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="ff3c-d5bb-8368-29f5" name="Plasma Grenade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(4); Grenade; Lethal(1); One-Use; Sticky</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="0bac-ff5b-e07b-dc1c" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
-                <infoLink id="49ca-a93f-4085-5c03" name="Continuous Fire" hidden="false" targetId="8af9-c2bd-d5cf-49de" type="rule" />
-                <infoLink id="7a01-ac98-e185-8f89" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="57ab-1b68-37ad-256d" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="fdc7-fc5e-5cfb-51a3" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-                <infoLink id="4aed-986f-7b1b-ba16" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="ee72-c0f0-009e-14e5" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="1770-2320-580f-4ca7" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
-                <infoLink id="6140-aa9e-c32e-e347" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
-                <infoLink id="9722-0d4b-b34c-dfab" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="44.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="1f98-fbfd-bcee-c917" name="Energy Sword" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="8dbb-95ea-055e-d0d8" name="Energy Sword" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP3</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(2); Lethal(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="d12f-c03a-6cb9-3cc6" name="Energy Sword lunge" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R1 (3")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP3</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Lunge</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="14b7-9491-76ae-8ea0" name="Plasma Grenade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(4); Grenade; Lethal(1); One-Use; Sticky</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="e568-4eaf-a50b-0367" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="8045-4b18-5584-b889" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="465e-78f0-c282-6e82" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
-                <infoLink id="2149-328e-02f8-a321" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-                <infoLink id="2d05-554e-79d9-8c45" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="1014-a3d4-1347-fc3b" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
-                <infoLink id="ba7b-abb6-8a55-ab6f" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
-                <infoLink id="b9d1-f0da-1b54-9764" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="47.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="850d-d3a0-665a-124a" name="Concussion Rifle" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="0e71-30a6-a3c1-2919" name="Sangheili Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Smash(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="5599-7953-e34e-02ae" name="Concussion Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R5 (15")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Blast; ESD(1); Frag(4); Grenade</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="e719-bc9f-507d-6049" name="Plasma Grenade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(4); Grenade; Lethal(1); One-Use; Sticky</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="e958-6691-d5d8-73f2" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
-                <infoLink id="e642-2033-22c7-fd73" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-                <infoLink id="5310-dfd6-2093-2f4d" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="caf5-bb2b-0eea-bb95" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-                <infoLink id="ddfe-9cda-3406-8106" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="3efa-f811-f159-15ac" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="e5a0-6e69-9873-7d34" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
-                <infoLink id="72ab-5a47-9d1b-fb32" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
-                <infoLink id="e3a3-b387-b4a9-f927" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="47.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="41.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4d08-f546-aa4b-58bb" name="Sangheili Mercenary (Needler)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
+          </conditions>
+        </modifier>
+        <modifier type="set" field="9b49-0b27-dbef-fd3a" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9b49-0b27-dbef-fd3a" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6126-75f7-391f-cc12" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="db73-9c8f-9dfa-9f4e" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7869-e732-5bac-8045" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="65a8-db07-67f7-eeaa" name="Sangheili Mercenary (Needler)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">7</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">3</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">4+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">2 (6") / 3 (9")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(3); Evade</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a2a5-eafc-7e10-3edd" name="Sangheili Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Smash(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d26b-5ba4-fb45-6f83" name="Needler" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1); Rapid Fire; Weight of Fire(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e3fd-4164-e356-d044" name="Plasma Grenade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(4); Grenade; Lethal(1); One-Use; Sticky</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="d048-7a91-40c3-05a3" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="41b0-bdfe-87a4-fd53" name="Evade" hidden="false" targetId="da0a-bc9e-6c78-3f5f" type="rule" />
+        <infoLink id="df25-4b83-5a84-2e58" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+        <infoLink id="403e-c714-e7e9-bf57" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="dd11-ff34-a755-3f9f" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+        <infoLink id="3283-03e1-8281-5c15" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="473a-6f21-fa36-1714" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="9939-4a53-1b32-6ad0" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
+        <infoLink id="e39c-96a6-45e5-1fb8" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
+        <infoLink id="3dc6-4227-0f57-9ecc" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
+        <infoLink id="37a8-b0be-7dfc-f0ce" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="44c4-4482-771d-5732" name="Sangheili" hidden="false" targetId="76d6-aa41-a970-e81a" primary="true" />
+        <categoryLink id="aec5-4b17-aa0a-e0af" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="e6f1-3d2f-c4d5-3365" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
+        <categoryLink id="8529-b871-cae6-7b5f" name="Sangheili Mercenary" hidden="false" targetId="7cb9-aa0b-123e-9c1c" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="42.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7820-4836-8eb7-6102" name="Sangheili Mercenary (Plasma Rifle)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
+          </conditions>
+        </modifier>
+        <modifier type="set" field="4451-9e83-0956-7c72" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4451-9e83-0956-7c72" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="76d7-4442-f0bb-ed86" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d433-97ec-a744-3711" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="59d0-065a-c0d8-c81c" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="cd85-893e-03b9-5903" name="Sangheili Mercenary (Plasma Rifle)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">7</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">3</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">4+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">2 (6") / 3 (9")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(3); Evade</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6e2b-efdd-5e2d-fb21" name="Sangheili Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Smash(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f94c-e257-87f9-6ccc" name="Plasma Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Continuous Fire; ESD(1); Rapid Fire</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="98d3-89f3-45ea-2646" name="Plasma Grenade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(4); Grenade; Lethal(1); One-Use; Sticky</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="4b85-ea6f-ee95-06ac" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="ec3a-6547-6d2b-4e85" name="Evade" hidden="false" targetId="da0a-bc9e-6c78-3f5f" type="rule" />
+        <infoLink id="dad4-fd79-3c8c-1ecc" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+        <infoLink id="9987-e542-d7c7-700c" name="Continuous Fire" hidden="false" targetId="8af9-c2bd-d5cf-49de" type="rule" />
+        <infoLink id="a6c1-56a4-404f-f4d2" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="fb79-043b-e509-2559" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+        <infoLink id="5a54-b90a-88d7-bbc7" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="0398-73fd-fcf6-396b" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
+        <infoLink id="ee93-7faf-77a4-ad99" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="d9f0-8f35-1816-1993" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
+        <infoLink id="6938-29e7-6a83-9dd9" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
+        <infoLink id="db3e-65f0-a0de-c28e" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="d76b-f57c-7f7a-4a23" name="Sangheili" hidden="false" targetId="76d6-aa41-a970-e81a" primary="true" />
+        <categoryLink id="9565-1b8a-3917-f364" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="7ec3-f0e3-5f9a-378f" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
+        <categoryLink id="75fd-1521-79e5-906b" name="Sangheili Mercenary" hidden="false" targetId="7cb9-aa0b-123e-9c1c" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="44.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="443a-a0c6-5d1f-b230" name="Sangheili Mercenary (Energy Sword)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
+          </conditions>
+        </modifier>
+        <modifier type="set" field="3b37-d15e-8071-915a" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3b37-d15e-8071-915a" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc73-34b8-2265-3dfe" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="81d4-ffad-b855-7420" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="31f8-ded6-c1d2-faee" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="8088-2596-92a4-fa80" name="Sangheili Mercenary (Energy Sword)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">7</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">3</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">4+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">2 (6") / 3 (9")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(3); Evade</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="325c-fc6e-61f1-96c3" name="Energy Sword" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP3</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(2); Lethal(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6e53-19dd-b673-8dd5" name="Energy Sword lunge" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R1 (3")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP3</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Lunge</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="910f-11bc-fa23-48c2" name="Plasma Grenade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(4); Grenade; Lethal(1); One-Use; Sticky</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="dc08-8d60-0870-2ef8" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="2cfe-2d4e-065e-696a" name="Evade" hidden="false" targetId="da0a-bc9e-6c78-3f5f" type="rule" />
+        <infoLink id="c58c-9dae-6ac4-9153" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="627d-5c2d-87a1-2c83" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="1c35-8714-0f4e-1485" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
+        <infoLink id="5cb9-47ff-3034-b0e4" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="bf7b-6606-6daa-a0de" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
+        <infoLink id="ce3b-9ea2-e135-b91f" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
+        <infoLink id="e79b-043d-3f57-e3c8" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
+        <infoLink id="a785-2d7d-c2cd-c2a3" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="579d-9389-f806-57d7" name="Sangheili" hidden="false" targetId="76d6-aa41-a970-e81a" primary="true" />
+        <categoryLink id="d97b-d7b7-8a52-28f3" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="dd51-5d61-2800-20f8" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
+        <categoryLink id="d55b-c7e5-d77c-bf33" name="Sangheili Mercenary" hidden="false" targetId="7cb9-aa0b-123e-9c1c" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="47.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="25bd-64df-adeb-2e65" name="Sangheili Mercenary (Concussion Rifle)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
+          </conditions>
+        </modifier>
+        <modifier type="set" field="bfb5-8f8d-054a-975d" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bfb5-8f8d-054a-975d" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a9a0-3cc9-8e1c-3dab" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="39c9-d404-eeb6-1f18" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="62e7-3b2d-68a0-5d57" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="8878-f3b4-fb00-591b" name="Sangheili Mercenary (Concussion Rifle)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">7</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">3</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">4+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">2 (6") / 3 (9")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(3); Evade</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e19f-927c-0b01-67aa" name="Sangheili Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Smash(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="970e-7b02-82cb-6473" name="Concussion Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R5 (15")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Blast; ESD(1); Frag(4); Grenade</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="cc4a-f064-18de-4080" name="Plasma Grenade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(4); Grenade; Lethal(1); One-Use; Sticky</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="2ced-3432-d431-5a63" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="10b2-372b-2543-0337" name="Evade" hidden="false" targetId="da0a-bc9e-6c78-3f5f" type="rule" />
+        <infoLink id="fd0b-f702-383e-d8f2" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+        <infoLink id="a21c-2ff2-18b0-0540" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
+        <infoLink id="47e5-5b8e-caaa-28c5" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="0d9b-a9de-e27b-1658" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="d6f3-d52b-9cd1-bb0c" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
+        <infoLink id="fa24-08d3-78a8-da04" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="9e43-8070-abdb-f9f6" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
+        <infoLink id="2f55-5aad-8963-81bb" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
+        <infoLink id="e24a-cbc0-1ece-771c" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="73ff-056b-152a-193e" name="Sangheili" hidden="false" targetId="76d6-aa41-a970-e81a" primary="true" />
+        <categoryLink id="67af-fbc6-1c85-382f" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="da23-62b4-1ede-487a" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
+        <categoryLink id="fbfa-8c1f-28c9-972d" name="Sangheili Mercenary" hidden="false" targetId="7cb9-aa0b-123e-9c1c" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="47.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="910e-7ac0-c495-531e" name="Sangheili Enforcer" hidden="false" collective="false" import="true" type="model">
@@ -8917,20 +9131,20 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
           </conditions>
         </modifier>
-        <modifier type="set" field="b646-b9b2-a7b7-072a" value="0.0">
+        <modifier type="set" field="4c61-9764-89b3-f68b" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b646-b9b2-a7b7-072a" type="max" />
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b666-a0e9-38a6-9ffa" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f3e-7d24-6b99-6978" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6fb3-a983-4e3b-145e" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4c61-9764-89b3-f68b" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="35a2-3f2c-1575-d10f" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="02ad-b5be-299b-210c" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8dda-1bdc-e475-8bd5" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="bfd0-df8d-c68c-2a4b" name="Sangheili Enforcer" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="2ce6-d9b2-41f0-e7c0" name="Sangheili Enforcer" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">9</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
@@ -8944,71 +9158,51 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(4); Evade; Tactician(1)</characteristic>
           </characteristics>
         </profile>
+        <profile id="9ca7-5958-8ccf-5514" name="Sangheili Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Smash(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="335a-a344-94e3-691f" name="Shock Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Blast; ESD(2); Sniper Scope</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4cae-7998-c89c-54b6" name="Plasma Grenade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(4); Grenade; Lethal(1); One-Use; Sticky</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="3403-c94a-0d9e-6f47" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="ca69-28b7-2e09-bbd7" name="Evade" hidden="false" targetId="da0a-bc9e-6c78-3f5f" type="rule" />
-        <infoLink id="c507-9365-18c0-9dc3" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
-        <infoLink id="0dba-23e2-bb2e-1e98" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="60e7-1a04-1ad5-677d" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="5e86-ef43-5d00-5f7c" name="Evade" hidden="false" targetId="da0a-bc9e-6c78-3f5f" type="rule" />
+        <infoLink id="cc9f-b60c-4c90-9302" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="467c-d900-6c2c-c302" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+        <infoLink id="33c9-85be-fddb-0b84" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
+        <infoLink id="a2c6-16b5-5cd5-2a38" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="a364-f4d7-9a0b-95c7" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
+        <infoLink id="22d8-719b-b05f-86fd" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="d845-14a3-c057-70b9" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
+        <infoLink id="c30a-f86f-d231-1373" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="e81f-f600-6936-e3bb" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
+        <infoLink id="19c3-ee3e-7b09-0eb0" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
+        <infoLink id="3d93-b824-7b33-5f39" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="a8f1-9e8e-5b45-7db3" name="Sangheili" hidden="false" targetId="76d6-aa41-a970-e81a" primary="true" />
-        <categoryLink id="40b9-1887-c471-70e5" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="3133-354f-72b1-f3c9" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
-        <categoryLink id="8cd7-d18a-4250-9f0e" name="Sangheili Enforcer" hidden="false" targetId="4e0d-ff7b-29cd-549b" primary="false" />
+        <categoryLink id="5032-356e-76d9-8f4c" name="Sangheili" hidden="false" targetId="76d6-aa41-a970-e81a" primary="true" />
+        <categoryLink id="451f-db78-7b84-31df" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="e4d3-8505-b162-211f" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
+        <categoryLink id="feae-b308-660d-5376" name="Sangheili Enforcer" hidden="false" targetId="4e0d-ff7b-29cd-549b" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="e7b0-fd35-bfa9-ee6c" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="dabf-0f84-9e79-a332">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1bfb-a554-2772-7508" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4589-2461-2115-4a44" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="dabf-0f84-9e79-a332" name="Shock Rifle" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="cb06-3bc3-8934-d4c9" name="Sangheili Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Smash(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="2c0d-0069-d287-4cfe" name="Shock Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Blast; ESD(2); Sniper Scope</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="80d9-b15d-ffcd-553e" name="Plasma Grenade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(4); Grenade; Lethal(1); One-Use; Sticky</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="d12e-1c65-4135-657a" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
-                <infoLink id="5637-8f33-251c-c9ec" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-                <infoLink id="67f9-51dd-2200-28b6" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="b034-a10d-c458-0083" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
-                <infoLink id="f33a-0cb1-18bb-9559" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-                <infoLink id="5d7a-e717-6999-494f" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="9951-ec1b-7896-2f4b" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="a3f5-8de1-0c10-0e17" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
-                <infoLink id="e134-14df-822b-13ef" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
-                <infoLink id="4f00-b1af-8e0d-53c6" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="56.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="56.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="8866-1550-87dc-0cdb" name="Jega 'Rdomnai (Banished Legend)" hidden="false" collective="false" import="true" type="model">
@@ -9018,20 +9212,20 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
           </conditions>
         </modifier>
-        <modifier type="set" field="4131-868f-00ef-ccd0" value="0.0">
+        <modifier type="set" field="8344-cc4e-f88d-0776" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4131-868f-00ef-ccd0" type="max" />
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f617-a0ae-ae09-2a5b" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c8df-c17c-212f-2cab" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee5e-ff20-d348-77d6" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8344-cc4e-f88d-0776" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8497-a627-3709-0d10" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5de5-b139-50c5-ede9" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7779-3d0a-6c3e-b8b5" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="c1b2-3f63-89ca-46c2" name="Jega 'Rdomnai (Banished Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="daa6-70d7-60ce-7b66" name="Jega 'Rdomnai (Banished Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">4</characteristic>
@@ -9045,65 +9239,45 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Legend; Active Camouflage; Energy Shield(3); Evade; Fearless; High Value Target; Spartan Killer; Tactician(1)</characteristic>
           </characteristics>
         </profile>
+        <profile id="1f52-b772-a0b6-a1a3" name="Bloodblade and Ghostpierce (thrown)" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R1 (3")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Lethal(1); Lunge</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5a4d-a347-9eaf-c9a4" name="Bloodblade and Ghostpierce (melee)" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP3</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(2); Lethal(2); Smash(1)</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="2e25-4ed3-19bf-fc25" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
-        <infoLink id="e08b-311c-554e-068a" name="Active Camouflage" hidden="false" targetId="e7f4-cc64-081b-32af" type="rule" />
-        <infoLink id="1a72-1e48-4fbd-0bf7" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="318a-36c5-bc7c-2041" name="Evade" hidden="false" targetId="da0a-bc9e-6c78-3f5f" type="rule" />
-        <infoLink id="33f2-a888-272d-a067" name="Fearless" hidden="false" targetId="c209-35bd-6caa-3a50" type="rule" />
-        <infoLink id="84d4-0790-8a71-fc7c" name="High Value Target (HVT)" hidden="false" targetId="a15c-2e11-e3cd-8b3c" type="rule" />
-        <infoLink id="3ece-4e45-ad61-23cc" name="Spartan Killer" hidden="false" targetId="1f56-e733-55df-2362" type="rule" />
-        <infoLink id="3319-d028-c5b0-f2b6" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
-        <infoLink id="fd0c-8cce-29fa-83b5" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="94ec-e195-6e74-03be" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
+        <infoLink id="e5cb-2198-4778-6f23" name="Active Camouflage" hidden="false" targetId="e7f4-cc64-081b-32af" type="rule" />
+        <infoLink id="d5ef-6c27-143a-557d" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="c224-b375-7d3d-9555" name="Evade" hidden="false" targetId="da0a-bc9e-6c78-3f5f" type="rule" />
+        <infoLink id="97ab-b885-6b82-58e5" name="Fearless" hidden="false" targetId="c209-35bd-6caa-3a50" type="rule" />
+        <infoLink id="a773-fc29-c153-49e3" name="High Value Target (HVT)" hidden="false" targetId="a15c-2e11-e3cd-8b3c" type="rule" />
+        <infoLink id="18e4-b223-4b6d-b924" name="Spartan Killer" hidden="false" targetId="1f56-e733-55df-2362" type="rule" />
+        <infoLink id="8852-a3c4-70d2-404a" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="bca6-3ff1-8bf7-650c" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="3ed3-f760-8114-351d" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="7517-a8b1-c083-bb29" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
+        <infoLink id="ea50-51c3-2783-374a" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+        <infoLink id="d5be-07c2-eb22-7ac4" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="f77a-45b1-3df9-3f4c" name="Sangheili" hidden="false" targetId="76d6-aa41-a970-e81a" primary="true" />
-        <categoryLink id="2106-c94c-3f06-0b28" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="2ae8-2ee8-6c6c-4452" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
-        <categoryLink id="7a24-ff71-ec20-06a2" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
-        <categoryLink id="45bb-7304-7d50-b160" name="Jega 'Rdomnai (Banished Legend)" hidden="false" targetId="5edd-7cc7-d096-0ae0" primary="false" />
+        <categoryLink id="917e-5db5-9146-5ad6" name="Sangheili" hidden="false" targetId="76d6-aa41-a970-e81a" primary="true" />
+        <categoryLink id="754b-2946-6936-622b" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="871d-7100-b387-c502" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
+        <categoryLink id="4069-2788-6556-1d2c" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
+        <categoryLink id="3465-35d0-fab8-6719" name="Jega 'Rdomnai (Banished Legend)" hidden="false" targetId="5edd-7cc7-d096-0ae0" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="f5cf-5de7-7879-ed4d" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="00b6-0a25-2391-a040">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5436-e897-88a5-45c7" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cbd5-fbaf-424f-b085" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="00b6-0a25-2391-a040" name="Bloodblade and Ghostpierce" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="d37c-7f3a-12ff-a897" name="Bloodblade and Ghostpierce (thrown)" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R1 (3")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Lethal(1); Lunge</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="5e0d-a87d-b27d-a115" name="Bloodblade and Ghostpierce (melee)" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP3</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(2); Lethal(2); Smash(1)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="fc64-e08e-fe6c-ee22" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="0a0b-2e21-b91c-bda0" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="7165-8133-ff0c-6fbe" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
-                <infoLink id="0c40-0fee-ebaa-6298" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
-                <infoLink id="c01e-7bad-d7f1-843d" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="75.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="75.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="4559-b2a2-2ed8-e34c" name="Kig-Yar Sniper" hidden="false" collective="false" import="true" type="model">
@@ -9113,20 +9287,20 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
           </conditions>
         </modifier>
-        <modifier type="set" field="52a9-106e-cbbe-2c73" value="0.0">
+        <modifier type="set" field="2a74-247d-6c60-4575" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="52a9-106e-cbbe-2c73" type="max" />
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c75-8f1d-a9cb-1999" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="88f2-a36f-dec9-bc86" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a7a-0420-1407-babe" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2a74-247d-6c60-4575" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e45a-5c5f-23ca-a7f7" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8460-2e0b-8c1e-06e8" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6378-e6bc-0466-027e" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="2977-1208-d7b2-dec3" name="Kig-Yar Sniper" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="99c6-e744-18f9-451b" name="Kig-Yar Sniper" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">3</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
@@ -9140,55 +9314,35 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Agile; Scout</characteristic>
           </characteristics>
         </profile>
+        <profile id="c07d-2b09-51c1-d961" name="Kig-Yar Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="dc0e-1c33-16cc-0516" name="Stalker Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Sniper Scope</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="5f2d-a0f1-5c1a-a0a2" name="Agile" hidden="false" targetId="e00d-7365-2450-192c" type="rule" />
-        <infoLink id="7a9a-14d7-bc41-1589" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
-        <infoLink id="93f8-362d-e113-9bc7" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="d7a5-bf77-4298-a5f9" name="Agile" hidden="false" targetId="e00d-7365-2450-192c" type="rule" />
+        <infoLink id="eaef-8880-1152-857d" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
+        <infoLink id="2ba6-ad41-9b0b-a3a9" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
+        <infoLink id="22ba-e105-25d7-d72d" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="29fa-b559-1f1c-0272" name="Kig-Yar" hidden="false" targetId="083a-640e-69e2-d56c" primary="true" />
-        <categoryLink id="1ea1-cc85-e779-a031" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="d70e-ba2e-c01e-3f4f" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
-        <categoryLink id="233f-aee5-7ac5-03d4" name="Kig-Yar Sniper" hidden="false" targetId="6f75-5a05-9cbb-3a01" primary="false" />
+        <categoryLink id="6113-b8d2-c7ca-6510" name="Kig-Yar" hidden="false" targetId="083a-640e-69e2-d56c" primary="true" />
+        <categoryLink id="5136-05fc-6852-5b58" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="6f68-558d-a9b8-c393" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
+        <categoryLink id="b9bd-b2f8-0e45-4c3a" name="Kig-Yar Sniper" hidden="false" targetId="6f75-5a05-9cbb-3a01" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="fc38-7407-e38c-a587" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="67ea-46ed-2470-ae04">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9fc7-3d34-8cd2-e828" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e0c1-2a7f-704f-83ba" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="67ea-46ed-2470-ae04" name="Stalker Rifle" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="7392-af29-9e62-6054" name="Kig-Yar Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="0c92-329b-d206-1548" name="Stalker Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Sniper Scope</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="2e5f-5afc-e9b5-00c5" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
-                <infoLink id="2195-5b1a-9f0f-2d0c" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="26.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="26.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="f6e9-3648-45fd-80e2" name="Kig-Yar Freebooter" hidden="false" collective="false" import="true" type="model">
@@ -9198,20 +9352,20 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
           </conditions>
         </modifier>
-        <modifier type="set" field="23a0-f1f5-c037-0a77" value="0.0">
+        <modifier type="set" field="7cc2-ccc8-54a7-a442" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="23a0-f1f5-c037-0a77" type="max" />
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a54b-3060-83e4-f07c" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73d6-de54-3309-14d8" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="85bc-59bb-2400-33c8" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7cc2-ccc8-54a7-a442" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5975-8dc2-9816-9096" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d1e-ceb4-5dce-7b91" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="af2d-9216-741d-7671" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="f02f-e85e-fd29-0b10" name="Kig-Yar Freebooter" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="0995-d249-06c8-1d7f" name="Kig-Yar Freebooter" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">5</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
@@ -9225,67 +9379,54 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(2); Scout</characteristic>
           </characteristics>
         </profile>
+        <profile id="8d4b-96f4-55e5-94d7" name="Kig-Yar Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8ae2-ea53-37a4-89cb" name="Needler" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1); Rapid Fire; Weight of Fire(1)</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="da05-22e3-5d72-4413" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="236d-1630-7c15-f0d6" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
-        <infoLink id="d3cf-e54d-41c8-1cf9" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="69ec-9b55-391d-b8ad" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="47e7-37c0-43d7-8595" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
+        <infoLink id="42ac-cb7d-d6cb-7f0d" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="a2a6-a403-5fff-6640" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+        <infoLink id="1af9-e02a-bcaf-792a" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="5b40-61d6-82dd-e0ef" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="223e-cb43-3836-382a" name="Kig-Yar" hidden="false" targetId="083a-640e-69e2-d56c" primary="true" />
-        <categoryLink id="5072-0b99-f949-3519" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="7ca7-9d18-e157-0257" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
-        <categoryLink id="a809-8588-5ef9-ba8a" name="Kig-Yar Freebooter" hidden="false" targetId="0214-ad3a-5546-5497" primary="false" />
+        <categoryLink id="bc62-271e-524d-2df9" name="Kig-Yar" hidden="false" targetId="083a-640e-69e2-d56c" primary="true" />
+        <categoryLink id="2256-5ccc-5662-b94c" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="38d3-039b-5602-ee2a" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
+        <categoryLink id="a9ea-bee1-39a0-3372" name="Kig-Yar Freebooter" hidden="false" targetId="0214-ad3a-5546-5497" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="fa8a-e51e-88cc-7f0d" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="eae0-e38a-5ee6-87ec">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a5bd-700c-a74e-14b1" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4689-479a-2e9a-9fbc" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="eae0-e38a-5ee6-87ec" name="Needler" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="a681-6593-d918-9a32" name="Kig-Yar Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="ea20-1b2a-8aa0-f3df" name="Needler" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1); Rapid Fire; Weight of Fire(1)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="b5b6-d2ee-65dc-f1ef" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="c63c-c66c-10db-b787" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="bc1c-2b12-35c8-4bdb" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="1956-6455-4c1d-6eef" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="20.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="20.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="27e8-38cf-5607-65d0" name="Jiralhanae Warrior" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="3661-1187-b063-f00f" value="30.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e1a-aa06-3578-3c13" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="084f-c78f-3aec-4fc8" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="efb1-2665-77a5-5fb8" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c7f7-f7d7-d2e1-176c" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d588-0fa4-5164-d976" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b6a6-6c5e-3348-28a2" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="c08d-f537-f536-1879" name="Jiralhanae Warrior" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="a92b-b7b2-a84d-12c6" name="Jiralhanae Warrior" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">7</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">6</characteristic>
@@ -9299,218 +9440,185 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Imposing; Scout</characteristic>
           </characteristics>
         </profile>
+        <profile id="3533-d4ff-e767-b9a9" name="Jiralhanae Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Knockback</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5fdf-263d-786d-2f23" name="VK78 Commando" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics; Rapid Fire</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="681f-67f9-405d-6915" name="Spike Grenade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(4); Grenade; One-Use; Sticky</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="9ad5-c4bc-a645-b74b" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
-        <infoLink id="f712-6034-cec5-36b0" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
-        <infoLink id="9547-a926-cc02-c18a" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="426e-b200-5a95-b6a1" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
+        <infoLink id="6c0f-b1f6-b80a-1a83" name="Scout" hidden="false" targetId="4ac8-75d9-ae57-961f" type="rule" />
+        <infoLink id="0885-0f2b-e5e6-99ea" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
+        <infoLink id="440b-eb22-41f9-68e4" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
+        <infoLink id="3689-6883-11e8-88c6" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+        <infoLink id="ea6a-ba3c-022d-0e23" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="539b-7e72-aa8f-5a9a" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
+        <infoLink id="64af-f27c-773e-9ef9" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
+        <infoLink id="f273-da7f-d578-4cb9" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
+        <infoLink id="ed98-c909-f80f-aa1e" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="4716-a942-50c2-271b" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
-        <categoryLink id="9ef5-46ed-f283-9afe" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="c926-3257-a4a5-ff63" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
-        <categoryLink id="2de8-ba47-8af6-b40c" name="Jiralhanae Warrior" hidden="false" targetId="35cd-dbbe-16fb-0194" primary="false" />
+        <categoryLink id="e1b1-25be-c112-4a35" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
+        <categoryLink id="fa43-6e47-2460-54d7" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="4085-b78b-0ae6-c455" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
+        <categoryLink id="9dab-fea3-cf42-beb1" name="Jiralhanae Warrior" hidden="false" targetId="35cd-dbbe-16fb-0194" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="836e-9e42-e72f-3c6f" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="dcf5-f228-0cfd-3f4b">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="51ea-b499-aeed-4df1" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="67dd-2b89-1b34-4e88" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="dcf5-f228-0cfd-3f4b" name="VK78 Commando" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="3661-1187-b063-f00f" value="30.0">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile id="f8c2-a8e4-5c09-9a71" name="Jiralhanae Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Knockback</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="9a53-b8e7-f6b2-bde5" name="VK78 Commando" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Optics; Rapid Fire</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="ae56-9bad-e601-69c0" name="Spike Grenade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(4); Grenade; One-Use; Sticky</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="bf6b-bf38-ca44-b472" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-                <infoLink id="847d-f533-28bd-9bfd" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
-                <infoLink id="8dd2-bd53-f18e-957e" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="ec96-ae1f-a41b-75a4" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-                <infoLink id="9883-9d1a-ef9f-f903" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="1275-1748-d1ea-d5f1" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
-                <infoLink id="b0d9-d90a-086e-7e5a" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
-                <infoLink id="4748-2d5f-dac1-4770" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="32.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="32.0" />
       </costs>
     </selectionEntry>
-    <selectionEntry id="6d06-6c5d-723f-0ae1" name="Jiralhanae Berserker" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="6d06-6c5d-723f-0ae1" name="Jiralhanae Berserker (Dynamo Grenade)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="3661-1187-b063-f00f" value="32.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a7d4-ea8d-93e6-f1c8" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa1a-394a-c13f-0b58" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab41-8a6a-7c82-cc0f" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
-      </constraints>
-      <infoLinks>
-        <infoLink id="60a6-20d5-7b96-5712" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
-        <infoLink id="38de-2850-ec3f-b776" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="8681-6f2e-5b31-1e8a" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink id="3eba-781f-773a-d772" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
-        <categoryLink id="efc4-f59c-80fb-61bb" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="042d-fddb-6332-07f0" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
-        <categoryLink id="2d27-aba6-1d33-69e6" name="Jiralhanae Berserker" hidden="false" targetId="6603-6ef1-4306-cfc0" primary="false" />
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="9b90-b603-236e-6cc7" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="6619-2e5f-21bc-d22b">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="598c-971f-938f-35cc" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="455d-8555-36e0-6efb" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="6619-2e5f-21bc-d22b" name="Dynamo Grenade" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="3661-1187-b063-f00f" value="32.0">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile id="eea7-530f-d698-657d" name="Jiralhanae Berserker (Dynamo Grenade)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
-                  <characteristics>
-                    <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">7</characteristic>
-                    <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">6</characteristic>
-                    <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
-                    <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
-                    <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
-                    <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">6+</characteristic>
-                    <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
-                    <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">6+</characteristic>
-                    <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">1 (3") / 3 (9")</characteristic>
-                    <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Imposing</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="db5d-1364-79fb-90ef" name="Wrist Blades" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Knockback; Smash(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="45d2-c048-4565-48d9" name="Dynamo Grenade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">EMP; Grenade; Implosion(3); One-Use</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="58e1-684a-9a4c-98b4" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-                <infoLink id="e70a-2dc7-0ab4-9097" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
-                <infoLink id="d313-41ff-a01e-83f0" name="EMP" hidden="false" targetId="eae8-da8a-08f0-ac08" type="rule" />
-                <infoLink id="350c-0c54-0b1f-16de" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="cbb4-a129-892e-c149" name="Implosion" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
-                <infoLink id="c963-97ab-2acb-6598" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
-                <infoLink id="b501-b4ae-2d7b-856f" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="33.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="c7fe-699c-fac5-b54d" name="Spike Grenade" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="3661-1187-b063-f00f" value="32.0">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile id="d8eb-6647-928d-9d31" name="Jiralhanae Berserker (Spike Grenade)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
-                  <characteristics>
-                    <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
-                    <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">6</characteristic>
-                    <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
-                    <characteristic name="ES" typeId="baac-a14d-979f-803f">1</characteristic>
-                    <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">7</characteristic>
-                    <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">6+</characteristic>
-                    <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
-                    <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">6+</characteristic>
-                    <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">1 (3") / 3 (9")</characteristic>
-                    <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(1); Imposing</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="3bbc-f5f2-e847-5bbc" name="Wrist Blades" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Knockback; Smash(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="dc9f-f5f3-7b32-50f8" name="Spike Grenade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(4); Grenade; One-Use; Sticky</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="5506-7117-5cf7-9814" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-                <infoLink id="2bd4-c32a-153e-e6c7" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
-                <infoLink id="128b-f689-dc0d-a5bc" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-                <infoLink id="0c62-b255-b608-1236" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="19b6-1434-5920-5e57" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
-                <infoLink id="8324-5158-c7e4-f489" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
-                <infoLink id="bdc4-c5e1-0043-1759" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="34.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="72ea-90e8-fc20-ad9c" name="Jiralhanae Sniper" hidden="false" collective="false" import="true" type="model">
-      <constraints>
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a576-e8de-44dc-2a34" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c8dc-ac33-b75d-e627" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d22-661a-c6dc-6c3b" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e52-a637-cf2a-aaab" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dac4-48e6-c56f-9124" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d31c-b3b6-1202-e046" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="ef88-b303-5d27-de2b" name="Jiralhanae Sniper" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="a24e-5d76-3df2-e308" name="Jiralhanae Berserker (Dynamo Grenade)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">7</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">6</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">6</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">6+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">6+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">1 (3") / 3 (9")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Imposing</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b7eb-268c-7a86-4f23" name="Wrist Blades" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Knockback; Smash(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a605-c961-83e3-2aa3" name="Dynamo Grenade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">EMP; Grenade; Implosion(3); One-Use</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="e8ac-a293-590b-550e" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
+        <infoLink id="cf88-0b2e-fa70-a89a" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
+        <infoLink id="844c-89bf-4c08-61fb" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+        <infoLink id="4510-efa3-a4ea-6718" name="EMP" hidden="false" targetId="eae8-da8a-08f0-ac08" type="rule" />
+        <infoLink id="d89a-766c-1407-2fe7" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
+        <infoLink id="028a-66d6-2468-24ed" name="Implosion" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
+        <infoLink id="69a5-e5ff-16e0-0aa5" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
+        <infoLink id="c2c3-a14d-8910-cae5" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="54f4-b12d-814c-1fd2" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
+        <categoryLink id="22a2-3c64-c5d9-ddec" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="2718-dcde-e3b4-8fd3" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
+        <categoryLink id="0e90-7ebf-45f6-a11f" name="Jiralhanae Berserker" hidden="false" targetId="6603-6ef1-4306-cfc0" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="33.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f865-f95a-74ae-1844" name="Jiralhanae Berserker (Spike Grenade)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="3661-1187-b063-f00f" value="32.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64ec-c690-76a6-c906" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b80-291b-6027-6daa" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c5dd-4d0c-7af0-f9a0" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="2daa-6bde-20b1-906b" name="Jiralhanae Berserker (Spike Grenade)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">6</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">1</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">7</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">6+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">6+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">1 (3") / 3 (9")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(1); Imposing</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b3c4-e497-88db-336f" name="Wrist Blades" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Knockback; Smash(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="41cf-0dce-ba59-820c" name="Spike Grenade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(4); Grenade; One-Use; Sticky</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="6906-33a7-3df1-4085" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="75f4-0043-4026-0855" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
+        <infoLink id="d13d-b0ed-343a-db11" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
+        <infoLink id="0d10-5cf7-83cb-98d3" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+        <infoLink id="8ed0-734a-42c0-74d9" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="655d-20ff-2641-5ffe" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
+        <infoLink id="d850-ed95-3f11-97f1" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
+        <infoLink id="bd2b-d4da-540c-dbb1" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
+        <infoLink id="c77f-a839-9544-dd77" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="5d6f-fad2-118b-c4d4" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
+        <categoryLink id="c442-bb79-78dd-f507" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="93c8-d9f1-9f08-c239" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
+        <categoryLink id="6b66-b300-32bb-ae32" name="Jiralhanae Berserker" hidden="false" targetId="6603-6ef1-4306-cfc0" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="34.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="72ea-90e8-fc20-ad9c" name="Jiralhanae Sniper (Shock Rifle)" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="829e-760a-67c5-6ff8" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2be9-d4be-07f0-faed" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9fa2-35cb-a5b0-677c" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="b8ac-43d6-60a9-436e" name="Jiralhanae Sniper (Shock Rifle)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">6</characteristic>
@@ -9524,112 +9632,120 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(2); Imposing; Stable</characteristic>
           </characteristics>
         </profile>
+        <profile id="f4d7-3125-4692-074c" name="Jiralhanae Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Knockback</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d2fa-f1f8-7803-5e96" name="Shock Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Blast; ESD(2); Sniper Scope</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="080e-54c0-ebf2-039b" name="Disruptor" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Rapid Fire</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="8888-ca7d-c86c-1f52" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="b2a1-26da-530c-de9d" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
-        <infoLink id="8a4b-cbfe-aa7a-461d" name="Stable" hidden="false" targetId="955f-e5b9-7014-393a" type="rule" />
-        <infoLink id="e425-7799-7a46-7fe2" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="fbe8-db5a-0e12-f437" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="2e28-f513-01f2-e9a1" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
+        <infoLink id="fc68-b54f-c995-ad7c" name="Stable" hidden="false" targetId="955f-e5b9-7014-393a" type="rule" />
+        <infoLink id="1420-1629-367e-5ec9" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
+        <infoLink id="d08a-9f38-0222-4e88" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
+        <infoLink id="742e-35d0-7daa-6d58" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="ef90-269e-d399-503c" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
+        <infoLink id="ef88-1d1e-c6e6-4f47" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+        <infoLink id="c7d5-82b5-7ce5-79da" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="726c-5955-561f-671a" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
-        <categoryLink id="49be-5431-c97f-80bb" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="6bb4-acd4-9361-294f" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
-        <categoryLink id="5bf5-2fc2-1282-e101" name="Jiralhanae Sniper" hidden="false" targetId="2b5a-260c-0ad9-5828" primary="false" />
+        <categoryLink id="92af-1abe-2073-1201" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
+        <categoryLink id="3532-aa56-7dd8-fb99" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="af2f-5cb5-9426-619f" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
+        <categoryLink id="cd90-40dc-488d-f103" name="Jiralhanae Sniper" hidden="false" targetId="2b5a-260c-0ad9-5828" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="7af7-d29a-6188-221d" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="c1c4-3e6b-535b-3941">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f654-1d77-384a-db6b" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f35e-fd0b-6508-8c21" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="c1c4-3e6b-535b-3941" name="Shock Rifle" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="90fc-b096-45b4-234b" name="Jiralhanae Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Knockback</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="be36-3445-abb8-f5c6" name="Shock Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Blast; ESD(2); Sniper Scope</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="cadc-b99e-ea5f-589b" name="Disruptor" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Rapid Fire</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="adfa-2b51-046e-d472" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-                <infoLink id="f289-d738-f957-e5c6" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-                <infoLink id="25d6-9123-d885-faa3" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="9296-2190-e6d5-d01a" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
-                <infoLink id="0ce5-7332-e337-8fef" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="e7ef-dd04-d361-a20e" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="36.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="883a-2420-1faf-443e" name="Skewer" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="b0dd-d57f-a920-f4ea" name="Skewer" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R5 (15")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP3</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Knockback; Lethal(1); Long; Optics</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="6075-9a1d-50e2-1656" name="Mangler" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Knockback</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="7d7a-6efb-c4f8-cbe2" name="Mangler melee" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="fd3f-d6fa-dc23-9be4" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-                <infoLink id="87fd-2c8a-710d-05a8" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="a5dc-da47-f421-49b4" name="Long" hidden="false" targetId="6d8a-c297-e299-855e" type="rule" />
-                <infoLink id="440e-ec3a-12f5-dea8" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
-                <infoLink id="596d-412e-158d-a24d" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="42.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="36.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d9fb-25d4-7957-7a9c" name="Jiralhanae Sniper (Skewer)" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9ab7-fc65-5a88-0e8f" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7fb9-61eb-ba81-3a3e" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c10-f2b3-0484-07e7" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="dafc-37f7-598c-40f4" name="Jiralhanae Sniper (Skewer)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">6</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">0</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">8</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">1 (3") / 2 (6")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(2); Imposing; Stable</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="91b0-9a18-cd02-a0f9" name="Skewer" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R5 (15")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP3</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Knockback; Lethal(1); Long; Optics</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6932-15f6-e1f1-f611" name="Mangler" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Knockback</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c116-5f0e-9206-5227" name="Mangler melee" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="0bbb-64a4-d585-f591" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="76a8-f5db-7611-4874" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
+        <infoLink id="5b06-d93e-2ea6-79de" name="Stable" hidden="false" targetId="955f-e5b9-7014-393a" type="rule" />
+        <infoLink id="3823-20bd-e278-ff4d" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
+        <infoLink id="e1a5-0721-ea73-b162" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="6741-9da0-b2a0-215c" name="Long" hidden="false" targetId="6d8a-c297-e299-855e" type="rule" />
+        <infoLink id="c5cd-ca82-2ed1-e5eb" name="Optics" hidden="false" targetId="7d5f-3ca6-64b3-507d" type="rule" />
+        <infoLink id="b5f3-838c-c1f8-5530" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="b7bb-4a52-0729-640e" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
+        <categoryLink id="0f10-3113-dd64-140f" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="786e-47c3-441a-57c6" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
+        <categoryLink id="3d3a-a851-8182-b25d" name="Jiralhanae Sniper" hidden="false" targetId="2b5a-260c-0ad9-5828" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="42.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="cd1d-d628-f71a-40a6" name="Jiralhanae Chosen Warrior" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0239-44aa-430f-dc6e" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="039b-bca1-f13d-2670" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d7f-59eb-4b43-ab63" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b0c7-b922-e063-e038" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a336-8720-e2cf-6494" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2fa2-3678-25f4-8761" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="7333-6ca1-7b02-bdf1" name="Jiralhanae Chosen Warrior" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="39bf-4b0a-8dd0-99a3" name="Jiralhanae Chosen Warrior" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">8</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">6</characteristic>
@@ -9643,80 +9759,67 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(1); Guarded; Imposing; Tactician(1)</characteristic>
           </characteristics>
         </profile>
+        <profile id="7551-2813-fc2a-6089" name="Jiralhanae Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Knockback</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3d4d-0ccf-9d46-29d3" name="Sentinel Beam" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Continuous Fire; Lethal(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1746-2642-8eb5-59fe" name="Spike Grenade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(4); Grenade; One-Use; Sticky</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="d608-f357-6dbe-c122" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="bba6-dbf1-79b9-073c" name="Guarded" hidden="false" targetId="380e-cfa0-0786-1b4f" type="rule" />
-        <infoLink id="625c-1a11-e2e3-c6a3" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
-        <infoLink id="9c85-7fed-4f98-f005" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
-        <infoLink id="e3f0-b61b-dfdf-6503" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="fa49-7262-7c12-f51b" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="1ae8-6edb-4bd2-dca3" name="Guarded" hidden="false" targetId="380e-cfa0-0786-1b4f" type="rule" />
+        <infoLink id="211c-ffad-44dc-c879" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
+        <infoLink id="126b-b737-e20e-b5be" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="1e61-f7eb-f981-18b0" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
+        <infoLink id="9bac-887f-072a-7ad8" name="Continuous Fire" hidden="false" targetId="8af9-c2bd-d5cf-49de" type="rule" />
+        <infoLink id="37e7-5087-664e-e08b" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="2fbb-8266-edf8-1b36" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="bb9e-3f1f-9891-fbdc" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
+        <infoLink id="b3d2-0fa2-27e8-1aa9" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
+        <infoLink id="b123-2778-4bc0-2f96" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
+        <infoLink id="9c3d-f94b-697e-0e18" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="48bc-0454-b64a-4070" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
-        <categoryLink id="c32a-58d8-785c-5d7e" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="ecb6-1b83-98c6-5d2d" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
-        <categoryLink id="1391-c8ac-75ea-97ed" name="Jiralhanae Chosen Warrior" hidden="false" targetId="e34d-9797-d763-efcc" primary="false" />
+        <categoryLink id="1e7a-3337-21ff-7e65" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
+        <categoryLink id="fe24-b5e3-e3c5-c9cb" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="e755-cf81-473d-a32b" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
+        <categoryLink id="febc-bb47-5337-e826" name="Jiralhanae Chosen Warrior" hidden="false" targetId="e34d-9797-d763-efcc" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="2d54-d34e-84d5-022d" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="44ac-dbc6-5824-252e">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="06f6-9f2d-1b82-5743" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e9e8-21de-a4cc-04ae" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="44ac-dbc6-5824-252e" name="Sentinel Beam" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="dc97-5597-0820-2b71" name="Jiralhanae Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Knockback</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="1de1-0a93-3e8b-a3f5" name="Sentinel Beam" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Continuous Fire; Lethal(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="25a3-0a56-4818-3114" name="Spike Grenade" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Frag(4); Grenade; One-Use; Sticky</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="e5e0-c147-a007-ce91" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-                <infoLink id="3e48-323c-ff35-1ebb" name="Continuous Fire" hidden="false" targetId="8af9-c2bd-d5cf-49de" type="rule" />
-                <infoLink id="ef9b-1606-c404-1958" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="303e-b4d1-d241-ae5d" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-                <infoLink id="8bbc-dfcb-6de6-a16f" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="5b3c-387e-9bf9-61a7" name="One-Use" hidden="false" targetId="6002-b7d9-1953-cb2e" type="rule" />
-                <infoLink id="bf10-bb2c-1092-05ea" name="Sticky" hidden="false" targetId="1956-e802-d0f4-f4bd" type="rule" />
-                <infoLink id="a956-79a5-5354-3a9e" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="44.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="44.0" />
       </costs>
     </selectionEntry>
-    <selectionEntry id="8c4f-7d9f-5b0a-21f3" name="Jiralhanae Captain" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="8c4f-7d9f-5b0a-21f3" name="Jiralhanae Captain (MLRS-2 Hydra)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="3661-1187-b063-f00f" value="50.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ea4-2e66-755a-8eb0" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e3e8-3bf8-ccbb-a48f" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f54-dd10-c76a-f979" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0024-7a93-aaeb-043b" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80cf-debf-7ef8-a3b9" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b6d1-fb78-09a7-bbb4" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="3a7c-adf2-b7ce-e52a" name="Jiralhanae Captain" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="f55a-b15c-35e0-d335" name="Jiralhanae Captain (MLRS-2 Hydra)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">11</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">7</characteristic>
@@ -9730,117 +9833,127 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(2); Imposing; Jump Pack; Tactician(1)</characteristic>
           </characteristics>
         </profile>
+        <profile id="0080-aa89-3c4f-9771" name="Jiralhanae Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Knockback</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5df1-7807-c26f-07f5" name="MLRS-2 Hydra" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Explosive; Frag(4); Lethal(1)</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="dd99-502d-413b-e7bf" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="6cc5-c1ea-d04a-512c" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
-        <infoLink id="e11f-8da3-ca12-1cc9" name="Jump Pack" hidden="false" targetId="7b06-42c9-226e-bf26" type="rule" />
-        <infoLink id="10bd-b4de-3dc5-f9c5" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
-        <infoLink id="7571-b6bb-21dc-ff5b" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="e538-6b61-7710-439c" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="c0bb-0e81-f8dd-ccd8" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
+        <infoLink id="b60d-08f3-db96-68ef" name="Jump Pack" hidden="false" targetId="7b06-42c9-226e-bf26" type="rule" />
+        <infoLink id="612e-5862-d5dd-2643" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="b604-494c-b5a0-69ad" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
+        <infoLink id="ccd0-5b4c-1cf2-3f53" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="b088-a2f5-dbf1-f8d0" name="Explosive" hidden="false" targetId="2599-56ef-4404-67aa" type="rule" />
+        <infoLink id="f360-ef94-2600-fce0" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
+        <infoLink id="0214-590f-b3f1-c8cb" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="b76b-070c-0179-2aee" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="2d27-8183-314d-10b2" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
-        <categoryLink id="118e-c1ae-8838-3d67" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="6777-b319-4124-2589" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
-        <categoryLink id="22e9-3298-cf43-124f" name="Jump Pack" hidden="false" targetId="d251-6fa8-833c-d2d3" primary="false" />
-        <categoryLink id="8237-1f2d-a625-a797" name="Jiralhanae Captain" hidden="false" targetId="c8a3-1f26-5867-8402" primary="false" />
+        <categoryLink id="03e2-3dd4-2a82-31e3" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
+        <categoryLink id="c7b3-e757-a0d4-8afd" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="3633-3e27-5531-1691" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
+        <categoryLink id="2fc0-e5e1-f979-c164" name="Jump Pack" hidden="false" targetId="d251-6fa8-833c-d2d3" primary="false" />
+        <categoryLink id="ab8b-8123-518c-3a19" name="Jiralhanae Captain" hidden="false" targetId="c8a3-1f26-5867-8402" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="f92d-54ba-428a-6b6e" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="d5e9-72cb-81db-8b98">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="921d-fe45-a3c7-965d" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4d00-36ee-78c6-5605" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="d5e9-72cb-81db-8b98" name="MLRS-2 Hydra" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="3661-1187-b063-f00f" value="50.0">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile id="1562-6123-1d7b-bb1e" name="Jiralhanae Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Knockback</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="cbad-c493-3c20-2b77" name="MLRS-2 Hydra" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Explosive; Frag(4); Lethal(1)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="f75c-ca58-d367-4450" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-                <infoLink id="014a-2a92-7b58-dcd2" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="07c0-f1b5-fa33-9a9c" name="Explosive" hidden="false" targetId="2599-56ef-4404-67aa" type="rule" />
-                <infoLink id="35e8-35d1-6685-9867" name="Frag" hidden="false" targetId="834f-932b-1b95-aa20" type="rule" />
-                <infoLink id="0fcb-81bd-3fc0-3757" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="9246-e0da-34c9-0d61" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="51.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="dc99-a1c5-6281-8abb" name="Ravager" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="7086-8df6-c731-8630" name="Ravager" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="ffda-886c-e5d4-38fa" name="Ravager" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Rapid Fire</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="d764-a1e6-6b08-a49a" name="Ravager" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R5 (15")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Blast; ESD(1); Grenade; Implosion(5); Long</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="b212-a4f5-8265-c058" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="3102-1a68-7004-f7ad" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="0618-9c8c-1176-2c02" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-                <infoLink id="6d0a-472a-d712-868e" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="7624-01de-a738-e0e1" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="ed5d-0c83-b49c-e1b0" name="Implosion" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
-                <infoLink id="f1a0-9271-71f6-2503" name="Long" hidden="false" targetId="6d8a-c297-e299-855e" type="rule" />
-                <infoLink id="299f-6cc0-a87e-60a0" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="51.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="51.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ffdc-3f91-c4ae-098c" name="Jiralhanae Captain (Ravager)" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b37e-1fe0-fa10-7219" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd78-63fc-14f9-c958" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="578d-b158-d0a0-b08a" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="cd84-9063-e91d-0d34" name="Jiralhanae Captain (Ravager)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">11</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">7</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">2</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">2</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">9</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">4+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">4+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">1 (3") / 3 (9")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Energy Shield(2); Imposing; Jump Pack; Tactician(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8d6d-05af-ec6a-d188" name="Ravager" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6b6c-3edf-9f3d-76be" name="Ravager" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Rapid Fire</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0eba-429b-1cf5-56a0" name="Ravager" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R5 (15")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Blast; ESD(1); Grenade; Implosion(5); Long</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="88cf-2048-cff5-126e" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="9b70-2f27-6a37-5e69" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
+        <infoLink id="1fe4-52e9-2ab0-9560" name="Jump Pack" hidden="false" targetId="7b06-42c9-226e-bf26" type="rule" />
+        <infoLink id="5cef-957d-39a9-b88e" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="d1a3-751a-ce55-3223" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="219f-7970-3795-a9bc" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+        <infoLink id="47c2-6cec-7252-063f" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
+        <infoLink id="432f-d6ec-f106-a072" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="c4b5-29e9-c3bf-2f9e" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
+        <infoLink id="a6df-e690-36ea-f67a" name="Implosion" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
+        <infoLink id="0699-151b-2326-a792" name="Long" hidden="false" targetId="6d8a-c297-e299-855e" type="rule" />
+        <infoLink id="fe78-a152-ec7d-04ee" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="b489-eee3-c3f3-7b9d" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
+        <categoryLink id="72cd-b376-bb39-07b2" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="e282-0af8-bb10-2c0e" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
+        <categoryLink id="9a15-a94b-718a-6c5a" name="Jump Pack" hidden="false" targetId="d251-6fa8-833c-d2d3" primary="false" />
+        <categoryLink id="d3b7-b0aa-db57-7d1e" name="Jiralhanae Captain" hidden="false" targetId="c8a3-1f26-5867-8402" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="51.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="edf6-a4cb-5afc-6f12" name="Tovarus (Jiralhanae Legend)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="3661-1187-b063-f00f" value="54.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d444-4fd2-e673-87d3" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c4ea-c480-8278-342f" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a12-bf5d-5dd3-d9ed" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b471-ddf7-96da-9bb9" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e426-472f-4189-2268" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d843-3d83-54bb-d835" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="24d6-df92-35c0-9411" name="Tovarus (Jiralhanae Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="b8b8-6a48-33f7-a5ca" name="Tovarus (Jiralhanae Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">11</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">7</characteristic>
@@ -9854,89 +9967,69 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Legend; Energy Shield(2); Imposing; Jump Pack; Spartan Killer</characteristic>
           </characteristics>
         </profile>
+        <profile id="eb98-39c9-1cb0-062b" name="Tovarus' Scrap Cannon" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1); Smash(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4ab8-1a54-a69b-33f5" name="Tovarus' Scrap Cannon" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Firing Platform(2); Knockback; Weight of Fire(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1838-6f20-e534-83f3" name="Tovarus' Scrap Cannon" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R5 (15")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Firing Platform(1); Suppression</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="3458-5554-4725-b083" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
-        <infoLink id="3a40-db77-a524-1dec" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="3774-96ca-ae75-0d07" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
-        <infoLink id="6ec3-21e8-d796-9831" name="Jump Pack" hidden="false" targetId="7b06-42c9-226e-bf26" type="rule" />
-        <infoLink id="78ef-0c9a-7909-f4d1" name="Spartan Killer" hidden="false" targetId="1f56-e733-55df-2362" type="rule" />
-        <infoLink id="c362-5c99-3587-9a0a" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="3b3d-f864-01f0-7ea9" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
+        <infoLink id="e31b-6b78-5541-1d13" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="ee60-0bc1-033f-883a" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
+        <infoLink id="51ab-85c5-fc32-70b3" name="Jump Pack" hidden="false" targetId="7b06-42c9-226e-bf26" type="rule" />
+        <infoLink id="5a0a-da9f-d7d2-05ee" name="Spartan Killer" hidden="false" targetId="1f56-e733-55df-2362" type="rule" />
+        <infoLink id="4bda-d2ec-19ba-886d" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="16dd-89ff-8a44-cc97" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+        <infoLink id="86df-409a-7898-e43d" name="Firing Platform" hidden="false" targetId="4e98-72a7-a073-68d6" type="rule" />
+        <infoLink id="c256-b604-0dfc-2cf5" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
+        <infoLink id="6173-ecc1-e52e-9e00" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="e4ff-56a4-7cf0-4e8c" name="Suppression" hidden="false" targetId="3ee6-86b5-e526-7c22" type="rule" />
+        <infoLink id="dd55-e10b-1d45-23e0" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="0da2-41f8-d77b-2702" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
-        <categoryLink id="a7a4-c968-d224-a259" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="413f-3dd9-0306-a3eb" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
-        <categoryLink id="40ac-7b58-a419-eb64" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
-        <categoryLink id="e919-b3f4-a9ea-0b27" name="Jump Pack" hidden="false" targetId="d251-6fa8-833c-d2d3" primary="false" />
-        <categoryLink id="3085-2440-6d67-319e" name="Tovarus (Jiralhanae Legend)" hidden="false" targetId="8b5c-60c1-69ba-31eb" primary="false" />
+        <categoryLink id="5281-dc9c-e199-a1bb" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
+        <categoryLink id="417e-e919-d632-af27" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="505e-dca6-6644-d8e3" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
+        <categoryLink id="900f-46cb-772a-f177" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
+        <categoryLink id="d8cf-5813-5af6-fcfd" name="Jump Pack" hidden="false" targetId="d251-6fa8-833c-d2d3" primary="false" />
+        <categoryLink id="2ca9-3b47-696b-3079" name="Tovarus (Jiralhanae Legend)" hidden="false" targetId="8b5c-60c1-69ba-31eb" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="a7e8-0582-4703-efe2" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="5a1e-3884-f4d2-af6c">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1ba0-cb19-955a-4092" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3447-7e7d-5d2a-a211" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="5a1e-3884-f4d2-af6c" name="Scrap Cannon" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="3661-1187-b063-f00f" value="54.0">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile id="28dc-1024-8966-603a" name="Tovarus' Scrap Cannon" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1); Smash(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="c803-869c-b72d-d6c6" name="Tovarus' Scrap Cannon" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R4 (12")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Firing Platform(2); Knockback; Weight of Fire(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="fbeb-50b9-1e66-542e" name="Tovarus' Scrap Cannon" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R5 (15")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Firing Platform(1); Suppression</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="ec04-0566-f026-0942" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="7658-aa8f-2173-610a" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
-                <infoLink id="a1e4-5087-adef-185a" name="Firing Platform" hidden="false" targetId="4e98-72a7-a073-68d6" type="rule" />
-                <infoLink id="4366-961a-240c-6294" name="Knockback" hidden="false" targetId="b418-1ae4-4e98-e9c3" type="rule" />
-                <infoLink id="fccb-003b-e7a8-f4eb" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="8f71-2ca3-1d3b-6fff" name="Suppression" hidden="false" targetId="3ee6-86b5-e526-7c22" type="rule" />
-                <infoLink id="5c25-856d-0109-bb92" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="56.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="56.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="c3c2-9338-9bc1-3de1" name="Hyperius (Jiralhanae Legend)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="3661-1187-b063-f00f" value="64.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d233-b393-05d5-bed8" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="44b9-09de-26e9-0431" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="40a5-268a-c5f9-47ab" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="abfe-83bd-fa9c-167c" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1816-9ba5-43b3-ee68" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2577-af3b-d7b7-cae8" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="51ac-fad4-4f1b-363c" name="Hyperius (Jiralhanae Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="1085-6ca0-9e32-df4c" name="Hyperius (Jiralhanae Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">11</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">7</characteristic>
@@ -9950,91 +10043,64 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Legend; Energy Shield(2); High Value Target; Imposing; Jump Pack; Spartan Killer; Tactician(1)</characteristic>
           </characteristics>
         </profile>
+        <profile id="2db2-5947-87e1-b7f8" name="Hyperius' Ravager" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Blast; ESD(1); Grenade; Implosion(5)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e0c3-e4d1-3a53-00dd" name="Hyperius' Ravager" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f8d8-875e-0396-7df5" name="S7 Sniper Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R7 (21")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Lethal(1); Sniper Scope</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="c718-ee41-2c7e-6c50" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
-        <infoLink id="8ca4-cd46-e6e8-afa0" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="94bf-62da-70e0-05e2" name="High Value Target (HVT)" hidden="false" targetId="a15c-2e11-e3cd-8b3c" type="rule" />
-        <infoLink id="154b-d9d7-c479-0892" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
-        <infoLink id="202f-66c0-ee97-5506" name="Jump Pack" hidden="false" targetId="7b06-42c9-226e-bf26" type="rule" />
-        <infoLink id="cca8-0480-0b5c-dcba" name="Spartan Killer" hidden="false" targetId="1f56-e733-55df-2362" type="rule" />
-        <infoLink id="1845-7260-1374-e324" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
-        <infoLink id="8043-9799-8009-e714" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="de28-8822-6ee6-7af6" name="Legend" hidden="false" targetId="86b4-c980-108b-6c39" type="rule" />
+        <infoLink id="0db5-8903-d633-a653" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="c12a-4ce3-f4b0-2787" name="High Value Target (HVT)" hidden="false" targetId="a15c-2e11-e3cd-8b3c" type="rule" />
+        <infoLink id="41f4-e729-be68-ba59" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
+        <infoLink id="cfde-271e-75d2-be8e" name="Jump Pack" hidden="false" targetId="7b06-42c9-226e-bf26" type="rule" />
+        <infoLink id="1fa6-83e0-c3c3-0510" name="Spartan Killer" hidden="false" targetId="1f56-e733-55df-2362" type="rule" />
+        <infoLink id="d47a-5e93-da2e-3ec2" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="33bf-5be2-1ed5-0325" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
+        <infoLink id="592a-bee1-c9fb-aecf" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="e9f9-f0ee-0553-2058" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
+        <infoLink id="013d-10cc-7ef6-1a95" name="Implosion" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
+        <infoLink id="001c-3b69-7755-fdef" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="b587-fc2c-4d65-1847" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
+        <infoLink id="c398-1c74-7387-212e" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="ade6-f4ac-77a3-f733" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
-        <categoryLink id="bd3f-c697-4cb8-d229" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="0277-be53-ddd0-5daf" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
-        <categoryLink id="9995-8056-dede-90c4" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
-        <categoryLink id="70c6-0c0d-ee2b-ffe7" name="Jump Pack" hidden="false" targetId="d251-6fa8-833c-d2d3" primary="false" />
-        <categoryLink id="8333-4b0a-afe5-b0f9" name="Hyperius (Jiralhanae Legend)" hidden="false" targetId="f53a-db6e-3ffb-6f02" primary="false" />
+        <categoryLink id="a533-e38a-ab4c-b86c" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
+        <categoryLink id="d23f-f666-ec76-ff65" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="b2c6-1af3-704a-4ba5" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
+        <categoryLink id="c2f0-53a9-c2bc-0100" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
+        <categoryLink id="80ff-bc1b-4358-24c1" name="Jump Pack" hidden="false" targetId="d251-6fa8-833c-d2d3" primary="false" />
+        <categoryLink id="de66-bfd4-7128-6ae1" name="Hyperius (Jiralhanae Legend)" hidden="false" targetId="f53a-db6e-3ffb-6f02" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="a528-ee9d-6eac-e827" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="3002-acd5-d6b2-a57d">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="368d-18a6-b37d-8630" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0516-4484-b405-44dc" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="3002-acd5-d6b2-a57d" name="Ravager / S7 Sniper" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="3661-1187-b063-f00f" value="64.0">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile id="caaa-76fc-7113-8091" name="Hyperius' Ravager" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R6 (18")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Blast; ESD(1); Grenade; Implosion(5)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="3daf-bd4e-a027-4192" name="Hyperius' Ravager" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="f1f7-8c5a-be17-3b01" name="S7 Sniper Rifle" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R7 (21")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Lethal(1); Sniper Scope</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="cee9-554e-44b7-9b96" name="Blast" hidden="false" targetId="932b-d65b-0dd5-95e2" type="rule" />
-                <infoLink id="6213-20a4-b1ae-d365" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="379b-01e4-7964-2569" name="Grenade" hidden="false" targetId="99da-5e42-c473-ef19" type="rule" />
-                <infoLink id="1878-c4c0-ba9d-5e21" name="Implosion" hidden="false" targetId="b2eb-de9b-903b-7cf1" type="rule" />
-                <infoLink id="a1e0-3032-cfdc-3389" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="e62d-362c-a0df-04fc" name="Sniper Scope" hidden="false" targetId="3c1d-2e6b-7914-1be8" type="rule" />
-                <infoLink id="870a-ae49-66cb-07be" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="65.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="65.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="768f-887e-b9f3-9df3" name="Atriox, Jiralhanae Warmaster (Banished Legend)" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="08c3-71d5-1757-dc54" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="646c-e2dd-7f2c-0c09" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b0e-1623-2149-c229" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4206-5241-c2ae-0e6d" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c71-e279-d562-ccfe" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="489b-1909-6a99-3a7e" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="8c3e-01fb-0c51-cbc3" name="Atriox, Jiralhanae Warmaster (Banished Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="2c63-bb45-7d2e-1b41" name="Atriox, Jiralhanae Warmaster (Banished Legend)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">12</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">8</characteristic>
@@ -10048,94 +10114,74 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Banished Legend; Energy Shield(2); Fearless; High Value Target; Imposing; Tactician(2); Unstoppable</characteristic>
           </characteristics>
         </profile>
+        <profile id="3c3f-292b-3044-c91f" name="Chainbreaker" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R1 (3")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Concussive; Lethal(1); Lunge</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5e15-93dc-b9d0-fbbe" name="Chainbreaker" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Concussive; ESD(1); Lethal(1); Smash(1)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="cdbe-1aa1-7a3a-4a0d" name="Power Gauntlet" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(2)</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="9c17-627d-512e-ba6c" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
-        <infoLink id="fd69-5495-c742-a9ab" name="Fearless" hidden="false" targetId="c209-35bd-6caa-3a50" type="rule" />
-        <infoLink id="8428-986d-fdb8-a8a9" name="High Value Target (HVT)" hidden="false" targetId="a15c-2e11-e3cd-8b3c" type="rule" />
-        <infoLink id="ea56-a59d-0c8b-ec4d" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
-        <infoLink id="8f4d-7319-f873-04f6" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
-        <infoLink id="a89e-0f18-41b3-3cfe" name="Unstoppable" hidden="false" targetId="b812-96c4-4f04-6234" type="rule" />
-        <infoLink id="1519-eddd-80ef-689b" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="75b3-fde4-c15f-86f8" name="Energy Shield" hidden="false" targetId="4ba0-e76c-b8cb-ece6" type="rule" />
+        <infoLink id="1a78-8b0a-1f84-e502" name="Fearless" hidden="false" targetId="c209-35bd-6caa-3a50" type="rule" />
+        <infoLink id="da0d-bbfb-b9c8-342f" name="High Value Target (HVT)" hidden="false" targetId="a15c-2e11-e3cd-8b3c" type="rule" />
+        <infoLink id="ae71-95a3-4f4f-ec28" name="Imposing" hidden="false" targetId="bbaf-8fa7-8de0-0964" type="rule" />
+        <infoLink id="1480-b813-581e-c561" name="Tactician" hidden="false" targetId="f5c2-c9d7-09f7-6bc0" type="rule" />
+        <infoLink id="4687-945c-312e-a45f" name="Unstoppable" hidden="false" targetId="b812-96c4-4f04-6234" type="rule" />
+        <infoLink id="68b5-2c0c-9238-b27a" name="Concussive" hidden="false" targetId="2797-0b62-17dd-e54b" type="rule" />
+        <infoLink id="22c8-e53b-3f65-a723" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="6293-4c48-31ce-3f2c" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
+        <infoLink id="2a8e-49c3-3013-814b" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="627e-f78d-e3ea-d7e8" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
+        <infoLink id="e723-ace1-1fcd-9248" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="6ace-cde7-8db6-73b4" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
-        <categoryLink id="60be-81eb-ead0-a5c6" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="7144-2f6d-cf9f-12f0" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
-        <categoryLink id="fc2e-b22f-e556-4f89" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
-        <categoryLink id="b20b-8e1b-74b3-d356" name="Atriox, Jiralhanae Warmaster (Banished Legend)" hidden="false" targetId="70dc-67aa-fdf4-ccfa" primary="false" />
+        <categoryLink id="6561-9a71-5230-efde" name="Jiralhanae" hidden="false" targetId="6b0d-c2d8-e4ac-3b69" primary="true" />
+        <categoryLink id="f6a8-21c2-414f-f4f0" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="f5d4-ad6e-d9b4-1fb4" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
+        <categoryLink id="f7e0-4ec8-9acd-f2f2" name="Legend" hidden="false" targetId="9824-3651-2dac-2542" primary="false" />
+        <categoryLink id="f919-f975-9352-f5c6" name="Atriox, Jiralhanae Warmaster (Banished Legend)" hidden="false" targetId="70dc-67aa-fdf4-ccfa" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="ad38-cab2-1680-5577" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="0f05-50b7-66c6-6d60">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6a4c-72be-cf8b-7ea6" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6f2c-26fc-3cc6-0fb6" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="0f05-50b7-66c6-6d60" name="Chainbreaker" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="d19a-26a6-d87b-69b5" name="Chainbreaker" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R1 (3")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Concussive; Lethal(1); Lunge</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="7d10-6692-b09d-04b8" name="Chainbreaker" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Concussive; ESD(1); Lethal(1); Smash(1)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="bb73-383f-0732-8950" name="Power Gauntlet" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP2</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(2)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="fcdf-c3d7-13b9-d53c" name="Concussive" hidden="false" targetId="2797-0b62-17dd-e54b" type="rule" />
-                <infoLink id="6d2c-913b-a539-7e6a" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="1c46-c579-b076-766e" name="Lunge" hidden="false" targetId="8dab-5f3d-8295-3136" type="rule" />
-                <infoLink id="9850-2d45-2b11-7843" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="f6cc-8ee5-6671-9e1c" name="Smash" hidden="false" targetId="ebf9-8f7b-c2af-15d7" type="rule" />
-                <infoLink id="0345-0985-dd1d-361b" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="75.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="75.0" />
       </costs>
     </selectionEntry>
-    <selectionEntry id="daa8-a337-4cff-ba49" name="Unggoy Conscript" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="daa8-a337-4cff-ba49" name="Unggoy Conscript (Plasma Pistol)" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
           </conditions>
         </modifier>
-        <modifier type="set" field="82da-d078-9e29-5ea8" value="0.0">
+        <modifier type="set" field="63a7-9fa8-e799-9ffb" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="82da-d078-9e29-5ea8" type="max" />
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b39-4b85-6769-425d" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b9ae-0025-ea23-67af" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="72a2-1bc4-b47e-43ea" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="63a7-9fa8-e799-9ffb" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4823-015a-33ac-07d7" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca10-3825-9ce1-2459" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f8a6-0e20-6d45-edb4" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="7a3a-90a8-4780-eee9" name="Unggoy Conscript" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="01d3-0101-5fba-3ddb" name="Unggoy Conscript (Plasma Pistol)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">4</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
@@ -10149,113 +10195,133 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Horde; Support</characteristic>
           </characteristics>
         </profile>
+        <profile id="70b2-606b-860f-62e6" name="Unggoy Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="757e-735f-9ace-0d91" name="Plasma Pistol" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Continuous Fire; ESD(2)</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="14dc-9874-7140-3263" name="Plasma Pistol" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1)</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="01ef-1a97-49a1-c1cb" name="Horde" hidden="false" targetId="2618-5915-8acb-4a97" type="rule" />
-        <infoLink id="7a50-a301-0715-b895" name="Support" hidden="false" targetId="03f8-5a2f-73f3-d61e" type="rule" />
-        <infoLink id="8e71-ef09-fee1-d2b2" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="9944-7ad6-faf8-15e1" name="Horde" hidden="false" targetId="2618-5915-8acb-4a97" type="rule" />
+        <infoLink id="a862-6e72-8438-a052" name="Support" hidden="false" targetId="03f8-5a2f-73f3-d61e" type="rule" />
+        <infoLink id="a446-1a42-8c0b-ff38" name="Continuous Fire" hidden="false" targetId="8af9-c2bd-d5cf-49de" type="rule" />
+        <infoLink id="471f-0e3a-7d67-1cd0" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="4e36-e7e8-d371-e737" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="3691-0c6b-92c5-cb6f" name="Unggoy" hidden="false" targetId="5c4d-42ee-4f9f-c4a6" primary="true" />
-        <categoryLink id="493a-edbf-325d-eb85" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="b957-e5b4-0c3a-1d84" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
-        <categoryLink id="5969-7952-2ee9-e3b0" name="Unggoy Conscript" hidden="false" targetId="3671-2113-062b-da67" primary="false" />
+        <categoryLink id="1e74-6c24-70bc-c8e1" name="Unggoy" hidden="false" targetId="5c4d-42ee-4f9f-c4a6" primary="true" />
+        <categoryLink id="ac68-cdbf-679b-d016" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="570b-e5a6-716f-c90b" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
+        <categoryLink id="f23d-225c-30ab-758d" name="Unggoy Conscript" hidden="false" targetId="3671-2113-062b-da67" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="2744-a268-9351-7b82" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="44bf-e8d3-1124-5321">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9f2d-d0a4-4f59-875b" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="71d0-14a3-4fe8-d957" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="44bf-e8d3-1124-5321" name="Plasma Pistol" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="a181-75b6-62ff-1428" name="Unggoy Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="c2e6-d65f-fda5-7229" name="Plasma Pistol" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Continuous Fire; ESD(2)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="adff-5710-4c0a-b973" name="Plasma Pistol" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP1</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="35ed-88da-8b2c-30a3" name="Continuous Fire" hidden="false" targetId="8af9-c2bd-d5cf-49de" type="rule" />
-                <infoLink id="dffe-1962-e57c-2030" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="ea60-c705-5f3a-77c4" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="15.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="5055-57c5-1119-d29e" name="Needler" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="951b-f76f-28a6-dc9a" name="Unggoy Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="2eae-c8ca-b4a1-923a" name="Needler" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1); Rapid Fire; Weight of Fire(1)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="7686-cdf0-aedb-c03d" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="c10d-1ff0-77e6-ebe2" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="3cea-c1da-14bd-17eb" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="4385-6cdb-9087-65e7" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="16.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="15.0" />
       </costs>
     </selectionEntry>
-    <selectionEntry id="fa4b-1349-510f-8e73" name="Unggoy Assault" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="0f80-c261-8c20-01ce" name="Unggoy Conscript (Needler)" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
           </conditions>
         </modifier>
-        <modifier type="set" field="a92a-0c07-1750-0e5c" value="0.0">
+        <modifier type="set" field="da25-d109-45b0-22ba" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a92a-0c07-1750-0e5c" type="max" />
-        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a50-80de-8317-75d6" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df90-dabf-8e6f-862b" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
-        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed83-ad08-b718-98da" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="da25-d109-45b0-22ba" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2395-d84c-39d6-5d67" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="de7a-8c2f-cef3-366e" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf22-0fec-7e0f-c635" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
       </constraints>
       <profiles>
-        <profile id="6fce-e639-d36f-65a3" name="Unggoy Assault" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+        <profile id="23ee-54eb-0b34-576a" name="Unggoy Conscript (Needler)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">4</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">3</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">6+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">6+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">6+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">1 (3") / 2 (6")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Horde; Support</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ccae-699e-586a-efab" name="Unggoy Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="08cf-0eee-3d68-1e7c" name="Needler" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1); Rapid Fire; Weight of Fire(1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="034d-7948-7451-4617" name="Horde" hidden="false" targetId="2618-5915-8acb-4a97" type="rule" />
+        <infoLink id="3d6b-31de-2e18-0eb7" name="Support" hidden="false" targetId="03f8-5a2f-73f3-d61e" type="rule" />
+        <infoLink id="5cb2-270a-152f-1f27" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="447d-491c-3c82-9790" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+        <infoLink id="4313-b480-f5f5-a76d" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="7680-3d56-049b-8bb6" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="31aa-4ab2-6864-4ae8" name="Unggoy" hidden="false" targetId="5c4d-42ee-4f9f-c4a6" primary="true" />
+        <categoryLink id="0de2-46fb-84e3-1a5a" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="9feb-70c9-1255-489d" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
+        <categoryLink id="7884-f54e-97f7-5499" name="Unggoy Conscript" hidden="false" targetId="3671-2113-062b-da67" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="16.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="fa4b-1349-510f-8e73" name="Unggoy Assault (Needler)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
+          </conditions>
+        </modifier>
+        <modifier type="set" field="5925-06a4-f3f8-9d57" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5925-06a4-f3f8-9d57" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b2fa-8ae9-2b3b-3467" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c500-bcd0-a606-d9db" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9958-b1e1-0513-2d52" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="648e-a82d-6e34-3b9d" name="Unggoy Assault (Needler)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
           <characteristics>
             <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">4</characteristic>
             <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
@@ -10269,83 +10335,103 @@
             <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Horde; Support</characteristic>
           </characteristics>
         </profile>
+        <profile id="0ad2-14df-c994-546a" name="Unggoy Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a66b-ea58-8927-035d" name="Needler" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1); Rapid Fire; Weight of Fire(1)</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="a4ba-b435-4631-3eb6" name="Horde" hidden="false" targetId="2618-5915-8acb-4a97" type="rule" />
-        <infoLink id="3595-fd98-bcc3-8b87" name="Support" hidden="false" targetId="03f8-5a2f-73f3-d61e" type="rule" />
-        <infoLink id="6e40-4a24-7dfc-4c77" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+        <infoLink id="8adb-128f-d463-cb5f" name="Horde" hidden="false" targetId="2618-5915-8acb-4a97" type="rule" />
+        <infoLink id="09f3-6593-b10f-200a" name="Support" hidden="false" targetId="03f8-5a2f-73f3-d61e" type="rule" />
+        <infoLink id="84d8-eebb-d10c-46db" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
+        <infoLink id="604e-42cf-9cc4-e791" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+        <infoLink id="266b-1212-af76-8a31" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
+        <infoLink id="7975-7367-a0cf-86d8" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="731b-4b08-6e37-5711" name="Unggoy" hidden="false" targetId="5c4d-42ee-4f9f-c4a6" primary="true" />
-        <categoryLink id="d0dd-912e-2d36-52cf" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
-        <categoryLink id="ca38-ca7b-9941-b595" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
-        <categoryLink id="885c-46bb-aef7-4678" name="Unggoy Assault" hidden="false" targetId="a995-d978-1d62-74e1" primary="false" />
+        <categoryLink id="2abb-c0e5-29c3-a452" name="Unggoy" hidden="false" targetId="5c4d-42ee-4f9f-c4a6" primary="true" />
+        <categoryLink id="438b-f719-4584-b7c2" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="0d12-1488-c3b5-a013" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
+        <categoryLink id="11f7-1994-1225-949c" name="Unggoy Assault" hidden="false" targetId="a995-d978-1d62-74e1" primary="false" />
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="d9eb-72c9-b72c-1637" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="3680-6075-d12c-7886">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ec52-c22d-b611-d7ed" type="min" />
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="26fc-8f66-9c91-2158" type="max" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="3680-6075-d12c-7886" name="Needler" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="5a1c-e608-4492-a072" name="Unggoy Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="2c59-4c2c-258b-5bcb" name="Needler" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">Lethal(1); Rapid Fire; Weight of Fire(1)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="159d-c70b-da4a-91da" name="Lethal" hidden="false" targetId="c9c5-689d-d66f-f6ed" type="rule" />
-                <infoLink id="110a-9c7e-bd0e-c7c3" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="669a-9b8e-e191-592c" name="Weight of Fire" hidden="false" targetId="bc27-150a-ad89-e8ea" type="rule" />
-                <infoLink id="c379-5f36-6d31-d17d" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="18.0" />
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="931c-7e25-2343-7a22" name="Disruptor" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="c0f2-9826-1614-05a5" name="Unggoy Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="be85-c1fd-4f94-fe4d" name="Disruptor" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
-                    <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
-                    <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Rapid Fire</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="3772-a58b-a41d-c46f" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
-                <infoLink id="0103-e07c-0f21-8210" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
-                <infoLink id="442a-b736-dc75-6d75" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
-              </infoLinks>
-              <costs>
-                <cost name="Points" typeId="3661-1187-b063-f00f" value="17.0" />
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="Points" typeId="3661-1187-b063-f00f" value="0.0" />
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="18.0" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0599-d244-c33d-4d09" name="Unggoy Assault (Disruptor)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
+          </conditions>
+        </modifier>
+        <modifier type="set" field="75bd-163a-741b-baa8" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="atLeast" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="75bd-163a-741b-baa8" type="max" />
+        <constraint field="associations" scope="self" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce62-c674-a465-b5c8" type="max" childId="cbd0-36b6-df6f-4356" childName="Object" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7041-d576-3f92-c3b2" type="max" childId="2c9a-7de5-64ee-a2ae" childName="Extra Ranged" />
+        <constraint field="associations" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fae0-9204-d829-b8f7" type="max" childId="a1b8-c083-cccf-472b" childName="Extra Melee" />
+      </constraints>
+      <profiles>
+        <profile id="4275-c462-b831-6093" name="Unggoy Assault (Disruptor)" hidden="false" typeId="8ae6-1e63-1814-f7c8" typeName="Model">
+          <characteristics>
+            <characteristic name="DT1S" typeId="cd48-acfa-5f62-dbeb">4</characteristic>
+            <characteristic name="HP" typeId="f71c-d4e9-5249-ccbf">3</characteristic>
+            <characteristic name="AR" typeId="8381-e478-0ada-c144">1</characteristic>
+            <characteristic name="ES" typeId="baac-a14d-979f-803f">0</characteristic>
+            <characteristic name="Wounds (HP+ES)" typeId="6845-839c-610d-8982">3</characteristic>
+            <characteristic name="RA" typeId="daf1-2d46-f21b-cabb">6+</characteristic>
+            <characteristic name="FI" typeId="4395-eb80-9715-afdd">5+</characteristic>
+            <characteristic name="SV" typeId="4b4c-fa64-06a3-6e29">5+</characteristic>
+            <characteristic name="SP" typeId="bfcc-8cbb-fbeb-45f6">1 (3") / 2 (6")</characteristic>
+            <characteristic name="Keywords" typeId="76fe-4f8f-1770-34be">Horde; Support</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="210b-ad63-8b0f-60c3" name="Unggoy Fists" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">CC</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="812f-e44b-d4ad-89cd" name="Disruptor" hidden="false" typeId="82c3-6c9d-6ad0-9a7c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="40f1-01cd-7b19-ab01">R3 (9")</characteristic>
+            <characteristic name="AP" typeId="7b6a-045a-d49a-bf01">AP -</characteristic>
+            <characteristic name="Keywords" typeId="6839-62d8-f604-4068">ESD(1); Rapid Fire</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="d991-cab7-7c18-b9d6" name="Horde" hidden="false" targetId="2618-5915-8acb-4a97" type="rule" />
+        <infoLink id="2bbb-d934-754c-351e" name="Support" hidden="false" targetId="03f8-5a2f-73f3-d61e" type="rule" />
+        <infoLink id="2964-d804-bf4f-d6d4" name="Energy Shield Depleter (ESD)" hidden="false" targetId="e993-cd21-a2aa-32d5" type="rule" />
+        <infoLink id="32c6-1003-00a1-d8c4" name="Rapid Fire" hidden="false" targetId="caa2-5531-f780-496a" type="rule" />
+        <infoLink id="45b9-2c84-6e01-06d6" name="Wounds (HP+ES)" hidden="false" targetId="6d02-109b-9e04-2f72" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="2341-e164-ab32-c52f" name="Unggoy" hidden="false" targetId="5c4d-42ee-4f9f-c4a6" primary="true" />
+        <categoryLink id="4963-bb5e-5623-9083" name="Fireteam Model" hidden="false" targetId="e837-d1d4-9fa0-a21a" primary="false" />
+        <categoryLink id="c6ae-ba58-985f-de9e" name="Banished" hidden="false" targetId="f4d5-f2da-e388-a1d4" primary="false" />
+        <categoryLink id="67d0-5565-a53d-3758" name="Unggoy Assault" hidden="false" targetId="a995-d978-1d62-74e1" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="3661-1187-b063-f00f" value="17.0" />
       </costs>
     </selectionEntry>
     <selectionEntry id="702a-f5d7-702c-739b" name="Extra Cmd Die (every round)" hidden="false" collective="false" import="true" type="upgrade">
@@ -10429,21 +10515,8 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="178a-92ff-aa2b-a9cd" name="Warmaster's Pack" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="equalTo" />
-          </conditions>
-        </modifier>
-        <modifier type="set" field="8ef3-9ce1-9575-0443" value="0.0">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="equalTo" />
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d01b-0298-b2be-9164" type="max" />
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8ef3-9ce1-9575-0443" type="max" />
       </constraints>
       <profiles>
         <profile id="d0aa-09cc-2ab1-4bf0" name="Warmaster's Pack" hidden="false" typeId="6ac3-aef2-db5b-5e6f" typeName="Upgrade">
@@ -10462,21 +10535,8 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="53c5-f589-f30f-0da8" name="Enraged" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="equalTo" />
-          </conditions>
-        </modifier>
-        <modifier type="set" field="d39e-59d0-5c09-00e6" value="0.0">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="equalTo" />
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7958-3c14-ea4f-f57c" type="max" />
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d39e-59d0-5c09-00e6" type="max" />
       </constraints>
       <profiles>
         <profile id="d45b-ec04-d59e-5afc" name="Enraged" hidden="false" typeId="6ac3-aef2-db5b-5e6f" typeName="Upgrade">
@@ -10495,21 +10555,8 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="96e0-a830-4193-b456" name="Veteran Heirlooms" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="equalTo" />
-          </conditions>
-        </modifier>
-        <modifier type="set" field="fb58-9185-2815-5f6f" value="0.0">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="equalTo" />
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="77b2-c050-edff-af5a" type="max" />
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fb58-9185-2815-5f6f" type="max" />
       </constraints>
       <profiles>
         <profile id="e770-b0b0-1bd5-e70b" name="Veteran Heirlooms" hidden="false" typeId="6ac3-aef2-db5b-5e6f" typeName="Upgrade">
@@ -10528,21 +10575,8 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="a60f-a55b-094e-4eab" name="Suppression Protocol" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="equalTo" />
-          </conditions>
-        </modifier>
-        <modifier type="set" field="b7b4-8f2d-ba86-c5ad" value="0.0">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="equalTo" />
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8738-123b-231b-310c" type="max" />
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b7b4-8f2d-ba86-c5ad" type="max" />
       </constraints>
       <profiles>
         <profile id="b472-895c-6f6b-54f1" name="Suppression Protocol" hidden="false" typeId="6ac3-aef2-db5b-5e6f" typeName="Upgrade">
@@ -10561,21 +10595,8 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="3457-d814-de66-35ef" name="UNSC Defence Shield" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="equalTo" />
-          </conditions>
-        </modifier>
-        <modifier type="set" field="4e77-5a8d-3103-0fad" value="0.0">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="equalTo" />
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cc71-bd02-1b7f-aa80" type="max" />
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4e77-5a8d-3103-0fad" type="max" />
       </constraints>
       <profiles>
         <profile id="a59c-f28d-c573-2446" name="UNSC Defence Shield" hidden="false" typeId="6ac3-aef2-db5b-5e6f" typeName="Upgrade">
@@ -10594,21 +10615,8 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="558a-acce-9a75-8037" name="Tactical Display Unit" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="equalTo" />
-          </conditions>
-        </modifier>
-        <modifier type="set" field="b70c-6399-fcb4-0435" value="0.0">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="equalTo" />
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa6d-6aa5-bf4a-51ad" type="max" />
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b70c-6399-fcb4-0435" type="max" />
       </constraints>
       <profiles>
         <profile id="b937-7a1e-8313-05d2" name="Tactical Display Unit" hidden="false" typeId="6ac3-aef2-db5b-5e6f" typeName="Upgrade">
@@ -10627,21 +10635,8 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="060c-0564-427d-8a8f" name="Hostile Incoming" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="equalTo" />
-          </conditions>
-        </modifier>
-        <modifier type="set" field="2001-a00d-afac-c27f" value="0.0">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="equalTo" />
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b67-05db-a075-a400" type="max" />
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2001-a00d-afac-c27f" type="max" />
       </constraints>
       <profiles>
         <profile id="327a-41d6-751a-634b" name="Hostile Incoming" hidden="false" typeId="6ac3-aef2-db5b-5e6f" typeName="Upgrade">
@@ -10660,21 +10655,8 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="131e-a106-9207-f994" name="Drop Pods" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="equalTo" />
-          </conditions>
-        </modifier>
-        <modifier type="set" field="0519-6cc8-30c9-c280" value="0.0">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="equalTo" />
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="accb-b21f-ce6a-9c33" type="max" />
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0519-6cc8-30c9-c280" type="max" />
       </constraints>
       <profiles>
         <profile id="efd3-313f-1d30-71a4" name="Drop Pods" hidden="false" typeId="6ac3-aef2-db5b-5e6f" typeName="Upgrade">
@@ -10693,21 +10675,8 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="ed3f-bee1-f7e1-866e" name="Ambush Hunters" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="equalTo" />
-          </conditions>
-        </modifier>
-        <modifier type="set" field="6acd-4834-5d1a-892f" value="0.0">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef04-2bbe-9574-7b60" type="equalTo" />
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4383-1943-00c4-3a7c" type="max" />
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6acd-4834-5d1a-892f" type="max" />
       </constraints>
       <profiles>
         <profile id="5e43-b779-1f58-8d1f" name="Ambush Hunters" hidden="false" typeId="6ac3-aef2-db5b-5e6f" typeName="Upgrade">
@@ -10726,21 +10695,8 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="7016-7b32-8e64-b072" name="Tactical Advance" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="equalTo" />
-          </conditions>
-        </modifier>
-        <modifier type="set" field="c1cd-29cd-b362-a3b1" value="0.0">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="equalTo" />
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1964-1034-c007-26de" type="max" />
-        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c1cd-29cd-b362-a3b1" type="max" />
       </constraints>
       <profiles>
         <profile id="43dc-46e9-307b-1d4a" name="Tactical Advance" hidden="false" typeId="6ac3-aef2-db5b-5e6f" typeName="Upgrade">
@@ -11649,14 +11605,24 @@
     <selectionEntry id="9d07-071b-5eb3-ef22" name="Bloodlust" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d06-6c5d-723f-0ae1" type="equalTo" />
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d06-6c5d-723f-0ae1" type="equalTo" />
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f865-f95a-74ae-1844" type="equalTo" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="set" field="1f1f-78d2-8cef-0b40" value="0.0">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d06-6c5d-723f-0ae1" type="equalTo" />
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d06-6c5d-723f-0ae1" type="equalTo" />
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f865-f95a-74ae-1844" type="equalTo" />
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="set" field="hidden" value="true">
           <conditions>

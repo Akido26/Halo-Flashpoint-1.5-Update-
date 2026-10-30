@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<catalogue id="71e0-7f72-0493-f399" name="UNSC" revision="8" battleScribeVersion="2.03" library="false" gameSystemId="61c2-d61f-70a4-4d68" gameSystemRevision="8" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="71e0-7f72-0493-f399" name="UNSC" revision="10" battleScribeVersion="2.03" library="false" gameSystemId="61c2-d61f-70a4-4d68" gameSystemRevision="10" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>UNSC fireteam: Spartans, ODST and Marines mix freely. Pick the detachment in Fireteam setup (ODST Corps or none). Tournament-legal path.</readme>
   <forceEntries>
     <forceEntry id="e15f-5a93-fa9e-d068" name="UNSC Fireteam" hidden="false">
@@ -30,15 +30,25 @@
   </forceEntries>
   <entryLinks>
     <entryLink id="73ec-6151-5320-07f9" name="Fireteam setup (UNSC)" hidden="false" collective="false" import="true" targetId="5e17-2c51-c3a9-d2f6" type="selectionEntry" />
-    <entryLink id="7baa-e55a-0923-c789" name="Spartan Zvezda" hidden="false" collective="false" import="true" targetId="047a-e8d5-dbec-dbd7" type="selectionEntry" />
-    <entryLink id="3725-1ea6-4e92-c8a8" name="Spartan HAZOP" hidden="false" collective="false" import="true" targetId="6ebd-e43f-182d-bed1" type="selectionEntry" />
-    <entryLink id="7746-377e-e7c6-ed24" name="Spartan Brawler" hidden="false" collective="false" import="true" targetId="f33e-e5e6-fcaf-bbd3" type="selectionEntry" />
-    <entryLink id="ae6e-f1cf-8576-0797" name="Spartan Mk VII" hidden="false" collective="false" import="true" targetId="7d09-5c62-6ae4-567e" type="selectionEntry" />
-    <entryLink id="db7d-c9b4-b8ed-e071" name="Spartan JFO" hidden="false" collective="false" import="true" targetId="978f-df5b-71c7-dcb9" type="selectionEntry" />
+    <entryLink id="7baa-e55a-0923-c789" name="Spartan Zvezda (VK78 Commando)" hidden="false" collective="false" import="true" targetId="047a-e8d5-dbec-dbd7" type="selectionEntry" />
+    <entryLink id="5f3c-261a-8af3-3a5c" name="Spartan Zvezda (Cindershot)" hidden="false" collective="false" import="true" targetId="df86-09c1-bb71-8718" type="selectionEntry" />
+    <entryLink id="3725-1ea6-4e92-c8a8" name="Spartan HAZOP (M45 Shotgun)" hidden="false" collective="false" import="true" targetId="6ebd-e43f-182d-bed1" type="selectionEntry" />
+    <entryLink id="f884-63bd-f7bf-270b" name="Spartan HAZOP (Spike Rifle)" hidden="false" collective="false" import="true" targetId="3c33-b8b3-7ede-0826" type="selectionEntry" />
+    <entryLink id="c82d-7c13-30c3-362f" name="Spartan HAZOP (Needle Rifle)" hidden="false" collective="false" import="true" targetId="8bc0-8488-0308-710a" type="selectionEntry" />
+    <entryLink id="7746-377e-e7c6-ed24" name="Spartan Brawler (CQS48 Bulldog)" hidden="false" collective="false" import="true" targetId="f33e-e5e6-fcaf-bbd3" type="selectionEntry" />
+    <entryLink id="3697-6157-bdcd-486c" name="Spartan Brawler (Needler)" hidden="false" collective="false" import="true" targetId="eb80-c258-8794-1df1" type="selectionEntry" />
+    <entryLink id="ae6e-f1cf-8576-0797" name="Spartan Mk VII (Pulse Carbine)" hidden="false" collective="false" import="true" targetId="7d09-5c62-6ae4-567e" type="selectionEntry" />
+    <entryLink id="5be1-c079-c546-b793" name="Spartan Mk VII (MA40 Assault Rifle)" hidden="false" collective="false" import="true" targetId="805c-c9dc-0f20-91ba" type="selectionEntry" />
+    <entryLink id="db7d-c9b4-b8ed-e071" name="Spartan JFO (H-165 Target Locator)" hidden="false" collective="false" import="true" targetId="978f-df5b-71c7-dcb9" type="selectionEntry" />
+    <entryLink id="2e6b-0a02-22ee-af23" name="Spartan JFO (Concussion Rifle)" hidden="false" collective="false" import="true" targetId="653e-85ba-334e-dd97" type="selectionEntry" />
     <entryLink id="9fae-f1ae-9fef-9654" name="Tomas Horvath (Spartan Legend)" hidden="false" collective="false" import="true" targetId="af93-eabc-e244-7a3b" type="selectionEntry" />
-    <entryLink id="050a-a561-1ff9-9283" name="Spartan Gungnir" hidden="false" collective="false" import="true" targetId="707a-60ef-4d56-65eb" type="selectionEntry" />
-    <entryLink id="015e-0dee-b4bf-bad9" name="Spartan Deadeye" hidden="false" collective="false" import="true" targetId="3158-e389-fb04-6287" type="selectionEntry" />
-    <entryLink id="e6cf-aad6-ce94-b74d" name="Spartan CQB" hidden="false" collective="false" import="true" targetId="3859-1abf-2873-475c" type="selectionEntry" />
+    <entryLink id="050a-a561-1ff9-9283" name="Spartan Gungnir (Plasma Launcher)" hidden="false" collective="false" import="true" targetId="707a-60ef-4d56-65eb" type="selectionEntry" />
+    <entryLink id="6af0-a9ab-8395-f3fb" name="Spartan Gungnir (M319 Grenade Launcher)" hidden="false" collective="false" import="true" targetId="607d-ca40-02b3-fa28" type="selectionEntry" />
+    <entryLink id="0a36-1320-ee86-4bdb" name="Spartan Gungnir (M41 SPNKr)" hidden="false" collective="false" import="true" targetId="1ed8-43ee-d0c9-d09a" type="selectionEntry" />
+    <entryLink id="015e-0dee-b4bf-bad9" name="Spartan Deadeye (Stalker Rifle)" hidden="false" collective="false" import="true" targetId="3158-e389-fb04-6287" type="selectionEntry" />
+    <entryLink id="6ef5-c0bb-8f3e-2796" name="Spartan Deadeye (M392 DMR)" hidden="false" collective="false" import="true" targetId="aae5-0040-c3a2-299e" type="selectionEntry" />
+    <entryLink id="e6cf-aad6-ce94-b74d" name="Spartan CQB (Energy Sword)" hidden="false" collective="false" import="true" targetId="3859-1abf-2873-475c" type="selectionEntry" />
+    <entryLink id="cc98-92a1-e165-e047" name="Spartan CQB (Gravity Hammer)" hidden="false" collective="false" import="true" targetId="56c9-d829-77c3-9b9e" type="selectionEntry" />
     <entryLink id="62fb-a9b8-99a3-eafe" name="Jun-A266 Noble Three (Spartan Legend)" hidden="false" collective="false" import="true" targetId="c52b-8443-17a5-7b3f" type="selectionEntry" />
     <entryLink id="c1bc-b86d-dadb-3cfb" name="Emile-A239 Noble Four (Spartan Legend)" hidden="false" collective="false" import="true" targetId="5cf8-1c43-0f06-73fc" type="selectionEntry" />
     <entryLink id="df33-aabe-b538-f23b" name="Kat-B320 Noble Two (Spartan Legend)" hidden="false" collective="false" import="true" targetId="5e16-35f6-f2d9-c552" type="selectionEntry" />
@@ -46,15 +56,23 @@
     <entryLink id="94fb-4c2b-165a-bc79" name="Carter-A259 Noble One (Spartan Legend)" hidden="false" collective="false" import="true" targetId="adf8-d842-c1fd-479d" type="selectionEntry" />
     <entryLink id="48ef-e705-3afb-7c9f" name="Jorge-052 Noble Five (Spartan Legend)" hidden="false" collective="false" import="true" targetId="5593-2523-2eb7-09ff" type="selectionEntry" />
     <entryLink id="58ea-499e-855e-cae9" name="Master Chief (Spartan Legend)" hidden="false" collective="false" import="true" targetId="4f9f-1376-9ba0-d0c4" type="selectionEntry" />
-    <entryLink id="f2a1-8fd6-6b8a-3e10" name="ODST Special Purpose Trooper" hidden="false" collective="false" import="true" targetId="c761-9496-21dd-2499" type="selectionEntry" />
+    <entryLink id="f2a1-8fd6-6b8a-3e10" name="ODST Special Purpose Trooper (M392 DMR)" hidden="false" collective="false" import="true" targetId="c761-9496-21dd-2499" type="selectionEntry" />
+    <entryLink id="66ad-12b8-3edc-0b5f" name="ODST Special Purpose Trooper (Pulse Carbine)" hidden="false" collective="false" import="true" targetId="b02e-55b7-7367-4018" type="selectionEntry" />
+    <entryLink id="cb2a-9a8f-b510-6683" name="ODST Special Purpose Trooper (BR55 Battle Rifle)" hidden="false" collective="false" import="true" targetId="731d-cad0-2896-a7a2" type="selectionEntry" />
     <entryLink id="0efb-7f88-5ba1-e61a" name="ODST 2nd Lieutenant" hidden="false" collective="false" import="true" targetId="6200-eabc-e34d-6e64" type="selectionEntry" />
-    <entryLink id="5611-3e48-c558-36a9" name="ODST Air Assault 'Bullfrog'" hidden="false" collective="false" import="true" targetId="4866-e09e-ceec-8f68" type="selectionEntry" />
-    <entryLink id="2a45-c9c0-66ea-fb42" name="ODST Firebreak" hidden="false" collective="false" import="true" targetId="9bda-deeb-1735-074e" type="selectionEntry" />
+    <entryLink id="5611-3e48-c558-36a9" name="ODST Air Assault 'Bullfrog' (MA40 Assault Rifle)" hidden="false" collective="false" import="true" targetId="4866-e09e-ceec-8f68" type="selectionEntry" />
+    <entryLink id="47f9-d6bd-df5f-9479" name="ODST Air Assault 'Bullfrog' (M7S SMG)" hidden="false" collective="false" import="true" targetId="1c54-a70c-6968-e7fd" type="selectionEntry" />
+    <entryLink id="2a45-c9c0-66ea-fb42" name="ODST Firebreak (M7057 Flamethrower)" hidden="false" collective="false" import="true" targetId="9bda-deeb-1735-074e" type="selectionEntry" />
+    <entryLink id="7a8a-beab-3618-da17" name="ODST Firebreak (M90 Shotgun)" hidden="false" collective="false" import="true" targetId="97fa-8d84-e21b-8c18" type="selectionEntry" />
     <entryLink id="32ca-bfcd-c83f-0fdb" name="ODST Captain" hidden="false" collective="false" import="true" targetId="ffd4-158e-3760-5d3e" type="selectionEntry" />
     <entryLink id="b4d5-abf3-aa75-7f9d" name="Captain Veronica Dare - ONI (UNSC Legend)" hidden="false" collective="false" import="true" targetId="ea2b-147b-2619-2738" type="selectionEntry" />
     <entryLink id="543c-e13f-ee56-4b13" name="Gunnery Sergeant Edward Buck (ODST Legend)" hidden="false" collective="false" import="true" targetId="613b-de3f-8591-6d1c" type="selectionEntry" />
     <entryLink id="2eab-b228-4adf-c45c" name="UNSC Marine Corporal" hidden="false" collective="false" import="true" targetId="d48f-2d71-7d87-a897" type="selectionEntry" />
-    <entryLink id="eb47-be70-9bfe-d4be" name="UNSC Marine" hidden="false" collective="false" import="true" targetId="3be4-405f-298f-bb56" type="selectionEntry" />
+    <entryLink id="eb47-be70-9bfe-d4be" name="UNSC Marine (M41 SPNKr)" hidden="false" collective="false" import="true" targetId="3be4-405f-298f-bb56" type="selectionEntry" />
+    <entryLink id="b851-e048-6ee1-4da7" name="UNSC Marine (S7 Sniper Rifle)" hidden="false" collective="false" import="true" targetId="3d97-1fad-e3d1-dfc1" type="selectionEntry" />
+    <entryLink id="4786-08f8-abb2-58e2" name="UNSC Marine (BR55 Battle Rifle)" hidden="false" collective="false" import="true" targetId="52bf-f4a0-fee2-c8d4" type="selectionEntry" />
+    <entryLink id="030d-3ced-8918-79c5" name="UNSC Marine (VK78 Commando)" hidden="false" collective="false" import="true" targetId="21e3-fdb5-d81c-12af" type="selectionEntry" />
+    <entryLink id="da86-d2b1-8c81-7f41" name="UNSC Marine (Pulse Carbine)" hidden="false" collective="false" import="true" targetId="8d98-887f-4b87-75d2" type="selectionEntry" />
     <entryLink id="895e-0c1c-0c21-733b" name="UNSC Marine Medic" hidden="false" collective="false" import="true" targetId="87a4-b61a-a049-5bfb" type="selectionEntry" />
     <entryLink id="84e0-72b2-6a9f-437f" name="UNSC Comms Marine" hidden="false" collective="false" import="true" targetId="53c5-5fa0-2b47-0684" type="selectionEntry" />
     <entryLink id="c6ab-f7b8-1724-2617" name="M6 Spartan Laser" hidden="false" collective="false" import="true" targetId="8b94-efb3-59f4-db29" type="selectionEntry" />
@@ -137,9 +155,73 @@
     <entryLink id="83f3-7d5b-4d75-7c3c" name="2x Extra Cmd Die (single use)" hidden="false" collective="false" import="true" targetId="aba7-4421-0838-73b7" type="selectionEntry" />
     <entryLink id="9535-3e8d-e175-ba38" name="Extra Cmd Die (one use)" hidden="false" collective="false" import="true" targetId="8b5f-3a24-d779-45fc" type="selectionEntry" />
     <entryLink id="a6f7-5276-e111-0702" name="Extra d8 (one use)" hidden="false" collective="false" import="true" targetId="8cea-b03b-98b1-b5a1" type="selectionEntry" />
-    <entryLink id="9d30-f0e1-f6d0-02bf" name="Suppression Protocol" hidden="false" collective="false" import="true" targetId="a60f-a55b-094e-4eab" type="selectionEntry" />
-    <entryLink id="c9ea-ca12-9409-970a" name="UNSC Defence Shield" hidden="false" collective="false" import="true" targetId="3457-d814-de66-35ef" type="selectionEntry" />
-    <entryLink id="53d9-7e9f-7a99-c234" name="Hostile Incoming" hidden="false" collective="false" import="true" targetId="060c-0564-427d-8a8f" type="selectionEntry" />
-    <entryLink id="e119-6498-825c-2467" name="Tactical Advance" hidden="false" collective="false" import="true" targetId="7016-7b32-8e64-b072" type="selectionEntry" />
+    <entryLink id="9d30-f0e1-f6d0-02bf" name="Suppression Protocol" hidden="false" collective="false" import="true" targetId="a60f-a55b-094e-4eab" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="equalTo" />
+          </conditions>
+        </modifier>
+        <modifier type="set" field="8571-9fd4-02ec-f8c1" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="equalTo" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8571-9fd4-02ec-f8c1" type="max" />
+      </constraints>
+    </entryLink>
+    <entryLink id="c9ea-ca12-9409-970a" name="UNSC Defence Shield" hidden="false" collective="false" import="true" targetId="3457-d814-de66-35ef" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="equalTo" />
+          </conditions>
+        </modifier>
+        <modifier type="set" field="74bb-6f3e-beaa-1375" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="equalTo" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="74bb-6f3e-beaa-1375" type="max" />
+      </constraints>
+    </entryLink>
+    <entryLink id="53d9-7e9f-7a99-c234" name="Hostile Incoming" hidden="false" collective="false" import="true" targetId="060c-0564-427d-8a8f" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="equalTo" />
+          </conditions>
+        </modifier>
+        <modifier type="set" field="9f6f-c7d9-d64e-d774" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="equalTo" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9f6f-c7d9-d64e-d774" type="max" />
+      </constraints>
+    </entryLink>
+    <entryLink id="e119-6498-825c-2467" name="Tactical Advance" hidden="false" collective="false" import="true" targetId="7016-7b32-8e64-b072" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="equalTo" />
+          </conditions>
+        </modifier>
+        <modifier type="set" field="e754-4c8a-23f9-663a" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f423-656e-673f-51b0" type="equalTo" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e754-4c8a-23f9-663a" type="max" />
+      </constraints>
+    </entryLink>
   </entryLinks>
 </catalogue>

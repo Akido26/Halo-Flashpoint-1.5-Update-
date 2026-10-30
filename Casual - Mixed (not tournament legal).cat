@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<catalogue id="e2ae-511d-6428-889e" name="Casual - Mixed Human and Alien (not tournament legal)" revision="8" battleScribeVersion="2.03" library="false" gameSystemId="61c2-d61f-70a4-4d68" gameSystemRevision="8" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
-  <readme>CASUAL ONLY. Lets one list mix UNSC and Banished units. Tournament lists never mix humans and aliens. No detachments here.</readme>
+<catalogue id="e2ae-511d-6428-889e" name="Casual - Mixed Human and Alien (not tournament legal)" revision="10" battleScribeVersion="2.03" library="false" gameSystemId="61c2-d61f-70a4-4d68" gameSystemRevision="10" authorName="Chief (Grok Bot) for family use" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <readme>CASUAL ONLY. Lets one list mix UNSC and Banished units. Tournament lists never mix humans and aliens. All Command and Fireteam upgrades are available with no detachment restriction (fun play); still max one of each.</readme>
   <forceEntries>
     <forceEntry id="34cd-1bfd-c9da-8697" name="Casual Mixed Fireteam (not tournament legal)" hidden="false">
       <categoryLinks>
@@ -27,19 +27,30 @@
           </constraints>
         </categoryLink>
         <categoryLink id="2b09-c227-257a-00cf" name="Command Upgrades" hidden="false" targetId="8bdc-911c-6856-85fb" primary="false" />
+        <categoryLink id="e500-b103-d054-e40b" name="Fireteam Upgrades" hidden="false" targetId="2513-309c-fd84-eddb" primary="false" />
       </categoryLinks>
     </forceEntry>
   </forceEntries>
   <entryLinks>
-    <entryLink id="6b19-e029-09db-ac4a" name="Spartan Zvezda" hidden="false" collective="false" import="true" targetId="047a-e8d5-dbec-dbd7" type="selectionEntry" />
-    <entryLink id="07ce-809a-062b-7ccf" name="Spartan HAZOP" hidden="false" collective="false" import="true" targetId="6ebd-e43f-182d-bed1" type="selectionEntry" />
-    <entryLink id="a12d-a896-17e8-6ed8" name="Spartan Brawler" hidden="false" collective="false" import="true" targetId="f33e-e5e6-fcaf-bbd3" type="selectionEntry" />
-    <entryLink id="28f0-6d18-2f6a-ba46" name="Spartan Mk VII" hidden="false" collective="false" import="true" targetId="7d09-5c62-6ae4-567e" type="selectionEntry" />
-    <entryLink id="0998-7dfc-facc-e75e" name="Spartan JFO" hidden="false" collective="false" import="true" targetId="978f-df5b-71c7-dcb9" type="selectionEntry" />
+    <entryLink id="6b19-e029-09db-ac4a" name="Spartan Zvezda (VK78 Commando)" hidden="false" collective="false" import="true" targetId="047a-e8d5-dbec-dbd7" type="selectionEntry" />
+    <entryLink id="2d8c-5d1f-35ce-1901" name="Spartan Zvezda (Cindershot)" hidden="false" collective="false" import="true" targetId="df86-09c1-bb71-8718" type="selectionEntry" />
+    <entryLink id="07ce-809a-062b-7ccf" name="Spartan HAZOP (M45 Shotgun)" hidden="false" collective="false" import="true" targetId="6ebd-e43f-182d-bed1" type="selectionEntry" />
+    <entryLink id="2264-19cb-ec06-766e" name="Spartan HAZOP (Spike Rifle)" hidden="false" collective="false" import="true" targetId="3c33-b8b3-7ede-0826" type="selectionEntry" />
+    <entryLink id="88ed-1488-d00c-df8f" name="Spartan HAZOP (Needle Rifle)" hidden="false" collective="false" import="true" targetId="8bc0-8488-0308-710a" type="selectionEntry" />
+    <entryLink id="a12d-a896-17e8-6ed8" name="Spartan Brawler (CQS48 Bulldog)" hidden="false" collective="false" import="true" targetId="f33e-e5e6-fcaf-bbd3" type="selectionEntry" />
+    <entryLink id="2436-9276-4d61-df30" name="Spartan Brawler (Needler)" hidden="false" collective="false" import="true" targetId="eb80-c258-8794-1df1" type="selectionEntry" />
+    <entryLink id="28f0-6d18-2f6a-ba46" name="Spartan Mk VII (Pulse Carbine)" hidden="false" collective="false" import="true" targetId="7d09-5c62-6ae4-567e" type="selectionEntry" />
+    <entryLink id="06d5-7953-6738-0714" name="Spartan Mk VII (MA40 Assault Rifle)" hidden="false" collective="false" import="true" targetId="805c-c9dc-0f20-91ba" type="selectionEntry" />
+    <entryLink id="0998-7dfc-facc-e75e" name="Spartan JFO (H-165 Target Locator)" hidden="false" collective="false" import="true" targetId="978f-df5b-71c7-dcb9" type="selectionEntry" />
+    <entryLink id="9fe4-1156-af43-9811" name="Spartan JFO (Concussion Rifle)" hidden="false" collective="false" import="true" targetId="653e-85ba-334e-dd97" type="selectionEntry" />
     <entryLink id="04a0-0151-4d5f-2dc5" name="Tomas Horvath (Spartan Legend)" hidden="false" collective="false" import="true" targetId="af93-eabc-e244-7a3b" type="selectionEntry" />
-    <entryLink id="f470-ab03-6b9d-c00f" name="Spartan Gungnir" hidden="false" collective="false" import="true" targetId="707a-60ef-4d56-65eb" type="selectionEntry" />
-    <entryLink id="9d1c-7a5f-b5ae-3735" name="Spartan Deadeye" hidden="false" collective="false" import="true" targetId="3158-e389-fb04-6287" type="selectionEntry" />
-    <entryLink id="941e-9ae4-e751-e8e4" name="Spartan CQB" hidden="false" collective="false" import="true" targetId="3859-1abf-2873-475c" type="selectionEntry" />
+    <entryLink id="f470-ab03-6b9d-c00f" name="Spartan Gungnir (Plasma Launcher)" hidden="false" collective="false" import="true" targetId="707a-60ef-4d56-65eb" type="selectionEntry" />
+    <entryLink id="18fe-e7ae-d8f5-fec6" name="Spartan Gungnir (M319 Grenade Launcher)" hidden="false" collective="false" import="true" targetId="607d-ca40-02b3-fa28" type="selectionEntry" />
+    <entryLink id="7239-dea7-68ce-6030" name="Spartan Gungnir (M41 SPNKr)" hidden="false" collective="false" import="true" targetId="1ed8-43ee-d0c9-d09a" type="selectionEntry" />
+    <entryLink id="9d1c-7a5f-b5ae-3735" name="Spartan Deadeye (Stalker Rifle)" hidden="false" collective="false" import="true" targetId="3158-e389-fb04-6287" type="selectionEntry" />
+    <entryLink id="0f1b-0a8f-81f9-e3a0" name="Spartan Deadeye (M392 DMR)" hidden="false" collective="false" import="true" targetId="aae5-0040-c3a2-299e" type="selectionEntry" />
+    <entryLink id="941e-9ae4-e751-e8e4" name="Spartan CQB (Energy Sword)" hidden="false" collective="false" import="true" targetId="3859-1abf-2873-475c" type="selectionEntry" />
+    <entryLink id="c8e3-268a-1226-38d0" name="Spartan CQB (Gravity Hammer)" hidden="false" collective="false" import="true" targetId="56c9-d829-77c3-9b9e" type="selectionEntry" />
     <entryLink id="70dc-23eb-241b-6b69" name="Jun-A266 Noble Three (Spartan Legend)" hidden="false" collective="false" import="true" targetId="c52b-8443-17a5-7b3f" type="selectionEntry" />
     <entryLink id="0cc6-34e4-bc64-da0f" name="Emile-A239 Noble Four (Spartan Legend)" hidden="false" collective="false" import="true" targetId="5cf8-1c43-0f06-73fc" type="selectionEntry" />
     <entryLink id="def2-fe71-2480-4c5e" name="Kat-B320 Noble Two (Spartan Legend)" hidden="false" collective="false" import="true" targetId="5e16-35f6-f2d9-c552" type="selectionEntry" />
@@ -47,32 +58,49 @@
     <entryLink id="76e4-1140-4453-d2b2" name="Carter-A259 Noble One (Spartan Legend)" hidden="false" collective="false" import="true" targetId="adf8-d842-c1fd-479d" type="selectionEntry" />
     <entryLink id="6b7d-004b-cb08-70cd" name="Jorge-052 Noble Five (Spartan Legend)" hidden="false" collective="false" import="true" targetId="5593-2523-2eb7-09ff" type="selectionEntry" />
     <entryLink id="333f-b8fc-568f-e7b2" name="Master Chief (Spartan Legend)" hidden="false" collective="false" import="true" targetId="4f9f-1376-9ba0-d0c4" type="selectionEntry" />
-    <entryLink id="5d9d-f124-d27a-284a" name="ODST Special Purpose Trooper" hidden="false" collective="false" import="true" targetId="c761-9496-21dd-2499" type="selectionEntry" />
+    <entryLink id="5d9d-f124-d27a-284a" name="ODST Special Purpose Trooper (M392 DMR)" hidden="false" collective="false" import="true" targetId="c761-9496-21dd-2499" type="selectionEntry" />
+    <entryLink id="0b7d-6d34-cac0-c704" name="ODST Special Purpose Trooper (Pulse Carbine)" hidden="false" collective="false" import="true" targetId="b02e-55b7-7367-4018" type="selectionEntry" />
+    <entryLink id="9d3b-33ab-9905-3b7a" name="ODST Special Purpose Trooper (BR55 Battle Rifle)" hidden="false" collective="false" import="true" targetId="731d-cad0-2896-a7a2" type="selectionEntry" />
     <entryLink id="3197-47e3-1ea7-2150" name="ODST 2nd Lieutenant" hidden="false" collective="false" import="true" targetId="6200-eabc-e34d-6e64" type="selectionEntry" />
-    <entryLink id="89a3-8f9b-ad35-b8cd" name="ODST Air Assault 'Bullfrog'" hidden="false" collective="false" import="true" targetId="4866-e09e-ceec-8f68" type="selectionEntry" />
-    <entryLink id="5904-fc96-722c-4ba9" name="ODST Firebreak" hidden="false" collective="false" import="true" targetId="9bda-deeb-1735-074e" type="selectionEntry" />
+    <entryLink id="89a3-8f9b-ad35-b8cd" name="ODST Air Assault 'Bullfrog' (MA40 Assault Rifle)" hidden="false" collective="false" import="true" targetId="4866-e09e-ceec-8f68" type="selectionEntry" />
+    <entryLink id="2b40-33fb-12c3-7791" name="ODST Air Assault 'Bullfrog' (M7S SMG)" hidden="false" collective="false" import="true" targetId="1c54-a70c-6968-e7fd" type="selectionEntry" />
+    <entryLink id="5904-fc96-722c-4ba9" name="ODST Firebreak (M7057 Flamethrower)" hidden="false" collective="false" import="true" targetId="9bda-deeb-1735-074e" type="selectionEntry" />
+    <entryLink id="80c5-3ed0-eda4-6691" name="ODST Firebreak (M90 Shotgun)" hidden="false" collective="false" import="true" targetId="97fa-8d84-e21b-8c18" type="selectionEntry" />
     <entryLink id="666f-e934-e955-e1cc" name="ODST Captain" hidden="false" collective="false" import="true" targetId="ffd4-158e-3760-5d3e" type="selectionEntry" />
     <entryLink id="8f9a-cc6e-b5a5-95b4" name="Captain Veronica Dare - ONI (UNSC Legend)" hidden="false" collective="false" import="true" targetId="ea2b-147b-2619-2738" type="selectionEntry" />
     <entryLink id="381f-1310-8c7f-884d" name="Gunnery Sergeant Edward Buck (ODST Legend)" hidden="false" collective="false" import="true" targetId="613b-de3f-8591-6d1c" type="selectionEntry" />
     <entryLink id="1aa8-97df-0986-1daa" name="UNSC Marine Corporal" hidden="false" collective="false" import="true" targetId="d48f-2d71-7d87-a897" type="selectionEntry" />
-    <entryLink id="b23c-4745-cddd-8145" name="UNSC Marine" hidden="false" collective="false" import="true" targetId="3be4-405f-298f-bb56" type="selectionEntry" />
+    <entryLink id="b23c-4745-cddd-8145" name="UNSC Marine (M41 SPNKr)" hidden="false" collective="false" import="true" targetId="3be4-405f-298f-bb56" type="selectionEntry" />
+    <entryLink id="4d48-6d2a-12b5-a1fc" name="UNSC Marine (S7 Sniper Rifle)" hidden="false" collective="false" import="true" targetId="3d97-1fad-e3d1-dfc1" type="selectionEntry" />
+    <entryLink id="1807-a9a9-cc0a-85ab" name="UNSC Marine (BR55 Battle Rifle)" hidden="false" collective="false" import="true" targetId="52bf-f4a0-fee2-c8d4" type="selectionEntry" />
+    <entryLink id="3bf5-e421-3200-066d" name="UNSC Marine (VK78 Commando)" hidden="false" collective="false" import="true" targetId="21e3-fdb5-d81c-12af" type="selectionEntry" />
+    <entryLink id="1d6d-2d7d-8b2e-fdab" name="UNSC Marine (Pulse Carbine)" hidden="false" collective="false" import="true" targetId="8d98-887f-4b87-75d2" type="selectionEntry" />
     <entryLink id="d35b-5aef-b03d-854d" name="UNSC Marine Medic" hidden="false" collective="false" import="true" targetId="87a4-b61a-a049-5bfb" type="selectionEntry" />
     <entryLink id="fc85-d8a4-acd4-6590" name="UNSC Comms Marine" hidden="false" collective="false" import="true" targetId="53c5-5fa0-2b47-0684" type="selectionEntry" />
-    <entryLink id="9be9-ef20-0e29-909a" name="Sangheili Mercenary" hidden="false" collective="false" import="true" targetId="3d52-9f42-39d5-df9d" type="selectionEntry" />
+    <entryLink id="9be9-ef20-0e29-909a" name="Sangheili Mercenary (Pulse Carbine)" hidden="false" collective="false" import="true" targetId="3d52-9f42-39d5-df9d" type="selectionEntry" />
+    <entryLink id="38a3-dae9-f983-4327" name="Sangheili Mercenary (Needler)" hidden="false" collective="false" import="true" targetId="4d08-f546-aa4b-58bb" type="selectionEntry" />
+    <entryLink id="5f04-297c-29b7-2f31" name="Sangheili Mercenary (Plasma Rifle)" hidden="false" collective="false" import="true" targetId="7820-4836-8eb7-6102" type="selectionEntry" />
+    <entryLink id="2cdb-a34d-c7dd-5192" name="Sangheili Mercenary (Energy Sword)" hidden="false" collective="false" import="true" targetId="443a-a0c6-5d1f-b230" type="selectionEntry" />
+    <entryLink id="59a3-c6e8-58cb-7871" name="Sangheili Mercenary (Concussion Rifle)" hidden="false" collective="false" import="true" targetId="25bd-64df-adeb-2e65" type="selectionEntry" />
     <entryLink id="a77f-1def-8c50-11e9" name="Sangheili Enforcer" hidden="false" collective="false" import="true" targetId="910e-7ac0-c495-531e" type="selectionEntry" />
     <entryLink id="6217-6c37-8425-f4f9" name="Jega 'Rdomnai (Banished Legend)" hidden="false" collective="false" import="true" targetId="8866-1550-87dc-0cdb" type="selectionEntry" />
     <entryLink id="1bad-3ef4-ff46-2c05" name="Kig-Yar Sniper" hidden="false" collective="false" import="true" targetId="4559-b2a2-2ed8-e34c" type="selectionEntry" />
     <entryLink id="8dad-d18d-df89-15c7" name="Kig-Yar Freebooter" hidden="false" collective="false" import="true" targetId="f6e9-3648-45fd-80e2" type="selectionEntry" />
     <entryLink id="39ce-0b22-b59c-d345" name="Jiralhanae Warrior" hidden="false" collective="false" import="true" targetId="27e8-38cf-5607-65d0" type="selectionEntry" />
-    <entryLink id="82cd-b5a5-3c9e-2308" name="Jiralhanae Berserker" hidden="false" collective="false" import="true" targetId="6d06-6c5d-723f-0ae1" type="selectionEntry" />
-    <entryLink id="f47e-81ed-82f6-b6a4" name="Jiralhanae Sniper" hidden="false" collective="false" import="true" targetId="72ea-90e8-fc20-ad9c" type="selectionEntry" />
+    <entryLink id="82cd-b5a5-3c9e-2308" name="Jiralhanae Berserker (Dynamo Grenade)" hidden="false" collective="false" import="true" targetId="6d06-6c5d-723f-0ae1" type="selectionEntry" />
+    <entryLink id="e863-2605-3a61-c340" name="Jiralhanae Berserker (Spike Grenade)" hidden="false" collective="false" import="true" targetId="f865-f95a-74ae-1844" type="selectionEntry" />
+    <entryLink id="f47e-81ed-82f6-b6a4" name="Jiralhanae Sniper (Shock Rifle)" hidden="false" collective="false" import="true" targetId="72ea-90e8-fc20-ad9c" type="selectionEntry" />
+    <entryLink id="7b82-1493-72d7-2bf9" name="Jiralhanae Sniper (Skewer)" hidden="false" collective="false" import="true" targetId="d9fb-25d4-7957-7a9c" type="selectionEntry" />
     <entryLink id="5b09-2996-9ed8-a6b2" name="Jiralhanae Chosen Warrior" hidden="false" collective="false" import="true" targetId="cd1d-d628-f71a-40a6" type="selectionEntry" />
-    <entryLink id="e3be-ee52-d8c3-0ffc" name="Jiralhanae Captain" hidden="false" collective="false" import="true" targetId="8c4f-7d9f-5b0a-21f3" type="selectionEntry" />
+    <entryLink id="e3be-ee52-d8c3-0ffc" name="Jiralhanae Captain (MLRS-2 Hydra)" hidden="false" collective="false" import="true" targetId="8c4f-7d9f-5b0a-21f3" type="selectionEntry" />
+    <entryLink id="cd83-8aab-5bc4-29a1" name="Jiralhanae Captain (Ravager)" hidden="false" collective="false" import="true" targetId="ffdc-3f91-c4ae-098c" type="selectionEntry" />
     <entryLink id="2493-d564-fe08-9562" name="Tovarus (Jiralhanae Legend)" hidden="false" collective="false" import="true" targetId="edf6-a4cb-5afc-6f12" type="selectionEntry" />
     <entryLink id="8e00-a050-c470-da9d" name="Hyperius (Jiralhanae Legend)" hidden="false" collective="false" import="true" targetId="c3c2-9338-9bc1-3de1" type="selectionEntry" />
     <entryLink id="2aba-4295-baf1-1f8b" name="Atriox, Jiralhanae Warmaster (Banished Legend)" hidden="false" collective="false" import="true" targetId="768f-887e-b9f3-9df3" type="selectionEntry" />
-    <entryLink id="b18e-71d1-076a-b97e" name="Unggoy Conscript" hidden="false" collective="false" import="true" targetId="daa8-a337-4cff-ba49" type="selectionEntry" />
-    <entryLink id="c675-ace6-90ee-8501" name="Unggoy Assault" hidden="false" collective="false" import="true" targetId="fa4b-1349-510f-8e73" type="selectionEntry" />
+    <entryLink id="b18e-71d1-076a-b97e" name="Unggoy Conscript (Plasma Pistol)" hidden="false" collective="false" import="true" targetId="daa8-a337-4cff-ba49" type="selectionEntry" />
+    <entryLink id="83e1-b07f-6f57-bb2f" name="Unggoy Conscript (Needler)" hidden="false" collective="false" import="true" targetId="0f80-c261-8c20-01ce" type="selectionEntry" />
+    <entryLink id="c675-ace6-90ee-8501" name="Unggoy Assault (Needler)" hidden="false" collective="false" import="true" targetId="fa4b-1349-510f-8e73" type="selectionEntry" />
+    <entryLink id="6ec9-6b69-9bd5-e4ef" name="Unggoy Assault (Disruptor)" hidden="false" collective="false" import="true" targetId="0599-d244-c33d-4d09" type="selectionEntry" />
     <entryLink id="afc6-06e7-7d55-69ed" name="M6 Spartan Laser" hidden="false" collective="false" import="true" targetId="8b94-efb3-59f4-db29" type="selectionEntry" />
     <entryLink id="37c3-6ba9-dbe4-dd81" name="Gravity Hammer" hidden="false" collective="false" import="true" targetId="8a63-c042-c023-d322" type="selectionEntry" />
     <entryLink id="fadc-f6d6-6497-d12e" name="Energy Sword" hidden="false" collective="false" import="true" targetId="437d-a383-5b31-8e6d" type="selectionEntry" />
@@ -160,5 +188,15 @@
     <entryLink id="5d66-6db8-2169-70b4" name="2x Extra Cmd Die (single use)" hidden="false" collective="false" import="true" targetId="aba7-4421-0838-73b7" type="selectionEntry" />
     <entryLink id="ee26-449c-26de-4b06" name="Extra Cmd Die (one use)" hidden="false" collective="false" import="true" targetId="8b5f-3a24-d779-45fc" type="selectionEntry" />
     <entryLink id="7e93-6564-0068-4854" name="Extra d8 (one use)" hidden="false" collective="false" import="true" targetId="8cea-b03b-98b1-b5a1" type="selectionEntry" />
+    <entryLink id="bc42-c71c-2e2a-7043" name="Warmaster's Pack" hidden="false" collective="false" import="true" targetId="178a-92ff-aa2b-a9cd" type="selectionEntry" />
+    <entryLink id="9f8e-6a3f-4836-1da3" name="Enraged" hidden="false" collective="false" import="true" targetId="53c5-f589-f30f-0da8" type="selectionEntry" />
+    <entryLink id="8276-5c2d-0131-b49c" name="Veteran Heirlooms" hidden="false" collective="false" import="true" targetId="96e0-a830-4193-b456" type="selectionEntry" />
+    <entryLink id="b681-ba56-f67b-218c" name="Suppression Protocol" hidden="false" collective="false" import="true" targetId="a60f-a55b-094e-4eab" type="selectionEntry" />
+    <entryLink id="b9dc-a7b2-04f1-e9ba" name="UNSC Defence Shield" hidden="false" collective="false" import="true" targetId="3457-d814-de66-35ef" type="selectionEntry" />
+    <entryLink id="76e9-32e9-3701-2d2c" name="Tactical Display Unit" hidden="false" collective="false" import="true" targetId="558a-acce-9a75-8037" type="selectionEntry" />
+    <entryLink id="c244-71b8-2035-6974" name="Hostile Incoming" hidden="false" collective="false" import="true" targetId="060c-0564-427d-8a8f" type="selectionEntry" />
+    <entryLink id="d613-50dd-bb63-bcfb" name="Drop Pods" hidden="false" collective="false" import="true" targetId="131e-a106-9207-f994" type="selectionEntry" />
+    <entryLink id="c41b-f95a-fbee-db38" name="Ambush Hunters" hidden="false" collective="false" import="true" targetId="ed3f-bee1-f7e1-866e" type="selectionEntry" />
+    <entryLink id="0992-6a04-d56b-80c5" name="Tactical Advance" hidden="false" collective="false" import="true" targetId="7016-7b32-8e64-b072" type="selectionEntry" />
   </entryLinks>
 </catalogue>
